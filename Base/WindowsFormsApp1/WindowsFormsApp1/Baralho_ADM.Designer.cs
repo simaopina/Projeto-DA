@@ -55,6 +55,11 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbxBaralhoADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -64,6 +69,7 @@
             // 
             // gbxBaralhoADM
             // 
+            this.gbxBaralhoADM.Controls.Add(this.vScrollBar1);
             this.gbxBaralhoADM.Location = new System.Drawing.Point(245, 272);
             this.gbxBaralhoADM.Name = "gbxBaralhoADM";
             this.gbxBaralhoADM.Size = new System.Drawing.Size(348, 248);
@@ -296,7 +302,10 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.baralhoToolStripMenuItem,
+            this.jogadoresToolStripMenuItem,
+            this.signoutToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
             this.menuStripHome.Size = new System.Drawing.Size(638, 24);
@@ -306,8 +315,8 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.loginToolStripMenuItem.Text = "Permissão";
             // 
             // pictureBox1
             // 
@@ -317,6 +326,31 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(331, 5);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(16, 243);
+            this.vScrollBar1.TabIndex = 0;
+            // 
+            // baralhoToolStripMenuItem
+            // 
+            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.baralhoToolStripMenuItem.Text = "Baralho";
+            // 
+            // jogadoresToolStripMenuItem
+            // 
+            this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
+            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            // 
+            // signoutToolStripMenuItem
+            // 
+            this.signoutToolStripMenuItem.Name = "signoutToolStripMenuItem";
+            this.signoutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.signoutToolStripMenuItem.Text = "Signout";
             // 
             // Baralho_ADM
             // 
@@ -337,6 +371,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Baralho_ADM";
             this.Text = "Baralho_ADM";
+            this.gbxBaralhoADM.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -379,5 +414,9 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signoutToolStripMenuItem;
     }
 }
