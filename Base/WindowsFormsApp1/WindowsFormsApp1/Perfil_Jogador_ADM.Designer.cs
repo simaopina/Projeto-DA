@@ -55,15 +55,47 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxNickName = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.picbxAvatar = new System.Windows.Forms.PictureBox();
+            this.numupdownIdade = new System.Windows.Forms.NumericUpDown();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.gbxPerfilJogador.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxPerfilJogador
             // 
+            this.gbxPerfilJogador.Controls.Add(this.btnAlterar);
+            this.gbxPerfilJogador.Controls.Add(this.numupdownIdade);
+            this.gbxPerfilJogador.Controls.Add(this.tbxEmail);
+            this.gbxPerfilJogador.Controls.Add(this.tbxNickName);
+            this.gbxPerfilJogador.Controls.Add(this.picbxAvatar);
+            this.gbxPerfilJogador.Controls.Add(this.tbxNome);
+            this.gbxPerfilJogador.Controls.Add(this.label11);
+            this.gbxPerfilJogador.Controls.Add(this.label14);
+            this.gbxPerfilJogador.Controls.Add(this.label12);
+            this.gbxPerfilJogador.Controls.Add(this.label13);
             this.gbxPerfilJogador.Location = new System.Drawing.Point(245, 272);
             this.gbxPerfilJogador.Name = "gbxPerfilJogador";
             this.gbxPerfilJogador.Size = new System.Drawing.Size(348, 248);
@@ -296,7 +328,10 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.baralhoToolStripMenuItem,
+            this.jogadoresToolStripMenuItem,
+            this.terminarSessãoToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
             this.menuStripHome.Size = new System.Drawing.Size(640, 24);
@@ -306,8 +341,8 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.loginToolStripMenuItem.Text = "Permissões";
             // 
             // pictureBox1
             // 
@@ -317,6 +352,148 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // baralhoToolStripMenuItem
+            // 
+            this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baralhoToolStripMenuItem1,
+            this.editarBaralhoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cartasToolStripMenuItem});
+            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.baralhoToolStripMenuItem.Text = "Baralho";
+            // 
+            // baralhoToolStripMenuItem1
+            // 
+            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Text = "Baralho";
+            // 
+            // editarBaralhoToolStripMenuItem
+            // 
+            this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Text = "Cartas";
+            // 
+            // jogadoresToolStripMenuItem
+            // 
+            this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfilToolStripMenuItem,
+            this.novoJogadorToolStripMenuItem});
+            this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
+            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            // 
+            // novoJogadorToolStripMenuItem
+            // 
+            this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
+            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.novoJogadorToolStripMenuItem.Text = "Adicionar Novo";
+            // 
+            // terminarSessãoToolStripMenuItem
+            // 
+            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            // 
+            // tbxNickName
+            // 
+            this.tbxNickName.Location = new System.Drawing.Point(191, 111);
+            this.tbxNickName.Name = "tbxNickName";
+            this.tbxNickName.Size = new System.Drawing.Size(142, 20);
+            this.tbxNickName.TabIndex = 40;
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Location = new System.Drawing.Point(191, 75);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(142, 20);
+            this.tbxEmail.TabIndex = 39;
+            // 
+            // tbxNome
+            // 
+            this.tbxNome.Location = new System.Drawing.Point(191, 44);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(142, 20);
+            this.tbxNome.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(151, 147);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Idade:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(128, 114);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "NickName:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(153, 78);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Email:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(150, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Nome:";
+            // 
+            // picbxAvatar
+            // 
+            this.picbxAvatar.Location = new System.Drawing.Point(17, 50);
+            this.picbxAvatar.Name = "picbxAvatar";
+            this.picbxAvatar.Size = new System.Drawing.Size(100, 83);
+            this.picbxAvatar.TabIndex = 32;
+            this.picbxAvatar.TabStop = false;
+            // 
+            // numupdownIdade
+            // 
+            this.numupdownIdade.Location = new System.Drawing.Point(191, 145);
+            this.numupdownIdade.Name = "numupdownIdade";
+            this.numupdownIdade.Size = new System.Drawing.Size(142, 20);
+            this.numupdownIdade.TabIndex = 41;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(17, 205);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(100, 23);
+            this.btnAlterar.TabIndex = 42;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // Perfil_Jogador_ADM
             // 
@@ -337,6 +514,8 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Perfil_Jogador_ADM";
             this.Text = "Perfil_Jogador_ADM";
+            this.gbxPerfilJogador.ResumeLayout(false);
+            this.gbxPerfilJogador.PerformLayout();
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -345,6 +524,8 @@
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +560,24 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoJogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.TextBox tbxNickName;
+        private System.Windows.Forms.PictureBox picbxAvatar;
+        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.NumericUpDown numupdownIdade;
     }
 }
