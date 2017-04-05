@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{694EAB67-CF22-45E7-B953-A6CDD1FE8DEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADD_Jogador_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADD_Jogador_ADM.Designer.cs">
+      <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baralho_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baralho_ADM.Designer.cs">
+      <DependentUpon>Baralho_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Baralho_Arbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baralho_Arbitro.Designer.cs">
+      <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cartas_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cartas_ADM.Designer.cs">
+      <DependentUpon>Cartas_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cartas_Arbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cartas_Arbitro.Designer.cs">
+      <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edicao_Baralhos_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edicao_Baralhos_ADM.Designer.cs">
+      <DependentUpon>Edicao_Baralhos_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hitorico_Arbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hitorico_Arbitro.Designer.cs">
+      <DependentUpon>Hitorico_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Arbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Arbitro.Designer.cs">
+      <DependentUpon>Home_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info_Cartas_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_Cartas_ADM.Designer.cs">
+      <DependentUpon>Info_Cartas_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info_Cartas_Arbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_Cartas_Arbitro.Designer.cs">
+      <DependentUpon>Info_Cartas_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JogoArbitro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JogoArbitro.Designer.cs">
+      <DependentUpon>JogoArbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil_Jogador_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfil_Jogador_ADM.Designer.cs">
+      <DependentUpon>Perfil_Jogador_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permissoes_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Permissoes_ADM.Designer.cs">
+      <DependentUpon>Permissoes_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ADD_Jogador_ADM.resx">
+      <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baralho_ADM.resx">
+      <DependentUpon>Baralho_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baralho_Arbitro.resx">
+      <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cartas_ADM.resx">
+      <DependentUpon>Cartas_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cartas_Arbitro.resx">
+      <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edicao_Baralhos_ADM.resx">
+      <DependentUpon>Edicao_Baralhos_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hitorico_Arbitro.resx">
+      <DependentUpon>Hitorico_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Arbitro.resx">
+      <DependentUpon>Home_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_Cartas_ADM.resx">
+      <DependentUpon>Info_Cartas_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info_Cartas_Arbitro.resx">
+      <DependentUpon>Info_Cartas_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JogoArbitro.resx">
+      <DependentUpon>JogoArbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil_Jogador_ADM.resx">
+      <DependentUpon>Perfil_Jogador_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Permissoes_ADM.resx">
+      <DependentUpon>Permissoes_ADM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17693025_1281970771857255_600020987_o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17813900_1281975635190102_1290798384_n.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

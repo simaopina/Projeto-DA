@@ -28,51 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.pesquisa = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
+            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
+            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
+            this.rbtnCartas = new System.Windows.Forms.RadioButton();
+            this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.listRank = new System.Windows.Forms.ListView();
             this.listEquipas = new System.Windows.Forms.ListView();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbxRank = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbxEquipas = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
+            this.gbxNoticias = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.menuStripHome.SuspendLayout();
+            this.gbxRank.SuspendLayout();
+            this.gbxEquipas.SuspendLayout();
+            this.gbxCuriosidades.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStripHome
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.loginToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(627, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripHome.Location = new System.Drawing.Point(0, 0);
+            this.menuStripHome.Name = "menuStripHome";
+            this.menuStripHome.Size = new System.Drawing.Size(627, 24);
+            this.menuStripHome.TabIndex = 0;
+            this.menuStripHome.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
@@ -86,67 +85,66 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.loginToolStripMenuItem.Text = "Login";
             // 
-            // button1
+            // btnPesquisar
             // 
-            this.button1.Location = new System.Drawing.Point(518, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Pesquisar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPesquisar.Location = new System.Drawing.Point(518, 203);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbtnArbitro
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(245, 233);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Arbitro";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbtnArbitro.AutoSize = true;
+            this.rbtnArbitro.Location = new System.Drawing.Point(245, 233);
+            this.rbtnArbitro.Name = "rbtnArbitro";
+            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
+            this.rbtnArbitro.TabIndex = 2;
+            this.rbtnArbitro.TabStop = true;
+            this.rbtnArbitro.Text = "Arbitro";
+            this.rbtnArbitro.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbtnJogadores
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(307, 233);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(74, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Jogadores";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbtnJogadores.AutoSize = true;
+            this.rbtnJogadores.Location = new System.Drawing.Point(307, 233);
+            this.rbtnJogadores.Name = "rbtnJogadores";
+            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
+            this.rbtnJogadores.TabIndex = 3;
+            this.rbtnJogadores.TabStop = true;
+            this.rbtnJogadores.Text = "Jogadores";
+            this.rbtnJogadores.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbtnTorneio
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(388, 233);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(61, 17);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Torneio";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbtnTorneio.AutoSize = true;
+            this.rbtnTorneio.Location = new System.Drawing.Point(388, 233);
+            this.rbtnTorneio.Name = "rbtnTorneio";
+            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
+            this.rbtnTorneio.TabIndex = 4;
+            this.rbtnTorneio.TabStop = true;
+            this.rbtnTorneio.Text = "Torneio";
+            this.rbtnTorneio.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rbtnCartas
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(456, 233);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(55, 17);
-            this.radioButton4.TabIndex = 5;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Cartas";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rbtnCartas.AutoSize = true;
+            this.rbtnCartas.Location = new System.Drawing.Point(456, 233);
+            this.rbtnCartas.Name = "rbtnCartas";
+            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
+            this.rbtnCartas.TabIndex = 5;
+            this.rbtnCartas.TabStop = true;
+            this.rbtnCartas.Text = "Cartas";
+            this.rbtnCartas.UseVisualStyleBackColor = true;
             // 
-            // pesquisa
+            // tbxpesquisa
             // 
-            this.pesquisa.Location = new System.Drawing.Point(245, 203);
-            this.pesquisa.Name = "pesquisa";
-            this.pesquisa.Size = new System.Drawing.Size(266, 20);
-            this.pesquisa.TabIndex = 6;
-            this.pesquisa.Text = "Pesquisar...";
+            this.tbxpesquisa.Location = new System.Drawing.Point(245, 203);
+            this.tbxpesquisa.Name = "tbxpesquisa";
+            this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
+            this.tbxpesquisa.TabIndex = 6;
+            this.tbxpesquisa.Text = "Pesquisar...";
             // 
             // listRank
             // 
@@ -190,20 +188,20 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "2.";
             // 
-            // groupBox1
+            // gbxRank
             // 
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.listRank);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(35, 196);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(179, 100);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Rank Jogadores";
+            this.gbxRank.Controls.Add(this.label7);
+            this.gbxRank.Controls.Add(this.label6);
+            this.gbxRank.Controls.Add(this.label1);
+            this.gbxRank.Controls.Add(this.listRank);
+            this.gbxRank.Controls.Add(this.label5);
+            this.gbxRank.Controls.Add(this.label4);
+            this.gbxRank.Location = new System.Drawing.Point(35, 196);
+            this.gbxRank.Name = "gbxRank";
+            this.gbxRank.Size = new System.Drawing.Size(179, 100);
+            this.gbxRank.TabIndex = 15;
+            this.gbxRank.TabStop = false;
+            this.gbxRank.Text = "Rank Jogadores";
             // 
             // label7
             // 
@@ -232,20 +230,20 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "3.";
             // 
-            // groupBox2
+            // gbxEquipas
             // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.listEquipas);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(35, 303);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(179, 100);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Rank Equipas";
+            this.gbxEquipas.Controls.Add(this.label2);
+            this.gbxEquipas.Controls.Add(this.listEquipas);
+            this.gbxEquipas.Controls.Add(this.label3);
+            this.gbxEquipas.Controls.Add(this.label8);
+            this.gbxEquipas.Controls.Add(this.label10);
+            this.gbxEquipas.Controls.Add(this.label9);
+            this.gbxEquipas.Location = new System.Drawing.Point(35, 303);
+            this.gbxEquipas.Name = "gbxEquipas";
+            this.gbxEquipas.Size = new System.Drawing.Size(179, 100);
+            this.gbxEquipas.TabIndex = 16;
+            this.gbxEquipas.TabStop = false;
+            this.gbxEquipas.Text = "Rank Equipas";
             // 
             // label2
             // 
@@ -292,37 +290,33 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "2.";
             // 
-            // groupBox3
+            // gbxCuriosidades
             // 
-            this.groupBox3.Controls.Add(this.list_Curiosidades);
-            this.groupBox3.Location = new System.Drawing.Point(35, 415);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(179, 100);
-            this.groupBox3.TabIndex = 17;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Curiosidades";
+            this.gbxCuriosidades.Controls.Add(this.list_Curiosidades);
+            this.gbxCuriosidades.Location = new System.Drawing.Point(35, 415);
+            this.gbxCuriosidades.Name = "gbxCuriosidades";
+            this.gbxCuriosidades.Size = new System.Drawing.Size(179, 100);
+            this.gbxCuriosidades.TabIndex = 17;
+            this.gbxCuriosidades.TabStop = false;
+            this.gbxCuriosidades.Text = "Curiosidades";
             // 
-            // groupBox4
+            // gbxNoticias
             // 
-            this.groupBox4.Location = new System.Drawing.Point(245, 270);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(348, 248);
-            this.groupBox4.TabIndex = 18;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.gbxNoticias.Location = new System.Drawing.Point(245, 270);
+            this.gbxNoticias.Name = "gbxNoticias";
+            this.gbxNoticias.Size = new System.Drawing.Size(348, 248);
+            this.gbxNoticias.TabIndex = 18;
+            this.gbxNoticias.TabStop = false;
+            this.gbxNoticias.Text = "Noticias";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
-            // 
-            // fontDialog1
-            // 
-            this.fontDialog1.Apply += new System.EventHandler(this.fontDialog1_Apply);
             // 
             // Home
             // 
@@ -330,29 +324,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(627, 539);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pesquisa);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.gbxNoticias);
+            this.Controls.Add(this.gbxCuriosidades);
+            this.Controls.Add(this.gbxEquipas);
+            this.Controls.Add(this.gbxRank);
+            this.Controls.Add(this.tbxpesquisa);
+            this.Controls.Add(this.rbtnCartas);
+            this.Controls.Add(this.rbtnTorneio);
+            this.Controls.Add(this.rbtnJogadores);
+            this.Controls.Add(this.rbtnArbitro);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.menuStripHome);
             this.Controls.Add(this.pictureBox1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStripHome;
             this.Name = "Home";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.menuStripHome.ResumeLayout(false);
+            this.menuStripHome.PerformLayout();
+            this.gbxRank.ResumeLayout(false);
+            this.gbxRank.PerformLayout();
+            this.gbxEquipas.ResumeLayout(false);
+            this.gbxEquipas.PerformLayout();
+            this.gbxCuriosidades.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -361,34 +355,33 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.TextBox pesquisa;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.RadioButton rbtnArbitro;
+        private System.Windows.Forms.RadioButton rbtnJogadores;
+        private System.Windows.Forms.RadioButton rbtnTorneio;
+        private System.Windows.Forms.RadioButton rbtnCartas;
+        private System.Windows.Forms.TextBox tbxpesquisa;
         private System.Windows.Forms.ListView listRank;
         private System.Windows.Forms.ListView listEquipas;
         private System.Windows.Forms.ListView list_Curiosidades;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbxRank;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbxEquipas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox gbxCuriosidades;
+        private System.Windows.Forms.GroupBox gbxNoticias;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
