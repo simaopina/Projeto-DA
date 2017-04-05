@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public Home()
         {
             InitializeComponent();
+       
         }
 
         private void Home_Load(object sender, EventArgs e)
