@@ -55,15 +55,28 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.gbxNovoJogadorADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNovoJogadorADM
             // 
+            this.gbxNovoJogadorADM.Controls.Add(this.pictureBox2);
             this.gbxNovoJogadorADM.Location = new System.Drawing.Point(244, 271);
             this.gbxNovoJogadorADM.Name = "gbxNovoJogadorADM";
             this.gbxNovoJogadorADM.Size = new System.Drawing.Size(348, 248);
@@ -296,7 +309,10 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.baralhoToolStripMenuItem,
+            this.jogadoresToolStripMenuItem,
+            this.signOutToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
             this.menuStripHome.Size = new System.Drawing.Size(632, 24);
@@ -306,8 +322,8 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.loginToolStripMenuItem.Text = "Login";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.loginToolStripMenuItem.Text = "Permissões";
             // 
             // pictureBox1
             // 
@@ -317,6 +333,75 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(36, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 83);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // baralhoToolStripMenuItem
+            // 
+            this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baralhoToolStripMenuItem1,
+            this.cartasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cartasToolStripMenuItem1});
+            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.baralhoToolStripMenuItem.Text = "Baralho";
+            // 
+            // jogadoresToolStripMenuItem
+            // 
+            this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfilToolStripMenuItem,
+            this.adicionarNovoToolStripMenuItem});
+            this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
+            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            // 
+            // signOutToolStripMenuItem
+            // 
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.signOutToolStripMenuItem.Text = "Terminar Sessão";
+            // 
+            // baralhoToolStripMenuItem1
+            // 
+            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Text = "Baralho";
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Text = "Editar Baralho";
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            // 
+            // adicionarNovoToolStripMenuItem
+            // 
+            this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.adicionarNovoToolStripMenuItem.Text = "Adicionar Novo";
+            // 
+            // cartasToolStripMenuItem1
+            // 
+            this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Text = "Cartas";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // ADD_Jogador_ADM
             // 
@@ -337,6 +422,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "ADD_Jogador_ADM";
             this.Text = "ADD_Jogador_ADM";
+            this.gbxNovoJogadorADM.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -345,6 +431,7 @@
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +466,15 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem1;
     }
 }
