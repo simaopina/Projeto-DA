@@ -55,7 +55,7 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picbxAvatar = new System.Windows.Forms.PictureBox();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,18 +65,41 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnInserirAvatar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxNickName = new System.Windows.Forms.TextBox();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.numupdownIdade = new System.Windows.Forms.NumericUpDown();
             this.gbxNovoJogadorADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNovoJogadorADM
             // 
-            this.gbxNovoJogadorADM.Controls.Add(this.pictureBox2);
+            this.gbxNovoJogadorADM.Controls.Add(this.numupdownIdade);
+            this.gbxNovoJogadorADM.Controls.Add(this.btnCancelar);
+            this.gbxNovoJogadorADM.Controls.Add(this.btnInserir);
+            this.gbxNovoJogadorADM.Controls.Add(this.tbxNickName);
+            this.gbxNovoJogadorADM.Controls.Add(this.tbxEmail);
+            this.gbxNovoJogadorADM.Controls.Add(this.tbxNome);
+            this.gbxNovoJogadorADM.Controls.Add(this.label14);
+            this.gbxNovoJogadorADM.Controls.Add(this.label13);
+            this.gbxNovoJogadorADM.Controls.Add(this.label12);
+            this.gbxNovoJogadorADM.Controls.Add(this.label11);
+            this.gbxNovoJogadorADM.Controls.Add(this.btnInserirAvatar);
+            this.gbxNovoJogadorADM.Controls.Add(this.picbxAvatar);
             this.gbxNovoJogadorADM.Location = new System.Drawing.Point(244, 271);
             this.gbxNovoJogadorADM.Name = "gbxNovoJogadorADM";
             this.gbxNovoJogadorADM.Size = new System.Drawing.Size(348, 248);
@@ -334,13 +357,13 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // picbxAvatar
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(36, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 83);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.picbxAvatar.Location = new System.Drawing.Point(20, 52);
+            this.picbxAvatar.Name = "picbxAvatar";
+            this.picbxAvatar.Size = new System.Drawing.Size(100, 83);
+            this.picbxAvatar.TabIndex = 0;
+            this.picbxAvatar.TabStop = false;
             // 
             // baralhoToolStripMenuItem
             // 
@@ -403,6 +426,97 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
+            // btnInserirAvatar
+            // 
+            this.btnInserirAvatar.Location = new System.Drawing.Point(20, 142);
+            this.btnInserirAvatar.Name = "btnInserirAvatar";
+            this.btnInserirAvatar.Size = new System.Drawing.Size(100, 23);
+            this.btnInserirAvatar.TabIndex = 1;
+            this.btnInserirAvatar.Text = "Inserir Imagem";
+            this.btnInserirAvatar.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(153, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Nome:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(156, 80);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Email:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(131, 116);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "NickName:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(154, 149);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Idade:";
+            // 
+            // tbxNome
+            // 
+            this.tbxNome.Location = new System.Drawing.Point(194, 46);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(142, 20);
+            this.tbxNome.TabIndex = 6;
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Location = new System.Drawing.Point(194, 77);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(142, 20);
+            this.tbxEmail.TabIndex = 7;
+            // 
+            // tbxNickName
+            // 
+            this.tbxNickName.Location = new System.Drawing.Point(194, 113);
+            this.tbxNickName.Name = "tbxNickName";
+            this.tbxNickName.Size = new System.Drawing.Size(142, 20);
+            this.tbxNickName.TabIndex = 8;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Location = new System.Drawing.Point(98, 205);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(75, 23);
+            this.btnInserir.TabIndex = 10;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(180, 205);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // numupdownIdade
+            // 
+            this.numupdownIdade.Location = new System.Drawing.Point(194, 145);
+            this.numupdownIdade.Name = "numupdownIdade";
+            this.numupdownIdade.Size = new System.Drawing.Size(142, 20);
+            this.numupdownIdade.TabIndex = 12;
+            // 
             // ADD_Jogador_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,6 +537,7 @@
             this.Name = "ADD_Jogador_ADM";
             this.Text = "ADD_Jogador_ADM";
             this.gbxNovoJogadorADM.ResumeLayout(false);
+            this.gbxNovoJogadorADM.PerformLayout();
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -431,7 +546,8 @@
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,7 +582,7 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picbxAvatar;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
@@ -476,5 +592,16 @@
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.TextBox tbxNickName;
+        private System.Windows.Forms.TextBox tbxEmail;
+        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnInserirAvatar;
+        private System.Windows.Forms.NumericUpDown numupdownIdade;
     }
 }
