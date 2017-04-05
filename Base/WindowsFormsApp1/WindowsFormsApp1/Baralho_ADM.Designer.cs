@@ -59,6 +59,12 @@
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.gbxBaralhoADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -336,12 +342,20 @@
             // 
             // baralhoToolStripMenuItem
             // 
+            this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baralhoToolStripMenuItem1,
+            this.cartasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cartasToolStripMenuItem1});
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
             this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.baralhoToolStripMenuItem.Text = "Baralho";
             // 
             // jogadoresToolStripMenuItem
             // 
+            this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.perfilToolStripMenuItem,
+            this.adicionarNovoToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
             this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.jogadoresToolStripMenuItem.Text = "Jogadores";
@@ -349,8 +363,43 @@
             // signoutToolStripMenuItem
             // 
             this.signoutToolStripMenuItem.Name = "signoutToolStripMenuItem";
-            this.signoutToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.signoutToolStripMenuItem.Text = "Signout";
+            this.signoutToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.signoutToolStripMenuItem.Text = "Terminar sessão";
+            // 
+            // perfilToolStripMenuItem
+            // 
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            // 
+            // adicionarNovoToolStripMenuItem
+            // 
+            this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.adicionarNovoToolStripMenuItem.Text = "Adicionar novo";
+            // 
+            // baralhoToolStripMenuItem1
+            // 
+            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Text = "Baralho";
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Text = "Editar Baralho";
+            // 
+            // cartasToolStripMenuItem1
+            // 
+            this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Text = "Cartas";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // Baralho_ADM
             // 
@@ -418,5 +467,11 @@
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
     }
 }
