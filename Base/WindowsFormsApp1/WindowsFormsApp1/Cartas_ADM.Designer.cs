@@ -376,8 +376,8 @@
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.signOutToolStripMenuItem.Text = "Terminar sessão";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.signOutToolStripMenuItem.Text = "Terminar Sessão";
             // 
             // perfilToolStripMenuItem
             // 
