@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +76,11 @@
     </Compile>
     <Compile Include="Cartas_Arbitro.Designer.cs">
       <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramaEntidadesArcmage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
     </Compile>
     <Compile Include="Edicao_Baralhos_ADM.cs">
       <SubType>Form</SubType>
@@ -192,6 +199,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DiagramaEntidadesArcmage.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DiagramaEntidadesArcmage.edmx.diagram">
+      <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
