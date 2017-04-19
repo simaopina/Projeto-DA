@@ -55,6 +55,8 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listVCartasARB = new System.Windows.Forms.ListView();
+            this.gbxCartasArbitro.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -64,6 +66,7 @@
             // 
             // gbxCartasArbitro
             // 
+            this.gbxCartasArbitro.Controls.Add(this.listVCartasARB);
             this.gbxCartasArbitro.Location = new System.Drawing.Point(245, 271);
             this.gbxCartasArbitro.Name = "gbxCartasArbitro";
             this.gbxCartasArbitro.Size = new System.Drawing.Size(348, 248);
@@ -318,6 +321,14 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // listVCartasARB
+            // 
+            this.listVCartasARB.Location = new System.Drawing.Point(7, 20);
+            this.listVCartasARB.Name = "listVCartasARB";
+            this.listVCartasARB.Size = new System.Drawing.Size(335, 222);
+            this.listVCartasARB.TabIndex = 0;
+            this.listVCartasARB.UseCompatibleStateImageBehavior = false;
+            // 
             // Cartas_Arbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +348,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Cartas_Arbitro";
             this.Text = "Cartas_Arbitro";
+            this.gbxCartasArbitro.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -379,5 +391,6 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ListView listVCartasARB;
     }
 }
