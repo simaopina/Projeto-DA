@@ -53,17 +53,19 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
+            this.permissõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.torneiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.permissõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listVCartasADM = new System.Windows.Forms.ListView();
+            this.gbxCartasADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -73,6 +75,7 @@
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.listVCartasADM);
             this.gbxCartasADM.Location = new System.Drawing.Point(245, 271);
             this.gbxCartasADM.Name = "gbxCartasADM";
             this.gbxCartasADM.Size = new System.Drawing.Size(348, 248);
@@ -315,6 +318,12 @@
             this.menuStripHome.TabIndex = 20;
             this.menuStripHome.Text = "menuStrip1";
             // 
+            // permissõesToolStripMenuItem
+            // 
+            this.permissõesToolStripMenuItem.Name = "permissõesToolStripMenuItem";
+            this.permissõesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.permissõesToolStripMenuItem.Text = "Permissões";
+            // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -326,36 +335,27 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.loginToolStripMenuItem.Text = "Baralho";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // baralhoToolStripMenuItem
             // 
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem.Text = "Baralho";
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Editar Baralho";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem1
             // 
             this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem1.Text = "Cartas";
             // 
             // torneiosToolStripMenuItem
@@ -367,11 +367,17 @@
             this.torneiosToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.torneiosToolStripMenuItem.Text = "Jogadores";
             // 
-            // permissõesToolStripMenuItem
+            // perfilToolStripMenuItem
             // 
-            this.permissõesToolStripMenuItem.Name = "permissõesToolStripMenuItem";
-            this.permissõesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.permissõesToolStripMenuItem.Text = "Permissões";
+            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.perfilToolStripMenuItem.Text = "Perfil";
+            // 
+            // addJogadorToolStripMenuItem
+            // 
+            this.addJogadorToolStripMenuItem.Name = "addJogadorToolStripMenuItem";
+            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.addJogadorToolStripMenuItem.Text = "Add jogador";
             // 
             // signOutToolStripMenuItem
             // 
@@ -379,17 +385,22 @@
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.signOutToolStripMenuItem.Text = "Terminar Sessão";
             // 
-            // perfilToolStripMenuItem
+            // pictureBox1
             // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
-            // addJogadorToolStripMenuItem
+            // listVCartasADM
             // 
-            this.addJogadorToolStripMenuItem.Name = "addJogadorToolStripMenuItem";
-            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addJogadorToolStripMenuItem.Text = "Add jogador";
+            this.listVCartasADM.Location = new System.Drawing.Point(17, 20);
+            this.listVCartasADM.Name = "listVCartasADM";
+            this.listVCartasADM.Size = new System.Drawing.Size(316, 222);
+            this.listVCartasADM.TabIndex = 0;
+            this.listVCartasADM.UseCompatibleStateImageBehavior = false;
             // 
             // Cartas_ADM
             // 
@@ -410,6 +421,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Cartas_ADM";
             this.Text = "Cartas_ADM";
+            this.gbxCartasADM.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -461,5 +473,6 @@
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
+        private System.Windows.Forms.ListView listVCartasADM;
     }
 }
