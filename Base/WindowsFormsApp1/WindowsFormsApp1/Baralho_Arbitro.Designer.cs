@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baralho_Arbitro));
             this.gbxBaralhoArbitro = new System.Windows.Forms.GroupBox();
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
@@ -55,6 +57,10 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listVbaralhoArbitro = new System.Windows.Forms.ListView();
+            this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
+            this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
+            this.gbxBaralhoArbitro.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -64,6 +70,7 @@
             // 
             // gbxBaralhoArbitro
             // 
+            this.gbxBaralhoArbitro.Controls.Add(this.listVbaralhoArbitro);
             this.gbxBaralhoArbitro.Location = new System.Drawing.Point(245, 270);
             this.gbxBaralhoArbitro.Name = "gbxBaralhoArbitro";
             this.gbxBaralhoArbitro.Size = new System.Drawing.Size(348, 248);
@@ -318,6 +325,70 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // listVbaralhoArbitro
+            // 
+            this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 20);
+            this.listVbaralhoArbitro.Name = "listVbaralhoArbitro";
+            this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 222);
+            this.listVbaralhoArbitro.TabIndex = 0;
+            this.listVbaralhoArbitro.UseCompatibleStateImageBehavior = false;
+            // 
+            // listaBaralhoArbitroUneasyAlliance
+            // 
+            this.listaBaralhoArbitroUneasyAlliance.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listaBaralhoArbitroUneasyAlliance.ImageStream")));
+            this.listaBaralhoArbitroUneasyAlliance.TransparentColor = System.Drawing.Color.Transparent;
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(0, "1.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(1, "2.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(2, "3.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(3, "4.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(4, "5.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(5, "6.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(6, "7.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(7, "8.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(8, "9.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(9, "10.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(10, "11.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(11, "12.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(12, "13.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(13, "14.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(14, "15.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(15, "16.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(16, "17.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(17, "18.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(18, "19.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(19, "20.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(20, "21.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(21, "22.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(22, "23.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(23, "24.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(24, "25.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(25, "26.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(26, "27.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(27, "28.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(28, "29.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(29, "30.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(30, "31.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(31, "32.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(32, "33.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(33, "34.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(34, "35.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(35, "36.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(36, "37.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(37, "38.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(38, "39.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(39, "40.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(40, "41.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(41, "42.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(42, "43.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(43, "44.PNG");
+            this.listaBaralhoArbitroUneasyAlliance.Images.SetKeyName(44, "45.PNG");
+            // 
+            // listaBaralhoArbitroGaianloveforlife
+            // 
+            this.listaBaralhoArbitroGaianloveforlife.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.listaBaralhoArbitroGaianloveforlife.ImageSize = new System.Drawing.Size(16, 16);
+            this.listaBaralhoArbitroGaianloveforlife.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // Baralho_Arbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +408,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Baralho_Arbitro";
             this.Text = "Baralho_Arbitro";
+            this.gbxBaralhoArbitro.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -379,5 +451,8 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ListView listVbaralhoArbitro;
+        private System.Windows.Forms.ImageList listaBaralhoArbitroUneasyAlliance;
+        private System.Windows.Forms.ImageList listaBaralhoArbitroGaianloveforlife;
     }
 }
