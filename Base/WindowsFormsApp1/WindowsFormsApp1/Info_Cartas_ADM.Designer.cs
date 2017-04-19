@@ -55,6 +55,12 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.gbxInfoCartasADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -64,6 +70,11 @@
             // 
             // gbxInfoCartasADM
             // 
+            this.gbxInfoCartasADM.Controls.Add(this.label12);
+            this.gbxInfoCartasADM.Controls.Add(this.label11);
+            this.gbxInfoCartasADM.Controls.Add(this.button2);
+            this.gbxInfoCartasADM.Controls.Add(this.button1);
+            this.gbxInfoCartasADM.Controls.Add(this.groupBox1);
             this.gbxInfoCartasADM.Location = new System.Drawing.Point(245, 271);
             this.gbxInfoCartasADM.Name = "gbxInfoCartasADM";
             this.gbxInfoCartasADM.Size = new System.Drawing.Size(348, 248);
@@ -318,6 +329,51 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(40, 51);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(112, 154);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Carta";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 30);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "<";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(314, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 30);
+            this.button2.TabIndex = 2;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(59, 35);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(76, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Titulo da Carta";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(167, 64);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 13);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "Info da carta";
+            // 
             // Info_Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +393,8 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Info_Cartas_ADM";
             this.Text = "Info_Cartas_ADM";
+            this.gbxInfoCartasADM.ResumeLayout(false);
+            this.gbxInfoCartasADM.PerformLayout();
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -379,5 +437,10 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button2;
     }
 }
