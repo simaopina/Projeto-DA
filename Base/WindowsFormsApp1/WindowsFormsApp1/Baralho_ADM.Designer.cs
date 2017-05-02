@@ -67,8 +67,8 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBaralhoGaian = new System.Windows.Forms.Button();
-            this.btnBaralhoUneasy = new System.Windows.Forms.Button();
+            this.btnBaralhoGaianAMD = new System.Windows.Forms.Button();
+            this.btnBaralhoUneasyADM = new System.Windows.Forms.Button();
             this.ListaBaralhoUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
             this.ListaBaralhoGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
             this.gbxBaralhoADM.SuspendLayout();
@@ -409,23 +409,23 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // btnBaralhoGaian
+            // btnBaralhoGaianAMD
             // 
-            this.btnBaralhoGaian.Location = new System.Drawing.Point(274, 274);
-            this.btnBaralhoGaian.Name = "btnBaralhoGaian";
-            this.btnBaralhoGaian.Size = new System.Drawing.Size(119, 24);
-            this.btnBaralhoGaian.TabIndex = 7;
-            this.btnBaralhoGaian.Text = "Gaian love for life";
-            this.btnBaralhoGaian.UseVisualStyleBackColor = true;
+            this.btnBaralhoGaianAMD.Location = new System.Drawing.Point(274, 274);
+            this.btnBaralhoGaianAMD.Name = "btnBaralhoGaianAMD";
+            this.btnBaralhoGaianAMD.Size = new System.Drawing.Size(119, 24);
+            this.btnBaralhoGaianAMD.TabIndex = 7;
+            this.btnBaralhoGaianAMD.Text = "Gaian love for life";
+            this.btnBaralhoGaianAMD.UseVisualStyleBackColor = true;
             // 
-            // btnBaralhoUneasy
+            // btnBaralhoUneasyADM
             // 
-            this.btnBaralhoUneasy.Location = new System.Drawing.Point(420, 275);
-            this.btnBaralhoUneasy.Name = "btnBaralhoUneasy";
-            this.btnBaralhoUneasy.Size = new System.Drawing.Size(119, 22);
-            this.btnBaralhoUneasy.TabIndex = 8;
-            this.btnBaralhoUneasy.Text = "Uneasy Alliance";
-            this.btnBaralhoUneasy.UseVisualStyleBackColor = true;
+            this.btnBaralhoUneasyADM.Location = new System.Drawing.Point(420, 275);
+            this.btnBaralhoUneasyADM.Name = "btnBaralhoUneasyADM";
+            this.btnBaralhoUneasyADM.Size = new System.Drawing.Size(119, 22);
+            this.btnBaralhoUneasyADM.TabIndex = 8;
+            this.btnBaralhoUneasyADM.Text = "Uneasy Alliance";
+            this.btnBaralhoUneasyADM.UseVisualStyleBackColor = true;
             // 
             // ListaBaralhoUneasyAlliance
             // 
@@ -532,9 +532,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 539);
-            this.Controls.Add(this.btnBaralhoUneasy);
+            this.Controls.Add(this.btnBaralhoUneasyADM);
             this.Controls.Add(this.gbxBaralhoADM);
-            this.Controls.Add(this.btnBaralhoGaian);
+            this.Controls.Add(this.btnBaralhoGaianAMD);
             this.Controls.Add(this.gbxCuriosidades);
             this.Controls.Add(this.gbxEquipas);
             this.Controls.Add(this.gbxRank);
@@ -600,8 +600,8 @@
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
-        private System.Windows.Forms.Button btnBaralhoGaian;
-        private System.Windows.Forms.Button btnBaralhoUneasy;
+        private System.Windows.Forms.Button btnBaralhoGaianAMD;
+        private System.Windows.Forms.Button btnBaralhoUneasyADM;
         private System.Windows.Forms.ListView ListVBaralhoADM;
         private System.Windows.Forms.ImageList ListaBaralhoUneasyAlliance;
         private System.Windows.Forms.ImageList ListaBaralhoGaianloveforlife;

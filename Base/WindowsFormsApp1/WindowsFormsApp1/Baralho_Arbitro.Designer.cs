@@ -60,6 +60,8 @@
             this.listVbaralhoArbitro = new System.Windows.Forms.ListView();
             this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
             this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
+            this.btnBaralhoGaianArbitro = new System.Windows.Forms.Button();
+            this.btnBaralhoUneasyADM = new System.Windows.Forms.Button();
             this.gbxBaralhoArbitro.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -71,9 +73,9 @@
             // gbxBaralhoArbitro
             // 
             this.gbxBaralhoArbitro.Controls.Add(this.listVbaralhoArbitro);
-            this.gbxBaralhoArbitro.Location = new System.Drawing.Point(245, 270);
+            this.gbxBaralhoArbitro.Location = new System.Drawing.Point(245, 303);
             this.gbxBaralhoArbitro.Name = "gbxBaralhoArbitro";
-            this.gbxBaralhoArbitro.Size = new System.Drawing.Size(348, 248);
+            this.gbxBaralhoArbitro.Size = new System.Drawing.Size(348, 215);
             this.gbxBaralhoArbitro.TabIndex = 30;
             this.gbxBaralhoArbitro.TabStop = false;
             this.gbxBaralhoArbitro.Text = "Baralho";
@@ -327,9 +329,9 @@
             // 
             // listVbaralhoArbitro
             // 
-            this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 20);
+            this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 19);
             this.listVbaralhoArbitro.Name = "listVbaralhoArbitro";
-            this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 222);
+            this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 223);
             this.listVbaralhoArbitro.TabIndex = 0;
             this.listVbaralhoArbitro.UseCompatibleStateImageBehavior = false;
             // 
@@ -389,11 +391,31 @@
             this.listaBaralhoArbitroGaianloveforlife.ImageSize = new System.Drawing.Size(16, 16);
             this.listaBaralhoArbitroGaianloveforlife.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // btnBaralhoGaianArbitro
+            // 
+            this.btnBaralhoGaianArbitro.Location = new System.Drawing.Point(271, 272);
+            this.btnBaralhoGaianArbitro.Name = "btnBaralhoGaianArbitro";
+            this.btnBaralhoGaianArbitro.Size = new System.Drawing.Size(119, 24);
+            this.btnBaralhoGaianArbitro.TabIndex = 32;
+            this.btnBaralhoGaianArbitro.Text = "Gaian love for life";
+            this.btnBaralhoGaianArbitro.UseVisualStyleBackColor = true;
+            // 
+            // btnBaralhoUneasyADM
+            // 
+            this.btnBaralhoUneasyADM.Location = new System.Drawing.Point(439, 274);
+            this.btnBaralhoUneasyADM.Name = "btnBaralhoUneasyADM";
+            this.btnBaralhoUneasyADM.Size = new System.Drawing.Size(119, 22);
+            this.btnBaralhoUneasyADM.TabIndex = 33;
+            this.btnBaralhoUneasyADM.Text = "Uneasy Alliance";
+            this.btnBaralhoUneasyADM.UseVisualStyleBackColor = true;
+            // 
             // Baralho_Arbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 538);
+            this.Controls.Add(this.btnBaralhoUneasyADM);
+            this.Controls.Add(this.btnBaralhoGaianArbitro);
             this.Controls.Add(this.gbxBaralhoArbitro);
             this.Controls.Add(this.gbxCuriosidades);
             this.Controls.Add(this.gbxEquipas);
@@ -454,5 +476,7 @@
         private System.Windows.Forms.ListView listVbaralhoArbitro;
         private System.Windows.Forms.ImageList listaBaralhoArbitroUneasyAlliance;
         private System.Windows.Forms.ImageList listaBaralhoArbitroGaianloveforlife;
+        private System.Windows.Forms.Button btnBaralhoGaianArbitro;
+        private System.Windows.Forms.Button btnBaralhoUneasyADM;
     }
 }

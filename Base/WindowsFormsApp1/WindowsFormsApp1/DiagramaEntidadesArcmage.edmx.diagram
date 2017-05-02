@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4364f7295d6949638deb5e3d03f4db00" Name="Diagram1" ZoomLevel="82" >
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Card" Width="1.5" PointX="7.5" PointY="0.625" />
+      <Diagram DiagramId="4364f7295d6949638deb5e3d03f4db00" Name="Diagram1" ZoomLevel="79" >
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Card" Width="1.5" PointX="8.25" PointY="0.5" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Deck" Width="1.5" PointX="4.375" PointY="3.625" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.User" Width="1.5" PointX="2.625" PointY="0.5" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Game" Width="1.5" PointX="0.5" PointY="3.5" />
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Team" Width="1.5" PointX="9.5" PointY="8" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Team" Width="1.5" PointX="12.125" PointY="8" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Tournament" Width="1.5" PointX="11.25" PointY="1" />
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Player" Width="1.5" PointX="15.125" PointY="8.5" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Player" Width="1.5" PointX="20.375" PointY="8.5" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Referee" Width="1.5" PointX="0.5" PointY="0.5" />
         <InheritanceConnector EntityType="DiagramaEntidadesArcmage.Referee" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Administrator" Width="1.5" PointX="4.875" PointY="0.625" />
@@ -25,19 +25,23 @@
         <InheritanceConnector EntityType="DiagramaEntidadesArcmage.TeamGame" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTeamGame" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTeamGame1" />
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.TeamTournament" Width="1.5" PointX="8.625" PointY="5.625" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.TeamTournament" Width="1.5" PointX="10.625" PointY="4.25" />
         <InheritanceConnector EntityType="DiagramaEntidadesArcmage.TeamTournament" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournamentTeamGame" />
-        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournamentTeam" />
-        <AssociationConnector Association="DiagramaEntidadesArcmage.DeckCard" />
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.StandadTournament" Width="1.5" PointX="12.75" PointY="5.625" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.StandadTournament" Width="1.5" PointX="15" PointY="4.125" />
         <InheritanceConnector EntityType="DiagramaEntidadesArcmage.StandadTournament" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.StandadTournamentStardadGame" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerStardadGame" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerStardadGame1" />
-        <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerTeam" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Deck_Card" Width="1.5" PointX="7.5" PointY="4.25" />
+        <AssociationConnector Association="DiagramaEntidadesArcmage.DeckDeck_Card" />
+        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.TeamTournament_Team" Width="1.5" PointX="12.25" PointY="5.625" />
+        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament" />
+        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeam" />
+        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamPlayer" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerStandadTournament" />
-      </Diagram>
+        <AssociationConnector Association="DiagramaEntidadesArcmage.CardDeck_Card" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

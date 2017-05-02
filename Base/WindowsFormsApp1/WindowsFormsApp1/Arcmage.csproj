@@ -32,7 +32,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -53,6 +62,9 @@
     <Compile Include="ADD_Jogador_ADM.Designer.cs">
       <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrator.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Baralho_ADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +76,9 @@
     </Compile>
     <Compile Include="Baralho_Arbitro.Designer.cs">
       <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Card.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
     <Compile Include="Cartas_ADM.cs">
       <SubType>Form</SubType>
@@ -77,6 +92,22 @@
     <Compile Include="Cartas_Arbitro.Designer.cs">
       <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Deck.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Deck_Card.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramaEntidadesArcmage.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramaEntidadesArcmage.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DiagramaEntidadesArcmage.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
     <Compile Include="DiagramaEntidadesArcmage.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +118,9 @@
     </Compile>
     <Compile Include="Edicao_Baralhos_ADM.Designer.cs">
       <DependentUpon>Edicao_Baralhos_ADM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
     <Compile Include="Hitorico_Arbitro.cs">
       <SubType>Form</SubType>
@@ -142,8 +176,38 @@
     <Compile Include="Permissoes_ADM.Designer.cs">
       <DependentUpon>Permissoes_ADM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referee.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StandadTournament.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StardadGame.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamGame.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamTournament.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeamTournament_Team.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tournament.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ADD_Jogador_ADM.resx">
       <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +270,7 @@
     <None Include="DiagramaEntidadesArcmage.edmx.diagram">
       <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,6 +291,17 @@
     <None Include="Resources\17813900_1281975635190102_1290798384_n.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DiagramaEntidadesArcmage.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DiagramaEntidadesArcmage.Context.cs</LastGenOutput>
+      <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
+    </Content>
+    <Content Include="DiagramaEntidadesArcmage.edmx.sql" />
+    <Content Include="DiagramaEntidadesArcmage.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DiagramaEntidadesArcmage.cs</LastGenOutput>
+      <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
+    </Content>
     <Content Include="Resources\card%281%29.png" />
     <Content Include="Resources\card%2810%29.png" />
     <Content Include="Resources\card%28100%29.png" />
@@ -427,6 +503,9 @@
     <Content Include="Resources\l\7.PNG" />
     <Content Include="Resources\l\8.PNG" />
     <Content Include="Resources\l\9.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
