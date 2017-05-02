@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baralho_Arbitro));
             this.gbxBaralhoArbitro = new System.Windows.Forms.GroupBox();
+            this.listVbaralhoArbitro = new System.Windows.Forms.ListView();
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.gbxEquipas = new System.Windows.Forms.GroupBox();
@@ -57,7 +58,6 @@
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listVbaralhoArbitro = new System.Windows.Forms.ListView();
             this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
             this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
             this.btnBaralhoGaianArbitro = new System.Windows.Forms.Button();
@@ -79,6 +79,14 @@
             this.gbxBaralhoArbitro.TabIndex = 30;
             this.gbxBaralhoArbitro.TabStop = false;
             this.gbxBaralhoArbitro.Text = "Baralho";
+            // 
+            // listVbaralhoArbitro
+            // 
+            this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 19);
+            this.listVbaralhoArbitro.Name = "listVbaralhoArbitro";
+            this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 223);
+            this.listVbaralhoArbitro.TabIndex = 0;
+            this.listVbaralhoArbitro.UseCompatibleStateImageBehavior = false;
             // 
             // gbxCuriosidades
             // 
@@ -327,14 +335,6 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // listVbaralhoArbitro
-            // 
-            this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 19);
-            this.listVbaralhoArbitro.Name = "listVbaralhoArbitro";
-            this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 223);
-            this.listVbaralhoArbitro.TabIndex = 0;
-            this.listVbaralhoArbitro.UseCompatibleStateImageBehavior = false;
-            // 
             // listaBaralhoArbitroUneasyAlliance
             // 
             this.listaBaralhoArbitroUneasyAlliance.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listaBaralhoArbitroUneasyAlliance.ImageStream")));
@@ -399,6 +399,7 @@
             this.btnBaralhoGaianArbitro.TabIndex = 32;
             this.btnBaralhoGaianArbitro.Text = "Gaian love for life";
             this.btnBaralhoGaianArbitro.UseVisualStyleBackColor = true;
+            this.btnBaralhoGaianArbitro.Click += new System.EventHandler(this.btnBaralhoGaianArbitro_Click);
             // 
             // btnBaralhoUneasyADM
             // 
@@ -408,6 +409,7 @@
             this.btnBaralhoUneasyADM.TabIndex = 33;
             this.btnBaralhoUneasyADM.Text = "Uneasy Alliance";
             this.btnBaralhoUneasyADM.UseVisualStyleBackColor = true;
+            this.btnBaralhoUneasyADM.Click += new System.EventHandler(this.btnBaralhoUneasyADM_Click);
             // 
             // Baralho_Arbitro
             // 

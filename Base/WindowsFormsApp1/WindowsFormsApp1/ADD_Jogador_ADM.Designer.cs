@@ -29,6 +29,18 @@
         private void InitializeComponent()
         {
             this.gbxNovoJogadorADM = new System.Windows.Forms.GroupBox();
+            this.numupdownIdade = new System.Windows.Forms.NumericUpDown();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.tbxNickName = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
+            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnInserirAvatar = new System.Windows.Forms.Button();
+            this.picbxAvatar = new System.Windows.Forms.PictureBox();
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.gbxEquipas = new System.Windows.Forms.GroupBox();
@@ -54,36 +66,24 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picbxAvatar = new System.Windows.Forms.PictureBox();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnInserirAvatar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbxNome = new System.Windows.Forms.TextBox();
-            this.tbxEmail = new System.Windows.Forms.TextBox();
-            this.tbxNickName = new System.Windows.Forms.TextBox();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.numupdownIdade = new System.Windows.Forms.NumericUpDown();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbxNovoJogadorADM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNovoJogadorADM
@@ -106,6 +106,106 @@
             this.gbxNovoJogadorADM.TabIndex = 30;
             this.gbxNovoJogadorADM.TabStop = false;
             this.gbxNovoJogadorADM.Text = "Novo Jogador";
+            // 
+            // numupdownIdade
+            // 
+            this.numupdownIdade.Location = new System.Drawing.Point(194, 145);
+            this.numupdownIdade.Name = "numupdownIdade";
+            this.numupdownIdade.Size = new System.Drawing.Size(142, 20);
+            this.numupdownIdade.TabIndex = 12;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(180, 205);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Location = new System.Drawing.Point(98, 205);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(75, 23);
+            this.btnInserir.TabIndex = 10;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // tbxNickName
+            // 
+            this.tbxNickName.Location = new System.Drawing.Point(194, 113);
+            this.tbxNickName.Name = "tbxNickName";
+            this.tbxNickName.Size = new System.Drawing.Size(142, 20);
+            this.tbxNickName.TabIndex = 8;
+            // 
+            // tbxEmail
+            // 
+            this.tbxEmail.Location = new System.Drawing.Point(194, 77);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(142, 20);
+            this.tbxEmail.TabIndex = 7;
+            // 
+            // tbxNome
+            // 
+            this.tbxNome.Location = new System.Drawing.Point(194, 46);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(142, 20);
+            this.tbxNome.TabIndex = 6;
+            this.tbxNome.TextChanged += new System.EventHandler(this.tbxNome_TextChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(154, 149);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Idade:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(131, 116);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "NickName:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(156, 80);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Email:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(153, 49);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Nome:";
+            // 
+            // btnInserirAvatar
+            // 
+            this.btnInserirAvatar.Location = new System.Drawing.Point(20, 142);
+            this.btnInserirAvatar.Name = "btnInserirAvatar";
+            this.btnInserirAvatar.Size = new System.Drawing.Size(100, 23);
+            this.btnInserirAvatar.TabIndex = 1;
+            this.btnInserirAvatar.Text = "Inserir Imagem";
+            this.btnInserirAvatar.UseVisualStyleBackColor = true;
+            // 
+            // picbxAvatar
+            // 
+            this.picbxAvatar.Location = new System.Drawing.Point(20, 52);
+            this.picbxAvatar.Name = "picbxAvatar";
+            this.picbxAvatar.Size = new System.Drawing.Size(100, 83);
+            this.picbxAvatar.TabIndex = 0;
+            this.picbxAvatar.TabStop = false;
             // 
             // gbxCuriosidades
             // 
@@ -348,23 +448,6 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.loginToolStripMenuItem.Text = "Permissões";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picbxAvatar
-            // 
-            this.picbxAvatar.Location = new System.Drawing.Point(20, 52);
-            this.picbxAvatar.Name = "picbxAvatar";
-            this.picbxAvatar.Size = new System.Drawing.Size(100, 83);
-            this.picbxAvatar.TabIndex = 0;
-            this.picbxAvatar.TabStop = false;
-            // 
             // baralhoToolStripMenuItem
             // 
             this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -376,6 +459,29 @@
             this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.baralhoToolStripMenuItem.Text = "Baralho";
             // 
+            // baralhoToolStripMenuItem1
+            // 
+            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.baralhoToolStripMenuItem1.Text = "Baralho";
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.cartasToolStripMenuItem.Text = "Editar Baralho";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            // 
+            // cartasToolStripMenuItem1
+            // 
+            this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.cartasToolStripMenuItem1.Text = "Cartas";
+            // 
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -384,24 +490,6 @@
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
             this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.jogadoresToolStripMenuItem.Text = "Jogadores";
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.signOutToolStripMenuItem.Text = "Terminar Sessão";
-            // 
-            // baralhoToolStripMenuItem1
-            // 
-            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.baralhoToolStripMenuItem1.Text = "Baralho";
-            // 
-            // cartasToolStripMenuItem
-            // 
-            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cartasToolStripMenuItem.Text = "Editar Baralho";
             // 
             // perfilToolStripMenuItem
             // 
@@ -415,107 +503,20 @@
             this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.adicionarNovoToolStripMenuItem.Text = "Adicionar Novo";
             // 
-            // cartasToolStripMenuItem1
+            // signOutToolStripMenuItem
             // 
-            this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.cartasToolStripMenuItem1.Text = "Cartas";
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.signOutToolStripMenuItem.Text = "Terminar Sessão";
             // 
-            // toolStripSeparator1
+            // pictureBox1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // btnInserirAvatar
-            // 
-            this.btnInserirAvatar.Location = new System.Drawing.Point(20, 142);
-            this.btnInserirAvatar.Name = "btnInserirAvatar";
-            this.btnInserirAvatar.Size = new System.Drawing.Size(100, 23);
-            this.btnInserirAvatar.TabIndex = 1;
-            this.btnInserirAvatar.Text = "Inserir Imagem";
-            this.btnInserirAvatar.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(153, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(38, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Nome:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(156, 80);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Email:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(131, 116);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "NickName:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(154, 149);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Idade:";
-            // 
-            // tbxNome
-            // 
-            this.tbxNome.Location = new System.Drawing.Point(194, 46);
-            this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(142, 20);
-            this.tbxNome.TabIndex = 6;
-            // 
-            // tbxEmail
-            // 
-            this.tbxEmail.Location = new System.Drawing.Point(194, 77);
-            this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(142, 20);
-            this.tbxEmail.TabIndex = 7;
-            // 
-            // tbxNickName
-            // 
-            this.tbxNickName.Location = new System.Drawing.Point(194, 113);
-            this.tbxNickName.Name = "tbxNickName";
-            this.tbxNickName.Size = new System.Drawing.Size(142, 20);
-            this.tbxNickName.TabIndex = 8;
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.Location = new System.Drawing.Point(98, 205);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(75, 23);
-            this.btnInserir.TabIndex = 10;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(180, 205);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // numupdownIdade
-            // 
-            this.numupdownIdade.Location = new System.Drawing.Point(194, 145);
-            this.numupdownIdade.Name = "numupdownIdade";
-            this.numupdownIdade.Size = new System.Drawing.Size(142, 20);
-            this.numupdownIdade.TabIndex = 12;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
             // ADD_Jogador_ADM
             // 
@@ -538,6 +539,8 @@
             this.Text = "ADD_Jogador_ADM";
             this.gbxNovoJogadorADM.ResumeLayout(false);
             this.gbxNovoJogadorADM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -546,8 +549,6 @@
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

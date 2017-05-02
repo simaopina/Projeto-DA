@@ -21,5 +21,20 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void Baralho_ADM_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBaralhoGaianAMD_Click(object sender, EventArgs e)
+        {
+            ListVBaralhoADM.SmallImageList = ListaBaralhoGaianloveforlife;
+        }
+
+        private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
+        {
+            ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
+        }
     }
 }

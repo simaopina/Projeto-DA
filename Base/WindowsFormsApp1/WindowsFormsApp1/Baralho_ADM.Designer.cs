@@ -417,6 +417,7 @@
             this.btnBaralhoGaianAMD.TabIndex = 7;
             this.btnBaralhoGaianAMD.Text = "Gaian love for life";
             this.btnBaralhoGaianAMD.UseVisualStyleBackColor = true;
+            this.btnBaralhoGaianAMD.Click += new System.EventHandler(this.btnBaralhoGaianAMD_Click);
             // 
             // btnBaralhoUneasyADM
             // 
@@ -426,6 +427,7 @@
             this.btnBaralhoUneasyADM.TabIndex = 8;
             this.btnBaralhoUneasyADM.Text = "Uneasy Alliance";
             this.btnBaralhoUneasyADM.UseVisualStyleBackColor = true;
+            this.btnBaralhoUneasyADM.Click += new System.EventHandler(this.btnBaralhoUneasyADM_Click);
             // 
             // ListaBaralhoUneasyAlliance
             // 
@@ -548,6 +550,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Baralho_ADM";
             this.Text = "Baralho_ADM";
+            this.Load += new System.EventHandler(this.Baralho_ADM_Load);
             this.gbxBaralhoADM.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);

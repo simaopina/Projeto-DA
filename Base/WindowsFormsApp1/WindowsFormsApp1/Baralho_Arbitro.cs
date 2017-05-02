@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
+        {
+            listVbaralhoArbitro.SmallImageList = listaBaralhoArbitroGaianloveforlife;
+        }
+
+        private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
+        {
+            listVbaralhoArbitro.SmallImageList = listaBaralhoArbitroUneasyAlliance;
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void tbxNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
