@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gbxJogosArbitro = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.listVData = new System.Windows.Forms.ListView();
+            this.listVJogo = new System.Windows.Forms.ListView();
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.gbxEquipas = new System.Windows.Forms.GroupBox();
@@ -54,19 +58,17 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.torneioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogosADecorrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeamentoDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listVNumeroJogo = new System.Windows.Forms.ListView();
+            this.label13 = new System.Windows.Forms.Label();
             this.gbxJogosArbitro.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -77,16 +79,52 @@
             // 
             // gbxJogosArbitro
             // 
+            this.gbxJogosArbitro.Controls.Add(this.label13);
+            this.gbxJogosArbitro.Controls.Add(this.listVNumeroJogo);
             this.gbxJogosArbitro.Controls.Add(this.label12);
             this.gbxJogosArbitro.Controls.Add(this.label11);
-            this.gbxJogosArbitro.Controls.Add(this.listView2);
-            this.gbxJogosArbitro.Controls.Add(this.listView1);
+            this.gbxJogosArbitro.Controls.Add(this.listVData);
+            this.gbxJogosArbitro.Controls.Add(this.listVJogo);
             this.gbxJogosArbitro.Location = new System.Drawing.Point(245, 272);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
             this.gbxJogosArbitro.Size = new System.Drawing.Size(348, 248);
             this.gbxJogosArbitro.TabIndex = 30;
             this.gbxJogosArbitro.TabStop = false;
             this.gbxJogosArbitro.Text = "Jogos Arbitro";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(236, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Data";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Jogo";
+            // 
+            // listVData
+            // 
+            this.listVData.Location = new System.Drawing.Point(238, 33);
+            this.listVData.Name = "listVData";
+            this.listVData.Size = new System.Drawing.Size(104, 209);
+            this.listVData.TabIndex = 1;
+            this.listVData.UseCompatibleStateImageBehavior = false;
+            // 
+            // listVJogo
+            // 
+            this.listVJogo.Location = new System.Drawing.Point(53, 33);
+            this.listVJogo.Name = "listVJogo";
+            this.listVJogo.Size = new System.Drawing.Size(179, 209);
+            this.listVJogo.TabIndex = 0;
+            this.listVJogo.UseCompatibleStateImageBehavior = false;
             // 
             // gbxCuriosidades
             // 
@@ -332,48 +370,22 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.loginToolStripMenuItem.Text = "Baralho";
             // 
-            // pictureBox1
+            // baralhoToolStripMenuItem
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.baralhoToolStripMenuItem.Text = "Baralho";
             // 
-            // listView1
+            // toolStripSeparator1
             // 
-            this.listView1.Location = new System.Drawing.Point(18, 33);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(214, 209);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
-            // listView2
+            // cartasToolStripMenuItem
             // 
-            this.listView2.Location = new System.Drawing.Point(238, 33);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(104, 209);
-            this.listView2.TabIndex = 1;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(15, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Jogo";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(236, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Data";
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.cartasToolStripMenuItem.Text = "Cartas";
             // 
             // torneioToolStripMenuItem
             // 
@@ -384,29 +396,6 @@
             this.torneioToolStripMenuItem.Name = "torneioToolStripMenuItem";
             this.torneioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.torneioToolStripMenuItem.Text = "Torneio";
-            // 
-            // terminarSessãoToolStripMenuItem
-            // 
-            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
-            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
-            // 
-            // baralhoToolStripMenuItem
-            // 
-            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.baralhoToolStripMenuItem.Text = "Baralho";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // cartasToolStripMenuItem
-            // 
-            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cartasToolStripMenuItem.Text = "Cartas";
             // 
             // jogosADecorrerToolStripMenuItem
             // 
@@ -425,6 +414,38 @@
             this.historicoToolStripMenuItem.Name = "historicoToolStripMenuItem";
             this.historicoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.historicoToolStripMenuItem.Text = "Historico";
+            // 
+            // terminarSessãoToolStripMenuItem
+            // 
+            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // listVNumeroJogo
+            // 
+            this.listVNumeroJogo.Location = new System.Drawing.Point(7, 33);
+            this.listVNumeroJogo.Name = "listVNumeroJogo";
+            this.listVNumeroJogo.Size = new System.Drawing.Size(40, 209);
+            this.listVNumeroJogo.TabIndex = 4;
+            this.listVNumeroJogo.UseCompatibleStateImageBehavior = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 13);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Nº";
             // 
             // JogoArbitro
             // 
@@ -491,8 +512,8 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listVData;
+        private System.Windows.Forms.ListView listVJogo;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
@@ -501,5 +522,7 @@
         private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListView listVNumeroJogo;
     }
 }
