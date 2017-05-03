@@ -36,5 +36,15 @@ namespace WindowsFormsApp1
         {
             ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
         }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM form = new Baralho_ADM();
+            // Ao atribuirmos à propriedade FormPrincipal uma referência para o form atual (form MTADMMenu)
+            // podemos usar, o form ArmaForm, os métodos públicos do form principal e aceder, através de métodos
+            // próprios para o efeito (ex.: método AdicionarArma()), aos componentes existentes no form principal.
+           
+            form.Show();
+        }
     }
 }
