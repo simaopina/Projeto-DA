@@ -57,11 +57,6 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
-            this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
-            this.btnBaralhoGaianArbitro = new System.Windows.Forms.Button();
-            this.btnBaralhoUneasyADM = new System.Windows.Forms.Button();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +64,12 @@
             this.jogosADecorrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeamentoDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
+            this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
+            this.btnBaralhoGaianArbitro = new System.Windows.Forms.Button();
+            this.btnBaralhoUneasyADM = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxBaralhoArbitro.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -89,6 +90,8 @@
             // 
             // listVbaralhoArbitro
             // 
+            this.listVbaralhoArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
             this.listVbaralhoArbitro.Location = new System.Drawing.Point(7, 19);
             this.listVbaralhoArbitro.Name = "listVbaralhoArbitro";
             this.listVbaralhoArbitro.Size = new System.Drawing.Size(335, 223);
@@ -338,6 +341,51 @@
             this.loginToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.loginToolStripMenuItem.Text = "Baralho";
             // 
+            // baralhoToolStripMenuItem
+            // 
+            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.baralhoToolStripMenuItem.Text = "Baralho";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.cartasToolStripMenuItem.Text = "Cartas";
+            // 
+            // torneioToolStripMenuItem
+            // 
+            this.torneioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jogosADecorrerToolStripMenuItem,
+            this.planeamentoDeJogosToolStripMenuItem,
+            this.historicoToolStripMenuItem});
+            this.torneioToolStripMenuItem.Name = "torneioToolStripMenuItem";
+            this.torneioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.torneioToolStripMenuItem.Text = "Torneio";
+            // 
+            // jogosADecorrerToolStripMenuItem
+            // 
+            this.jogosADecorrerToolStripMenuItem.Name = "jogosADecorrerToolStripMenuItem";
+            this.jogosADecorrerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.jogosADecorrerToolStripMenuItem.Text = "Jogos a decorrer";
+            // 
+            // planeamentoDeJogosToolStripMenuItem
+            // 
+            this.planeamentoDeJogosToolStripMenuItem.Name = "planeamentoDeJogosToolStripMenuItem";
+            this.planeamentoDeJogosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.planeamentoDeJogosToolStripMenuItem.Text = "Planeamento de jogos";
+            // 
+            // historicoToolStripMenuItem
+            // 
+            this.historicoToolStripMenuItem.Name = "historicoToolStripMenuItem";
+            this.historicoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.historicoToolStripMenuItem.Text = "Historico";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
@@ -399,9 +447,53 @@
             // 
             // listaBaralhoArbitroGaianloveforlife
             // 
-            this.listaBaralhoArbitroGaianloveforlife.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.listaBaralhoArbitroGaianloveforlife.ImageSize = new System.Drawing.Size(16, 16);
+            this.listaBaralhoArbitroGaianloveforlife.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listaBaralhoArbitroGaianloveforlife.ImageStream")));
             this.listaBaralhoArbitroGaianloveforlife.TransparentColor = System.Drawing.Color.Transparent;
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(0, "1.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(1, "2.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(2, "3.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(3, "4.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(4, "5.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(5, "6.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(6, "7.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(7, "8.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(8, "9.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(9, "10.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(10, "11.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(11, "12.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(12, "13.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(13, "14.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(14, "15.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(15, "16.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(16, "17.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(17, "18.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(18, "19.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(19, "20.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(20, "21.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(21, "22.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(22, "23.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(23, "24.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(24, "25.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(25, "26.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(26, "27.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(27, "28.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(28, "29.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(29, "30.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(30, "31.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(31, "32.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(32, "33.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(33, "34.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(34, "35.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(35, "36.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(36, "37.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(37, "38.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(38, "39.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(39, "40.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(40, "41.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(41, "42.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(42, "43.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(43, "44.PNG");
+            this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(44, "45.PNG");
             // 
             // btnBaralhoGaianArbitro
             // 
@@ -423,50 +515,9 @@
             this.btnBaralhoUneasyADM.UseVisualStyleBackColor = true;
             this.btnBaralhoUneasyADM.Click += new System.EventHandler(this.btnBaralhoUneasyADM_Click);
             // 
-            // baralhoToolStripMenuItem
+            // columnHeader1
             // 
-            this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.baralhoToolStripMenuItem.Text = "Baralho";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // cartasToolStripMenuItem
-            // 
-            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cartasToolStripMenuItem.Text = "Cartas";
-            // 
-            // torneioToolStripMenuItem
-            // 
-            this.torneioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.jogosADecorrerToolStripMenuItem,
-            this.planeamentoDeJogosToolStripMenuItem,
-            this.historicoToolStripMenuItem});
-            this.torneioToolStripMenuItem.Name = "torneioToolStripMenuItem";
-            this.torneioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.torneioToolStripMenuItem.Text = "Torneio";
-            // 
-            // jogosADecorrerToolStripMenuItem
-            // 
-            this.jogosADecorrerToolStripMenuItem.Name = "jogosADecorrerToolStripMenuItem";
-            this.jogosADecorrerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.jogosADecorrerToolStripMenuItem.Text = "Jogos a decorrer";
-            // 
-            // planeamentoDeJogosToolStripMenuItem
-            // 
-            this.planeamentoDeJogosToolStripMenuItem.Name = "planeamentoDeJogosToolStripMenuItem";
-            this.planeamentoDeJogosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.planeamentoDeJogosToolStripMenuItem.Text = "Planeamento de jogos";
-            // 
-            // historicoToolStripMenuItem
-            // 
-            this.historicoToolStripMenuItem.Name = "historicoToolStripMenuItem";
-            this.historicoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.historicoToolStripMenuItem.Text = "Historico";
+            this.columnHeader1.Text = "Carta";
             // 
             // Baralho_Arbitro
             // 
@@ -489,6 +540,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Baralho_Arbitro";
             this.Text = "Baralho_Arbitro";
+            this.Load += new System.EventHandler(this.Baralho_Arbitro_Load);
             this.gbxBaralhoArbitro.ResumeLayout(false);
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
@@ -544,5 +596,6 @@
         private System.Windows.Forms.ToolStripMenuItem jogosADecorrerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

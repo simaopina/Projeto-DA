@@ -91,11 +91,15 @@
             // 
             // ListVBaralhoADM
             // 
+            this.ListVBaralhoADM.LargeImageList = this.ListaBaralhoGaianloveforlife;
             this.ListVBaralhoADM.Location = new System.Drawing.Point(6, 19);
             this.ListVBaralhoADM.Name = "ListVBaralhoADM";
             this.ListVBaralhoADM.Size = new System.Drawing.Size(336, 192);
+            this.ListVBaralhoADM.SmallImageList = this.ListaBaralhoGaianloveforlife;
             this.ListVBaralhoADM.TabIndex = 0;
             this.ListVBaralhoADM.UseCompatibleStateImageBehavior = false;
+            this.ListVBaralhoADM.View = System.Windows.Forms.View.SmallIcon;
+            this.ListVBaralhoADM.SelectedIndexChanged += new System.EventHandler(this.ListVBaralhoADM_SelectedIndexChanged);
             // 
             // gbxCuriosidades
             // 
@@ -352,25 +356,25 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Editar Baralho";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem1
             // 
             this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem1.Text = "Cartas";
             // 
             // jogadoresToolStripMenuItem

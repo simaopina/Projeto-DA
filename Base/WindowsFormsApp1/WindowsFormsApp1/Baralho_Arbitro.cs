@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Baralho_Arbitro : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public Baralho_Arbitro()
         {
             InitializeComponent();
@@ -19,12 +21,25 @@ namespace WindowsFormsApp1
 
         private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
         {
-            listVbaralhoArbitro.SmallImageList = listaBaralhoArbitroGaianloveforlife;
+            listVbaralhoArbitro.LargeImageList = listaBaralhoArbitroGaianloveforlife;
+            listVbaralhoArbitro.Items.Clear();
+
+            foreach (Card carta in container.CardSet)
+            {
+                ListViewItem item = new ListViewItem("ola");
+            item.ImageIndex = 1;
+            listVbaralhoArbitro.Items.Add(item);
+            }
         }
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
             listVbaralhoArbitro.SmallImageList = listaBaralhoArbitroUneasyAlliance;
+        }
+
+        private void Baralho_Arbitro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -129,6 +129,7 @@
     <Property Name="Cost" Type="int" Nullable="false" />
     <Property Name="RuleText" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Attack" Type="int" Nullable="false" />
+    <Property Name="Image" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DeckSet">
     <Key>
@@ -640,6 +641,7 @@
           <Property Name="RuleText" Type="String" Nullable="false" />
           <Property Name="Attack" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Deck_Card" Relationship="DiagramaEntidadesArcmage.CardDeck_Card" FromRole="Card" ToRole="Deck_Card" />
+          <Property Name="Image" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Deck">
           <Key>
@@ -927,6 +929,7 @@
           <ScalarProperty Name="Cost" ColumnName="Cost" />
           <ScalarProperty Name="RuleText" ColumnName="RuleText" />
           <ScalarProperty Name="Attack" ColumnName="Attack" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Baralho_ADM : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Baralho_ADM()
         {
             InitializeComponent();
@@ -29,12 +30,14 @@ namespace WindowsFormsApp1
 
         private void btnBaralhoGaianAMD_Click(object sender, EventArgs e)
         {
-            ListVBaralhoADM.SmallImageList = ListaBaralhoGaianloveforlife;
+           
+
         }
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
             ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
+
         }
 
         private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -45,6 +48,17 @@ namespace WindowsFormsApp1
             // próprios para o efeito (ex.: método AdicionarArma()), aos componentes existentes no form principal.
            
             form.Show();
+        }
+
+        private void ListVBaralhoADM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Card carta in container.CardSet)
+            {
+                ListViewItem item = new ListViewItem(carta.Name);
+                //item.ImageIndex = carta.Image;
+                ListVBaralhoADM.Items.Add(item);
+
+            }
         }
     }
 }

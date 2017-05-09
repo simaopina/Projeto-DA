@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/02/2017 14:56:00
+-- Date Created: 05/09/2017 15:09:54
 -- Generated from EDMX file: C:\Users\sawak\Desktop\Ipleiria\2º Semestre\Desenvolvimento de aplicações\Repositorio\Base\WindowsFormsApp1\WindowsFormsApp1\DiagramaEntidadesArcmage.edmx
 -- --------------------------------------------------
 
@@ -157,7 +157,8 @@ CREATE TABLE [dbo].[CardSet] (
     [Defense] int  NOT NULL,
     [Cost] int  NOT NULL,
     [RuleText] nvarchar(max)  NOT NULL,
-    [Attack] int  NOT NULL
+    [Attack] int  NOT NULL,
+    [Image] int  NOT NULL
 );
 GO
 

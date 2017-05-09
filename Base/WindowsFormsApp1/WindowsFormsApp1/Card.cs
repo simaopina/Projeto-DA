@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         public int Cost { get; set; }
         public string RuleText { get; set; }
         public int Attack { get; set; }
+        public int Image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Deck_Card> Deck_Card { get; set; }
