@@ -65,6 +65,10 @@
     <Compile Include="Administrator.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
+    <Compile Include="Arbitro_JogosOndeTou.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arbitro_JogosOndeTou.Designer.cs" />
     <Compile Include="Baralho_ADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +215,7 @@
     <EmbeddedResource Include="ADD_Jogador_ADM.resx">
       <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Arbitro_JogosOndeTou.resx" />
     <EmbeddedResource Include="Baralho_ADM.resx">
       <DependentUpon>Baralho_ADM.cs</DependentUpon>
     </EmbeddedResource>
