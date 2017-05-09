@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         private void Home_Load(object sender, EventArgs e)
         {
             Baralho_Arbitro frm = new Baralho_Arbitro();
-
+            
             frm.Show();
         }
     }

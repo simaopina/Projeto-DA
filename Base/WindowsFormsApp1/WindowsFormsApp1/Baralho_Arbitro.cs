@@ -26,9 +26,9 @@ namespace WindowsFormsApp1
 
             foreach (Card carta in container.CardSet)
             {
-                ListViewItem item = new ListViewItem("ola");
-            item.ImageIndex = 1;
-            listVbaralhoArbitro.Items.Add(item);
+                ListViewItem item = new ListViewItem(carta.Name);
+                item.ImageIndex = carta.Image;
+                listVbaralhoArbitro.Items.Add(item);
             }
         }
 
