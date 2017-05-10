@@ -47,5 +47,12 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             
         }
+
+        private void Cartas_ADM_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'baseDadosDataSet.CardSet' table. You can move, or remove it, as needed.
+            this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);
+
+        }
     }
 }
