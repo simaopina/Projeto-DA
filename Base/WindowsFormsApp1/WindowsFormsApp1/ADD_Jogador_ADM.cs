@@ -21,5 +21,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

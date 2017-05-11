@@ -537,6 +537,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "ADD_Jogador_ADM";
             this.Text = "ADD_Jogador_ADM";
+            this.Load += new System.EventHandler(this.ADD_Jogador_ADM_Load);
             this.gbxNovoJogadorADM.ResumeLayout(false);
             this.gbxNovoJogadorADM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
