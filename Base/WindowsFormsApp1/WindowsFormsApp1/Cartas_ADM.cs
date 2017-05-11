@@ -47,5 +47,10 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             
         }
+
+        private void Cartas_ADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

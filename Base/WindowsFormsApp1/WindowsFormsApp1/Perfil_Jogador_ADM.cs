@@ -12,9 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class Perfil_Jogador_ADM : Form
     {
+
         public Perfil_Jogador_ADM()
         {
             InitializeComponent();
+
         }
     }
 }

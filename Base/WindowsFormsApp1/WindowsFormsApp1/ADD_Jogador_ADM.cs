@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class ADD_Jogador_ADM : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public ADD_Jogador_ADM()
         {
             InitializeComponent();
@@ -21,5 +22,28 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            string nome = tbxNome.Text;
+            string email = tbxEmail.Text;
+            string nickname = tbxNickName.Text;
+            int idade = Convert.ToInt32(numupdownIdade.Text);
+            string imagem = picbxAvatar.Image;
+
+
+            Player jogador = new Player
+            {
+                Name = nome,
+                Email = email,
+                Nickname = nickname,
+                Age = idade,
+                Avatar = imagem
+            };
+
+            container.PlayerSet.Add(jogador);
+            container.SaveChanges();
+        }
+
     }
 }

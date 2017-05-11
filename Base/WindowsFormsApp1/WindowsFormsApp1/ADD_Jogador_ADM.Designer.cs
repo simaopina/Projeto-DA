@@ -41,27 +41,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnInserirAvatar = new System.Windows.Forms.Button();
             this.picbxAvatar = new System.Windows.Forms.PictureBox();
-            this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
-            this.list_Curiosidades = new System.Windows.Forms.ListView();
-            this.gbxEquipas = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listEquipas = new System.Windows.Forms.ListView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.gbxRank = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listRank = new System.Windows.Forms.ListView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.gbxJogadores = new System.Windows.Forms.GroupBox();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
@@ -76,18 +57,19 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbxJogadores = new System.Windows.Forms.ListBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
-            this.gbxCuriosidades.SuspendLayout();
-            this.gbxEquipas.SuspendLayout();
-            this.gbxRank.SuspendLayout();
+            this.gbxJogadores.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxNovoJogadorADM
             // 
+            this.gbxNovoJogadorADM.Controls.Add(this.btnAlterar);
             this.gbxNovoJogadorADM.Controls.Add(this.numupdownIdade);
             this.gbxNovoJogadorADM.Controls.Add(this.btnCancelar);
             this.gbxNovoJogadorADM.Controls.Add(this.btnInserir);
@@ -116,7 +98,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(180, 205);
+            this.btnCancelar.Location = new System.Drawing.Point(215, 205);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 11;
@@ -125,12 +107,13 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(98, 205);
+            this.btnInserir.Location = new System.Drawing.Point(53, 205);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 10;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // tbxNickName
             // 
@@ -207,159 +190,15 @@
             this.picbxAvatar.TabIndex = 0;
             this.picbxAvatar.TabStop = false;
             // 
-            // gbxCuriosidades
+            // gbxJogadores
             // 
-            this.gbxCuriosidades.Controls.Add(this.list_Curiosidades);
-            this.gbxCuriosidades.Location = new System.Drawing.Point(34, 416);
-            this.gbxCuriosidades.Name = "gbxCuriosidades";
-            this.gbxCuriosidades.Size = new System.Drawing.Size(179, 100);
-            this.gbxCuriosidades.TabIndex = 29;
-            this.gbxCuriosidades.TabStop = false;
-            this.gbxCuriosidades.Text = "Curiosidades";
-            // 
-            // list_Curiosidades
-            // 
-            this.list_Curiosidades.Location = new System.Drawing.Point(37, 19);
-            this.list_Curiosidades.Name = "list_Curiosidades";
-            this.list_Curiosidades.Size = new System.Drawing.Size(121, 64);
-            this.list_Curiosidades.TabIndex = 9;
-            this.list_Curiosidades.UseCompatibleStateImageBehavior = false;
-            // 
-            // gbxEquipas
-            // 
-            this.gbxEquipas.Controls.Add(this.label2);
-            this.gbxEquipas.Controls.Add(this.listEquipas);
-            this.gbxEquipas.Controls.Add(this.label3);
-            this.gbxEquipas.Controls.Add(this.label8);
-            this.gbxEquipas.Controls.Add(this.label10);
-            this.gbxEquipas.Controls.Add(this.label9);
-            this.gbxEquipas.Location = new System.Drawing.Point(34, 304);
-            this.gbxEquipas.Name = "gbxEquipas";
-            this.gbxEquipas.Size = new System.Drawing.Size(179, 100);
-            this.gbxEquipas.TabIndex = 28;
-            this.gbxEquipas.TabStop = false;
-            this.gbxEquipas.Text = "Rank Equipas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "5.";
-            // 
-            // listEquipas
-            // 
-            this.listEquipas.Location = new System.Drawing.Point(37, 19);
-            this.listEquipas.Name = "listEquipas";
-            this.listEquipas.Size = new System.Drawing.Size(121, 64);
-            this.listEquipas.TabIndex = 8;
-            this.listEquipas.UseCompatibleStateImageBehavior = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "4.";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "3.";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "1.";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(15, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "2.";
-            // 
-            // gbxRank
-            // 
-            this.gbxRank.Controls.Add(this.label7);
-            this.gbxRank.Controls.Add(this.label6);
-            this.gbxRank.Controls.Add(this.label1);
-            this.gbxRank.Controls.Add(this.listRank);
-            this.gbxRank.Controls.Add(this.label5);
-            this.gbxRank.Controls.Add(this.label4);
-            this.gbxRank.Location = new System.Drawing.Point(34, 197);
-            this.gbxRank.Name = "gbxRank";
-            this.gbxRank.Size = new System.Drawing.Size(179, 100);
-            this.gbxRank.TabIndex = 27;
-            this.gbxRank.TabStop = false;
-            this.gbxRank.Text = "Rank Jogadores";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 71);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "5.";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "4.";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "3.";
-            // 
-            // listRank
-            // 
-            this.listRank.Location = new System.Drawing.Point(37, 19);
-            this.listRank.Name = "listRank";
-            this.listRank.Size = new System.Drawing.Size(121, 64);
-            this.listRank.TabIndex = 7;
-            this.listRank.UseCompatibleStateImageBehavior = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "2.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "1.";
+            this.gbxJogadores.Controls.Add(this.lbxJogadores);
+            this.gbxJogadores.Location = new System.Drawing.Point(34, 197);
+            this.gbxJogadores.Name = "gbxJogadores";
+            this.gbxJogadores.Size = new System.Drawing.Size(179, 322);
+            this.gbxJogadores.TabIndex = 27;
+            this.gbxJogadores.TabStop = false;
+            this.gbxJogadores.Text = "Lista de Jogadores";
             // 
             // tbxpesquisa
             // 
@@ -368,50 +207,6 @@
             this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
-            // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(455, 234);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(387, 234);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(306, 234);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(244, 234);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 
@@ -518,20 +313,31 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // lbxJogadores
+            // 
+            this.lbxJogadores.FormattingEnabled = true;
+            this.lbxJogadores.Location = new System.Drawing.Point(7, 20);
+            this.lbxJogadores.Name = "lbxJogadores";
+            this.lbxJogadores.Size = new System.Drawing.Size(166, 290);
+            this.lbxJogadores.TabIndex = 0;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(134, 205);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
             // ADD_Jogador_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 540);
             this.Controls.Add(this.gbxNovoJogadorADM);
-            this.Controls.Add(this.gbxCuriosidades);
-            this.Controls.Add(this.gbxEquipas);
-            this.Controls.Add(this.gbxRank);
+            this.Controls.Add(this.gbxJogadores);
             this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
@@ -541,11 +347,7 @@
             this.gbxNovoJogadorADM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
-            this.gbxCuriosidades.ResumeLayout(false);
-            this.gbxEquipas.ResumeLayout(false);
-            this.gbxEquipas.PerformLayout();
-            this.gbxRank.ResumeLayout(false);
-            this.gbxRank.PerformLayout();
+            this.gbxJogadores.ResumeLayout(false);
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -557,27 +359,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbxNovoJogadorADM;
-        private System.Windows.Forms.GroupBox gbxCuriosidades;
-        private System.Windows.Forms.ListView list_Curiosidades;
-        private System.Windows.Forms.GroupBox gbxEquipas;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listEquipas;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox gbxRank;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listRank;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox gbxJogadores;
         private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -604,5 +387,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnInserirAvatar;
         private System.Windows.Forms.NumericUpDown numupdownIdade;
+        private System.Windows.Forms.ListBox lbxJogadores;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }
