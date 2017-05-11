@@ -45,5 +45,9 @@ namespace WindowsFormsApp1
             container.SaveChanges();
         }
 
+        private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

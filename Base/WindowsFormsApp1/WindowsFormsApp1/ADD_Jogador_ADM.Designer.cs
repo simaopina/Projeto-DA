@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbxNovoJogadorADM = new System.Windows.Forms.GroupBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.numupdownIdade = new System.Windows.Forms.NumericUpDown();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.btnInserirAvatar = new System.Windows.Forms.Button();
             this.picbxAvatar = new System.Windows.Forms.PictureBox();
             this.gbxJogadores = new System.Windows.Forms.GroupBox();
+            this.lbxJogadores = new System.Windows.Forms.ListBox();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,6 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbxJogadores = new System.Windows.Forms.ListBox();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
@@ -88,6 +88,15 @@
             this.gbxNovoJogadorADM.TabIndex = 30;
             this.gbxNovoJogadorADM.TabStop = false;
             this.gbxNovoJogadorADM.Text = "Novo Jogador";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(134, 205);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // numupdownIdade
             // 
@@ -199,6 +208,14 @@
             this.gbxJogadores.TabIndex = 27;
             this.gbxJogadores.TabStop = false;
             this.gbxJogadores.Text = "Lista de Jogadores";
+            // 
+            // lbxJogadores
+            // 
+            this.lbxJogadores.FormattingEnabled = true;
+            this.lbxJogadores.Location = new System.Drawing.Point(7, 20);
+            this.lbxJogadores.Name = "lbxJogadores";
+            this.lbxJogadores.Size = new System.Drawing.Size(166, 290);
+            this.lbxJogadores.TabIndex = 0;
             // 
             // tbxpesquisa
             // 
@@ -313,23 +330,6 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // lbxJogadores
-            // 
-            this.lbxJogadores.FormattingEnabled = true;
-            this.lbxJogadores.Location = new System.Drawing.Point(7, 20);
-            this.lbxJogadores.Name = "lbxJogadores";
-            this.lbxJogadores.Size = new System.Drawing.Size(166, 290);
-            this.lbxJogadores.TabIndex = 0;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Location = new System.Drawing.Point(134, 205);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterar.TabIndex = 13;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
             // ADD_Jogador_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +343,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "ADD_Jogador_ADM";
             this.Text = "ADD_Jogador_ADM";
+            this.Load += new System.EventHandler(this.ADD_Jogador_ADM_Load);
             this.gbxNovoJogadorADM.ResumeLayout(false);
             this.gbxNovoJogadorADM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).EndInit();
