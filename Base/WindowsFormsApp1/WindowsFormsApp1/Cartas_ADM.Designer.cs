@@ -409,6 +409,8 @@
             // 
             // DataGridCartas
             // 
+            this.DataGridCartas.AllowUserToAddRows = false;
+            this.DataGridCartas.AllowUserToDeleteRows = false;
             this.DataGridCartas.AutoGenerateColumns = false;
             this.DataGridCartas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridCartas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -425,7 +427,8 @@
             this.DataGridCartas.DataSource = this.cardSetBindingSource;
             this.DataGridCartas.Location = new System.Drawing.Point(25, 253);
             this.DataGridCartas.Name = "DataGridCartas";
-            this.DataGridCartas.Size = new System.Drawing.Size(296, 262);
+            this.DataGridCartas.ReadOnly = true;
+            this.DataGridCartas.Size = new System.Drawing.Size(296, 289);
             this.DataGridCartas.TabIndex = 32;
             // 
             // idDataGridViewTextBoxColumn
@@ -440,54 +443,63 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // factionDataGridViewTextBoxColumn
             // 
             this.factionDataGridViewTextBoxColumn.DataPropertyName = "Faction";
             this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
             this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
+            this.factionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // typeDataGridViewTextBoxColumn
             // 
             this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // loyaltyDataGridViewTextBoxColumn
             // 
             this.loyaltyDataGridViewTextBoxColumn.DataPropertyName = "Loyalty";
             this.loyaltyDataGridViewTextBoxColumn.HeaderText = "Loyalty";
             this.loyaltyDataGridViewTextBoxColumn.Name = "loyaltyDataGridViewTextBoxColumn";
+            this.loyaltyDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // defenseDataGridViewTextBoxColumn
             // 
             this.defenseDataGridViewTextBoxColumn.DataPropertyName = "Defense";
             this.defenseDataGridViewTextBoxColumn.HeaderText = "Defense";
             this.defenseDataGridViewTextBoxColumn.Name = "defenseDataGridViewTextBoxColumn";
+            this.defenseDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // costDataGridViewTextBoxColumn
             // 
             this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
             this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
             this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ruleTextDataGridViewTextBoxColumn
             // 
             this.ruleTextDataGridViewTextBoxColumn.DataPropertyName = "RuleText";
             this.ruleTextDataGridViewTextBoxColumn.HeaderText = "RuleText";
             this.ruleTextDataGridViewTextBoxColumn.Name = "ruleTextDataGridViewTextBoxColumn";
+            this.ruleTextDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // attackDataGridViewTextBoxColumn
             // 
             this.attackDataGridViewTextBoxColumn.DataPropertyName = "Attack";
             this.attackDataGridViewTextBoxColumn.HeaderText = "Attack";
             this.attackDataGridViewTextBoxColumn.Name = "attackDataGridViewTextBoxColumn";
+            this.attackDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // imageDataGridViewTextBoxColumn
             // 
             this.imageDataGridViewTextBoxColumn.DataPropertyName = "Image";
             this.imageDataGridViewTextBoxColumn.HeaderText = "Image";
             this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
+            this.imageDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Cartas_ADM
             // 
