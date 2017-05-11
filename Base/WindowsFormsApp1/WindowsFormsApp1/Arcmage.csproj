@@ -178,7 +178,6 @@
     <Compile Include="Info_Cartas_Arbitro.Designer.cs">
       <DependentUpon>Info_Cartas_Arbitro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Jogador.cs" />
     <Compile Include="JogoArbitro.cs">
       <SubType>Form</SubType>
     </Compile>

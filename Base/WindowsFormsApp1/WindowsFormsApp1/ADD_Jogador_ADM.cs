@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             string email = tbxEmail.Text;
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
-            string imagem = picbxAvatar.Image;
+            string imagem = "asd";
 
 
             Player jogador = new Player

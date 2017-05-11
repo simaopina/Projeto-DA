@@ -80,6 +80,7 @@ namespace WindowsFormsApp1
 
         public void refresh_datagrid()
         {
+
             this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);
             DataGridCartas.DataSource = cardSetBindingSource;
 
@@ -119,11 +120,6 @@ namespace WindowsFormsApp1
             MessageBox.Show("Alterado com sucesso!");
 
             refresh_datagrid();
-        }
-
-        private void Cartas_ADM_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
