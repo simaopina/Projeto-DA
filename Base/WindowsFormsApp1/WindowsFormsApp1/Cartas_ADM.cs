@@ -120,5 +120,10 @@ namespace WindowsFormsApp1
 
             refresh_datagrid();
         }
+
+        private void Cartas_ADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
