@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -82,6 +97,11 @@
     </Compile>
     <Compile Include="Baralho_Arbitro.Designer.cs">
       <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Card.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
@@ -277,6 +297,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="BaseDadosDataSet.xsc">
+      <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet.xss">
+      <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DiagramaEntidadesArcmage.edmx.diagram">
       <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
     </None>
@@ -301,6 +332,13 @@
     <None Include="Resources\17813900_1281975635190102_1290798384_n.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BaseDados.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BaseDados_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BaseDados.mdf</DependentUpon>
+    </Content>
     <Content Include="DiagramaEntidadesArcmage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Context.cs</LastGenOutput>
@@ -516,6 +554,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

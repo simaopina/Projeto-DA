@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Baralho_Arbitro frm = new Baralho_Arbitro();
+            Cartas_ADM frm = new Cartas_ADM();
             
             frm.Show();
         }
