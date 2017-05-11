@@ -331,13 +331,6 @@
     <None Include="Resources\17813900_1281975635190102_1290798384_n.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BaseDados.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BaseDados_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BaseDados.mdf</DependentUpon>
-    </Content>
     <Content Include="DiagramaEntidadesArcmage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Context.cs</LastGenOutput>
