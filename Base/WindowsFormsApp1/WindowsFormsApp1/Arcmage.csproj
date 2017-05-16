@@ -103,6 +103,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDataSet_Cards.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -307,6 +312,17 @@
     <None Include="BaseDadosDataSet.xss">
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </None>
+    <None Include="BaseDadosDataSet_Cards.xsc">
+      <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet_Cards.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet_Cards.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet_Cards.xss">
+      <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </None>
     <None Include="DiagramaEntidadesArcmage.edmx.diagram">
       <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
     </None>
@@ -322,7 +338,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\17693025_1281970771857255_600020987_o.png" />

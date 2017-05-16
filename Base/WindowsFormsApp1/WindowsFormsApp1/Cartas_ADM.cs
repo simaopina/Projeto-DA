@@ -57,8 +57,10 @@ namespace WindowsFormsApp1
 
         private void Cartas_ADM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Cards.CardSet' table. You can move, or remove it, as needed.
+            this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet.CardSet' table. You can move, or remove it, as needed.
-            this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);
+            /*this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);*/
 
         }
 
@@ -81,8 +83,8 @@ namespace WindowsFormsApp1
         public void refresh_datagrid()
         {
 
-            this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);
-            DataGridCartas.DataSource = cardSetBindingSource;
+            this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
+            DataGridCartas.DataSource = cardSetBindingSource1;
 
         }
         private void btAlterarCarta_Click(object sender, EventArgs e)

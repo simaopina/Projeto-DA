@@ -79,12 +79,17 @@
             this.ruleTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
+            this.cardSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cardSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter();
             this.gbxCartasADM.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCartasADM
@@ -424,12 +429,14 @@
             this.ruleTextDataGridViewTextBoxColumn,
             this.attackDataGridViewTextBoxColumn,
             this.imageDataGridViewTextBoxColumn});
-            this.DataGridCartas.DataSource = this.cardSetBindingSource;
+            this.DataGridCartas.DataSource = this.cardSetBindingSource1;
             this.DataGridCartas.Location = new System.Drawing.Point(25, 253);
             this.DataGridCartas.Name = "DataGridCartas";
             this.DataGridCartas.ReadOnly = true;
+            this.DataGridCartas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridCartas.Size = new System.Drawing.Size(296, 289);
             this.DataGridCartas.TabIndex = 32;
+            this.DataGridCartas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -501,6 +508,20 @@
             this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
             this.imageDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // baseDadosDataSet_Cards
+            // 
+            this.baseDadosDataSet_Cards.DataSetName = "BaseDadosDataSet_Cards";
+            this.baseDadosDataSet_Cards.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cardSetBindingSource1
+            // 
+            this.cardSetBindingSource1.DataMember = "CardSet";
+            this.cardSetBindingSource1.DataSource = this.baseDadosDataSet_Cards;
+            // 
+            // cardSetTableAdapter1
+            // 
+            this.cardSetTableAdapter1.ClearBeforeFill = true;
+            // 
             // Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,6 +544,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,5 +603,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ruleTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn attackDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
+        private BaseDadosDataSet_Cards baseDadosDataSet_Cards;
+        private System.Windows.Forms.BindingSource cardSetBindingSource1;
+        private BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter cardSetTableAdapter1;
     }
 }

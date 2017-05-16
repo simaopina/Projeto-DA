@@ -28,6 +28,17 @@ namespace WindowsFormsApp1.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BaseDados.mdf" +
             ";Integrated Security=True;Connect Timeout=30")]
+        public string BaseDadosConnectionString2 {
+            get {
+                return ((string)(this["BaseDadosConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\BaseDeDados\\BaseDados.mdf;" +
+            "Integrated Security=True;Connect Timeout=30")]
         public string BaseDadosConnectionString {
             get {
                 return ((string)(this["BaseDadosConnectionString"]));
