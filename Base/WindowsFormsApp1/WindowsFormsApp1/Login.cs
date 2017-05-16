@@ -16,5 +16,19 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Home_Arbitro HAfrm = new Home_Arbitro();
+
+            HAfrm.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+             Permissoes_ADM Perfrm = new Permissoes_ADM();
+
+             Perfrm.Show();
+        }
     }
 }
