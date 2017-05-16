@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbxCartasADM = new System.Windows.Forms.GroupBox();
+            this.btnRemover = new System.Windows.Forms.Button();
             this.btAlterarCarta = new System.Windows.Forms.Button();
             this.btAdicionarCartas = new System.Windows.Forms.Button();
             this.txtDefesa = new System.Windows.Forms.TextBox();
@@ -79,8 +80,8 @@
             this.ruleTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
             this.cardSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
             this.cardSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter();
             this.gbxCartasADM.SuspendLayout();
             this.menuStripHome.SuspendLayout();
@@ -88,12 +89,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.btnRemover);
             this.gbxCartasADM.Controls.Add(this.btAlterarCarta);
             this.gbxCartasADM.Controls.Add(this.btAdicionarCartas);
             this.gbxCartasADM.Controls.Add(this.txtDefesa);
@@ -120,6 +122,16 @@
             this.gbxCartasADM.TabIndex = 30;
             this.gbxCartasADM.TabStop = false;
             this.gbxCartasADM.Text = "Cartas Administrador";
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(197, 107);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 20;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btAlterarCarta
             // 
@@ -292,6 +304,7 @@
             this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
+            this.tbxpesquisa.TextChanged += new System.EventHandler(this.tbxpesquisa_TextChanged);
             // 
             // btnPesquisar
             // 
@@ -301,6 +314,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -508,15 +522,15 @@
             this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
             this.imageDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // baseDadosDataSet_Cards
-            // 
-            this.baseDadosDataSet_Cards.DataSetName = "BaseDadosDataSet_Cards";
-            this.baseDadosDataSet_Cards.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cardSetBindingSource1
             // 
             this.cardSetBindingSource1.DataMember = "CardSet";
             this.cardSetBindingSource1.DataSource = this.baseDadosDataSet_Cards;
+            // 
+            // baseDadosDataSet_Cards
+            // 
+            this.baseDadosDataSet_Cards.DataSetName = "BaseDadosDataSet_Cards";
+            this.baseDadosDataSet_Cards.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cardSetTableAdapter1
             // 
@@ -544,8 +558,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +620,6 @@
         private BaseDadosDataSet_Cards baseDadosDataSet_Cards;
         private System.Windows.Forms.BindingSource cardSetBindingSource1;
         private BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter cardSetTableAdapter1;
+        private System.Windows.Forms.Button btnRemover;
     }
 }
