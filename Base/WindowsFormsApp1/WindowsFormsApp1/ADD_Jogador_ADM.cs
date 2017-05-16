@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -26,6 +27,26 @@ namespace WindowsFormsApp1
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
+        {
+            AddJogador();
+
+            refreshJogador();
+        }
+
+
+        private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
+        {
+            refreshJogador();
+        }
+
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            AlterarJogador();
+            refreshJogador();
+        }
+
+        private void AddJogador()
         {
             string nome = tbxNome.Text;
             string email = tbxEmail.Text;
@@ -47,7 +68,7 @@ namespace WindowsFormsApp1
             container.SaveChanges();
         }
 
-        private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
+        private void refreshJogador()
         {
             lbxJogadores.Items.Clear();
 
@@ -57,6 +78,31 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void AlterarJogador()
+        {
+            string nome = tbxNome.Text;
+            string email = tbxEmail.Text;
+            string nickname = tbxNickName.Text;
+            int idade = Convert.ToInt32(numupdownIdade.Text);
+            string imagem = "Sou bueda Fixe";
+
+            Player player;
+
+            player = container.PlayerSet.Find(id_jogador);
+            player.Name = nome;
+            player.Email = email;
+            player.Nickname = nickname;
+            player.Age = idade;
+            player.Avatar = imagem;
+
+            container.Entry(player).State = System.Data.Entity.EntityState.Modified;
+            container.SaveChanges();
+
+            MessageBox.Show("Alterado com sucesso!");
+        }
+    
+
+        // Menu Strip
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home Homefrm = new Home();
@@ -87,11 +133,11 @@ namespace WindowsFormsApp1
             CardFrm.Show();
         }
 
-        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Perfil_Jogador_ADM PerfFrm = new Perfil_Jogador_ADM();
-            PerfFrm.Show();
-        }
+        //private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Perfil_Jogador_ADM PerfFrm = new Perfil_Jogador_ADM();
+        //    PerfFrm.Show();
+        //}
 
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -103,6 +149,22 @@ namespace WindowsFormsApp1
         {
             Home Homefrm = new Home();
             Homefrm.Show();
+        }
+
+        private void lbxJogadores_Click(object sender, EventArgs e)
+        {
+            //if (lbxJogadores.SelectedItems.Count !=0)
+            //{
+            //if (lbxJogadores.SelectedItems[1].Selected)
+            //{
+                tbxNome.Text = lbxJogadores.FocusedItem.SubItems[1].Text;
+                tbxEmail.Text = lbxJogadores.Text;
+                tbxNickName.Text = lbxJogadores.Text;
+                numupdownIdade.Text = lbxJogadores.Text;
+                picbxAvatar.Image = lbxJogadores.Text;
+            //}
+            //}
+
         }
     }
 }

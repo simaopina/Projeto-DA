@@ -55,7 +55,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -97,6 +96,7 @@
             this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // numupdownIdade
             // 
@@ -216,6 +216,7 @@
             this.lbxJogadores.Name = "lbxJogadores";
             this.lbxJogadores.Size = new System.Drawing.Size(166, 290);
             this.lbxJogadores.TabIndex = 0;
+            this.lbxJogadores.Click += new System.EventHandler(this.lbxJogadores_Click);
             // 
             // tbxpesquisa
             // 
@@ -302,18 +303,10 @@
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perfilToolStripMenuItem,
             this.adicionarNovoToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
             this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.jogadoresToolStripMenuItem.Text = "Jogadores";
-            // 
-            // perfilToolStripMenuItem
-            // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
-            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // adicionarNovoToolStripMenuItem
             // 
@@ -380,7 +373,6 @@
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
