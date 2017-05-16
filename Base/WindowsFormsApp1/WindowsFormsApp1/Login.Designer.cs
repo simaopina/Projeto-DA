@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.gbxLogin = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.tbxPW = new System.Windows.Forms.TextBox();
+            this.tbxemail = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.gbxCuriosidade = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.gbx_Equipas = new System.Windows.Forms.GroupBox();
@@ -55,12 +61,6 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.tbxemail = new System.Windows.Forms.TextBox();
-            this.tbxPW = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbxLogin.SuspendLayout();
             this.gbxCuriosidade.SuspendLayout();
             this.gbx_Equipas.SuspendLayout();
@@ -83,6 +83,58 @@
             this.gbxLogin.TabIndex = 30;
             this.gbxLogin.TabStop = false;
             this.gbxLogin.Text = "Login";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(215, 164);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(102, 164);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // tbxPW
+            // 
+            this.tbxPW.Location = new System.Drawing.Point(102, 107);
+            this.tbxPW.Name = "tbxPW";
+            this.tbxPW.Size = new System.Drawing.Size(188, 20);
+            this.tbxPW.TabIndex = 3;
+            // 
+            // tbxemail
+            // 
+            this.tbxemail.Location = new System.Drawing.Point(102, 68);
+            this.tbxemail.Name = "tbxemail";
+            this.tbxemail.Size = new System.Drawing.Size(188, 20);
+            this.tbxemail.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(40, 110);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Password:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(61, 71);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(35, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Email:";
             // 
             // gbxCuriosidade
             // 
@@ -330,56 +382,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(61, 71);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Email:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 110);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Password:";
-            // 
-            // tbxemail
-            // 
-            this.tbxemail.Location = new System.Drawing.Point(102, 68);
-            this.tbxemail.Name = "tbxemail";
-            this.tbxemail.Size = new System.Drawing.Size(188, 20);
-            this.tbxemail.TabIndex = 2;
-            // 
-            // tbxPW
-            // 
-            this.tbxPW.Location = new System.Drawing.Point(102, 107);
-            this.tbxPW.Name = "tbxPW";
-            this.tbxPW.Size = new System.Drawing.Size(188, 20);
-            this.tbxPW.TabIndex = 3;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(102, 164);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(215, 164);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
