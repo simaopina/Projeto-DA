@@ -24,5 +24,12 @@ namespace WindowsFormsApp1
             
             frm.Show();
         }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login Lfrm = new Login();
+
+            Lfrm.Show();
+        }
     }
 }
