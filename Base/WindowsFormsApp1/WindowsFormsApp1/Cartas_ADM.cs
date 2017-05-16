@@ -102,10 +102,8 @@ namespace WindowsFormsApp1
             // objeto já criado
             Card carta;
 
-            MessageBox.Show(id_carta.ToString());
             //vai procurar o id da carta 
             carta = container.CardSet.Find(id_carta);
-            MessageBox.Show(carta.Name);
             carta.Name = nome;
             carta.Faction = facao;
             carta.Type = tipo;
@@ -116,12 +114,51 @@ namespace WindowsFormsApp1
             carta.Defense = defesa;
             carta.Image = imagem;
 
+            //facultativa
             container.Entry(carta).State = System.Data.Entity.EntityState.Modified;
             container.SaveChanges();
 
             MessageBox.Show("Alterado com sucesso!");
 
             refresh_datagrid();
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+
+            Card carta = container.CardSet.Find(id_carta);
+
+            container.CardSet.Remove(carta);
+
+            container.SaveChanges();
+
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_datagrid();
+
+        }
+
+        private void tbxpesquisa_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+
+                var query = container.CardSet.Where(carta => carta.Name.Contains(tbxpesquisa.Text));
+
+                DataGridCartas.DataSource = query.ToList();
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
         }
     }
 }
