@@ -58,5 +58,10 @@ namespace WindowsFormsApp1
             Hadmfrm.Show();
             Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
