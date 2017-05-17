@@ -21,36 +21,42 @@ namespace WindowsFormsApp1
         {
             Baralho_Arbitro BarAbarfrm = new Baralho_Arbitro();
             BarAbarfrm.Show();
+            Close();
         }
 
         private void cartaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cartas_Arbitro CartAbarfrm = new Cartas_Arbitro();
             CartAbarfrm.Show();
+            Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             JogoArbitro ArbJogosfrm = new JogoArbitro();
             ArbJogosfrm.Show();
+            Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou();
             ArbOndeToufrm.Show();
+            Close();
         }
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
             Histfrm.Show();
+            Close();
         }
 
         private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home Hfrm = new Home();
             Hfrm.Show();
+            Close();
         }
     }
 }
