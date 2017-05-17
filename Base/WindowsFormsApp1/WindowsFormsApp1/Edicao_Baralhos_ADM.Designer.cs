@@ -419,20 +419,22 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.Location = new System.Drawing.Point(175, 236);
+            this.button3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(171, 236);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 43);
+            this.button3.Size = new System.Drawing.Size(77, 43);
             this.button3.TabIndex = 6;
             this.button3.Text = "Guardar alterações";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(255, 236);
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(251, 236);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 43);
+            this.button4.Size = new System.Drawing.Size(77, 43);
             this.button4.TabIndex = 7;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = false;
