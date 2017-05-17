@@ -47,6 +47,11 @@ namespace WindowsFormsApp1
             refreshJogador();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
+        }
+
         private void AddJogador()
         {
             string nome = tbxNome.Text;
@@ -87,30 +92,51 @@ namespace WindowsFormsApp1
             int idade = Convert.ToInt32(numupdownIdade.Text);
             string imagem = "Sou bueda Fixe";
 
-            Player player;
+            //Player player;
+            if (jogadorSelected != null)
+            {
+                //player = container.PlayerSet.Find(id_jogador);
+                jogadorSelected.Name = nome;
+                jogadorSelected.Email = email;
+                jogadorSelected.Nickname = nickname;
+                jogadorSelected.Age = idade;
+                jogadorSelected.Avatar = imagem;
 
-            player = container.PlayerSet.Find(id_jogador);
-            player.Name = nome;
-            player.Email = email;
-            player.Nickname = nickname;
-            player.Age = idade;
-            player.Avatar = imagem;
+                container.Entry(jogadorSelected).State = System.Data.Entity.EntityState.Modified;
+                container.SaveChanges();
 
-            container.Entry(player).State = System.Data.Entity.EntityState.Modified;
-            container.SaveChanges();
+                MessageBox.Show("Alterado com sucesso!");
+            }
+            else
+            {
+                MessageBox.Show("Erro!");
+            }
 
-            MessageBox.Show("Alterado com sucesso!");
+        }
+
+        private void Cancelar()
+        {
+            // Fazer o cancelar ir para o menu do ADM - Simone <3S
         }
 
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
         {
-            jogadorSelected = (Player)lbxJogadores.SelectedItem;
-            tbxNome.Text = jogadorSelected.Name;
-            tbxEmail.Text = jogadorSelected.Email;
-            tbxNickName.Text = jogadorSelected.Nickname;
-            numupdownIdade.Value = jogadorSelected.Age;
-
+            if (lbxJogadores.SelectedItem != null)
+            {
+                jogadorSelected = container.PlayerSet.Where(jog => jog.Name.Equals(lbxJogadores.SelectedItem.ToString())).First();
+                //jogadorSelected = (Player)lbxJogadores.SelectedItem;
+                tbxNome.Text = jogadorSelected.Name;
+                tbxEmail.Text = jogadorSelected.Email;
+                tbxNickName.Text = jogadorSelected.Nickname;
+                numupdownIdade.Value = jogadorSelected.Age;
+            }
+            else
+            {
+                jogadorSelected = null;
+            }
         }
+
+
 
         // Menu Strip
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -143,12 +169,6 @@ namespace WindowsFormsApp1
             CardFrm.Show();
         }
 
-        //private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Perfil_Jogador_ADM PerfFrm = new Perfil_Jogador_ADM();
-        //    PerfFrm.Show();
-        //}
-
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
@@ -161,6 +181,6 @@ namespace WindowsFormsApp1
             Homefrm.Show();
         }
 
-        
+
     }
 }

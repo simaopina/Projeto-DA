@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             JogoArbitro JArbfrm = new JogoArbitro();
-            JArbfrm.Show;
+            JArbfrm.Show();
             Close();
         }
 
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro BarArbfrm = new Baralho_Arbitro;
+            Baralho_Arbitro BarArbfrm = new Baralho_Arbitro();
             BarArbfrm.Show();
             Close();
         }
