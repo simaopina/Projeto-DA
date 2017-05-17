@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     public partial class ADD_Jogador_ADM : Form
     {
         int id_jogador = 0;
+        Player jogadorSelected = null;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public ADD_Jogador_ADM()
@@ -100,7 +101,16 @@ namespace WindowsFormsApp1
 
             MessageBox.Show("Alterado com sucesso!");
         }
-    
+
+        private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            jogadorSelected = (Player)lbxJogadores.SelectedItem;
+            tbxNome.Text = jogadorSelected.Name;
+            tbxEmail.Text = jogadorSelected.Email;
+            tbxNickName.Text = jogadorSelected.Nickname;
+            numupdownIdade.Value = jogadorSelected.Age;
+
+        }
 
         // Menu Strip
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,20 +161,6 @@ namespace WindowsFormsApp1
             Homefrm.Show();
         }
 
-        private void lbxJogadores_Click(object sender, EventArgs e)
-        {
-            //if (lbxJogadores.SelectedItems.Count !=0)
-            //{
-            //if (lbxJogadores.SelectedItems[1].Selected)
-            //{
-                tbxNome.Text = lbxJogadores.FocusedItem.SubItems[1].Text;
-                tbxEmail.Text = lbxJogadores.Text;
-                tbxNickName.Text = lbxJogadores.Text;
-                numupdownIdade.Text = lbxJogadores.Text;
-                picbxAvatar.Image = lbxJogadores.Text;
-            //}
-            //}
-
-        }
+        
     }
 }
