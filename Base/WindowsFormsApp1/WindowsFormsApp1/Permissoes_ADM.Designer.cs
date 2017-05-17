@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gbxPermissoes = new System.Windows.Forms.GroupBox();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -75,10 +79,6 @@
             this.adicionarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.listView4 = new System.Windows.Forms.ListView();
             this.gbxPermissoes.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -111,6 +111,38 @@
             this.gbxPermissoes.TabIndex = 30;
             this.gbxPermissoes.TabStop = false;
             this.gbxPermissoes.Text = "Permissões Administrador";
+            // 
+            // listView4
+            // 
+            this.listView4.Location = new System.Drawing.Point(106, 163);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(161, 23);
+            this.listView4.TabIndex = 15;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView3
+            // 
+            this.listView3.Location = new System.Drawing.Point(106, 124);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(161, 23);
+            this.listView3.TabIndex = 14;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(106, 85);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(161, 23);
+            this.listView2.TabIndex = 13;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(106, 46);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 23);
+            this.listView1.TabIndex = 12;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button8
             // 
@@ -440,6 +472,7 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // menuStripHome
             // 
@@ -529,38 +562,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(106, 46);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 23);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(106, 85);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(161, 23);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView3
-            // 
-            this.listView3.Location = new System.Drawing.Point(106, 124);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(161, 23);
-            this.listView3.TabIndex = 14;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView4
-            // 
-            this.listView4.Location = new System.Drawing.Point(106, 163);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(161, 23);
-            this.listView4.TabIndex = 15;
-            this.listView4.UseCompatibleStateImageBehavior = false;
             // 
             // Permissoes_ADM
             // 

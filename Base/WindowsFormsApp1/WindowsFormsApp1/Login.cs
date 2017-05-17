@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-             Permissoes_ADM Perfrm = new Permissoes_ADM();
+             Home_ADM Perfrm = new Home_ADM();
 
              Perfrm.Show();
         }
