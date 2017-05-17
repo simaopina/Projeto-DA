@@ -299,6 +299,7 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // menuStripHome
             // 
@@ -368,7 +369,7 @@
             // addJogadorToolStripMenuItem
             // 
             this.addJogadorToolStripMenuItem.Name = "addJogadorToolStripMenuItem";
-            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.addJogadorToolStripMenuItem.Text = "Add Jogador";
             this.addJogadorToolStripMenuItem.Click += new System.EventHandler(this.addJogadorToolStripMenuItem_Click);
             // 

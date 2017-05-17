@@ -51,5 +51,12 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM Hadmfrm = new Home_ADM();
+            Hadmfrm.Show();
+            Close();
+        }
     }
 }
