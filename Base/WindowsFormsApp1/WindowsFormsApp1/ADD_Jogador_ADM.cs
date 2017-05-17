@@ -47,6 +47,11 @@ namespace WindowsFormsApp1
             refreshJogador();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Cancelar();
+        }
+
         private void AddJogador()
         {
             string nome = tbxNome.Text;
@@ -106,7 +111,12 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Erro!");
             }
-            
+
+        }
+
+        private void Cancelar()
+        {
+            // Fazer o cancelar ir para o menu do ADM - Simone <3S
         }
 
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,9 +134,9 @@ namespace WindowsFormsApp1
             {
                 jogadorSelected = null;
             }
-            
-
         }
+
+
 
         // Menu Strip
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -159,12 +169,6 @@ namespace WindowsFormsApp1
             CardFrm.Show();
         }
 
-        //private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    Perfil_Jogador_ADM PerfFrm = new Perfil_Jogador_ADM();
-        //    PerfFrm.Show();
-        //}
-
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
@@ -177,6 +181,6 @@ namespace WindowsFormsApp1
             Homefrm.Show();
         }
 
-        
+
     }
 }

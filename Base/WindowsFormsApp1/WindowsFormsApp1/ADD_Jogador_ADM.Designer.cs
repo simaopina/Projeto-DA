@@ -113,6 +113,7 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnInserir
             // 
@@ -311,8 +312,8 @@
             // adicionarNovoToolStripMenuItem
             // 
             this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
-            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.adicionarNovoToolStripMenuItem.Text = "Adicionar Novo";
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.adicionarNovoToolStripMenuItem.Text = "Perfil Jogador";
             this.adicionarNovoToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovoToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
