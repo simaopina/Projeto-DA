@@ -177,7 +177,7 @@ namespace WindowsFormsApp1
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Edicao_Baralhos_ADM ECfrm = new Edicao_Baralhos_ADM;
+            Edicao_Baralhos_ADM ECfrm = new Edicao_Baralhos_ADM();
             ECfrm.Show();
             Close();
         }
