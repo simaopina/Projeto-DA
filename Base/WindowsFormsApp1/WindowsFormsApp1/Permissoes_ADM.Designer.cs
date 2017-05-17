@@ -75,6 +75,10 @@
             this.adicionarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.listView4 = new System.Windows.Forms.ListView();
             this.gbxPermissoes.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -85,6 +89,10 @@
             // 
             // gbxPermissoes
             // 
+            this.gbxPermissoes.Controls.Add(this.listView4);
+            this.gbxPermissoes.Controls.Add(this.listView3);
+            this.gbxPermissoes.Controls.Add(this.listView2);
+            this.gbxPermissoes.Controls.Add(this.listView1);
             this.gbxPermissoes.Controls.Add(this.button8);
             this.gbxPermissoes.Controls.Add(this.button7);
             this.gbxPermissoes.Controls.Add(this.button6);
@@ -179,7 +187,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(62, 164);
+            this.label14.Location = new System.Drawing.Point(15, 164);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 13);
             this.label14.TabIndex = 3;
@@ -188,7 +196,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(59, 124);
+            this.label13.Location = new System.Drawing.Point(13, 124);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 13);
             this.label13.TabIndex = 2;
@@ -197,7 +205,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(59, 90);
+            this.label12.Location = new System.Drawing.Point(13, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 13);
             this.label12.TabIndex = 1;
@@ -206,7 +214,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 51);
+            this.label11.Location = new System.Drawing.Point(13, 51);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 0;
@@ -522,6 +530,38 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(106, 46);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 23);
+            this.listView1.TabIndex = 12;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(106, 85);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(161, 23);
+            this.listView2.TabIndex = 13;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView3
+            // 
+            this.listView3.Location = new System.Drawing.Point(106, 124);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(161, 23);
+            this.listView3.TabIndex = 14;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView4
+            // 
+            this.listView4.Location = new System.Drawing.Point(106, 163);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(161, 23);
+            this.listView4.TabIndex = 15;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            // 
             // Permissoes_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,5 +645,9 @@
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView1;
     }
 }
