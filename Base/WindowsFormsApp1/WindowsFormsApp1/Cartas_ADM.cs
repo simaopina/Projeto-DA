@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
         /// </summary>
         int id_carta = 0;
 
+        Boolean Carta_selecionada = false;
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Cartas_ADM()
         {
@@ -29,7 +31,7 @@ namespace WindowsFormsApp1
             string facao = txtFacao.Text;
             string tipo = txtTipo.Text;
             int lealdade = Convert.ToInt32(txtLealdade.Text);
-            int custo = Convert.ToInt32(txtLealdade.Text);
+            int custo = Convert.ToInt32(txtcusto.Text);
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
@@ -66,6 +68,8 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            Carta_selecionada = true;
+
             txtNome.Text = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
             txtFacao.Text = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
             txtTipo.Text = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
@@ -78,6 +82,14 @@ namespace WindowsFormsApp1
             
 
             id_carta = (int)DataGridCartas.CurrentRow.Cells[0].Value;
+
+            if (Carta_selecionada = true)
+            {
+                Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM();
+                Info_cartas_ADM.Show();
+
+            }
+
         }
 
         public void refresh_datagrid()
