@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             Baralho_ADM Brlhfrm = new Baralho_ADM();
 
             Brlhfrm.Show();
+            Close();
         }
 
         private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace WindowsFormsApp1
              Edicao_Baralhos_ADM EBrlhfrm = new Edicao_Baralhos_ADM ();
 
             EBrlhfrm.Show();
+            Close();
         }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace WindowsFormsApp1
             Cartas_ADM Cfrm = new Cartas_ADM();
 
             Cfrm.Show();
+            Close();
         }
 
         private void perToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +46,7 @@ namespace WindowsFormsApp1
             Perfil_Jogador_ADM PJofrm = new Perfil_Jogador_ADM();
 
             PJofrm.Show();
+            Close();
         }
 
         private void adicionarJogadorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +54,7 @@ namespace WindowsFormsApp1
             ADD_Jogador_ADM addJofrm = new ADD_Jogador_ADM();
 
             addJofrm.Show();
+            Close();
         }
 
         private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +62,7 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
 
             Hfrm.Show();
+            Close();
         }
     }
 }

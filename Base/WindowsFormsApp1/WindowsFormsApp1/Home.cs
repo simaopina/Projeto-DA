@@ -20,9 +20,7 @@ namespace WindowsFormsApp1
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Cartas_ADM frm = new Cartas_ADM();
             
-            frm.Show();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
