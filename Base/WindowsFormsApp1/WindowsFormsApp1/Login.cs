@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
             Home_Arbitro HAfrm = new Home_Arbitro();
 
             HAfrm.Show();
+            Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace WindowsFormsApp1
              Home_ADM Perfrm = new Home_ADM();
 
              Perfrm.Show();
+            Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
