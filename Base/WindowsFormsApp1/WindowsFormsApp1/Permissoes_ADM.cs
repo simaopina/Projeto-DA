@@ -40,15 +40,7 @@ namespace WindowsFormsApp1
 
             Cfrm.Show();
             Close();
-        }
-
-        private void perToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Perfil_Jogador_ADM PJofrm = new Perfil_Jogador_ADM();
-
-            PJofrm.Show();
-            Close();
-        }
+        }   
 
         private void adicionarJogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {

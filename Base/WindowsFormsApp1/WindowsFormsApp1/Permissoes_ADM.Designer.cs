@@ -72,7 +72,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -495,18 +494,10 @@
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perToolStripMenuItem,
             this.adicionarJogadorToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
             this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.jogadoresToolStripMenuItem.Text = "Jogadores";
-            // 
-            // perToolStripMenuItem
-            // 
-            this.perToolStripMenuItem.Name = "perToolStripMenuItem";
-            this.perToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.perToolStripMenuItem.Text = "Perfil";
-            this.perToolStripMenuItem.Click += new System.EventHandler(this.perToolStripMenuItem_Click);
             // 
             // adicionarJogadorToolStripMenuItem
             // 
@@ -612,7 +603,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem perToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
     }
