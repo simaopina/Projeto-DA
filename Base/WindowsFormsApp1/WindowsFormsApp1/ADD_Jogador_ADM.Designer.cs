@@ -58,6 +58,7 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRemover = new System.Windows.Forms.Button();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
@@ -68,6 +69,7 @@
             // 
             // gbxNovoJogadorADM
             // 
+            this.gbxNovoJogadorADM.Controls.Add(this.btnRemover);
             this.gbxNovoJogadorADM.Controls.Add(this.btnAlterar);
             this.gbxNovoJogadorADM.Controls.Add(this.numupdownIdade);
             this.gbxNovoJogadorADM.Controls.Add(this.btnCancelar);
@@ -90,7 +92,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(134, 205);
+            this.btnAlterar.Location = new System.Drawing.Point(98, 203);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(75, 23);
             this.btnAlterar.TabIndex = 13;
@@ -107,7 +109,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(215, 205);
+            this.btnCancelar.Location = new System.Drawing.Point(260, 203);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 11;
@@ -117,7 +119,7 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(53, 205);
+            this.btnInserir.Location = new System.Drawing.Point(17, 203);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 10;
@@ -312,7 +314,7 @@
             // adicionarNovoToolStripMenuItem
             // 
             this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
-            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.adicionarNovoToolStripMenuItem.Text = "Perfil Jogador";
             this.adicionarNovoToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovoToolStripMenuItem_Click);
             // 
@@ -331,6 +333,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(179, 203);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 14;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // ADD_Jogador_ADM
             // 
@@ -391,5 +403,6 @@
         private System.Windows.Forms.NumericUpDown numupdownIdade;
         private System.Windows.Forms.ListBox lbxJogadores;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnRemover;
     }
 }

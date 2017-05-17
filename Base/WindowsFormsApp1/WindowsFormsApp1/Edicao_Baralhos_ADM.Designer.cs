@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             this.gbxEdBaralhoADM = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardarAlterações = new System.Windows.Forms.Button();
+            this.btnAdicionarBaralho = new System.Windows.Forms.Button();
+            this.btnRemoverBaralho = new System.Windows.Forms.Button();
+            this.cbxBaralho = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.listVCartas = new System.Windows.Forms.ListView();
+            this.listVBaralho = new System.Windows.Forms.ListView();
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.list_Curiosidades = new System.Windows.Forms.ListView();
             this.gbxEquipas = new System.Windows.Forms.GroupBox();
@@ -46,10 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
@@ -63,6 +69,7 @@
             this.addJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbxEdBaralhoADM.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxRank.SuspendLayout();
@@ -72,12 +79,118 @@
             // 
             // gbxEdBaralhoADM
             // 
-            this.gbxEdBaralhoADM.Location = new System.Drawing.Point(245, 271);
+            this.gbxEdBaralhoADM.Controls.Add(this.label13);
+            this.gbxEdBaralhoADM.Controls.Add(this.label12);
+            this.gbxEdBaralhoADM.Controls.Add(this.btnCancelar);
+            this.gbxEdBaralhoADM.Controls.Add(this.btnGuardarAlterações);
+            this.gbxEdBaralhoADM.Controls.Add(this.btnAdicionarBaralho);
+            this.gbxEdBaralhoADM.Controls.Add(this.btnRemoverBaralho);
+            this.gbxEdBaralhoADM.Controls.Add(this.cbxBaralho);
+            this.gbxEdBaralhoADM.Controls.Add(this.label11);
+            this.gbxEdBaralhoADM.Controls.Add(this.listVCartas);
+            this.gbxEdBaralhoADM.Controls.Add(this.listVBaralho);
+            this.gbxEdBaralhoADM.Location = new System.Drawing.Point(245, 233);
             this.gbxEdBaralhoADM.Name = "gbxEdBaralhoADM";
-            this.gbxEdBaralhoADM.Size = new System.Drawing.Size(348, 248);
+            this.gbxEdBaralhoADM.Size = new System.Drawing.Size(348, 286);
             this.gbxEdBaralhoADM.TabIndex = 30;
             this.gbxEdBaralhoADM.TabStop = false;
             this.gbxEdBaralhoADM.Text = "Edição Baralho";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(252, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Cartas:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(35, 43);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 13);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Baralho:";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(251, 236);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 43);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnGuardarAlterações
+            // 
+            this.btnGuardarAlterações.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnGuardarAlterações.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarAlterações.Location = new System.Drawing.Point(171, 236);
+            this.btnGuardarAlterações.Name = "btnGuardarAlterações";
+            this.btnGuardarAlterações.Size = new System.Drawing.Size(77, 43);
+            this.btnGuardarAlterações.TabIndex = 6;
+            this.btnGuardarAlterações.Text = "Guardar alterações";
+            this.btnGuardarAlterações.UseVisualStyleBackColor = false;
+            // 
+            // btnAdicionarBaralho
+            // 
+            this.btnAdicionarBaralho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdicionarBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarBaralho.Location = new System.Drawing.Point(143, 143);
+            this.btnAdicionarBaralho.Name = "btnAdicionarBaralho";
+            this.btnAdicionarBaralho.Size = new System.Drawing.Size(45, 37);
+            this.btnAdicionarBaralho.TabIndex = 5;
+            this.btnAdicionarBaralho.Text = "<";
+            this.btnAdicionarBaralho.UseVisualStyleBackColor = false;
+            // 
+            // btnRemoverBaralho
+            // 
+            this.btnRemoverBaralho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRemoverBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverBaralho.Location = new System.Drawing.Point(143, 100);
+            this.btnRemoverBaralho.Name = "btnRemoverBaralho";
+            this.btnRemoverBaralho.Size = new System.Drawing.Size(45, 37);
+            this.btnRemoverBaralho.TabIndex = 4;
+            this.btnRemoverBaralho.Text = ">";
+            this.btnRemoverBaralho.UseVisualStyleBackColor = false;
+            // 
+            // cbxBaralho
+            // 
+            this.cbxBaralho.FormattingEnabled = true;
+            this.cbxBaralho.Location = new System.Drawing.Point(127, 14);
+            this.cbxBaralho.Name = "cbxBaralho";
+            this.cbxBaralho.Size = new System.Drawing.Size(121, 21);
+            this.cbxBaralho.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(83, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 13);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Baralho:";
+            // 
+            // listVCartas
+            // 
+            this.listVCartas.Location = new System.Drawing.Point(213, 62);
+            this.listVCartas.Name = "listVCartas";
+            this.listVCartas.Size = new System.Drawing.Size(115, 168);
+            this.listVCartas.TabIndex = 1;
+            this.listVCartas.UseCompatibleStateImageBehavior = false;
+            // 
+            // listVBaralho
+            // 
+            this.listVBaralho.Location = new System.Drawing.Point(6, 62);
+            this.listVBaralho.Name = "listVBaralho";
+            this.listVBaralho.Size = new System.Drawing.Size(115, 168);
+            this.listVBaralho.TabIndex = 0;
+            this.listVBaralho.UseCompatibleStateImageBehavior = false;
             // 
             // gbxCuriosidades
             // 
@@ -241,50 +354,6 @@
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
             // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 234);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 234);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 234);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 234);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(518, 204);
@@ -399,15 +468,13 @@
             this.Controls.Add(this.gbxEquipas);
             this.Controls.Add(this.gbxRank);
             this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
             this.Name = "Edicao_Baralhos_ADM";
             this.Text = "Edicao_Baralhos_ADM";
+            this.gbxEdBaralhoADM.ResumeLayout(false);
+            this.gbxEdBaralhoADM.PerformLayout();
             this.gbxCuriosidades.ResumeLayout(false);
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
@@ -441,10 +508,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -458,5 +521,15 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addJogadorToolStripMenuItem;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardarAlterações;
+        private System.Windows.Forms.Button btnAdicionarBaralho;
+        private System.Windows.Forms.Button btnRemoverBaralho;
+        private System.Windows.Forms.ComboBox cbxBaralho;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListView listVCartas;
+        private System.Windows.Forms.ListView listVBaralho;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
