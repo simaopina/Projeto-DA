@@ -143,42 +143,49 @@ namespace WindowsFormsApp1
         {
             Home Homefrm = new Home();
             Homefrm.Show();
+            Close();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Permissoes_ADM Permfrm = new Permissoes_ADM();
             Permfrm.Show();
+            Close();
         }
 
         private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Baralho_ADM BarFrm = new Baralho_ADM();
             BarFrm.Show();
+            Close();
         }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Edicao_Baralhos_ADM EBfrm = new Edicao_Baralhos_ADM();
             EBfrm.Show();
+            Close();
         }
 
         private void cartasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Cartas_ADM CardFrm = new Cartas_ADM();
             CardFrm.Show();
+            Close();
         }
 
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
             AddJFrm.Show();
+            Close();
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home Homefrm = new Home();
             Homefrm.Show();
+            Close();
         }
 
 
