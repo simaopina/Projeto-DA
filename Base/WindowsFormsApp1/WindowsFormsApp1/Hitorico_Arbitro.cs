@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_Arbitro HArfrm = new Home_Arbitro();
