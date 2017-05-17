@@ -46,12 +46,14 @@
             this.lblDefesa = new System.Windows.Forms.Label();
             this.lblAtaque = new System.Windows.Forms.Label();
             this.lblRegras = new System.Windows.Forms.Label();
+            this.txtbLealdade = new System.Windows.Forms.TextBox();
             this.gbxInfoCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxInfoCartasADM
             // 
+            this.gbxInfoCartasADM.Controls.Add(this.txtbLealdade);
             this.gbxInfoCartasADM.Controls.Add(this.lblDefesa);
             this.gbxInfoCartasADM.Controls.Add(this.lblAtaque);
             this.gbxInfoCartasADM.Controls.Add(this.lblRegras);
@@ -237,6 +239,13 @@
             this.lblRegras.TabIndex = 18;
             this.lblRegras.Text = "label16";
             // 
+            // txtbLealdade
+            // 
+            this.txtbLealdade.Location = new System.Drawing.Point(258, 43);
+            this.txtbLealdade.Name = "txtbLealdade";
+            this.txtbLealdade.Size = new System.Drawing.Size(100, 20);
+            this.txtbLealdade.TabIndex = 21;
+            // 
             // Info_Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,5 +282,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbLealdade;
     }
 }

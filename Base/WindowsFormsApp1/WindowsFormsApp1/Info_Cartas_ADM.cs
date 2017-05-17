@@ -26,10 +26,12 @@ namespace WindowsFormsApp1
 
         private void Info_Cartas_ADM_Load(object sender, EventArgs e)
         {
+            txtbLealdade.ReadOnly =true;
+
             string nome = lblNome.Text;
             string facao = lblFacao.Text;
             string tipo = lblTipo.Text;
-            int lealdade = Convert.ToInt32(lblLealdade.Text);
+            int lealdade = Convert.ToInt32(txtbLealdade.Text);
             int custo = Convert.ToInt32(lblCusto.Text);
             string regras = lblRegras.Text;
             int ataque = Convert.ToInt32(lblAtaque.Text);
