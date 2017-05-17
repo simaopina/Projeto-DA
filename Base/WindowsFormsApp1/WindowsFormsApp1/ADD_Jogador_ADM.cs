@@ -116,7 +116,9 @@ namespace WindowsFormsApp1
 
         private void Cancelar()
         {
-            // Fazer o cancelar ir para o menu do ADM - Simone <3S
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
         }
 
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
