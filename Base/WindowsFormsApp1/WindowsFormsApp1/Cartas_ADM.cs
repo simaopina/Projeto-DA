@@ -31,8 +31,8 @@ namespace WindowsFormsApp1
             int lealdade = Convert.ToInt32(txtLealdade.Text);
             int custo = Convert.ToInt32(txtLealdade.Text);
             string regras = txtRegras.Text;
-            int ataque = Convert.ToInt32(txtAtaque.Text);
-            int defesa = Convert.ToInt32(txtDefesa.Text);
+            int ataque = Convert.ToInt32(NumericAtaque.Text);
+            int defesa = Convert.ToInt32(NumericDefesa.Text);
             int imagem = 0;
 
             Card carta = new Card
@@ -70,11 +70,11 @@ namespace WindowsFormsApp1
             txtFacao.Text = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
             txtTipo.Text = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
             txtLealdade.Text = DataGridCartas.CurrentRow.Cells[4].Value.ToString();
-            txtDefesa.Text = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
+            NumericDefesa.Text = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
             txtcusto.Text = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
             txtRegras.Text = DataGridCartas.CurrentRow.Cells[7].Value.ToString();
-            txtAtaque.Text = DataGridCartas.CurrentRow.Cells[8].Value.ToString();
-            txtImagem.Text = DataGridCartas.CurrentRow.Cells[9].Value.ToString();
+            NumericAtaque.Text = DataGridCartas.CurrentRow.Cells[8].Value.ToString();
+            LinkLabelImagem.Text = DataGridCartas.CurrentRow.Cells[9].Value.ToString();
             
 
             id_carta = (int)DataGridCartas.CurrentRow.Cells[0].Value;
@@ -95,8 +95,8 @@ namespace WindowsFormsApp1
             int lealdade = Convert.ToInt32(txtLealdade.Text);
             int custo = Convert.ToInt32(txtLealdade.Text);
             string regras = txtRegras.Text;
-            int ataque = Convert.ToInt32(txtAtaque.Text);
-            int defesa = Convert.ToInt32(txtDefesa.Text);
+            int ataque = Convert.ToInt32(NumericAtaque.Text);
+            int defesa = Convert.ToInt32(NumericDefesa.Text);
             int imagem = 0;
 
             // objeto já criado

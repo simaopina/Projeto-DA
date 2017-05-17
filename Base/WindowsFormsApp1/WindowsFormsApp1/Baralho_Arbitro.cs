@@ -34,7 +34,15 @@ namespace WindowsFormsApp1
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
-            listVbaralhoArbitro.SmallImageList = listaBaralhoArbitroUneasyAlliance;
+            listVbaralhoArbitro.LargeImageList = listaBaralhoArbitroUneasyAlliance;
+            listVbaralhoArbitro.Items.Clear();
+
+            foreach (Card carta in container.CardSet)
+            {
+                ListViewItem item = new ListViewItem(carta.Name);
+                item.ImageIndex = carta.Image;
+                listVbaralhoArbitro.Items.Add(item);
+            }
         }
 
         private void Baralho_Arbitro_Load(object sender, EventArgs e)
