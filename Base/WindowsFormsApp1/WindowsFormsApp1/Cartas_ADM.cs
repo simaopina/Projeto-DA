@@ -160,5 +160,52 @@ namespace WindowsFormsApp1
                 refresh_datagrid();
             }
         }
+
+        private void permissõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permissoes_ADM Perfrm = new Permissoes_ADM();
+            Perfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM Barfrm = new Baralho_ADM();
+            Barfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM ECfrm = new Edicao_Baralhos_ADM;
+            ECfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Perfil_Jogador_ADM PJfrm = new Perfil_Jogador_ADM();
+            PJfrm.Show();
+            Close();
+        }
+
+        private void addJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM addjfrm = new ADD_Jogador_ADM();
+            addjfrm.Show();
+            Close();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }

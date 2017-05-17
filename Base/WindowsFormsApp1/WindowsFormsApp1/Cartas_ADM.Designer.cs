@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbxCartasADM = new System.Windows.Forms.GroupBox();
+            this.LinkLabelImagem = new System.Windows.Forms.LinkLabel();
+            this.NumericDefesa = new System.Windows.Forms.NumericUpDown();
+            this.NumericAtaque = new System.Windows.Forms.NumericUpDown();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btAlterarCarta = new System.Windows.Forms.Button();
             this.btAdicionarCartas = new System.Windows.Forms.Button();
@@ -80,10 +83,9 @@
             this.cardSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
             this.cardSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter();
-            this.NumericAtaque = new System.Windows.Forms.NumericUpDown();
-            this.NumericDefesa = new System.Windows.Forms.NumericUpDown();
-            this.LinkLabelImagem = new System.Windows.Forms.LinkLabel();
             this.gbxCartasADM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).BeginInit();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
@@ -91,8 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCartasADM
@@ -124,6 +124,30 @@
             this.gbxCartasADM.TabIndex = 30;
             this.gbxCartasADM.TabStop = false;
             this.gbxCartasADM.Text = "Cartas Administrador";
+            // 
+            // LinkLabelImagem
+            // 
+            this.LinkLabelImagem.AutoSize = true;
+            this.LinkLabelImagem.Location = new System.Drawing.Point(429, 77);
+            this.LinkLabelImagem.Name = "LinkLabelImagem";
+            this.LinkLabelImagem.Size = new System.Drawing.Size(60, 13);
+            this.LinkLabelImagem.TabIndex = 24;
+            this.LinkLabelImagem.TabStop = true;
+            this.LinkLabelImagem.Text = "Adicionar...";
+            // 
+            // NumericDefesa
+            // 
+            this.NumericDefesa.Location = new System.Drawing.Point(429, 104);
+            this.NumericDefesa.Name = "NumericDefesa";
+            this.NumericDefesa.Size = new System.Drawing.Size(47, 20);
+            this.NumericDefesa.TabIndex = 23;
+            // 
+            // NumericAtaque
+            // 
+            this.NumericAtaque.Location = new System.Drawing.Point(429, 46);
+            this.NumericAtaque.Name = "NumericAtaque";
+            this.NumericAtaque.Size = new System.Drawing.Size(47, 20);
+            this.NumericAtaque.TabIndex = 21;
             // 
             // btnRemover
             // 
@@ -322,6 +346,7 @@
             this.permissõesToolStripMenuItem.Name = "permissõesToolStripMenuItem";
             this.permissõesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.permissõesToolStripMenuItem.Text = "Permissões";
+            this.permissõesToolStripMenuItem.Click += new System.EventHandler(this.permissõesToolStripMenuItem_Click);
             // 
             // loginToolStripMenuItem
             // 
@@ -337,14 +362,16 @@
             // baralhoToolStripMenuItem
             // 
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.baralhoToolStripMenuItem.Text = "Baralho";
+            this.baralhoToolStripMenuItem.Click += new System.EventHandler(this.baralhoToolStripMenuItem_Click);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cartasToolStripMenuItem.Text = "Editar Baralho";
+            this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -354,8 +381,9 @@
             // cartasToolStripMenuItem1
             // 
             this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.cartasToolStripMenuItem1.Text = "Cartas";
+            this.cartasToolStripMenuItem1.Click += new System.EventHandler(this.cartasToolStripMenuItem1_Click);
             // 
             // torneiosToolStripMenuItem
             // 
@@ -369,20 +397,23 @@
             // perfilToolStripMenuItem
             // 
             this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.perfilToolStripMenuItem.Text = "Perfil";
+            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // addJogadorToolStripMenuItem
             // 
             this.addJogadorToolStripMenuItem.Name = "addJogadorToolStripMenuItem";
-            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.addJogadorToolStripMenuItem.Text = "Add jogador";
+            this.addJogadorToolStripMenuItem.Click += new System.EventHandler(this.addJogadorToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.signOutToolStripMenuItem.Text = "Terminar Sessão";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -517,30 +548,6 @@
             // 
             this.cardSetTableAdapter1.ClearBeforeFill = true;
             // 
-            // NumericAtaque
-            // 
-            this.NumericAtaque.Location = new System.Drawing.Point(429, 46);
-            this.NumericAtaque.Name = "NumericAtaque";
-            this.NumericAtaque.Size = new System.Drawing.Size(47, 20);
-            this.NumericAtaque.TabIndex = 21;
-            // 
-            // NumericDefesa
-            // 
-            this.NumericDefesa.Location = new System.Drawing.Point(429, 104);
-            this.NumericDefesa.Name = "NumericDefesa";
-            this.NumericDefesa.Size = new System.Drawing.Size(47, 20);
-            this.NumericDefesa.TabIndex = 23;
-            // 
-            // LinkLabelImagem
-            // 
-            this.LinkLabelImagem.AutoSize = true;
-            this.LinkLabelImagem.Location = new System.Drawing.Point(429, 77);
-            this.LinkLabelImagem.Name = "LinkLabelImagem";
-            this.LinkLabelImagem.Size = new System.Drawing.Size(60, 13);
-            this.LinkLabelImagem.TabIndex = 24;
-            this.LinkLabelImagem.TabStop = true;
-            this.LinkLabelImagem.Text = "Adicionar...";
-            // 
             // Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,6 +564,8 @@
             this.Load += new System.EventHandler(this.Cartas_ADM_Load);
             this.gbxCartasADM.ResumeLayout(false);
             this.gbxCartasADM.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -565,8 +574,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
