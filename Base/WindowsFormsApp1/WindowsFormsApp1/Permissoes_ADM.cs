@@ -12,10 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class Permissoes_ADM : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public Permissoes_ADM()
         {
             InitializeComponent();
         }
+        Player jogadorSelected = null;
+
+
 
         //Navegação
         private void bralhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,7 +33,7 @@ namespace WindowsFormsApp1
 
         private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             Edicao_Baralhos_ADM EBrlhfrm = new Edicao_Baralhos_ADM ();
+            Edicao_Baralhos_ADM EBrlhfrm = new Edicao_Baralhos_ADM();
 
             EBrlhfrm.Show();
             Close();
@@ -40,7 +45,7 @@ namespace WindowsFormsApp1
 
             Cfrm.Show();
             Close();
-        }   
+        }
 
         private void adicionarJogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -70,6 +75,11 @@ namespace WindowsFormsApp1
             Home_ADM Hadmfrm = new Home_ADM();
             Hadmfrm.Show();
             Close();
+        }
+
+        private void cbxPromoverArbitro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

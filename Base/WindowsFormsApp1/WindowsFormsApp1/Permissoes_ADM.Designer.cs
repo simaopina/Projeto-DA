@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.gbxPermissoes = new System.Windows.Forms.GroupBox();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -79,6 +75,10 @@
             this.adicionarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxPromoverArbitro = new System.Windows.Forms.ComboBox();
+            this.cbxRemoverArbitro = new System.Windows.Forms.ComboBox();
+            this.cbxBannirArbitro = new System.Windows.Forms.ComboBox();
+            this.cbxBannirJogador = new System.Windows.Forms.ComboBox();
             this.gbxPermissoes.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -89,10 +89,10 @@
             // 
             // gbxPermissoes
             // 
-            this.gbxPermissoes.Controls.Add(this.listView4);
-            this.gbxPermissoes.Controls.Add(this.listView3);
-            this.gbxPermissoes.Controls.Add(this.listView2);
-            this.gbxPermissoes.Controls.Add(this.listView1);
+            this.gbxPermissoes.Controls.Add(this.cbxBannirJogador);
+            this.gbxPermissoes.Controls.Add(this.cbxBannirArbitro);
+            this.gbxPermissoes.Controls.Add(this.cbxRemoverArbitro);
+            this.gbxPermissoes.Controls.Add(this.cbxPromoverArbitro);
             this.gbxPermissoes.Controls.Add(this.button8);
             this.gbxPermissoes.Controls.Add(this.button7);
             this.gbxPermissoes.Controls.Add(this.button6);
@@ -111,38 +111,6 @@
             this.gbxPermissoes.TabIndex = 30;
             this.gbxPermissoes.TabStop = false;
             this.gbxPermissoes.Text = "Permissões Administrador";
-            // 
-            // listView4
-            // 
-            this.listView4.Location = new System.Drawing.Point(106, 163);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(161, 23);
-            this.listView4.TabIndex = 15;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView3
-            // 
-            this.listView3.Location = new System.Drawing.Point(106, 124);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(161, 23);
-            this.listView3.TabIndex = 14;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(106, 85);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(161, 23);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(106, 46);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 23);
-            this.listView1.TabIndex = 12;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // button8
             // 
@@ -219,7 +187,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(15, 164);
+            this.label14.Location = new System.Drawing.Point(13, 168);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 13);
             this.label14.TabIndex = 3;
@@ -228,7 +196,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 124);
+            this.label13.Location = new System.Drawing.Point(13, 129);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 13);
             this.label13.TabIndex = 2;
@@ -563,6 +531,39 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // cbxPromoverArbitro
+            // 
+            this.cbxPromoverArbitro.FormattingEnabled = true;
+            this.cbxPromoverArbitro.Location = new System.Drawing.Point(104, 46);
+            this.cbxPromoverArbitro.Name = "cbxPromoverArbitro";
+            this.cbxPromoverArbitro.Size = new System.Drawing.Size(161, 21);
+            this.cbxPromoverArbitro.TabIndex = 16;
+            this.cbxPromoverArbitro.SelectedIndexChanged += new System.EventHandler(this.cbxPromoverArbitro_SelectedIndexChanged);
+            // 
+            // cbxRemoverArbitro
+            // 
+            this.cbxRemoverArbitro.FormattingEnabled = true;
+            this.cbxRemoverArbitro.Location = new System.Drawing.Point(104, 87);
+            this.cbxRemoverArbitro.Name = "cbxRemoverArbitro";
+            this.cbxRemoverArbitro.Size = new System.Drawing.Size(161, 21);
+            this.cbxRemoverArbitro.TabIndex = 17;
+            // 
+            // cbxBannirArbitro
+            // 
+            this.cbxBannirArbitro.FormattingEnabled = true;
+            this.cbxBannirArbitro.Location = new System.Drawing.Point(104, 124);
+            this.cbxBannirArbitro.Name = "cbxBannirArbitro";
+            this.cbxBannirArbitro.Size = new System.Drawing.Size(161, 21);
+            this.cbxBannirArbitro.TabIndex = 18;
+            // 
+            // cbxBannirJogador
+            // 
+            this.cbxBannirJogador.FormattingEnabled = true;
+            this.cbxBannirJogador.Location = new System.Drawing.Point(104, 163);
+            this.cbxBannirJogador.Name = "cbxBannirJogador";
+            this.cbxBannirJogador.Size = new System.Drawing.Size(161, 21);
+            this.cbxBannirJogador.TabIndex = 19;
+            // 
             // Permissoes_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,9 +647,9 @@
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
-        private System.Windows.Forms.ListView listView4;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ComboBox cbxBannirJogador;
+        private System.Windows.Forms.ComboBox cbxBannirArbitro;
+        private System.Windows.Forms.ComboBox cbxRemoverArbitro;
+        private System.Windows.Forms.ComboBox cbxPromoverArbitro;
     }
 }
