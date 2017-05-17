@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
 
             id_carta = (int)DataGridCartas.CurrentRow.Cells[0].Value;
 
-            if (Carta_selecionada = true)
+            if (Carta_selecionada == true)
             {
                 Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM();
                 Info_cartas_ADM.Show();
@@ -214,6 +214,14 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM H_ADM = new Home_ADM();
+            H_ADM.Show();
+            Close();
+
         }
     }
 }
