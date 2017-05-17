@@ -26,8 +26,8 @@ namespace WindowsFormsApp1
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login Lfrm = new Login();
-
             Lfrm.Show();
+            Hide();
         }
     }
 }

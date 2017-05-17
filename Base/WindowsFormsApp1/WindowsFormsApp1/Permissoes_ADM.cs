@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        //Navegação
         private void bralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Baralho_ADM Brlhfrm = new Baralho_ADM();
@@ -39,15 +40,7 @@ namespace WindowsFormsApp1
 
             Cfrm.Show();
             Close();
-        }
-
-        private void perToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Perfil_Jogador_ADM PJofrm = new Perfil_Jogador_ADM();
-
-            PJofrm.Show();
-            Close();
-        }
+        }   
 
         private void adicionarJogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -62,6 +55,13 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
 
             Hfrm.Show();
+            Close();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permissoes_ADM Perfrm = new Permissoes_ADM();
+            Perfrm.Show();
             Close();
         }
     }

@@ -30,5 +30,12 @@ namespace WindowsFormsApp1
 
              Perfrm.Show();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }

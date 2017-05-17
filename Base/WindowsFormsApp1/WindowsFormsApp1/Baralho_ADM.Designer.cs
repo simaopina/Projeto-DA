@@ -50,10 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
@@ -64,7 +60,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.perfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -82,9 +77,9 @@
             // gbxBaralhoADM
             // 
             this.gbxBaralhoADM.Controls.Add(this.ListVBaralhoADM);
-            this.gbxBaralhoADM.Location = new System.Drawing.Point(245, 303);
+            this.gbxBaralhoADM.Location = new System.Drawing.Point(245, 275);
             this.gbxBaralhoADM.Name = "gbxBaralhoADM";
-            this.gbxBaralhoADM.Size = new System.Drawing.Size(348, 217);
+            this.gbxBaralhoADM.Size = new System.Drawing.Size(348, 245);
             this.gbxBaralhoADM.TabIndex = 30;
             this.gbxBaralhoADM.TabStop = false;
             this.gbxBaralhoADM.Text = "Baralho";
@@ -94,7 +89,7 @@
             this.ListVBaralhoADM.LargeImageList = this.ListaBaralhoGaianloveforlife;
             this.ListVBaralhoADM.Location = new System.Drawing.Point(6, 19);
             this.ListVBaralhoADM.Name = "ListVBaralhoADM";
-            this.ListVBaralhoADM.Size = new System.Drawing.Size(336, 192);
+            this.ListVBaralhoADM.Size = new System.Drawing.Size(336, 220);
             this.ListVBaralhoADM.SmallImageList = this.ListaBaralhoGaianloveforlife;
             this.ListVBaralhoADM.TabIndex = 0;
             this.ListVBaralhoADM.UseCompatibleStateImageBehavior = false;
@@ -313,50 +308,6 @@
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
             // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 235);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 235);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 235);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 235);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Location = new System.Drawing.Point(518, 205);
@@ -414,7 +365,7 @@
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Editar Baralho";
             this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
@@ -426,25 +377,17 @@
             // cartasToolStripMenuItem1
             // 
             this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem1.Text = "Cartas";
             this.cartasToolStripMenuItem1.Click += new System.EventHandler(this.cartasToolStripMenuItem1_Click);
             // 
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.perfilToolStripMenuItem,
             this.adicionarNovoToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
             this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.jogadoresToolStripMenuItem.Text = "Jogadores";
-            // 
-            // perfilToolStripMenuItem
-            // 
-            this.perfilToolStripMenuItem.Name = "perfilToolStripMenuItem";
-            this.perfilToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.perfilToolStripMenuItem.Text = "Perfil";
-            this.perfilToolStripMenuItem.Click += new System.EventHandler(this.perfilToolStripMenuItem_Click);
             // 
             // adicionarNovoToolStripMenuItem
             // 
@@ -471,7 +414,7 @@
             // 
             // btnBaralhoGaianAMD
             // 
-            this.btnBaralhoGaianAMD.Location = new System.Drawing.Point(274, 274);
+            this.btnBaralhoGaianAMD.Location = new System.Drawing.Point(272, 245);
             this.btnBaralhoGaianAMD.Name = "btnBaralhoGaianAMD";
             this.btnBaralhoGaianAMD.Size = new System.Drawing.Size(119, 24);
             this.btnBaralhoGaianAMD.TabIndex = 7;
@@ -481,7 +424,7 @@
             // 
             // btnBaralhoUneasyADM
             // 
-            this.btnBaralhoUneasyADM.Location = new System.Drawing.Point(420, 275);
+            this.btnBaralhoUneasyADM.Location = new System.Drawing.Point(420, 245);
             this.btnBaralhoUneasyADM.Name = "btnBaralhoUneasyADM";
             this.btnBaralhoUneasyADM.Size = new System.Drawing.Size(119, 22);
             this.btnBaralhoUneasyADM.TabIndex = 8;
@@ -551,10 +494,6 @@
             this.Controls.Add(this.gbxEquipas);
             this.Controls.Add(this.gbxRank);
             this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
@@ -595,10 +534,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -611,7 +546,6 @@
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
         private System.Windows.Forms.Button btnBaralhoGaianAMD;
         private System.Windows.Forms.Button btnBaralhoUneasyADM;
