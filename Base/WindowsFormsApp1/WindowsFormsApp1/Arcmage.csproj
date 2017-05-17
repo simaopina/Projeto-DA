@@ -195,11 +195,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Perfil_Jogador_ADM.cs">
+    <Compile Include="Home_ADM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Perfil_Jogador_ADM.Designer.cs">
-      <DependentUpon>Perfil_Jogador_ADM.cs</DependentUpon>
+    <Compile Include="Home_ADM.Designer.cs">
+      <DependentUpon>Home_ADM.cs</DependentUpon>
     </Compile>
     <Compile Include="Permissoes_ADM.cs">
       <SubType>Form</SubType>
@@ -281,8 +281,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Perfil_Jogador_ADM.resx">
-      <DependentUpon>Perfil_Jogador_ADM.cs</DependentUpon>
+    <EmbeddedResource Include="Home_ADM.resx">
+      <DependentUpon>Home_ADM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Permissoes_ADM.resx">
       <DependentUpon>Permissoes_ADM.cs</DependentUpon>
