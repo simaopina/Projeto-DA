@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        //Navegação
         private void bralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Baralho_ADM Brlhfrm = new Baralho_ADM();
@@ -62,6 +63,13 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
 
             Hfrm.Show();
+            Close();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permissoes_ADM Perfrm = new Permissoes_ADM();
+            Perfrm.Show();
             Close();
         }
     }
