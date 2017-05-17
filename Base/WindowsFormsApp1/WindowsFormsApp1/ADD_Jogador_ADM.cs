@@ -136,12 +136,36 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+
+            if (lbxJogadores.SelectedItem != null)
+            {
+
+                // verificar o remover //
+                jogadorSelected = container.PlayerSet.Find(jogadorSelected);
+            
+                container.PlayerSet.Remove(jogadorSelected);
+
+                container.SaveChanges();
+
+
+                MessageBox.Show("Eliminado com sucesso!");
+
+                refreshJogador();
+            }
+            else
+            {
+                MessageBox.Show("Erro!");
+            }
+            
+        }
 
 
         // Menu Strip
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home Homefrm = new Home();
+            Home_ADM Homefrm = new Home_ADM();
             Homefrm.Show();
             Close();
         }
@@ -188,6 +212,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-
+        
     }
 }
