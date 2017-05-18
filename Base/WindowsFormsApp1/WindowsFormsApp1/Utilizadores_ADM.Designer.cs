@@ -28,19 +28,338 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtbNickName_ADM = new System.Windows.Forms.TextBox();
+            this.txtbPassword_ADM = new System.Windows.Forms.TextBox();
+            this.txtbEmail_ADM = new System.Windows.Forms.TextBox();
+            this.btnGuardar_ADM = new System.Windows.Forms.Button();
+            this.btnAlterar_ADM = new System.Windows.Forms.Button();
+            this.btnEliminar_ADM = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.linkLAvatar_ARB = new System.Windows.Forms.LinkLabel();
+            this.txtbNickName_ARB = new System.Windows.Forms.TextBox();
+            this.txtbPassword_ARB = new System.Windows.Forms.TextBox();
+            this.txtbNome_ARB = new System.Windows.Forms.TextBox();
+            this.btn = new System.Windows.Forms.Button();
+            this.btnAlterar_ARB = new System.Windows.Forms.Button();
+            this.btnGuarda_ARB = new System.Windows.Forms.Button();
+            this.dataGrid_ADM = new System.Windows.Forms.DataGridView();
+            this.dataGrid_ARB = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ADM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ARB)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnEliminar_ADM);
+            this.groupBox1.Controls.Add(this.btnAlterar_ADM);
+            this.groupBox1.Controls.Add(this.btnGuardar_ADM);
+            this.groupBox1.Controls.Add(this.txtbEmail_ADM);
+            this.groupBox1.Controls.Add(this.txtbPassword_ADM);
+            this.groupBox1.Controls.Add(this.txtbNickName_ADM);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(21, 352);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(209, 148);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Administrador";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn);
+            this.groupBox2.Controls.Add(this.btnAlterar_ARB);
+            this.groupBox2.Controls.Add(this.txtbNome_ARB);
+            this.groupBox2.Controls.Add(this.btnGuarda_ARB);
+            this.groupBox2.Controls.Add(this.txtbPassword_ARB);
+            this.groupBox2.Controls.Add(this.txtbNickName_ARB);
+            this.groupBox2.Controls.Add(this.linkLAvatar_ARB);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Location = new System.Drawing.Point(332, 352);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(209, 148);
+            this.groupBox2.TabIndex = 35;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Árbitro";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Adicionar utilizador";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "NickName:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Password:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(32, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Email:";
+            // 
+            // txtbNickName_ADM
+            // 
+            this.txtbNickName_ADM.Location = new System.Drawing.Point(78, 27);
+            this.txtbNickName_ADM.Name = "txtbNickName_ADM";
+            this.txtbNickName_ADM.Size = new System.Drawing.Size(100, 20);
+            this.txtbNickName_ADM.TabIndex = 3;
+            // 
+            // txtbPassword_ADM
+            // 
+            this.txtbPassword_ADM.Location = new System.Drawing.Point(78, 53);
+            this.txtbPassword_ADM.Name = "txtbPassword_ADM";
+            this.txtbPassword_ADM.Size = new System.Drawing.Size(100, 20);
+            this.txtbPassword_ADM.TabIndex = 4;
+            // 
+            // txtbEmail_ADM
+            // 
+            this.txtbEmail_ADM.Location = new System.Drawing.Point(78, 79);
+            this.txtbEmail_ADM.Name = "txtbEmail_ADM";
+            this.txtbEmail_ADM.Size = new System.Drawing.Size(100, 20);
+            this.txtbEmail_ADM.TabIndex = 5;
+            // 
+            // btnGuardar_ADM
+            // 
+            this.btnGuardar_ADM.Location = new System.Drawing.Point(10, 117);
+            this.btnGuardar_ADM.Name = "btnGuardar_ADM";
+            this.btnGuardar_ADM.Size = new System.Drawing.Size(57, 23);
+            this.btnGuardar_ADM.TabIndex = 6;
+            this.btnGuardar_ADM.Text = "Guardar";
+            this.btnGuardar_ADM.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar_ADM
+            // 
+            this.btnAlterar_ADM.Location = new System.Drawing.Point(73, 117);
+            this.btnAlterar_ADM.Name = "btnAlterar_ADM";
+            this.btnAlterar_ADM.Size = new System.Drawing.Size(57, 23);
+            this.btnAlterar_ADM.TabIndex = 7;
+            this.btnAlterar_ADM.Text = "Alterar";
+            this.btnAlterar_ADM.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar_ADM
+            // 
+            this.btnEliminar_ADM.Location = new System.Drawing.Point(136, 117);
+            this.btnEliminar_ADM.Name = "btnEliminar_ADM";
+            this.btnEliminar_ADM.Size = new System.Drawing.Size(57, 23);
+            this.btnEliminar_ADM.TabIndex = 8;
+            this.btnEliminar_ADM.Text = "Eliminar";
+            this.btnEliminar_ADM.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "NickName:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Password:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Nome:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Avatar:";
+            // 
+            // linkLAvatar_ARB
+            // 
+            this.linkLAvatar_ARB.AutoSize = true;
+            this.linkLAvatar_ARB.Location = new System.Drawing.Point(69, 100);
+            this.linkLAvatar_ARB.Name = "linkLAvatar_ARB";
+            this.linkLAvatar_ARB.Size = new System.Drawing.Size(55, 13);
+            this.linkLAvatar_ARB.TabIndex = 4;
+            this.linkLAvatar_ARB.TabStop = true;
+            this.linkLAvatar_ARB.Text = "linkLabel1";
+            // 
+            // txtbNickName_ARB
+            // 
+            this.txtbNickName_ARB.Location = new System.Drawing.Point(72, 17);
+            this.txtbNickName_ARB.Name = "txtbNickName_ARB";
+            this.txtbNickName_ARB.Size = new System.Drawing.Size(100, 20);
+            this.txtbNickName_ARB.TabIndex = 9;
+            // 
+            // txtbPassword_ARB
+            // 
+            this.txtbPassword_ARB.Location = new System.Drawing.Point(72, 43);
+            this.txtbPassword_ARB.Name = "txtbPassword_ARB";
+            this.txtbPassword_ARB.Size = new System.Drawing.Size(100, 20);
+            this.txtbPassword_ARB.TabIndex = 10;
+            // 
+            // txtbNome_ARB
+            // 
+            this.txtbNome_ARB.Location = new System.Drawing.Point(72, 69);
+            this.txtbNome_ARB.Name = "txtbNome_ARB";
+            this.txtbNome_ARB.Size = new System.Drawing.Size(100, 20);
+            this.txtbNome_ARB.TabIndex = 11;
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(146, 117);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(57, 23);
+            this.btn.TabIndex = 11;
+            this.btn.Text = "Eliminar";
+            this.btn.UseVisualStyleBackColor = true;
+            // 
+            // btnAlterar_ARB
+            // 
+            this.btnAlterar_ARB.Location = new System.Drawing.Point(83, 117);
+            this.btnAlterar_ARB.Name = "btnAlterar_ARB";
+            this.btnAlterar_ARB.Size = new System.Drawing.Size(57, 23);
+            this.btnAlterar_ARB.TabIndex = 10;
+            this.btnAlterar_ARB.Text = "Alterar";
+            this.btnAlterar_ARB.UseVisualStyleBackColor = true;
+            // 
+            // btnGuarda_ARB
+            // 
+            this.btnGuarda_ARB.Location = new System.Drawing.Point(20, 117);
+            this.btnGuarda_ARB.Name = "btnGuarda_ARB";
+            this.btnGuarda_ARB.Size = new System.Drawing.Size(57, 23);
+            this.btnGuarda_ARB.TabIndex = 9;
+            this.btnGuarda_ARB.Text = "Guardar";
+            this.btnGuarda_ARB.UseVisualStyleBackColor = true;
+            // 
+            // dataGrid_ADM
+            // 
+            this.dataGrid_ADM.AllowUserToAddRows = false;
+            this.dataGrid_ADM.AllowUserToDeleteRows = false;
+            this.dataGrid_ADM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_ADM.Location = new System.Drawing.Point(21, 246);
+            this.dataGrid_ADM.Name = "dataGrid_ADM";
+            this.dataGrid_ADM.ReadOnly = true;
+            this.dataGrid_ADM.Size = new System.Drawing.Size(240, 100);
+            this.dataGrid_ADM.TabIndex = 37;
+            // 
+            // dataGrid_ARB
+            // 
+            this.dataGrid_ARB.AllowUserToAddRows = false;
+            this.dataGrid_ARB.AllowUserToDeleteRows = false;
+            this.dataGrid_ARB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_ARB.Location = new System.Drawing.Point(332, 246);
+            this.dataGrid_ARB.Name = "dataGrid_ARB";
+            this.dataGrid_ARB.ReadOnly = true;
+            this.dataGrid_ARB.Size = new System.Drawing.Size(240, 100);
+            this.dataGrid_ARB.TabIndex = 38;
             // 
             // Utilizadores_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 371);
+            this.ClientSize = new System.Drawing.Size(619, 512);
+            this.Controls.Add(this.dataGrid_ARB);
+            this.Controls.Add(this.dataGrid_ADM);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Utilizadores_ADM";
             this.Text = "Utilizadores_ADM";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ADM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ARB)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminar_ADM;
+        private System.Windows.Forms.Button btnAlterar_ADM;
+        private System.Windows.Forms.Button btnGuardar_ADM;
+        private System.Windows.Forms.TextBox txtbEmail_ADM;
+        private System.Windows.Forms.TextBox txtbPassword_ADM;
+        private System.Windows.Forms.TextBox txtbNickName_ADM;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbPassword_ARB;
+        private System.Windows.Forms.TextBox txtbNickName_ARB;
+        private System.Windows.Forms.LinkLabel linkLAvatar_ARB;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtbNome_ARB;
+        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnAlterar_ARB;
+        private System.Windows.Forms.Button btnGuarda_ARB;
+        private System.Windows.Forms.DataGridView dataGrid_ADM;
+        private System.Windows.Forms.DataGridView dataGrid_ARB;
     }
 }
