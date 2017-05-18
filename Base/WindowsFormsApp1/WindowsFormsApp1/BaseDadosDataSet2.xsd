@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="BaseDadosDataSet1" targetNamespace="http://tempuri.org/BaseDadosDataSet1.xsd" xmlns:mstns="http://tempuri.org/BaseDadosDataSet1.xsd" xmlns="http://tempuri.org/BaseDadosDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="BaseDadosDataSet2" targetNamespace="http://tempuri.org/BaseDadosDataSet2.xsd" xmlns:mstns="http://tempuri.org/BaseDadosDataSet2.xsd" xmlns="http://tempuri.org/BaseDadosDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -55,28 +55,12 @@ SELECT Id, Username, Password FROM UserSet WHERE (Id = @Id)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserSet_AdministratorTableAdapter" GeneratorDataComponentClassName="UserSet_AdministratorTableAdapter" Name="UserSet_Administrator" UserDataComponentName="UserSet_AdministratorTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="BaseDadosConnectionString (Settings)" DbObjectName="dbo.UserSet_Administrator" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Email FROM dbo.UserSet_Administrator</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Email" DataSetColumn="Email" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BaseDadosDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BaseDadosDataSet1" msprop:Generator_UserDSName="BaseDadosDataSet1">
+  <xs:element name="BaseDadosDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BaseDadosDataSet2" msprop:Generator_UserDSName="BaseDadosDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="UserSet" msprop:Generator_TableClassName="UserSetDataTable" msprop:Generator_TableVarName="tableUserSet" msprop:Generator_TablePropName="UserSet" msprop:Generator_RowDeletingName="UserSetRowDeleting" msprop:Generator_RowChangingName="UserSetRowChanging" msprop:Generator_RowEvHandlerName="UserSetRowChangeEventHandler" msprop:Generator_RowDeletedName="UserSetRowDeleted" msprop:Generator_UserTableName="UserSet" msprop:Generator_RowChangedName="UserSetRowChanged" msprop:Generator_RowEvArgName="UserSetRowChangeEvent" msprop:Generator_RowClassName="UserSetRow">
@@ -91,19 +75,6 @@ SELECT Id, Username, Password FROM UserSet WHERE (Id = @Id)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="UserSet_Administrator" msprop:Generator_TableClassName="UserSet_AdministratorDataTable" msprop:Generator_TableVarName="tableUserSet_Administrator" msprop:Generator_TablePropName="UserSet_Administrator" msprop:Generator_RowDeletingName="UserSet_AdministratorRowDeleting" msprop:Generator_RowChangingName="UserSet_AdministratorRowChanging" msprop:Generator_RowEvHandlerName="UserSet_AdministratorRowChangeEventHandler" msprop:Generator_RowDeletedName="UserSet_AdministratorRowDeleted" msprop:Generator_UserTableName="UserSet_Administrator" msprop:Generator_RowChangedName="UserSet_AdministratorRowChanged" msprop:Generator_RowEvArgName="UserSet_AdministratorRowChangeEvent" msprop:Generator_RowClassName="UserSet_AdministratorRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
