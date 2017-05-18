@@ -113,6 +113,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosGameStardad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosGameStardad.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -193,6 +198,12 @@
     </Compile>
     <Compile Include="JogoArbitro.Designer.cs">
       <DependentUpon>JogoArbitro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogos.Designer.cs">
+      <DependentUpon>Jogos.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -283,6 +294,9 @@
     <EmbeddedResource Include="JogoArbitro.resx">
       <DependentUpon>JogoArbitro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Jogos.resx">
+      <DependentUpon>Jogos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +352,17 @@
     </None>
     <None Include="BaseDadosdeck.xss">
       <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosGameStardad.xsc">
+      <DependentUpon>BaseDadosGameStardad.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosGameStardad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosGameStardad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosGameStardad.xss">
+      <DependentUpon>BaseDadosGameStardad.xsd</DependentUpon>
     </None>
     <None Include="DiagramaEntidadesArcmage.edmx.diagram">
       <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
