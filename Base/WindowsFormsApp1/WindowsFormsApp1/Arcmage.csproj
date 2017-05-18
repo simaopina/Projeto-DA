@@ -255,6 +255,12 @@
     <Compile Include="User.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utilizadores_ADM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilizadores_ADM.Designer.cs">
+      <DependentUpon>Utilizadores_ADM.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ADD_Jogador_ADM.resx">
       <DependentUpon>ADD_Jogador_ADM.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +322,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Utilizadores_ADM.resx">
+      <DependentUpon>Utilizadores_ADM.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="DiagramaEntidadesArcmage.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
