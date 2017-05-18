@@ -20,7 +20,9 @@ namespace WindowsFormsApp1
 
         private void Home_Load(object sender, EventArgs e)
         {
-            
+            Utilizadores_ADM UTILIZADORESfrm = new Utilizadores_ADM();
+            UTILIZADORESfrm.Show();
+            Hide();
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -28,6 +30,8 @@ namespace WindowsFormsApp1
             Login Lfrm = new Login();
             Lfrm.Show();
             Hide();
+
+           
         }
     }
 }

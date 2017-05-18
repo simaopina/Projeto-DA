@@ -103,10 +103,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosDataSet_Cards.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosData_ADM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosData_ADM.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosData_administrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosData_administrador.xsd</DependentUpon>
     </Compile>
     <Compile Include="BaseDadosdeck.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -340,6 +360,28 @@
     <None Include="BaseDadosDataSet.xss">
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </None>
+    <None Include="BaseDadosDataSet1.xsc">
+      <DependentUpon>BaseDadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet1.xss">
+      <DependentUpon>BaseDadosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet2.xsc">
+      <DependentUpon>BaseDadosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet2.xss">
+      <DependentUpon>BaseDadosDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="BaseDadosDataSet_Cards.xsc">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
     </None>
@@ -350,6 +392,28 @@
     </None>
     <None Include="BaseDadosDataSet_Cards.xss">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosData_ADM.xsc">
+      <DependentUpon>BaseDadosData_ADM.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosData_ADM.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosData_ADM.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosData_ADM.xss">
+      <DependentUpon>BaseDadosData_ADM.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosData_administrador.xsc">
+      <DependentUpon>BaseDadosData_administrador.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosData_administrador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosData_administrador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosData_administrador.xss">
+      <DependentUpon>BaseDadosData_administrador.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosdeck.xsc">
       <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
