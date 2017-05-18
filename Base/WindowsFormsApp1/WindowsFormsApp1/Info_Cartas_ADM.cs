@@ -16,9 +16,18 @@ namespace WindowsFormsApp1
         int id_carta = 0;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
-        public Info_Cartas_ADM()
+        public Info_Cartas_ADM(string nome, string facao, string tipo, string lealdade, string custo, string regras, string  ataque, string defesa, string imagem)
         {
             InitializeComponent();
+
+            lblNome.Text = nome;
+            lblFacao.Text = facao;
+            lblTipo.Text = tipo;
+            lblLealdade.Text = lealdade;
+            lblCusto.Text = custo;
+            lblRegras.Text = regras;
+            lblAtaque.Text = ataque;
+            lblDefesa.Text = defesa;
 
 
         }
@@ -31,45 +40,7 @@ namespace WindowsFormsApp1
         private void Info_Cartas_ADM_Load(object sender, EventArgs e)
         {
 
-            string nome = lblNome.Text;
-            string facao = lblFacao.Text;
-            string tipo = lblTipo.Text;
-            int lealdade = Convert.ToInt32(lblLealdade.Text);
-            int custo = Convert.ToInt32(lblCusto.Text);
-            string regras = lblRegras.Text;
-            int ataque = Convert.ToInt32(lblDefesa.Text);
-            int defesa = Convert.ToInt32(lblDefesa.Text);
-            int imagem = 0;
-
-
-            Card carta = new Card
-            {
-                Name = nome,
-                Faction = facao,
-                Type = tipo,
-                Loyalty = lealdade,
-                Cost = custo,
-                RuleText = regras,
-                Attack = ataque,
-                Defense = defesa,
-                Image = imagem
-            };
-          
-
-            //vai procurar o id da carta 
-            carta = container.CardSet.Find(id_carta);
-            carta.Name = lblNome.Text;
-            carta.Faction = lblFacao.Text;
-            carta.Type = lblTipo.Text;
-            carta.Loyalty = Convert.ToInt32(lblLealdade.Text);
-            carta.Cost = Convert.ToInt32(lblCusto.Text);
-            carta.RuleText = regras;
-            carta.Attack = Convert.ToInt32(lblDefesa.Text);
-            carta.Defense = Convert.ToInt32(lblDefesa.Text);
-            carta.Image = imagem;
-
             
-
         }
     }
 }

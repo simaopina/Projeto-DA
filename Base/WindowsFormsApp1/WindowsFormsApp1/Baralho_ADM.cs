@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
     public partial class Baralho_ADM : Form
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+        int id_baralho = 0;
+
         public Baralho_ADM()
         {
             InitializeComponent();
@@ -27,6 +29,8 @@ namespace WindowsFormsApp1
 
         private void Baralho_ADM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosdeck.DeckSet' table. You can move, or remove it, as needed.
+            this.deckSetTableAdapter.Fill(this.baseDadosdeck.DeckSet);
 
         }
 
@@ -38,7 +42,7 @@ namespace WindowsFormsApp1
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
-            ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
+         //   ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
 
         }
 
@@ -58,7 +62,7 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(carta.Name);
                 //item.ImageIndex = carta.Image;
-                ListVBaralhoADM.Items.Add(item);
+//                ListVBaralhoADM.Items.Add(item);
 
             }
         }
@@ -99,6 +103,29 @@ namespace WindowsFormsApp1
             Home_ADM Hadmfrm = new Home_ADM();
             Hadmfrm.Show();
             Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nome = txtbNome.Text;
+
+            Deck baralho = new Deck
+            {
+
+                Name = nome
+
+            };
+
+            container.DeckSet.Add(baralho);
+            container.SaveChanges();
+            refresh_datagrid();
+        }
+
+        public void refresh_datagrid()
+        {
+            this.deckSetTableAdapter.Fill(this.baseDadosdeck.DeckSet);
+            dataGridView1.DataSource = deckSetBindingSource;
+
         }
     }
 }

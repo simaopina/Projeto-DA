@@ -455,6 +455,7 @@
             this.DataGridCartas.Size = new System.Drawing.Size(568, 98);
             this.DataGridCartas.TabIndex = 32;
             this.DataGridCartas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DataGridCartas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridCartas_CellContentDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 

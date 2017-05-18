@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         /// </summary>
         int id_carta = 0;
 
-        Boolean Carta_selecionada = false;
+       // Boolean Carta_selecionada = false;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Cartas_ADM()
@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            Carta_selecionada = true;
+            //Carta_selecionada = true;
 
 
             txtNome.Text = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
@@ -84,39 +84,8 @@ namespace WindowsFormsApp1
             
 
             id_carta = (int)DataGridCartas.CurrentRow.Cells[0].Value;
-/*
 
-            string nome = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
-            string facao = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
-            string tipo = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
-            int lealdade = DataGridCartas.CurrentRow.Cells[4].Value.ToString();
-            string custo = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
-            string regras = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string ataque = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string defesa = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string imagem = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-
-            Card carta;
-
-            //vai procurar o id da carta 
-            carta = container.CardSet.Find(id_carta);
-            carta.Name = nome;
-            carta.Faction = facao;
-            carta.Type = tipo;
-            carta.Loyalty = lealdade;
-            carta.Cost = custo;
-            carta.RuleText = regras;
-            carta.Attack = ataque;
-            carta.Defense = defesa;
-            carta.Image = imagem;
-
-            if (Carta_selecionada == true)
-            {
-                Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome,facao,tipo, lealdade, custo, regras, ataque, defesa, imagem);
-                Info_cartas_ADM.Show();
-
-            }
-            */
+            
         }
 
         public void refresh_datagrid()
@@ -249,6 +218,22 @@ namespace WindowsFormsApp1
             H_ADM.Show();
             Close();
 
+        }
+
+        private void DataGridCartas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string nome = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
+            string facao = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
+            string tipo = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
+            string lealdade =DataGridCartas.CurrentRow.Cells[4].Value.ToString();
+            string custo = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
+            string regras = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+            string ataque = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+            string defesa = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+            string imagem = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+
+            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
+            Info_cartas_ADM.Show();
         }
     }
 }

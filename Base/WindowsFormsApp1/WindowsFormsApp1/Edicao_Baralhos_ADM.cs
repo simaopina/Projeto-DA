@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+   
     public partial class Edicao_Baralhos_ADM : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+        int id_baralho = 0;
+
         public Edicao_Baralhos_ADM()
         {
             InitializeComponent();
+
+            foreach(Deck baralho in container.DeckSet)
+            {
+                cbxBaralho.Items.Add(baralho.Name);
+            }
+            
         }
         //Navegação
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,6 +71,16 @@ namespace WindowsFormsApp1
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listVCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

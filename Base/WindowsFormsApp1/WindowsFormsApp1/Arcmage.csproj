@@ -108,6 +108,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosdeck.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Card.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -322,6 +327,17 @@
     </None>
     <None Include="BaseDadosDataSet_Cards.xss">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosdeck.xsc">
+      <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosdeck.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosdeck.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosdeck.xss">
+      <DependentUpon>BaseDadosdeck.xsd</DependentUpon>
     </None>
     <None Include="DiagramaEntidadesArcmage.edmx.diagram">
       <DependentUpon>DiagramaEntidadesArcmage.edmx</DependentUpon>
