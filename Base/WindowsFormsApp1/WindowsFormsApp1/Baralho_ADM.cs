@@ -124,8 +124,23 @@ namespace WindowsFormsApp1
         public void refresh_datagrid()
         {
             this.deckSetTableAdapter.Fill(this.baseDadosdeck.DeckSet);
-            dataGridView1.DataSource = deckSetBindingSource;
+            DataGridBaralho.DataSource = deckSetBindingSource;
 
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
+                DataGridBaralho.DataSource = query.ToList();
+
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
         }
     }
 }

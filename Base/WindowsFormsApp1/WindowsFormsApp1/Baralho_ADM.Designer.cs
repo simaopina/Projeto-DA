@@ -46,12 +46,12 @@
             this.signoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ListaBaralhoUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.baseDadosdeck = new WindowsFormsApp1.BaseDadosdeck();
-            this.deckSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deckSetTableAdapter = new WindowsFormsApp1.BaseDadosdeckTableAdapters.DeckSetTableAdapter();
+            this.DataGridBaralho = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deckSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosdeck = new WindowsFormsApp1.BaseDadosdeck();
+            this.deckSetTableAdapter = new WindowsFormsApp1.BaseDadosdeckTableAdapters.DeckSetTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNome = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -59,9 +59,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridBaralho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).BeginInit();
             this.SuspendLayout();
             // 
             // ListaBaralhoGaianloveforlife
@@ -130,6 +130,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -277,35 +278,21 @@
             this.ListaBaralhoUneasyAlliance.Images.SetKeyName(43, "44.PNG");
             this.ListaBaralhoUneasyAlliance.Images.SetKeyName(44, "45.PNG");
             // 
-            // dataGridView1
+            // DataGridBaralho
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridBaralho.AllowUserToAddRows = false;
+            this.DataGridBaralho.AllowUserToDeleteRows = false;
+            this.DataGridBaralho.AutoGenerateColumns = false;
+            this.DataGridBaralho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridBaralho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.deckSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(245, 228);
-            this.dataGridView1.TabIndex = 32;
-            // 
-            // baseDadosdeck
-            // 
-            this.baseDadosdeck.DataSetName = "BaseDadosdeck";
-            this.baseDadosdeck.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deckSetBindingSource
-            // 
-            this.deckSetBindingSource.DataMember = "DeckSet";
-            this.deckSetBindingSource.DataSource = this.baseDadosdeck;
-            // 
-            // deckSetTableAdapter
-            // 
-            this.deckSetTableAdapter.ClearBeforeFill = true;
+            this.DataGridBaralho.DataSource = this.deckSetBindingSource;
+            this.DataGridBaralho.Location = new System.Drawing.Point(44, 273);
+            this.DataGridBaralho.Name = "DataGridBaralho";
+            this.DataGridBaralho.ReadOnly = true;
+            this.DataGridBaralho.Size = new System.Drawing.Size(245, 228);
+            this.DataGridBaralho.TabIndex = 32;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -320,6 +307,20 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // deckSetBindingSource
+            // 
+            this.deckSetBindingSource.DataMember = "DeckSet";
+            this.deckSetBindingSource.DataSource = this.baseDadosdeck;
+            // 
+            // baseDadosdeck
+            // 
+            this.baseDadosdeck.DataSetName = "BaseDadosdeck";
+            this.baseDadosdeck.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // deckSetTableAdapter
+            // 
+            this.deckSetTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -375,7 +376,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtbNome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGridBaralho);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
@@ -386,9 +387,9 @@
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridBaralho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,7 +412,7 @@
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
         private System.Windows.Forms.ImageList ListaBaralhoUneasyAlliance;
         private System.Windows.Forms.ImageList ListaBaralhoGaianloveforlife;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DataGridBaralho;
         private BaseDadosdeck baseDadosdeck;
         private System.Windows.Forms.BindingSource deckSetBindingSource;
         private BaseDadosdeckTableAdapters.DeckSetTableAdapter deckSetTableAdapter;
