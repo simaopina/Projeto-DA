@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         {
             if (lbxEquipa.SelectedItem != null)
             {
-                equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString()));
+                //equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString()));
                 //equipaSelected = (Team)lbxEquipa.SelectedItem;
                 tbxNome.Text = equipaSelected.Name;
 
