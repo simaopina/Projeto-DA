@@ -58,7 +58,8 @@ namespace WindowsFormsApp1
             string email = tbxEmail.Text;
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
-            string imagem = "Sou bueda Fixe";
+            string imagem = picbxAvatar.Text;
+            //ver isto.
 
 
             Player jogador = new Player
@@ -116,9 +117,13 @@ namespace WindowsFormsApp1
 
         private void Cancelar()
         {
-            Home_ADM HAdmfrm = new Home_ADM();
-            HAdmfrm.Show();
-            Close();
+            tbxNome.ResetText();
+            tbxNickName.ResetText();
+            tbxEmail.ResetText();
+            tbxpesquisa.ResetText();
+            numupdownIdade.ResetText();
+            picbxAvatar.ResetText();
+
         }
 
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
