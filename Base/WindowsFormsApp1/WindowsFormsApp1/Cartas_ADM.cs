@@ -229,5 +229,33 @@ namespace WindowsFormsApp1
             Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
             Info_cartas_ADM.Show();
         }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa Iefrm = new InserirEquipa();
+            Iefrm.Show();
+            Close();
+        }
+
+        private void utilizadoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
+            Uadmfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
     }
 }

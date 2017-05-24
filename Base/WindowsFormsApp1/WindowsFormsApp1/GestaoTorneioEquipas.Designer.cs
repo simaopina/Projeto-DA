@@ -58,6 +58,13 @@
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.equipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -256,6 +263,7 @@
             this.homeToolStripMenuItem,
             this.baralhoToolStripMenuItem,
             this.jogadoresToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.terminarSessãoToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
@@ -268,6 +276,7 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem
             // 
@@ -285,43 +294,97 @@
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
             this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
+            this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
             this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
+            this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
             this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
+            this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoJogadorToolStripMenuItem});
+            this.novoJogadorToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.equipaToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.utilizadoresToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
-            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.jogadoresToolStripMenuItem.Text = "Gestão";
             // 
             // novoJogadorToolStripMenuItem
             // 
             this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
-            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.novoJogadorToolStripMenuItem.Text = "Adicionar Novo";
+            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoJogadorToolStripMenuItem.Text = "Jogador";
+            this.novoJogadorToolStripMenuItem.Click += new System.EventHandler(this.novoJogadorToolStripMenuItem_Click);
             // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
+            // equipaToolStripMenuItem
+            // 
+            this.equipaToolStripMenuItem.Name = "equipaToolStripMenuItem";
+            this.equipaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.equipaToolStripMenuItem.Text = "Nova Equipa";
+            this.equipaToolStripMenuItem.Click += new System.EventHandler(this.equipaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            // 
+            // utilizadoresToolStripMenuItem
+            // 
+            this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
+            this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.torneioIndividualToolStripMenuItem,
+            this.torneioEquipaToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
+            this.toolStripMenuItem1.Text = "Torneios";
+            // 
+            // torneioIndividualToolStripMenuItem
+            // 
+            this.torneioIndividualToolStripMenuItem.Name = "torneioIndividualToolStripMenuItem";
+            this.torneioIndividualToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.torneioIndividualToolStripMenuItem.Text = "Torneio Individual";
+            // 
+            // torneioEquipaToolStripMenuItem
+            // 
+            this.torneioEquipaToolStripMenuItem.Name = "torneioEquipaToolStripMenuItem";
+            this.torneioEquipaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.torneioEquipaToolStripMenuItem.Text = "Torneio Equipa";
             // 
             // GestaoTorneioEquipas
             // 
@@ -381,5 +444,12 @@
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem novoJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem equipaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
     }
 }

@@ -52,6 +52,13 @@
             this.addJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.novaEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxEdBaralhoADM.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -205,6 +212,7 @@
             this.homeToolStripMenuItem,
             this.baralhoToolStripMenuItem,
             this.jogadoresToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.terminarSessãoToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
@@ -235,6 +243,7 @@
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editarToolStripMenuItem.Text = "Editar Baralho";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -251,16 +260,20 @@
             // jogadoresToolStripMenuItem
             // 
             this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addJogadorToolStripMenuItem});
+            this.addJogadorToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.novaEquipaToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.utilizadoresToolStripMenuItem});
             this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
-            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.jogadoresToolStripMenuItem.Text = "Gestão";
             // 
             // addJogadorToolStripMenuItem
             // 
             this.addJogadorToolStripMenuItem.Name = "addJogadorToolStripMenuItem";
-            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.addJogadorToolStripMenuItem.Text = "Add Jogador";
+            this.addJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addJogadorToolStripMenuItem.Text = "Jogador";
             this.addJogadorToolStripMenuItem.Click += new System.EventHandler(this.addJogadorToolStripMenuItem_Click);
             // 
             // terminarSessãoToolStripMenuItem
@@ -278,6 +291,53 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
+            // novaEquipaToolStripMenuItem
+            // 
+            this.novaEquipaToolStripMenuItem.Name = "novaEquipaToolStripMenuItem";
+            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaEquipaToolStripMenuItem.Text = "Nova Equipa";
+            this.novaEquipaToolStripMenuItem.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            // 
+            // utilizadoresToolStripMenuItem
+            // 
+            this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
+            this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.torneioIndividualToolStripMenuItem,
+            this.torneioEquipaToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
+            this.toolStripMenuItem1.Text = "Torneios";
+            // 
+            // torneioIndividualToolStripMenuItem
+            // 
+            this.torneioIndividualToolStripMenuItem.Name = "torneioIndividualToolStripMenuItem";
+            this.torneioIndividualToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.torneioIndividualToolStripMenuItem.Text = "Torneio Individual";
+            this.torneioIndividualToolStripMenuItem.Click += new System.EventHandler(this.torneioIndividualToolStripMenuItem_Click);
+            // 
+            // torneioEquipaToolStripMenuItem
+            // 
+            this.torneioEquipaToolStripMenuItem.Name = "torneioEquipaToolStripMenuItem";
+            this.torneioEquipaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.torneioEquipaToolStripMenuItem.Text = "Torneio Equipa";
+            this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
             // 
             // Edicao_Baralhos_ADM
             // 
@@ -327,5 +387,12 @@
         private System.Windows.Forms.ListView listVBaralho;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem novaEquipaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
     }
 }

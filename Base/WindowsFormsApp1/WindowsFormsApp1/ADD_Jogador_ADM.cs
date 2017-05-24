@@ -59,7 +59,8 @@ namespace WindowsFormsApp1
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
             string imagem = picbxAvatar.Text;
-           
+            //ver isto.
+
 
             Player jogador = new Player
             {
@@ -212,24 +213,32 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnInserirAvatar_Click(object sender, EventArgs e)
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (caminhoImagem.ShowDialog() == DialogResult.OK)
-            {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
 
-                string caminhoFicheiro = caminhoImagem.FileName;
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
 
-                caminhoFicheiro.Contains(".jpg");
-                caminhoFicheiro.Contains(".png");
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa Iefrm = new InserirEquipa();
+            Iefrm.Show();
+            Close();
+        }
 
-                string[] partes = caminhoFicheiro.Split('\\');
-                partes.Last();
-
-                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
-
-                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
-
-            }
+        private void utilizadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utifrm = new Utilizadores_ADM();
+            Utifrm.Show();
+            Close();
         }
     }
 }

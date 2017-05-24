@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class InserirEquipa : Form
     {
-        Player equipaSelected = null;
+        Team equipaSelected = null;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public InserirEquipa()
@@ -25,8 +25,7 @@ namespace WindowsFormsApp1
         {
             if (lbxEquipa.SelectedItem != null)
             {
-                //equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString()));
-                //equipaSelected = (Team)lbxEquipa.SelectedItem;
+                equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString())).First();
                 tbxNome.Text = equipaSelected.Name;
 
             }
