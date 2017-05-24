@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             string email = tbxEmail.Text;
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
-            string imagem = "Sou bueda Fixe";
+            string imagem = picbxAvatar.Text;
 
             //Player player;
             if (jogadorSelected != null)
