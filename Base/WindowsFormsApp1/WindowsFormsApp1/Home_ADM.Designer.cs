@@ -36,7 +36,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,6 @@
             this.btnEditBaralhos = new System.Windows.Forms.Button();
             this.btnEditCartas = new System.Windows.Forms.Button();
             this.btnJogador = new System.Windows.Forms.Button();
-            this.btnPermissoes = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.gpbxMenu = new System.Windows.Forms.GroupBox();
             this.menuStripHome.SuspendLayout();
@@ -150,7 +148,6 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem,
             this.baralhoToolStripMenuItem,
             this.jogadoresToolStripMenuItem,
             this.terminarSessãoToolStripMenuItem});
@@ -159,13 +156,6 @@
             this.menuStripHome.Size = new System.Drawing.Size(640, 24);
             this.menuStripHome.TabIndex = 20;
             this.menuStripHome.Text = "menuStrip1";
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.loginToolStripMenuItem.Text = "Permissões";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem
             // 
@@ -195,7 +185,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // cartasToolStripMenuItem
             // 
@@ -430,23 +420,13 @@
             // 
             // btnJogador
             // 
-            this.btnJogador.Location = new System.Drawing.Point(261, 173);
+            this.btnJogador.Location = new System.Drawing.Point(162, 173);
             this.btnJogador.Name = "btnJogador";
             this.btnJogador.Size = new System.Drawing.Size(98, 92);
             this.btnJogador.TabIndex = 37;
             this.btnJogador.Text = "Adicionar Jogador";
             this.btnJogador.UseVisualStyleBackColor = true;
             this.btnJogador.Click += new System.EventHandler(this.btnJogador_Click);
-            // 
-            // btnPermissoes
-            // 
-            this.btnPermissoes.Location = new System.Drawing.Point(62, 173);
-            this.btnPermissoes.Name = "btnPermissoes";
-            this.btnPermissoes.Size = new System.Drawing.Size(98, 92);
-            this.btnPermissoes.TabIndex = 38;
-            this.btnPermissoes.Text = "Permissões";
-            this.btnPermissoes.UseVisualStyleBackColor = true;
-            this.btnPermissoes.Click += new System.EventHandler(this.btnPermissoes_Click);
             // 
             // label11
             // 
@@ -463,7 +443,6 @@
             this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
             this.gpbxMenu.Controls.Add(this.btnEditCartas);
             this.gpbxMenu.Controls.Add(this.btnJogador);
-            this.gpbxMenu.Controls.Add(this.btnPermissoes);
             this.gpbxMenu.Controls.Add(this.btnCartas);
             this.gpbxMenu.Location = new System.Drawing.Point(221, 263);
             this.gpbxMenu.Name = "gpbxMenu";
@@ -516,7 +495,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;
@@ -546,7 +524,6 @@
         private System.Windows.Forms.Button btnEditBaralhos;
         private System.Windows.Forms.Button btnEditCartas;
         private System.Windows.Forms.Button btnJogador;
-        private System.Windows.Forms.Button btnPermissoes;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox gpbxMenu;
     }

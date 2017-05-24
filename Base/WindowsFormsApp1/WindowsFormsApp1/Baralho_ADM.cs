@@ -68,12 +68,6 @@ namespace WindowsFormsApp1
         }
 
         //Navegação
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Permissoes_ADM Permfrm = new Permissoes_ADM();
-            Permfrm.Show();
-            Close();
-        }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {

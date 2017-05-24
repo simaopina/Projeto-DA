@@ -48,13 +48,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnPermissoes_Click(object sender, EventArgs e)
-        {
-            Permissoes_ADM Perfrm = new Permissoes_ADM();
-            Perfrm.Show();
-            Close();
-        }
-
         private void btnJogador_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM addjfrm = new ADD_Jogador_ADM();
@@ -67,13 +60,6 @@ namespace WindowsFormsApp1
         {
             Home_ADM HAdmfrm = new Home_ADM();
             HAdmfrm.Show();
-            Close();
-        }
-
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Permissoes_ADM Perfrm = new Permissoes_ADM();
-            Perfrm.Show();
             Close();
         }
 
