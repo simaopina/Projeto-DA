@@ -213,6 +213,32 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa Iefrm = new InserirEquipa();
+            Iefrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utifrm = new Utilizadores_ADM();
+            Utifrm.Show();
+            Close();
+        }
     }
 }
