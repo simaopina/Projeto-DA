@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class GestaoTorneio : Form
+    public partial class GestaoTorneioJogadores : Form
     {
-        public GestaoTorneio()
+        public GestaoTorneioJogadores()
         {
             InitializeComponent();
         }
