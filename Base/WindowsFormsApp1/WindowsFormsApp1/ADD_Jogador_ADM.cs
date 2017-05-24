@@ -59,8 +59,7 @@ namespace WindowsFormsApp1
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
             string imagem = picbxAvatar.Text;
-            //ver isto.
-
+           
 
             Player jogador = new Player
             {
@@ -213,6 +212,24 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        
+        private void btnInserirAvatar_Click(object sender, EventArgs e)
+        {
+            if (caminhoImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = caminhoImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+
+            }
+        }
     }
 }

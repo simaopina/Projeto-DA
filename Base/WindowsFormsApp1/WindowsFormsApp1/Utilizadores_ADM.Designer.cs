@@ -68,9 +68,11 @@
             this.listVADM = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewArbitro = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -241,6 +243,7 @@
             this.btnGuarda_ARB.TabIndex = 9;
             this.btnGuarda_ARB.Text = "Guardar";
             this.btnGuarda_ARB.UseVisualStyleBackColor = true;
+            this.btnGuarda_ARB.Click += new System.EventHandler(this.btnGuarda_ARB_Click);
             // 
             // txtbPassword_ARB
             // 
@@ -261,10 +264,11 @@
             this.linkLAvatar_ARB.AutoSize = true;
             this.linkLAvatar_ARB.Location = new System.Drawing.Point(69, 95);
             this.linkLAvatar_ARB.Name = "linkLAvatar_ARB";
-            this.linkLAvatar_ARB.Size = new System.Drawing.Size(55, 13);
+            this.linkLAvatar_ARB.Size = new System.Drawing.Size(53, 13);
             this.linkLAvatar_ARB.TabIndex = 4;
             this.linkLAvatar_ARB.TabStop = true;
-            this.linkLAvatar_ARB.Text = "linkLabel1";
+            this.linkLAvatar_ARB.Text = "Imagem...";
+            this.linkLAvatar_ARB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLAvatar_ARB_LinkClicked);
             // 
             // label8
             // 
@@ -378,6 +382,7 @@
             this.listVADM.TabIndex = 39;
             this.listVADM.UseCompatibleStateImageBehavior = false;
             this.listVADM.View = System.Windows.Forms.View.Details;
+            this.listVADM.SelectedIndexChanged += new System.EventHandler(this.listVADM_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -388,32 +393,42 @@
             // 
             this.columnHeader2.Text = "Email";
             // 
-            // listView1
+            // listViewArbitro
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Location = new System.Drawing.Point(335, 247);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(206, 99);
-            this.listView1.TabIndex = 40;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listViewArbitro.Location = new System.Drawing.Point(335, 247);
+            this.listViewArbitro.Name = "listViewArbitro";
+            this.listViewArbitro.Size = new System.Drawing.Size(206, 99);
+            this.listViewArbitro.TabIndex = 40;
+            this.listViewArbitro.UseCompatibleStateImageBehavior = false;
+            this.listViewArbitro.View = System.Windows.Forms.View.Details;
+            this.listViewArbitro.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Name";
+            this.columnHeader3.Text = "Username";
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Avatar";
+            this.columnHeader4.Text = "Nome";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Avatar";
+            // 
+            // caminhoImagem
+            // 
+            this.caminhoImagem.FileName = "openFileDialog1";
             // 
             // Utilizadores_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 512);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewArbitro);
             this.Controls.Add(this.listVADM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -481,8 +496,10 @@
         private System.Windows.Forms.ListView listVADM;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewArbitro;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.OpenFileDialog caminhoImagem;
     }
 }
