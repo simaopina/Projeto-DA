@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbxJogador2 = new System.Windows.Forms.ListBox();
+            this.lbxJogador1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbxEquipa = new System.Windows.Forms.ListBox();
@@ -41,7 +43,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,6 +59,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lbxJogador2);
+            this.groupBox3.Controls.Add(this.lbxJogador1);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.lbxEquipa);
@@ -74,10 +77,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Inserir Equipa";
             // 
+            // lbxJogador2
+            // 
+            this.lbxJogador2.FormattingEnabled = true;
+            this.lbxJogador2.Location = new System.Drawing.Point(384, 240);
+            this.lbxJogador2.Name = "lbxJogador2";
+            this.lbxJogador2.Size = new System.Drawing.Size(183, 43);
+            this.lbxJogador2.TabIndex = 54;
+            // 
+            // lbxJogador1
+            // 
+            this.lbxJogador1.FormattingEnabled = true;
+            this.lbxJogador1.Location = new System.Drawing.Point(384, 184);
+            this.lbxJogador1.Name = "lbxJogador1";
+            this.lbxJogador1.Size = new System.Drawing.Size(183, 43);
+            this.lbxJogador1.TabIndex = 53;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(272, 263);
+            this.label2.Location = new System.Drawing.Point(269, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 52;
@@ -86,7 +105,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 211);
+            this.label1.Location = new System.Drawing.Point(269, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 51;
@@ -131,7 +150,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 164);
+            this.label3.Location = new System.Drawing.Point(269, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 44;
@@ -139,7 +158,7 @@
             // 
             // tbxNome
             // 
-            this.tbxNome.Location = new System.Drawing.Point(384, 161);
+            this.tbxNome.Location = new System.Drawing.Point(384, 151);
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(183, 20);
             this.tbxNome.TabIndex = 43;
@@ -167,7 +186,6 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem,
             this.baralhoToolStripMenuItem,
             this.jogadoresToolStripMenuItem,
             this.terminarSessãoToolStripMenuItem});
@@ -183,12 +201,6 @@
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
             // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.loginToolStripMenuItem.Text = "Permissões";
-            // 
             // baralhoToolStripMenuItem
             // 
             this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -203,24 +215,24 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
             // 
             // jogadoresToolStripMenuItem
@@ -276,7 +288,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;
@@ -288,5 +299,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbxEquipa;
+        private System.Windows.Forms.ListBox lbxJogador2;
+        private System.Windows.Forms.ListBox lbxJogador1;
     }
 }
