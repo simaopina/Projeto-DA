@@ -19,14 +19,29 @@ namespace WindowsFormsApp1
         public Utilizadores_ADM()
         {
             InitializeComponent();
+
+            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+
+            foreach (Administrator adm in admin)
+            {
+                listVADM.Items.Add(new string[] { adm.Username, adm.Email });
+            }
+
+
         }
 
         private void Utilizadores_ADM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosData_ADM.UserSet_Administrator' table. You can move, or remove it, as needed.
+            this.userSet_AdministratorTableAdapter1.Fill(this.baseDadosData_ADM.UserSet_Administrator);
+            // TODO: This line of code loads data into the 'baseDadosData_ADM.UserSet' table. You can move, or remove it, as needed.
+            this.userSetTableAdapter1.Fill(this.baseDadosData_ADM.UserSet);
             // TODO: This line of code loads data into the 'baseDadosData_administrador.UserSet_Administrator' table. You can move, or remove it, as needed.
             this.userSet_AdministratorTableAdapter.Fill(this.baseDadosData_administrador.UserSet_Administrator);
             // TODO: This line of code loads data into the 'baseDadosDataSet2.UserSet' table. You can move, or remove it, as needed.
             this.userSetTableAdapter.Fill(this.baseDadosDataSet2.UserSet);
+
+            
 
         }
 
@@ -47,7 +62,7 @@ namespace WindowsFormsApp1
 
             container.UserSet.Add(User_ADM);
             container.SaveChanges();
-            refresh_datagrid();
+            //refresh_datagrid();
 
         }
 
@@ -61,17 +76,22 @@ namespace WindowsFormsApp1
 
         private void btnAlterar_ADM_Click(object sender, EventArgs e)
         {
-            string Username = txtbNickName_ADM.Text;
+            /*string Username = txtbNickName_ADM.Text;
             string Password = txtbPassword_ADM.Text;
             string Email = txtbPassword_ADM.Text;
 
             Administrator User_ADM;
 
-            User_ADM = container.UserSet.Find(id_ADM);
+            //User_ADM = container.UserSet.Find(id_ADM);
             User_ADM.Username = Username;
             User_ADM.Password = Password;
             User_ADM.Email = Email;
+            */
 
+        }
+
+        private void dataGrid_ADM_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
