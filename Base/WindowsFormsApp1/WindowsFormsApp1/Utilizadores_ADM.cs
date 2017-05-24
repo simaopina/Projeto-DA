@@ -24,7 +24,22 @@ namespace WindowsFormsApp1
 
             foreach (Administrator adm in admin)
             {
-                listVADM.Items.Add(new string[] { adm.Username, adm.Email });
+                ListViewItem item = new ListViewItem(adm.Username);
+                item.SubItems.Add(adm.Email);
+                listVADM.Items.Add(item);
+            }
+            //new string[] { adm.Username, adm.Email }
+
+
+
+            List<Referee> arbitro = container.UserSet.OfType<Referee>().ToList();
+
+            foreach (Referee arb in arbitro)
+            {
+                ListViewItem item = new ListViewItem(arb.Username);
+                item.SubItems.Add(arb.Name);
+                item.SubItems.Add(arb.Avatar);
+                listView1.Items.Add(item);
             }
 
 
@@ -32,14 +47,7 @@ namespace WindowsFormsApp1
 
         private void Utilizadores_ADM_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baseDadosData_ADM.UserSet_Administrator' table. You can move, or remove it, as needed.
-            this.userSet_AdministratorTableAdapter1.Fill(this.baseDadosData_ADM.UserSet_Administrator);
-            // TODO: This line of code loads data into the 'baseDadosData_ADM.UserSet' table. You can move, or remove it, as needed.
-            this.userSetTableAdapter1.Fill(this.baseDadosData_ADM.UserSet);
-            // TODO: This line of code loads data into the 'baseDadosData_administrador.UserSet_Administrator' table. You can move, or remove it, as needed.
-            this.userSet_AdministratorTableAdapter.Fill(this.baseDadosData_administrador.UserSet_Administrator);
-            // TODO: This line of code loads data into the 'baseDadosDataSet2.UserSet' table. You can move, or remove it, as needed.
-            this.userSetTableAdapter.Fill(this.baseDadosDataSet2.UserSet);
+          
 
             
 
@@ -62,16 +70,13 @@ namespace WindowsFormsApp1
 
             container.UserSet.Add(User_ADM);
             container.SaveChanges();
-            //refresh_datagrid();
+            refresh_listview();
 
         }
 
-        public void refresh_datagrid()
+        public void refresh_listview()
         {
-            this.userSet_AdministratorTableAdapter.Fill(this.baseDadosData_administrador.UserSet_Administrator);
-            dataGrid_ADM.DataSource = userSetBindingSource;
-
-           
+            listVADM.Refresh();
         }
 
         private void btnAlterar_ADM_Click(object sender, EventArgs e)

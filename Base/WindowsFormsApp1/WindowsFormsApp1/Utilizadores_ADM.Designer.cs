@@ -53,10 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGrid_ARB = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet2 = new WindowsFormsApp1.BaseDadosDataSet2();
             this.baseDadosData_ADM = new WindowsFormsApp1.BaseDadosData_ADM();
@@ -70,10 +66,14 @@
             this.userSetAdministratorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userSet_AdministratorTableAdapter1 = new WindowsFormsApp1.BaseDadosData_ADMTableAdapters.UserSet_AdministratorTableAdapter();
             this.listVADM = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ARB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosData_ADM)).BeginInit();
@@ -311,44 +311,6 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Adicionar utilizador";
             // 
-            // dataGrid_ARB
-            // 
-            this.dataGrid_ARB.AllowUserToAddRows = false;
-            this.dataGrid_ARB.AllowUserToDeleteRows = false;
-            this.dataGrid_ARB.AutoGenerateColumns = false;
-            this.dataGrid_ARB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_ARB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.usernameDataGridViewTextBoxColumn1,
-            this.passwordDataGridViewTextBoxColumn1});
-            this.dataGrid_ARB.DataSource = this.userSetBindingSource;
-            this.dataGrid_ARB.Location = new System.Drawing.Point(332, 246);
-            this.dataGrid_ARB.Name = "dataGrid_ARB";
-            this.dataGrid_ARB.ReadOnly = true;
-            this.dataGrid_ARB.Size = new System.Drawing.Size(240, 100);
-            this.dataGrid_ARB.TabIndex = 38;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn1
-            // 
-            this.usernameDataGridViewTextBoxColumn1.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn1.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn1.Name = "usernameDataGridViewTextBoxColumn1";
-            this.usernameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn1
-            // 
-            this.passwordDataGridViewTextBoxColumn1.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn1.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn1.Name = "passwordDataGridViewTextBoxColumn1";
-            this.passwordDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // userSetBindingSource
             // 
             this.userSetBindingSource.DataMember = "UserSet";
@@ -407,19 +369,52 @@
             // 
             // listVADM
             // 
+            this.listVADM.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.listVADM.Location = new System.Drawing.Point(24, 247);
             this.listVADM.Name = "listVADM";
             this.listVADM.Size = new System.Drawing.Size(206, 99);
             this.listVADM.TabIndex = 39;
             this.listVADM.UseCompatibleStateImageBehavior = false;
+            this.listVADM.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Username";
+            this.columnHeader1.Width = 91;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Email";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.Location = new System.Drawing.Point(335, 247);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(206, 99);
+            this.listView1.TabIndex = 40;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Name";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Avatar";
             // 
             // Utilizadores_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 512);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.listVADM);
-            this.Controls.Add(this.dataGrid_ARB);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -432,7 +427,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ARB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosData_ADM)).EndInit();
@@ -472,15 +466,11 @@
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Button btnAlterar_ARB;
         private System.Windows.Forms.Button btnGuarda_ARB;
-        private System.Windows.Forms.DataGridView dataGrid_ARB;
         private System.Windows.Forms.BindingSource baseDadosDataADMBindingSource;
         private BaseDadosData_ADM baseDadosData_ADM;
         private BaseDadosDataSet2 baseDadosDataSet2;
         private System.Windows.Forms.BindingSource userSetBindingSource;
         private BaseDadosDataSet2TableAdapters.UserSetTableAdapter userSetTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn1;
         private BaseDadosData_administrador baseDadosData_administrador;
         private System.Windows.Forms.BindingSource userSetAdministratorBindingSource;
         private BaseDadosData_administradorTableAdapters.UserSet_AdministratorTableAdapter userSet_AdministratorTableAdapter;
@@ -489,5 +479,10 @@
         private System.Windows.Forms.BindingSource userSetAdministratorBindingSource1;
         private BaseDadosData_ADMTableAdapters.UserSet_AdministratorTableAdapter userSet_AdministratorTableAdapter1;
         private System.Windows.Forms.ListView listVADM;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
