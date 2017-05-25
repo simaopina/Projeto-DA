@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,9 @@ namespace WindowsFormsApp1
         /// </summary>
         int id_carta = 0;
 
-       // Boolean Carta_selecionada = false;
+        string ParteFinalNome;
+
+        Card cartaselecionada = null;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Cartas_ADM()
@@ -35,8 +38,8 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
-
+            string imagem = ParteFinalNome;
+           
             Card carta = new Card
             {
                 Name = nome,
@@ -49,6 +52,7 @@ namespace WindowsFormsApp1
                 Defense = defesa,
                 Image = imagem
             };
+
 
             container.CardSet.Add(carta);
             container.SaveChanges();
@@ -105,7 +109,7 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
+            string imagem = ParteFinalNome;
 
             // objeto já criado
             Card carta;
@@ -133,17 +137,23 @@ namespace WindowsFormsApp1
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            if (cartaselecionada != null)
+            {
 
-            Card carta = container.CardSet.Find(id_carta);
+                cartaselecionada = container.CardSet.Find(id_carta);
 
-            container.CardSet.Remove(carta);
+                container.CardSet.Remove(cartaselecionada);
 
-            container.SaveChanges();
+                container.SaveChanges();
 
 
-            MessageBox.Show("Eliminado com sucesso!");
+                MessageBox.Show("Eliminado com sucesso!");
 
-            refresh_datagrid();
+                refresh_datagrid();
+
+            }
+
+            
 
         }
 
@@ -256,6 +266,27 @@ namespace WindowsFormsApp1
             GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
             Gtefrm.Show();
             Close();
+        }
+
+        private void LinkLabelImagem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            if (caminhoImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = caminhoImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                ParteFinalNome = partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                pictImagem.Image = Image.FromFile(caminhoFicheiro);
+
+            }
         }
     }
 }

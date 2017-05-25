@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,10 @@ namespace WindowsFormsApp1
     {
 
         int id_carta = 0;
+
+        string ParteFinalNome;
+
+        Card carta = null;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Info_Cartas_ADM(string nome, string facao, string tipo, string lealdade, string custo, string regras, string  ataque, string defesa, string imagem)
@@ -28,6 +33,7 @@ namespace WindowsFormsApp1
             lblRegras.Text = regras;
             lblAtaque.Text = ataque;
             lblDefesa.Text = defesa;
+            pictureBox.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + carta.Image);
 
 
         }
@@ -41,6 +47,11 @@ namespace WindowsFormsApp1
         {
 
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

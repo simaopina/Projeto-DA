@@ -98,6 +98,11 @@
     <Compile Include="Baralho_Arbitro.Designer.cs">
       <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosCartasEdição.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -376,6 +381,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="BaseDadosCartasEdição.xsc">
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosCartasEdição.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosCartasEdição.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosCartasEdição.xss">
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </None>
     <None Include="BaseDadosDataSet.xsc">
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </None>

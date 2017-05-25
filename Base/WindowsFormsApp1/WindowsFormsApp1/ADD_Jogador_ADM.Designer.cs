@@ -220,6 +220,7 @@
             this.picbxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxAvatar.TabIndex = 0;
             this.picbxAvatar.TabStop = false;
+            this.picbxAvatar.Click += new System.EventHandler(this.picbxAvatar_Click);
             // 
             // gbxJogadores
             // 
@@ -400,6 +401,7 @@
             // caminhoImagem
             // 
             this.caminhoImagem.FileName = "openFileDialog1";
+            this.caminhoImagem.FileOk += new System.ComponentModel.CancelEventHandler(this.caminhoImagem_FileOk);
             // 
             // ADD_Jogador_ADM
             // 
