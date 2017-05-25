@@ -21,14 +21,19 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            foreach(Deck baralho in container.DeckSet)
+             foreach(Deck baralho in container.DeckSet)
+             {
+                 cbxBaralho.Items.Add(baralho.Name);
+             }
+
+
+             foreach(Card cartas in container.CardSet)
             {
-                cbxBaralho.Items.Add(baralho.Name);
+                listVCartas.Items.Add(cartas.Name);
             }
-            
         }
         //Navegação
-      
+
         private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Baralho_ADM BarADMfrm = new Baralho_ADM();
@@ -76,13 +81,14 @@ namespace WindowsFormsApp1
 
         private void listVCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+
+
+
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -117,6 +123,11 @@ namespace WindowsFormsApp1
             Edicao_Baralhos_ADM Ebfrm = new Edicao_Baralhos_ADM();
             Ebfrm.Show();
             Close();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
