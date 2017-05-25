@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
                 cbxTorneioEquipa.Items.Add(game.Date);
             }
 
-            foreach (Tournament torneio in container.TournamentSet)
+            foreach (Tournament torneio in container.TournamentSet.OfType<TeamTournament>)
             {
                 listVJogosEquipa.Items.Add(torneio.Name);
             }

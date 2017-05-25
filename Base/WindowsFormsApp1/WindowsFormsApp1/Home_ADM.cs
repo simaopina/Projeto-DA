@@ -90,5 +90,12 @@ namespace WindowsFormsApp1
             AddJofrm.Show();
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ATorneioJogosStandard Sefrm = new ATorneioJogosStandard();
+            Sefrm.Show();
+            Close();
+        }
     }
 }
