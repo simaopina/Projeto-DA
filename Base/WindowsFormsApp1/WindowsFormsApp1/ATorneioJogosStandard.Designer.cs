@@ -37,27 +37,40 @@
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabStandard = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardarAlterações = new System.Windows.Forms.Button();
-            this.btnAdicionarBaralho = new System.Windows.Forms.Button();
-            this.btnRemoverBaralho = new System.Windows.Forms.Button();
-            this.cbxBaralho = new System.Windows.Forms.ComboBox();
+            this.btnAdicionarStandard = new System.Windows.Forms.Button();
+            this.btnRemoverStandard = new System.Windows.Forms.Button();
+            this.cbxTorneioStandard = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.listVCartas = new System.Windows.Forms.ListView();
-            this.listVBaralho = new System.Windows.Forms.ListView();
+            this.listVJogosStandard = new System.Windows.Forms.ListView();
+            this.listVTorneiosStandard = new System.Windows.Forms.ListView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardarEquipa = new System.Windows.Forms.Button();
             this.btnAdicionarJogoEquipa = new System.Windows.Forms.Button();
             this.btnRetirarEquipa = new System.Windows.Forms.Button();
-            this.cbxTorneio = new System.Windows.Forms.ComboBox();
+            this.cbxTorneioEquipa = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listVJogosEquipa = new System.Windows.Forms.ListView();
             this.listVTorneiosEquipa = new System.Windows.Forms.ListView();
+            this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.novaEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioIndiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.jogoIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogoTorneiioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabStandard.SuspendLayout();
@@ -93,30 +106,48 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem
             // 
+            this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baralhoToolStripMenuItem1,
+            this.editarBaralhoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cartasToolStripMenuItem});
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
             this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.baralhoToolStripMenuItem.Text = "Baralho";
             // 
             // gestãoToolStripMenuItem
             // 
+            this.gestãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jogadorToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.novaEquipaToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.utilizadoresToolStripMenuItem});
             this.gestãoToolStripMenuItem.Name = "gestãoToolStripMenuItem";
-            this.gestãoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.gestãoToolStripMenuItem.Text = "Gestão";
+            this.gestãoToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.gestãoToolStripMenuItem.Text = "Gestão Utilizador";
             // 
             // torneiosToolStripMenuItem
             // 
+            this.torneiosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.torneioIndiToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.jogoIndividualToolStripMenuItem,
+            this.jogoTorneiioToolStripMenuItem});
             this.torneiosToolStripMenuItem.Name = "torneiosToolStripMenuItem";
-            this.torneiosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.torneiosToolStripMenuItem.Text = "Torneios";
+            this.torneiosToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.torneiosToolStripMenuItem.Text = "Gestão Jogos";
             // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
             // tabStandard
             // 
@@ -135,38 +166,18 @@
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.btnCancelar);
             this.tabPage1.Controls.Add(this.btnGuardarAlterações);
-            this.tabPage1.Controls.Add(this.btnAdicionarBaralho);
-            this.tabPage1.Controls.Add(this.btnRemoverBaralho);
-            this.tabPage1.Controls.Add(this.cbxBaralho);
+            this.tabPage1.Controls.Add(this.btnAdicionarStandard);
+            this.tabPage1.Controls.Add(this.btnRemoverStandard);
+            this.tabPage1.Controls.Add(this.cbxTorneioStandard);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.listVCartas);
-            this.tabPage1.Controls.Add(this.listVBaralho);
+            this.tabPage1.Controls.Add(this.listVJogosStandard);
+            this.tabPage1.Controls.Add(this.listVTorneiosStandard);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(590, 310);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Standard";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.button1);
-            this.tabPage2.Controls.Add(this.btnGuardarEquipa);
-            this.tabPage2.Controls.Add(this.btnAdicionarJogoEquipa);
-            this.tabPage2.Controls.Add(this.btnRetirarEquipa);
-            this.tabPage2.Controls.Add(this.cbxTorneio);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.listVJogosEquipa);
-            this.tabPage2.Controls.Add(this.listVTorneiosEquipa);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(590, 310);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Equipas";
             // 
             // label13
             // 
@@ -208,35 +219,35 @@
             this.btnGuardarAlterações.Text = "Guardar alterações";
             this.btnGuardarAlterações.UseVisualStyleBackColor = false;
             // 
-            // btnAdicionarBaralho
+            // btnAdicionarStandard
             // 
-            this.btnAdicionarBaralho.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAdicionarBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarBaralho.Location = new System.Drawing.Point(269, 146);
-            this.btnAdicionarBaralho.Name = "btnAdicionarBaralho";
-            this.btnAdicionarBaralho.Size = new System.Drawing.Size(45, 37);
-            this.btnAdicionarBaralho.TabIndex = 15;
-            this.btnAdicionarBaralho.Text = "<";
-            this.btnAdicionarBaralho.UseVisualStyleBackColor = false;
+            this.btnAdicionarStandard.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAdicionarStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarStandard.Location = new System.Drawing.Point(269, 146);
+            this.btnAdicionarStandard.Name = "btnAdicionarStandard";
+            this.btnAdicionarStandard.Size = new System.Drawing.Size(45, 37);
+            this.btnAdicionarStandard.TabIndex = 15;
+            this.btnAdicionarStandard.Text = "<";
+            this.btnAdicionarStandard.UseVisualStyleBackColor = false;
             // 
-            // btnRemoverBaralho
+            // btnRemoverStandard
             // 
-            this.btnRemoverBaralho.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRemoverBaralho.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverBaralho.Location = new System.Drawing.Point(269, 103);
-            this.btnRemoverBaralho.Name = "btnRemoverBaralho";
-            this.btnRemoverBaralho.Size = new System.Drawing.Size(45, 37);
-            this.btnRemoverBaralho.TabIndex = 14;
-            this.btnRemoverBaralho.Text = ">";
-            this.btnRemoverBaralho.UseVisualStyleBackColor = false;
+            this.btnRemoverStandard.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRemoverStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverStandard.Location = new System.Drawing.Point(269, 103);
+            this.btnRemoverStandard.Name = "btnRemoverStandard";
+            this.btnRemoverStandard.Size = new System.Drawing.Size(45, 37);
+            this.btnRemoverStandard.TabIndex = 14;
+            this.btnRemoverStandard.Text = ">";
+            this.btnRemoverStandard.UseVisualStyleBackColor = false;
             // 
-            // cbxBaralho
+            // cbxTorneioStandard
             // 
-            this.cbxBaralho.FormattingEnabled = true;
-            this.cbxBaralho.Location = new System.Drawing.Point(248, 25);
-            this.cbxBaralho.Name = "cbxBaralho";
-            this.cbxBaralho.Size = new System.Drawing.Size(121, 21);
-            this.cbxBaralho.TabIndex = 12;
+            this.cbxTorneioStandard.FormattingEnabled = true;
+            this.cbxTorneioStandard.Location = new System.Drawing.Point(248, 25);
+            this.cbxTorneioStandard.Name = "cbxTorneioStandard";
+            this.cbxTorneioStandard.Size = new System.Drawing.Size(121, 21);
+            this.cbxTorneioStandard.TabIndex = 12;
             // 
             // label11
             // 
@@ -247,21 +258,41 @@
             this.label11.TabIndex = 13;
             this.label11.Text = "Torneio:";
             // 
-            // listVCartas
+            // listVJogosStandard
             // 
-            this.listVCartas.Location = new System.Drawing.Point(370, 68);
-            this.listVCartas.Name = "listVCartas";
-            this.listVCartas.Size = new System.Drawing.Size(115, 168);
-            this.listVCartas.TabIndex = 11;
-            this.listVCartas.UseCompatibleStateImageBehavior = false;
+            this.listVJogosStandard.Location = new System.Drawing.Point(370, 68);
+            this.listVJogosStandard.Name = "listVJogosStandard";
+            this.listVJogosStandard.Size = new System.Drawing.Size(115, 168);
+            this.listVJogosStandard.TabIndex = 11;
+            this.listVJogosStandard.UseCompatibleStateImageBehavior = false;
             // 
-            // listVBaralho
+            // listVTorneiosStandard
             // 
-            this.listVBaralho.Location = new System.Drawing.Point(108, 68);
-            this.listVBaralho.Name = "listVBaralho";
-            this.listVBaralho.Size = new System.Drawing.Size(115, 168);
-            this.listVBaralho.TabIndex = 10;
-            this.listVBaralho.UseCompatibleStateImageBehavior = false;
+            this.listVTorneiosStandard.Location = new System.Drawing.Point(108, 68);
+            this.listVTorneiosStandard.Name = "listVTorneiosStandard";
+            this.listVTorneiosStandard.Size = new System.Drawing.Size(115, 168);
+            this.listVTorneiosStandard.TabIndex = 10;
+            this.listVTorneiosStandard.UseCompatibleStateImageBehavior = false;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.btnGuardarEquipa);
+            this.tabPage2.Controls.Add(this.btnAdicionarJogoEquipa);
+            this.tabPage2.Controls.Add(this.btnRetirarEquipa);
+            this.tabPage2.Controls.Add(this.cbxTorneioEquipa);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.listVJogosEquipa);
+            this.tabPage2.Controls.Add(this.listVTorneiosEquipa);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(590, 310);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Equipas";
             // 
             // label1
             // 
@@ -325,13 +356,13 @@
             this.btnRetirarEquipa.Text = ">";
             this.btnRetirarEquipa.UseVisualStyleBackColor = false;
             // 
-            // cbxTorneio
+            // cbxTorneioEquipa
             // 
-            this.cbxTorneio.FormattingEnabled = true;
-            this.cbxTorneio.Location = new System.Drawing.Point(248, 25);
-            this.cbxTorneio.Name = "cbxTorneio";
-            this.cbxTorneio.Size = new System.Drawing.Size(121, 21);
-            this.cbxTorneio.TabIndex = 22;
+            this.cbxTorneioEquipa.FormattingEnabled = true;
+            this.cbxTorneioEquipa.Location = new System.Drawing.Point(248, 25);
+            this.cbxTorneioEquipa.Name = "cbxTorneioEquipa";
+            this.cbxTorneioEquipa.Size = new System.Drawing.Size(121, 21);
+            this.cbxTorneioEquipa.TabIndex = 22;
             // 
             // label3
             // 
@@ -357,6 +388,89 @@
             this.listVTorneiosEquipa.Size = new System.Drawing.Size(115, 168);
             this.listVTorneiosEquipa.TabIndex = 20;
             this.listVTorneiosEquipa.UseCompatibleStateImageBehavior = false;
+            // 
+            // baralhoToolStripMenuItem1
+            // 
+            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Text = "Baralho";
+            this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
+            // 
+            // editarBaralhoToolStripMenuItem
+            // 
+            this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
+            this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // cartasToolStripMenuItem
+            // 
+            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Text = "Cartas";
+            this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
+            // 
+            // jogadorToolStripMenuItem
+            // 
+            this.jogadorToolStripMenuItem.Name = "jogadorToolStripMenuItem";
+            this.jogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.jogadorToolStripMenuItem.Text = "Jogador";
+            this.jogadorToolStripMenuItem.Click += new System.EventHandler(this.jogadorToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
+            // novaEquipaToolStripMenuItem
+            // 
+            this.novaEquipaToolStripMenuItem.Name = "novaEquipaToolStripMenuItem";
+            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaEquipaToolStripMenuItem.Text = "Nova Equipa";
+            this.novaEquipaToolStripMenuItem.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            // 
+            // utilizadoresToolStripMenuItem
+            // 
+            this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
+            this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click);
+            // 
+            // torneioIndiToolStripMenuItem
+            // 
+            this.torneioIndiToolStripMenuItem.Name = "torneioIndiToolStripMenuItem";
+            this.torneioIndiToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.torneioIndiToolStripMenuItem.Text = "Torneio";
+            this.torneioIndiToolStripMenuItem.Click += new System.EventHandler(this.torneioIndiToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(151, 6);
+            // 
+            // jogoIndividualToolStripMenuItem
+            // 
+            this.jogoIndividualToolStripMenuItem.Name = "jogoIndividualToolStripMenuItem";
+            this.jogoIndividualToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.jogoIndividualToolStripMenuItem.Text = "Jogo Individual";
+            this.jogoIndividualToolStripMenuItem.Click += new System.EventHandler(this.jogoIndividualToolStripMenuItem_Click);
+            // 
+            // jogoTorneiioToolStripMenuItem
+            // 
+            this.jogoTorneiioToolStripMenuItem.Name = "jogoTorneiioToolStripMenuItem";
+            this.jogoTorneiioToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.jogoTorneiioToolStripMenuItem.Text = "Jogo Torneio";
+            this.jogoTorneiioToolStripMenuItem.Click += new System.EventHandler(this.jogoTorneiioToolStripMenuItem_Click);
             // 
             // ATorneioJogosStandard
             // 
@@ -398,21 +512,34 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardarAlterações;
-        private System.Windows.Forms.Button btnAdicionarBaralho;
-        private System.Windows.Forms.Button btnRemoverBaralho;
-        private System.Windows.Forms.ComboBox cbxBaralho;
+        private System.Windows.Forms.Button btnAdicionarStandard;
+        private System.Windows.Forms.Button btnRemoverStandard;
+        private System.Windows.Forms.ComboBox cbxTorneioStandard;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListView listVCartas;
-        private System.Windows.Forms.ListView listVBaralho;
+        private System.Windows.Forms.ListView listVJogosStandard;
+        private System.Windows.Forms.ListView listVTorneiosStandard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnGuardarEquipa;
         private System.Windows.Forms.Button btnAdicionarJogoEquipa;
         private System.Windows.Forms.Button btnRetirarEquipa;
-        private System.Windows.Forms.ComboBox cbxTorneio;
+        private System.Windows.Forms.ComboBox cbxTorneioEquipa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListView listVJogosEquipa;
         private System.Windows.Forms.ListView listVTorneiosEquipa;
+        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem novaEquipaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torneioIndiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem jogoIndividualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogoTorneiioToolStripMenuItem;
     }
 }
