@@ -56,15 +56,16 @@
             this.cartasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.novaEquipaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.utilizadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.novaEquipaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.utilizadoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
@@ -209,12 +210,14 @@
             this.btnInserirAvatar.TabIndex = 1;
             this.btnInserirAvatar.Text = "Inserir Imagem";
             this.btnInserirAvatar.UseVisualStyleBackColor = true;
+            this.btnInserirAvatar.Click += new System.EventHandler(this.btnInserirAvatar_Click);
             // 
             // picbxAvatar
             // 
             this.picbxAvatar.Location = new System.Drawing.Point(20, 52);
             this.picbxAvatar.Name = "picbxAvatar";
             this.picbxAvatar.Size = new System.Drawing.Size(100, 83);
+            this.picbxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxAvatar.TabIndex = 0;
             this.picbxAvatar.TabStop = false;
             // 
@@ -289,26 +292,26 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Editar Baralho";
             this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem1
             // 
             this.cartasToolStripMenuItem1.Name = "cartasToolStripMenuItem1";
-            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem1.Text = "Cartas";
             this.cartasToolStripMenuItem1.Click += new System.EventHandler(this.cartasToolStripMenuItem1_Click);
             // 
@@ -327,9 +330,33 @@
             // adicionarNovoToolStripMenuItem
             // 
             this.adicionarNovoToolStripMenuItem.Name = "adicionarNovoToolStripMenuItem";
-            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.adicionarNovoToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.adicionarNovoToolStripMenuItem.Text = "Jogador";
             this.adicionarNovoToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(138, 6);
+            // 
+            // novaEquipaToolStripMenuItem1
+            // 
+            this.novaEquipaToolStripMenuItem1.Name = "novaEquipaToolStripMenuItem1";
+            this.novaEquipaToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.novaEquipaToolStripMenuItem1.Text = "Nova Equipa";
+            this.novaEquipaToolStripMenuItem1.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(138, 6);
+            // 
+            // utilizadoresToolStripMenuItem1
+            // 
+            this.utilizadoresToolStripMenuItem1.Name = "utilizadoresToolStripMenuItem1";
+            this.utilizadoresToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.utilizadoresToolStripMenuItem1.Text = "Utilizadores";
+            this.utilizadoresToolStripMenuItem1.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem1_Click);
             // 
             // signOutToolStripMenuItem
             // 
@@ -370,29 +397,9 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripSeparator4
+            // caminhoImagem
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(149, 6);
-            // 
-            // novaEquipaToolStripMenuItem1
-            // 
-            this.novaEquipaToolStripMenuItem1.Name = "novaEquipaToolStripMenuItem1";
-            this.novaEquipaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.novaEquipaToolStripMenuItem1.Text = "Nova Equipa";
-            this.novaEquipaToolStripMenuItem1.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
-            // 
-            // utilizadoresToolStripMenuItem1
-            // 
-            this.utilizadoresToolStripMenuItem1.Name = "utilizadoresToolStripMenuItem1";
-            this.utilizadoresToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.utilizadoresToolStripMenuItem1.Text = "Utilizadores";
-            this.utilizadoresToolStripMenuItem1.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem1_Click);
+            this.caminhoImagem.FileName = "openFileDialog1";
             // 
             // ADD_Jogador_ADM
             // 
@@ -460,5 +467,6 @@
         private System.Windows.Forms.ToolStripMenuItem novaEquipaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem1;
+        private System.Windows.Forms.OpenFileDialog caminhoImagem;
     }
 }

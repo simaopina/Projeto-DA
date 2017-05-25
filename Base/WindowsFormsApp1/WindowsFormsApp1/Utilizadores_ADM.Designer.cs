@@ -68,7 +68,7 @@
             this.listVADM = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listViewArbitro = new System.Windows.Forms.ListView();
+            this.listVArbitro = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -121,6 +121,7 @@
             this.btnEliminar_ADM.TabIndex = 8;
             this.btnEliminar_ADM.Text = "Eliminar";
             this.btnEliminar_ADM.UseVisualStyleBackColor = true;
+            this.btnEliminar_ADM.Click += new System.EventHandler(this.btnEliminar_ADM_Click);
             // 
             // btnAlterar_ADM
             // 
@@ -218,6 +219,7 @@
             this.btn.TabIndex = 11;
             this.btn.Text = "Eliminar";
             this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnAlterar_ARB
             // 
@@ -227,6 +229,7 @@
             this.btnAlterar_ARB.TabIndex = 10;
             this.btnAlterar_ARB.Text = "Alterar";
             this.btnAlterar_ARB.UseVisualStyleBackColor = true;
+            this.btnAlterar_ARB.Click += new System.EventHandler(this.btnAlterar_ARB_Click);
             // 
             // txtbNome_ARB
             // 
@@ -393,19 +396,19 @@
             // 
             this.columnHeader2.Text = "Email";
             // 
-            // listViewArbitro
+            // listVArbitro
             // 
-            this.listViewArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listVArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.listViewArbitro.Location = new System.Drawing.Point(335, 247);
-            this.listViewArbitro.Name = "listViewArbitro";
-            this.listViewArbitro.Size = new System.Drawing.Size(206, 99);
-            this.listViewArbitro.TabIndex = 40;
-            this.listViewArbitro.UseCompatibleStateImageBehavior = false;
-            this.listViewArbitro.View = System.Windows.Forms.View.Details;
-            this.listViewArbitro.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listVArbitro.Location = new System.Drawing.Point(335, 247);
+            this.listVArbitro.Name = "listVArbitro";
+            this.listVArbitro.Size = new System.Drawing.Size(206, 99);
+            this.listVArbitro.TabIndex = 40;
+            this.listVArbitro.UseCompatibleStateImageBehavior = false;
+            this.listVArbitro.View = System.Windows.Forms.View.Details;
+            this.listVArbitro.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
@@ -428,7 +431,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 512);
-            this.Controls.Add(this.listViewArbitro);
+            this.Controls.Add(this.listVArbitro);
             this.Controls.Add(this.listVADM);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
@@ -496,7 +499,7 @@
         private System.Windows.Forms.ListView listVADM;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ListView listViewArbitro;
+        private System.Windows.Forms.ListView listVArbitro;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
