@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbxGestaoEquipas = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,11 +41,9 @@
             this.datetimeData = new System.Windows.Forms.DateTimePicker();
             this.btnCriar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listVEquipa2 = new System.Windows.Forms.ListView();
             this.btnPesquisarEquipa2 = new System.Windows.Forms.Button();
             this.tbxEquipa2 = new System.Windows.Forms.TextBox();
             this.gbxEquipa1 = new System.Windows.Forms.GroupBox();
-            this.listVEquipa1 = new System.Windows.Forms.ListView();
             this.btnPesquisarEquipa1 = new System.Windows.Forms.Button();
             this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,11 +64,22 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridEquipa1 = new System.Windows.Forms.DataGridView();
+            this.baseDadosDataSet_TeamSet = new WindowsFormsApp1.BaseDadosDataSet_TeamSet();
+            this.teamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.teamSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSet_TeamSetTableAdapters.TeamSetTableAdapter();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridEquipa2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxGestaoEquipas.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbxEquipa1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_TeamSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxGestaoEquipas
@@ -178,7 +188,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listVEquipa2);
+            this.groupBox2.Controls.Add(this.dataGridEquipa2);
             this.groupBox2.Controls.Add(this.btnPesquisarEquipa2);
             this.groupBox2.Controls.Add(this.tbxEquipa2);
             this.groupBox2.Location = new System.Drawing.Point(326, 190);
@@ -187,14 +197,6 @@
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipa2";
-            // 
-            // listVEquipa2
-            // 
-            this.listVEquipa2.Location = new System.Drawing.Point(6, 56);
-            this.listVEquipa2.Name = "listVEquipa2";
-            this.listVEquipa2.Size = new System.Drawing.Size(260, 77);
-            this.listVEquipa2.TabIndex = 37;
-            this.listVEquipa2.UseCompatibleStateImageBehavior = false;
             // 
             // btnPesquisarEquipa2
             // 
@@ -215,7 +217,7 @@
             // 
             // gbxEquipa1
             // 
-            this.gbxEquipa1.Controls.Add(this.listVEquipa1);
+            this.gbxEquipa1.Controls.Add(this.dataGridEquipa1);
             this.gbxEquipa1.Controls.Add(this.btnPesquisarEquipa1);
             this.gbxEquipa1.Controls.Add(this.tbxEquipa1);
             this.gbxEquipa1.Location = new System.Drawing.Point(23, 190);
@@ -225,14 +227,6 @@
             this.gbxEquipa1.TabStop = false;
             this.gbxEquipa1.Text = "Equipa1";
             // 
-            // listVEquipa1
-            // 
-            this.listVEquipa1.Location = new System.Drawing.Point(7, 57);
-            this.listVEquipa1.Name = "listVEquipa1";
-            this.listVEquipa1.Size = new System.Drawing.Size(260, 77);
-            this.listVEquipa1.TabIndex = 36;
-            this.listVEquipa1.UseCompatibleStateImageBehavior = false;
-            // 
             // btnPesquisarEquipa1
             // 
             this.btnPesquisarEquipa1.Location = new System.Drawing.Point(192, 30);
@@ -241,6 +235,7 @@
             this.btnPesquisarEquipa1.TabIndex = 35;
             this.btnPesquisarEquipa1.Text = "Pesquisar";
             this.btnPesquisarEquipa1.UseVisualStyleBackColor = true;
+            this.btnPesquisarEquipa1.Click += new System.EventHandler(this.btnPesquisarEquipa1_Click);
             // 
             // tbxEquipa1
             // 
@@ -388,6 +383,57 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
+            // dataGridEquipa1
+            // 
+            this.dataGridEquipa1.AutoGenerateColumns = false;
+            this.dataGridEquipa1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEquipa1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn});
+            this.dataGridEquipa1.DataSource = this.teamSetBindingSource;
+            this.dataGridEquipa1.Location = new System.Drawing.Point(6, 56);
+            this.dataGridEquipa1.Name = "dataGridEquipa1";
+            this.dataGridEquipa1.Size = new System.Drawing.Size(261, 77);
+            this.dataGridEquipa1.TabIndex = 38;
+            // 
+            // baseDadosDataSet_TeamSet
+            // 
+            this.baseDadosDataSet_TeamSet.DataSetName = "BaseDadosDataSet_TeamSet";
+            this.baseDadosDataSet_TeamSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // teamSetBindingSource
+            // 
+            this.teamSetBindingSource.DataMember = "TeamSet";
+            this.teamSetBindingSource.DataSource = this.baseDadosDataSet_TeamSet;
+            // 
+            // teamSetTableAdapter
+            // 
+            this.teamSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // dataGridEquipa2
+            // 
+            this.dataGridEquipa2.AutoGenerateColumns = false;
+            this.dataGridEquipa2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEquipa2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridEquipa2.DataSource = this.teamSetBindingSource;
+            this.dataGridEquipa2.Location = new System.Drawing.Point(6, 56);
+            this.dataGridEquipa2.Name = "dataGridEquipa2";
+            this.dataGridEquipa2.Size = new System.Drawing.Size(261, 77);
+            this.dataGridEquipa2.TabIndex = 39;
+            this.dataGridEquipa2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEquipa2_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // GestaoTorneioEquipas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,6 +446,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "GestaoTorneioEquipas";
             this.Text = "GestaoTorneioEquipas";
+            this.Load += new System.EventHandler(this.GestaoTorneioEquipas_Load);
             this.gbxGestaoEquipas.ResumeLayout(false);
             this.gbxGestaoEquipas.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -409,6 +456,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_TeamSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,11 +479,9 @@
         private System.Windows.Forms.DateTimePicker datetimeData;
         private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listVEquipa2;
         private System.Windows.Forms.Button btnPesquisarEquipa2;
         private System.Windows.Forms.TextBox tbxEquipa2;
         private System.Windows.Forms.GroupBox gbxEquipa1;
-        private System.Windows.Forms.ListView listVEquipa1;
         private System.Windows.Forms.Button btnPesquisarEquipa1;
         private System.Windows.Forms.TextBox tbxEquipa1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -453,5 +502,12 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridEquipa1;
+        private BaseDadosDataSet_TeamSet baseDadosDataSet_TeamSet;
+        private System.Windows.Forms.BindingSource teamSetBindingSource;
+        private BaseDadosDataSet_TeamSetTableAdapters.TeamSetTableAdapter teamSetTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridEquipa2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

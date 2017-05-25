@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
-            this.listVJogador1 = new System.Windows.Forms.ListView();
             this.btnPesquisarJogador1 = new System.Windows.Forms.Button();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
-            this.listVJogador2 = new System.Windows.Forms.ListView();
             this.btnPesquisarJogador2 = new System.Windows.Forms.Button();
             this.tbxJogador2 = new System.Windows.Forms.TextBox();
             this.btnCriar = new System.Windows.Forms.Button();
@@ -67,11 +66,27 @@
             this.datetimeData = new System.Windows.Forms.DateTimePicker();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataGridJogador1 = new System.Windows.Forms.DataGridView();
+            this.baseDadosDataSet3 = new WindowsFormsApp1.BaseDadosDataSet3();
+            this.playerSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSet3TableAdapters.PlayerSetTableAdapter();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridJogador2 = new System.Windows.Forms.DataGridView();
+            this.baseDadosDataSet4 = new WindowsFormsApp1.BaseDadosDataSet4();
+            this.playerSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.playerSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
             this.gbxJogador2.SuspendLayout();
             this.gbxGestaoTorneios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripHome
@@ -227,7 +242,7 @@
             // 
             // gbxJogador1
             // 
-            this.gbxJogador1.Controls.Add(this.listVJogador1);
+            this.gbxJogador1.Controls.Add(this.dataGridJogador1);
             this.gbxJogador1.Controls.Add(this.btnPesquisarJogador1);
             this.gbxJogador1.Controls.Add(this.tbxJogador1);
             this.gbxJogador1.Location = new System.Drawing.Point(23, 187);
@@ -235,15 +250,7 @@
             this.gbxJogador1.Size = new System.Drawing.Size(276, 145);
             this.gbxJogador1.TabIndex = 36;
             this.gbxJogador1.TabStop = false;
-            this.gbxJogador1.Text = "Equipa1";
-            // 
-            // listVJogador1
-            // 
-            this.listVJogador1.Location = new System.Drawing.Point(7, 57);
-            this.listVJogador1.Name = "listVJogador1";
-            this.listVJogador1.Size = new System.Drawing.Size(260, 77);
-            this.listVJogador1.TabIndex = 36;
-            this.listVJogador1.UseCompatibleStateImageBehavior = false;
+            this.gbxJogador1.Text = "Jogador1";
             // 
             // btnPesquisarJogador1
             // 
@@ -253,10 +260,11 @@
             this.btnPesquisarJogador1.TabIndex = 35;
             this.btnPesquisarJogador1.Text = "Pesquisar";
             this.btnPesquisarJogador1.UseVisualStyleBackColor = true;
+            this.btnPesquisarJogador1.Click += new System.EventHandler(this.btnPesquisarJogador1_Click);
             // 
             // gbxJogador2
             // 
-            this.gbxJogador2.Controls.Add(this.listVJogador2);
+            this.gbxJogador2.Controls.Add(this.dataGridJogador2);
             this.gbxJogador2.Controls.Add(this.btnPesquisarJogador2);
             this.gbxJogador2.Controls.Add(this.tbxJogador2);
             this.gbxJogador2.Location = new System.Drawing.Point(326, 188);
@@ -264,15 +272,7 @@
             this.gbxJogador2.Size = new System.Drawing.Size(277, 144);
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
-            this.gbxJogador2.Text = "Equipa2";
-            // 
-            // listVJogador2
-            // 
-            this.listVJogador2.Location = new System.Drawing.Point(6, 56);
-            this.listVJogador2.Name = "listVJogador2";
-            this.listVJogador2.Size = new System.Drawing.Size(260, 77);
-            this.listVJogador2.TabIndex = 37;
-            this.listVJogador2.UseCompatibleStateImageBehavior = false;
+            this.gbxJogador2.Text = "Jogador2";
             // 
             // btnPesquisarJogador2
             // 
@@ -282,6 +282,7 @@
             this.btnPesquisarJogador2.TabIndex = 36;
             this.btnPesquisarJogador2.Text = "Pesquisar";
             this.btnPesquisarJogador2.UseVisualStyleBackColor = true;
+            this.btnPesquisarJogador2.Click += new System.EventHandler(this.btnPesquisarJogador2_Click);
             // 
             // tbxJogador2
             // 
@@ -407,6 +408,70 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(151, 6);
             // 
+            // dataGridJogador1
+            // 
+            this.dataGridJogador1.AutoGenerateColumns = false;
+            this.dataGridJogador1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridJogador1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn});
+            this.dataGridJogador1.DataSource = this.playerSetBindingSource;
+            this.dataGridJogador1.Location = new System.Drawing.Point(6, 57);
+            this.dataGridJogador1.Name = "dataGridJogador1";
+            this.dataGridJogador1.Size = new System.Drawing.Size(261, 77);
+            this.dataGridJogador1.TabIndex = 36;
+            // 
+            // baseDadosDataSet3
+            // 
+            this.baseDadosDataSet3.DataSetName = "BaseDadosDataSet3";
+            this.baseDadosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // playerSetBindingSource
+            // 
+            this.playerSetBindingSource.DataMember = "PlayerSet";
+            this.playerSetBindingSource.DataSource = this.baseDadosDataSet3;
+            // 
+            // playerSetTableAdapter
+            // 
+            this.playerSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // dataGridJogador2
+            // 
+            this.dataGridJogador2.AutoGenerateColumns = false;
+            this.dataGridJogador2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridJogador2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn1});
+            this.dataGridJogador2.DataSource = this.playerSetBindingSource1;
+            this.dataGridJogador2.Location = new System.Drawing.Point(7, 56);
+            this.dataGridJogador2.Name = "dataGridJogador2";
+            this.dataGridJogador2.Size = new System.Drawing.Size(259, 77);
+            this.dataGridJogador2.TabIndex = 37;
+            // 
+            // baseDadosDataSet4
+            // 
+            this.baseDadosDataSet4.DataSetName = "BaseDadosDataSet4";
+            this.baseDadosDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // playerSetBindingSource1
+            // 
+            this.playerSetBindingSource1.DataMember = "PlayerSet";
+            this.playerSetBindingSource1.DataSource = this.baseDadosDataSet4;
+            // 
+            // playerSetTableAdapter1
+            // 
+            this.playerSetTableAdapter1.ClearBeforeFill = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
             // GestaoTorneioJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +484,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "GestaoTorneioJogadores";
             this.Text = "GestaoTorneio";
+            this.Load += new System.EventHandler(this.GestaoTorneioJogadores_Load);
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -428,6 +494,12 @@
             this.gbxJogador2.PerformLayout();
             this.gbxGestaoTorneios.ResumeLayout(false);
             this.gbxGestaoTorneios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,10 +520,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbxJogador1;
         private System.Windows.Forms.GroupBox gbxJogador1;
-        private System.Windows.Forms.ListView listVJogador1;
         private System.Windows.Forms.Button btnPesquisarJogador1;
         private System.Windows.Forms.GroupBox gbxJogador2;
-        private System.Windows.Forms.ListView listVJogador2;
         private System.Windows.Forms.Button btnPesquisarJogador2;
         private System.Windows.Forms.TextBox tbxJogador2;
         private System.Windows.Forms.Button btnCriar;
@@ -474,5 +544,15 @@
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.DataGridView dataGridJogador1;
+        private BaseDadosDataSet3 baseDadosDataSet3;
+        private System.Windows.Forms.BindingSource playerSetBindingSource;
+        private BaseDadosDataSet3TableAdapters.PlayerSetTableAdapter playerSetTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridJogador2;
+        private BaseDadosDataSet4 baseDadosDataSet4;
+        private System.Windows.Forms.BindingSource playerSetBindingSource1;
+        private BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter playerSetTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
     }
 }
