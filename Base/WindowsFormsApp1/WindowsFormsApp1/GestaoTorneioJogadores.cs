@@ -157,5 +157,21 @@ namespace WindowsFormsApp1
             dataGridJogador2.DataSource = playerSetBindingSource;
 
         }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            string nome = tbxNome.Text;
+            string data = datetimeData.Text;
+            string hora = datetimeHora.Text;
+            string descricao = tbxDescricao.Text;
+
+            Jogos jogo = new Jogos
+            {
+                Name = nome,
+                Date = data,
+                Hora = hora,
+                Description = descricao
+            };
+        }
     }
 }
