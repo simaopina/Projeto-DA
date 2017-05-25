@@ -98,5 +98,12 @@ namespace WindowsFormsApp1
             logfrm.Show();
             Close();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ATorneioJogosStandard tjsfrm = new ATorneioJogosStandard();
+            tjsfrm.Show();
+            Close();
+        }
     }
 }

@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.gbxGestaoEquipas = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbxDescrição = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.dateTimeHora = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button3 = new System.Windows.Forms.Button();
+            this.datetimeData = new System.Windows.Forms.DateTimePicker();
+            this.btnCriar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listVEquipa2 = new System.Windows.Forms.ListView();
+            this.btnPesquisarEquipa2 = new System.Windows.Forms.Button();
+            this.tbxEquipa2 = new System.Windows.Forms.TextBox();
+            this.gbxEquipa1 = new System.Windows.Forms.GroupBox();
+            this.listVEquipa1 = new System.Windows.Forms.ListView();
+            this.btnPesquisarEquipa1 = new System.Windows.Forms.Button();
+            this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,6 @@
             this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.equipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -65,40 +64,41 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox3.SuspendLayout();
+            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbxGestaoEquipas.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbxEquipa1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox3
+            // gbxGestaoEquipas
             // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Location = new System.Drawing.Point(23, 339);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(580, 193);
-            this.groupBox3.TabIndex = 44;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.gbxGestaoEquipas.Controls.Add(this.btnCancelar);
+            this.gbxGestaoEquipas.Controls.Add(this.label4);
+            this.gbxGestaoEquipas.Controls.Add(this.tbxDescrição);
+            this.gbxGestaoEquipas.Controls.Add(this.label3);
+            this.gbxGestaoEquipas.Controls.Add(this.tbxNome);
+            this.gbxGestaoEquipas.Controls.Add(this.dateTimeHora);
+            this.gbxGestaoEquipas.Controls.Add(this.label2);
+            this.gbxGestaoEquipas.Controls.Add(this.label1);
+            this.gbxGestaoEquipas.Controls.Add(this.datetimeData);
+            this.gbxGestaoEquipas.Controls.Add(this.btnCriar);
+            this.gbxGestaoEquipas.Location = new System.Drawing.Point(23, 339);
+            this.gbxGestaoEquipas.Name = "gbxGestaoEquipas";
+            this.gbxGestaoEquipas.Size = new System.Drawing.Size(580, 193);
+            this.gbxGestaoEquipas.TabIndex = 44;
+            this.gbxGestaoEquipas.TabStop = false;
+            this.gbxGestaoEquipas.Text = "Gestão de Equipas - Jogos";
             // 
-            // button4
+            // btnCancelar
             // 
-            this.button4.Location = new System.Drawing.Point(132, 157);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 47;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(132, 157);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -109,13 +109,13 @@
             this.label4.TabIndex = 46;
             this.label4.Text = "Descrição";
             // 
-            // textBox4
+            // tbxDescrição
             // 
-            this.textBox4.Location = new System.Drawing.Point(309, 51);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(246, 99);
-            this.textBox4.TabIndex = 45;
+            this.tbxDescrição.Location = new System.Drawing.Point(309, 51);
+            this.tbxDescrição.Multiline = true;
+            this.tbxDescrição.Name = "tbxDescrição";
+            this.tbxDescrição.Size = new System.Drawing.Size(246, 99);
+            this.tbxDescrição.TabIndex = 45;
             // 
             // label3
             // 
@@ -126,20 +126,20 @@
             this.label3.TabIndex = 44;
             this.label3.Text = "Nome";
             // 
-            // textBox3
+            // tbxNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(105, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 20);
-            this.textBox3.TabIndex = 43;
+            this.tbxNome.Location = new System.Drawing.Point(105, 35);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(183, 20);
+            this.tbxNome.TabIndex = 43;
             // 
-            // dateTimePicker2
+            // dateTimeHora
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(105, 114);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker2.TabIndex = 42;
+            this.dateTimeHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimeHora.Location = new System.Drawing.Point(105, 114);
+            this.dateTimeHora.Name = "dateTimeHora";
+            this.dateTimeHora.Size = new System.Drawing.Size(121, 20);
+            this.dateTimeHora.TabIndex = 42;
             // 
             // label2
             // 
@@ -159,94 +159,96 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Data";
             // 
-            // dateTimePicker1
+            // datetimeData
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(105, 77);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 39;
+            this.datetimeData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetimeData.Location = new System.Drawing.Point(105, 77);
+            this.datetimeData.Name = "datetimeData";
+            this.datetimeData.Size = new System.Drawing.Size(121, 20);
+            this.datetimeData.TabIndex = 39;
             // 
-            // button3
+            // btnCriar
             // 
-            this.button3.Location = new System.Drawing.Point(50, 157);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 38;
-            this.button3.Text = "Jogar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCriar.Location = new System.Drawing.Point(50, 157);
+            this.btnCriar.Name = "btnCriar";
+            this.btnCriar.Size = new System.Drawing.Size(75, 23);
+            this.btnCriar.TabIndex = 38;
+            this.btnCriar.Text = "Criar";
+            this.btnCriar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView2);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.listVEquipa2);
+            this.groupBox2.Controls.Add(this.btnPesquisarEquipa2);
+            this.groupBox2.Controls.Add(this.tbxEquipa2);
             this.groupBox2.Location = new System.Drawing.Point(326, 190);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(277, 144);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Equipa2";
             // 
-            // listView2
+            // listVEquipa2
             // 
-            this.listView2.Location = new System.Drawing.Point(6, 56);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(260, 77);
-            this.listView2.TabIndex = 37;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listVEquipa2.Location = new System.Drawing.Point(6, 56);
+            this.listVEquipa2.Name = "listVEquipa2";
+            this.listVEquipa2.Size = new System.Drawing.Size(260, 77);
+            this.listVEquipa2.TabIndex = 37;
+            this.listVEquipa2.UseCompatibleStateImageBehavior = false;
             // 
-            // button2
+            // btnPesquisarEquipa2
             // 
-            this.button2.Location = new System.Drawing.Point(191, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPesquisarEquipa2.Location = new System.Drawing.Point(191, 29);
+            this.btnPesquisarEquipa2.Name = "btnPesquisarEquipa2";
+            this.btnPesquisarEquipa2.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarEquipa2.TabIndex = 36;
+            this.btnPesquisarEquipa2.Text = "Pesquisar";
+            this.btnPesquisarEquipa2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // tbxEquipa2
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 35;
+            this.tbxEquipa2.Location = new System.Drawing.Point(6, 29);
+            this.tbxEquipa2.Name = "tbxEquipa2";
+            this.tbxEquipa2.Size = new System.Drawing.Size(178, 20);
+            this.tbxEquipa2.TabIndex = 35;
+            this.tbxEquipa2.Text = "Pesquisar Equipa 2";
             // 
-            // groupBox1
+            // gbxEquipa1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(23, 190);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(276, 145);
-            this.groupBox1.TabIndex = 42;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.gbxEquipa1.Controls.Add(this.listVEquipa1);
+            this.gbxEquipa1.Controls.Add(this.btnPesquisarEquipa1);
+            this.gbxEquipa1.Controls.Add(this.tbxEquipa1);
+            this.gbxEquipa1.Location = new System.Drawing.Point(23, 190);
+            this.gbxEquipa1.Name = "gbxEquipa1";
+            this.gbxEquipa1.Size = new System.Drawing.Size(276, 145);
+            this.gbxEquipa1.TabIndex = 42;
+            this.gbxEquipa1.TabStop = false;
+            this.gbxEquipa1.Text = "Equipa1";
             // 
-            // listView1
+            // listVEquipa1
             // 
-            this.listView1.Location = new System.Drawing.Point(7, 57);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(260, 77);
-            this.listView1.TabIndex = 36;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listVEquipa1.Location = new System.Drawing.Point(7, 57);
+            this.listVEquipa1.Name = "listVEquipa1";
+            this.listVEquipa1.Size = new System.Drawing.Size(260, 77);
+            this.listVEquipa1.TabIndex = 36;
+            this.listVEquipa1.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // btnPesquisarEquipa1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPesquisarEquipa1.Location = new System.Drawing.Point(192, 30);
+            this.btnPesquisarEquipa1.Name = "btnPesquisarEquipa1";
+            this.btnPesquisarEquipa1.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarEquipa1.TabIndex = 35;
+            this.btnPesquisarEquipa1.Text = "Pesquisar";
+            this.btnPesquisarEquipa1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbxEquipa1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 20);
-            this.textBox1.TabIndex = 34;
+            this.tbxEquipa1.Location = new System.Drawing.Point(6, 30);
+            this.tbxEquipa1.Name = "tbxEquipa1";
+            this.tbxEquipa1.Size = new System.Drawing.Size(179, 20);
+            this.tbxEquipa1.TabIndex = 34;
+            this.tbxEquipa1.Text = "Pesquisar Equipa 1";
             // 
             // pictureBox1
             // 
@@ -292,14 +294,14 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
@@ -311,7 +313,7 @@
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
             this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
@@ -333,13 +335,6 @@
             this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novoJogadorToolStripMenuItem.Text = "Jogador";
             this.novoJogadorToolStripMenuItem.Click += new System.EventHandler(this.novoJogadorToolStripMenuItem_Click);
-            // 
-            // terminarSessãoToolStripMenuItem
-            // 
-            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
-            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
-            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -386,24 +381,31 @@
             this.torneioEquipaToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.torneioEquipaToolStripMenuItem.Text = "Torneio Equipa";
             // 
+            // terminarSessãoToolStripMenuItem
+            // 
+            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
+            // 
             // GestaoTorneioEquipas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 541);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbxGestaoEquipas);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbxEquipa1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
             this.Name = "GestaoTorneioEquipas";
             this.Text = "GestaoTorneioEquipas";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbxGestaoEquipas.ResumeLayout(false);
+            this.gbxGestaoEquipas.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbxEquipa1.ResumeLayout(false);
+            this.gbxEquipa1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
@@ -414,25 +416,25 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox gbxGestaoEquipas;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbxDescrição;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.DateTimePicker dateTimeHora;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DateTimePicker datetimeData;
+        private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListView listVEquipa2;
+        private System.Windows.Forms.Button btnPesquisarEquipa2;
+        private System.Windows.Forms.TextBox tbxEquipa2;
+        private System.Windows.Forms.GroupBox gbxEquipa1;
+        private System.Windows.Forms.ListView listVEquipa1;
+        private System.Windows.Forms.Button btnPesquisarEquipa1;
+        private System.Windows.Forms.TextBox tbxEquipa1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
