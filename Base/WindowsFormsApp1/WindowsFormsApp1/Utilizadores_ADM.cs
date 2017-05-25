@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,10 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        int id_ADM = 0;
+        Administrator administradorSelecionado = null;
+
+        Referee arbitroSeleciona = null;
+
 
         public Utilizadores_ADM()
         {
@@ -39,7 +43,7 @@ namespace WindowsFormsApp1
                 ListViewItem item = new ListViewItem(arb.Username);
                 item.SubItems.Add(arb.Name);
                 item.SubItems.Add(arb.Avatar);
-                listView1.Items.Add(item);
+                listVArbitro.Items.Add(item);
             }
 
 
@@ -70,34 +74,219 @@ namespace WindowsFormsApp1
 
             container.UserSet.Add(User_ADM);
             container.SaveChanges();
-            refresh_listview();
+            refresh_listviewADM();
 
         }
 
-        public void refresh_listview()
+        public void refresh_listviewADM()
         {
-            listVADM.Refresh();
+            listVADM.Items.Clear();
+
+            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+            
+            foreach (Administrator adm in admin)
+            {
+                ListViewItem item = new ListViewItem(adm.Username);
+                item.SubItems.Add(adm.Email);
+                listVADM.Items.Add(item);
+
+            }
+
         }
+
+
+        public void refresh_listviewARB()
+        {
+            listVArbitro.Items.Clear();
+
+            List<Referee> arb = container.UserSet.OfType<Referee>().ToList();
+
+            foreach (Referee arbrito in arb)
+            {
+                ListViewItem item = new ListViewItem(arbrito.Username);
+                item.SubItems.Add(arbrito.Name);
+                item.SubItems.Add(arbrito.Avatar);
+                listVADM.Items.Add(item);
+
+            }
+        }
+
+
 
         private void btnAlterar_ADM_Click(object sender, EventArgs e)
         {
-            /*string Username = txtbNickName_ADM.Text;
+            string Username = txtbNickName_ADM.Text;
             string Password = txtbPassword_ADM.Text;
             string Email = txtbPassword_ADM.Text;
 
+            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+
             Administrator User_ADM;
 
-            //User_ADM = container.UserSet.Find(id_ADM);
-            User_ADM.Username = Username;
-            User_ADM.Password = Password;
-            User_ADM.Email = Email;
-            */
+            if (administradorSelecionado != null)
+            {
+                //User_ADM = container.UserSet.Find(id_ADM);
+                
+                administradorSelecionado.Username = Username;
+                administradorSelecionado.Password = Password;
+                administradorSelecionado.Email = Email;
+                
 
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listviewADM();
+            }
+           
         }
 
         private void dataGrid_ADM_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void listVADM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVADM.SelectedItems.Count > 0)
+            {
+                string adminU = listVADM.SelectedItems[0].Text;
+                administradorSelecionado = container.UserSet.OfType<Administrator>().Where(user => user.Username.Equals(adminU)).First();
+
+                CarregaDadosADM();
+
+                listVADM.Refresh();
+
+            }
+            else
+            {
+                administradorSelecionado = null;
+            }
+        }
+
+        private void CarregaDadosADM()
+        {
+           
+            List<User> user = container.UserSet.ToList();
+
+            txtbNickName_ADM.Text = administradorSelecionado.Username;
+            txtbPassword_ADM.Text = administradorSelecionado.Password;
+            txtbEmail_ADM.Text = administradorSelecionado.Email;
+            
+        }
+
+        private void CarregaDadosARB()
+        {
+            List<User> user = container.UserSet.ToList();
+
+            txtbNickName_ARB.Text = arbitroSeleciona.Username;
+            txtbNome_ARB.Text = arbitroSeleciona.Name;
+            txtbPassword_ARB.Text = arbitroSeleciona.Password;
+           // linkLAvatar_ARB.Image = Image.FromFile(caminhoFicheiro);
+
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVArbitro.SelectedItems.Count > 0)
+            {
+                string adminU = listVArbitro.SelectedItems[0].Text;
+                arbitroSeleciona = container.UserSet.OfType<Referee>().Where(user => user.Username.Equals(adminU)).First();
+
+                CarregaDadosARB();
+
+                listVArbitro.Refresh();
+
+            }
+            else
+            {
+                administradorSelecionado = null;
+            }
+        }
+
+        private void btnGuarda_ARB_Click(object sender, EventArgs e)
+        {
+            string Username = txtbNickName_ARB.Text;
+            string Password = txtbPassword_ARB.Text;
+            string Nome = txtbNome_ARB.Text;
+            string Avatar = linkLAvatar_ARB.Text;
+
+
+            Referee User_ARB = new Referee
+            {
+                Username = Username,
+                Password = Password,
+                Name = Nome,
+                Avatar = Avatar
+
+            };
+
+            container.UserSet.Add(User_ARB);
+            container.SaveChanges();
+            listVArbitro.Refresh();
+        }
+
+        private void linkLAvatar_ARB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (caminhoImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = caminhoImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                linkLAvatar_ARB.Text = partes.Last();
+
+            }
+        }
+
+        private void btnAlterar_ARB_Click(object sender, EventArgs e)
+        {
+            string Username = txtbNickName_ADM.Text;
+            string Password = txtbPassword_ADM.Text;
+            string Name = txtbNome_ARB.Text;
+            string avatar = linkLAvatar_ARB.Text;
+
+            List<Referee> arb = container.UserSet.OfType<Referee>().ToList();
+
+            Administrator User_ARB;
+
+            if (arbitroSeleciona != null)
+            {
+                //User_ADM = container.UserSet.Find(id_ADM);
+
+                arbitroSeleciona.Username = Username;
+                arbitroSeleciona.Password = Password;
+                arbitroSeleciona.Name = Name;
+                arbitroSeleciona.Avatar = avatar;
+
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listviewARB();
+              
+            }
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_ADM_Click(object sender, EventArgs e)
+        {
+           /* if (administradorSelecionado != null)
+            {
+
+            }*/
         }
     }
 }

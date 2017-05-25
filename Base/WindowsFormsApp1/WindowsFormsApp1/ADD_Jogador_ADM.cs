@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
         int id_jogador = 0;
         Player jogadorSelected = null;
 
+
+        string ParteFinalNome;
+    
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public ADD_Jogador_ADM()
         {
@@ -54,12 +58,14 @@ namespace WindowsFormsApp1
 
         private void AddJogador()
         {
+           
+
             string nome = tbxNome.Text;
             string email = tbxEmail.Text;
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
-            string imagem = picbxAvatar.Text;
-            //ver isto.
+            string imagem = ParteFinalNome;
+           
 
 
             Player jogador = new Player
@@ -136,6 +142,7 @@ namespace WindowsFormsApp1
                 tbxEmail.Text = jogadorSelected.Email;
                 tbxNickName.Text = jogadorSelected.Nickname;
                 numupdownIdade.Value = jogadorSelected.Age;
+                picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar);
             }
             else
             {
@@ -150,12 +157,18 @@ namespace WindowsFormsApp1
             {
 
                 // verificar o remover //
-                jogadorSelected = container.PlayerSet.Find(jogadorSelected);
-            
+                //jogadorSelected = container.PlayerSet.Find(jogadorSelected);
+
+                string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar;
+
+                File.Delete(caminhoImagem);
+
                 container.PlayerSet.Remove(jogadorSelected);
 
+               
                 container.SaveChanges();
 
+                jogadorSelected = null;
 
                 MessageBox.Show("Eliminado com sucesso!");
 
@@ -167,6 +180,9 @@ namespace WindowsFormsApp1
             }
             
         }
+
+        //limpar campos
+        //apagar 
 
 
         // Menu Strip
@@ -240,5 +256,27 @@ namespace WindowsFormsApp1
             Utifrm.Show();
             Close();
         }
+
+        private void btnInserirAvatar_Click(object sender, EventArgs e)
+        {
+            
+            if (caminhoImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = caminhoImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                ParteFinalNome = partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+
+            }
+        
+    }
     }
 }
