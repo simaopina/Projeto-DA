@@ -14,7 +14,6 @@
     <EntitySet Name="TournamentSet" EntityType="DiagramaEntidadesArcmage.Store.TournamentSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PlayerSet" EntityType="DiagramaEntidadesArcmage.Store.PlayerSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Deck_CardSet" EntityType="DiagramaEntidadesArcmage.Store.Deck_CardSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TeamTournament_TeamSet" EntityType="DiagramaEntidadesArcmage.Store.TeamTournament_TeamSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserSet_Referee" EntityType="DiagramaEntidadesArcmage.Store.UserSet_Referee" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="GameSet_TeamGame" EntityType="DiagramaEntidadesArcmage.Store.GameSet_TeamGame" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TournamentSet_TeamTournament" EntityType="DiagramaEntidadesArcmage.Store.TournamentSet_TeamTournament" store:Type="Tables" Schema="dbo" />
@@ -23,6 +22,7 @@
     <EntitySet Name="UserSet_Administrator" EntityType="DiagramaEntidadesArcmage.Store.UserSet_Administrator" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TeamPlayer" EntityType="DiagramaEntidadesArcmage.Store.TeamPlayer" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PlayerStandadTournament" EntityType="DiagramaEntidadesArcmage.Store.PlayerStandadTournament" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeamTournamentTeam" EntityType="DiagramaEntidadesArcmage.Store.TeamTournamentTeam" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="RefereeGame" Association="DiagramaEntidadesArcmage.Store.RefereeGame">
       <End Role="Referee" EntitySet="UserSet_Referee" />
       <End Role="Game" EntitySet="GameSet" />
@@ -63,14 +63,6 @@
       <End Role="Deck" EntitySet="DeckSet" />
       <End Role="Deck_Card" EntitySet="Deck_CardSet" />
     </AssociationSet>
-    <AssociationSet Name="TeamTournament_TeamTeamTournament" Association="DiagramaEntidadesArcmage.Store.TeamTournament_TeamTeamTournament">
-      <End Role="TeamTournament_Team" EntitySet="TeamTournament_TeamSet" />
-      <End Role="TeamTournament" EntitySet="TournamentSet_TeamTournament" />
-    </AssociationSet>
-    <AssociationSet Name="TeamTournament_TeamTeam" Association="DiagramaEntidadesArcmage.Store.TeamTournament_TeamTeam">
-      <End Role="TeamTournament_Team" EntitySet="TeamTournament_TeamSet" />
-      <End Role="Team" EntitySet="TeamSet" />
-    </AssociationSet>
     <AssociationSet Name="FK_TeamPlayer_Team" Association="DiagramaEntidadesArcmage.Store.FK_TeamPlayer_Team">
       <End Role="Team" EntitySet="TeamSet" />
       <End Role="TeamPlayer" EntitySet="TeamPlayer" />
@@ -90,6 +82,14 @@
     <AssociationSet Name="CardDeck_Card" Association="DiagramaEntidadesArcmage.Store.CardDeck_Card">
       <End Role="Card" EntitySet="CardSet" />
       <End Role="Deck_Card" EntitySet="Deck_CardSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamTournamentTeam_TeamTournament" Association="DiagramaEntidadesArcmage.Store.FK_TeamTournamentTeam_TeamTournament">
+      <End Role="TeamTournament" EntitySet="TournamentSet_TeamTournament" />
+      <End Role="TeamTournamentTeam" EntitySet="TeamTournamentTeam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TeamTournamentTeam_Team" Association="DiagramaEntidadesArcmage.Store.FK_TeamTournamentTeam_Team">
+      <End Role="Team" EntitySet="TeamSet" />
+      <End Role="TeamTournamentTeam" EntitySet="TeamTournamentTeam" />
     </AssociationSet>
     <AssociationSet Name="FK_Referee_inherits_User" Association="DiagramaEntidadesArcmage.Store.FK_Referee_inherits_User">
       <End Role="User" EntitySet="UserSet" />
@@ -129,7 +129,7 @@
     <Property Name="Cost" Type="int" Nullable="false" />
     <Property Name="RuleText" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Attack" Type="int" Nullable="false" />
-    <Property Name="Image" Type="int" Nullable="false" />
+    <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="DeckSet">
     <Key>
@@ -157,6 +157,7 @@
     <Property Name="RefereeId" Type="int" Nullable="true" />
     <Property Name="DeckIOneld" Type="int" Nullable="true" />
     <Property Name="DeckITwold" Type="int" Nullable="true" />
+    <Property Name="Hour" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="TeamSet">
     <Key>
@@ -194,14 +195,6 @@
     <Property Name="DeckId" Type="int" Nullable="false" />
     <Property Name="CardId" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="TeamTournament_TeamSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TeamTournament_Id" Type="int" Nullable="false" />
-    <Property Name="Team_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="UserSet_Referee">
     <Key>
@@ -263,6 +256,14 @@
     </Key>
     <Property Name="Player_Id" Type="int" Nullable="false" />
     <Property Name="StandadTournament_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TeamTournamentTeam">
+    <Key>
+      <PropertyRef Name="TeamTournament_Id" />
+      <PropertyRef Name="Team_Id" />
+    </Key>
+    <Property Name="TeamTournament_Id" Type="int" Nullable="false" />
+    <Property Name="Team_Id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="RefereeGame">
     <End Role="Referee" Type="DiagramaEntidadesArcmage.Store.UserSet_Referee" Multiplicity="0..1" />
@@ -384,30 +385,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="TeamTournament_TeamTeamTournament">
-    <End Role="TeamTournament_Team" Type="DiagramaEntidadesArcmage.Store.TeamTournament_TeamSet" Multiplicity="*" />
-    <End Role="TeamTournament" Type="DiagramaEntidadesArcmage.Store.TournamentSet_TeamTournament" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="TeamTournament">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamTournament_Team">
-        <PropertyRef Name="TeamTournament_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TeamTournament_TeamTeam">
-    <End Role="TeamTournament_Team" Type="DiagramaEntidadesArcmage.Store.TeamTournament_TeamSet" Multiplicity="*" />
-    <End Role="Team" Type="DiagramaEntidadesArcmage.Store.TeamSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Team">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TeamTournament_Team">
-        <PropertyRef Name="Team_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="CardDeck_Card">
     <End Role="Card" Type="DiagramaEntidadesArcmage.Store.CardSet" Multiplicity="1" />
     <End Role="Deck_Card" Type="DiagramaEntidadesArcmage.Store.Deck_CardSet" Multiplicity="*" />
@@ -465,6 +442,30 @@
       </Principal>
       <Dependent Role="PlayerStandadTournament">
         <PropertyRef Name="StandadTournament_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamTournamentTeam_TeamTournament">
+    <End Role="TeamTournament" Type="DiagramaEntidadesArcmage.Store.TournamentSet_TeamTournament" Multiplicity="1" />
+    <End Role="TeamTournamentTeam" Type="DiagramaEntidadesArcmage.Store.TeamTournamentTeam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeamTournament">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeamTournamentTeam">
+        <PropertyRef Name="TeamTournament_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TeamTournamentTeam_Team">
+    <End Role="TeamTournamentTeam" Type="DiagramaEntidadesArcmage.Store.TeamTournamentTeam" Multiplicity="*" />
+    <End Role="Team" Type="DiagramaEntidadesArcmage.Store.TeamSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Team">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TeamTournamentTeam">
+        <PropertyRef Name="Team_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -605,15 +606,6 @@
             <End Role="Deck" EntitySet="DeckSet" />
             <End Role="Deck_Card" EntitySet="Deck_CardSet" />
           </AssociationSet>
-          <EntitySet Name="TeamTournament_TeamSet" EntityType="DiagramaEntidadesArcmage.TeamTournament_Team" />
-          <AssociationSet Name="TeamTournament_TeamTeamTournament" Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament">
-            <End Role="TeamTournament_Team" EntitySet="TeamTournament_TeamSet" />
-            <End Role="TeamTournament" EntitySet="TournamentSet" />
-          </AssociationSet>
-          <AssociationSet Name="TeamTournament_TeamTeam" Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeam">
-            <End Role="TeamTournament_Team" EntitySet="TeamTournament_TeamSet" />
-            <End Role="Team" EntitySet="TeamSet" />
-          </AssociationSet>
           <AssociationSet Name="TeamPlayer" Association="DiagramaEntidadesArcmage.TeamPlayer">
             <End Role="Team" EntitySet="TeamSet" />
             <End Role="Player" EntitySet="PlayerSet" />
@@ -625,6 +617,10 @@
           <AssociationSet Name="CardDeck_Card" Association="DiagramaEntidadesArcmage.CardDeck_Card">
             <End Role="Card" EntitySet="CardSet" />
             <End Role="Deck_Card" EntitySet="Deck_CardSet" />
+          </AssociationSet>
+          <AssociationSet Name="TeamTournamentTeam" Association="DiagramaEntidadesArcmage.TeamTournamentTeam">
+            <End Role="TeamTournament" EntitySet="TournamentSet" />
+            <End Role="Team" EntitySet="TeamSet" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Card">
@@ -641,7 +637,7 @@
           <Property Name="RuleText" Type="String" Nullable="false" />
           <Property Name="Attack" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Deck_Card" Relationship="DiagramaEntidadesArcmage.CardDeck_Card" FromRole="Card" ToRole="Deck_Card" />
-          <Property Name="Image" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Deck">
           <Key>
@@ -675,6 +671,7 @@
           <Property Name="DeckIOneld" Type="Int32" Nullable="true" />
           <NavigationProperty Name="DeckTwo" Relationship="DiagramaEntidadesArcmage.DeckGame1" FromRole="Game" ToRole="Deck" />
           <Property Name="DeckITwold" Type="Int32" Nullable="true" />
+          <Property Name="Hour" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -685,8 +682,8 @@
           <Property Name="Avatar" Type="String" Nullable="false" />
           <NavigationProperty Name="GameAsOne" Relationship="DiagramaEntidadesArcmage.TeamTeamGame" FromRole="Team" ToRole="TeamGame" />
           <NavigationProperty Name="GameAsTwo" Relationship="DiagramaEntidadesArcmage.TeamTeamGame1" FromRole="Team" ToRole="TeamGame" />
-          <NavigationProperty Name="TeamTournament_Team" Relationship="DiagramaEntidadesArcmage.TeamTournament_TeamTeam" FromRole="Team" ToRole="TeamTournament_Team" />
           <NavigationProperty Name="Player" Relationship="DiagramaEntidadesArcmage.TeamPlayer" FromRole="Team" ToRole="Player" />
+          <NavigationProperty Name="TeamTournament" Relationship="DiagramaEntidadesArcmage.TeamTournamentTeam" FromRole="Team" ToRole="TeamTournament" />
         </EntityType>
         <EntityType Name="Tournament">
           <Key>
@@ -798,7 +795,7 @@
         </Association>
         <EntityType Name="TeamTournament" BaseType="DiagramaEntidadesArcmage.Tournament" >
           <NavigationProperty Name="Games" Relationship="DiagramaEntidadesArcmage.TeamTournamentTeamGame" FromRole="TeamTournament" ToRole="TeamGame" />
-          <NavigationProperty Name="TeamTournament_Team" Relationship="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament" FromRole="TeamTournament" ToRole="TeamTournament_Team" />
+          <NavigationProperty Name="Team" Relationship="DiagramaEntidadesArcmage.TeamTournamentTeam" FromRole="TeamTournament" ToRole="Team" />
         </EntityType>
         <Association Name="TeamTournamentTeamGame">
           <End Type="DiagramaEntidadesArcmage.TeamTournament" Role="TeamTournament" Multiplicity="1" />
@@ -875,22 +872,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="TeamTournament_Team">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="TeamTournament" Relationship="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament" FromRole="TeamTournament_Team" ToRole="TeamTournament" />
-          <NavigationProperty Name="Team" Relationship="DiagramaEntidadesArcmage.TeamTournament_TeamTeam" FromRole="TeamTournament_Team" ToRole="Team" />
-        </EntityType>
-        <Association Name="TeamTournament_TeamTeamTournament">
-          <End Type="DiagramaEntidadesArcmage.TeamTournament_Team" Role="TeamTournament_Team" Multiplicity="*" />
-          <End Type="DiagramaEntidadesArcmage.TeamTournament" Role="TeamTournament" Multiplicity="1" />
-        </Association>
-        <Association Name="TeamTournament_TeamTeam">
-          <End Type="DiagramaEntidadesArcmage.TeamTournament_Team" Role="TeamTournament_Team" Multiplicity="*" />
-          <End Type="DiagramaEntidadesArcmage.Team" Role="Team" Multiplicity="1" />
-        </Association>
         <Association Name="TeamPlayer">
           <End Type="DiagramaEntidadesArcmage.Team" Role="Team" Multiplicity="*" />
           <End Type="DiagramaEntidadesArcmage.Player" Role="Player" Multiplicity="*" />
@@ -910,6 +891,10 @@
               <PropertyRef Name="CardId" />
             </Dependent>
           </ReferentialConstraint>
+        </Association>
+        <Association Name="TeamTournamentTeam">
+          <End Type="DiagramaEntidadesArcmage.TeamTournament" Role="TeamTournament" Multiplicity="*" />
+          <End Type="DiagramaEntidadesArcmage.Team" Role="Team" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -973,6 +958,7 @@
           <ScalarProperty Name="RefereeId" ColumnName="RefereeId" />
           <ScalarProperty Name="DeckIOneld" ColumnName="DeckIOneld" />
           <ScalarProperty Name="DeckITwold" ColumnName="DeckITwold" />
+          <ScalarProperty Name="Hour" ColumnName="Hour" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(DiagramaEntidadesArcmage.TeamGame)">
@@ -1043,29 +1029,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TeamTournament_TeamSet">
-      <EntityTypeMapping TypeName="IsTypeOf(DiagramaEntidadesArcmage.TeamTournament_Team)">
-        <MappingFragment StoreEntitySet="TeamTournament_TeamSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <AssociationSetMapping Name="TeamTournament_TeamTeamTournament" TypeName="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament" StoreEntitySet="TeamTournament_TeamSet">
-      <EndProperty Name="TeamTournament">
-        <ScalarProperty Name="Id" ColumnName="TeamTournament_Id" />
-      </EndProperty>
-      <EndProperty Name="TeamTournament_Team">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="TeamTournament_TeamTeam" TypeName="DiagramaEntidadesArcmage.TeamTournament_TeamTeam" StoreEntitySet="TeamTournament_TeamSet">
-      <EndProperty Name="Team">
-        <ScalarProperty Name="Id" ColumnName="Team_Id" />
-      </EndProperty>
-      <EndProperty Name="TeamTournament_Team">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="TeamPlayer" TypeName="DiagramaEntidadesArcmage.TeamPlayer" StoreEntitySet="TeamPlayer">
       <EndProperty Name="Team">
         <ScalarProperty Name="Id" ColumnName="Team_Id" />
@@ -1080,6 +1043,14 @@
       </EndProperty>
       <EndProperty Name="StandadTournament">
         <ScalarProperty Name="Id" ColumnName="StandadTournament_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TeamTournamentTeam" TypeName="DiagramaEntidadesArcmage.TeamTournamentTeam" StoreEntitySet="TeamTournamentTeam">
+      <EndProperty Name="TeamTournament">
+        <ScalarProperty Name="Id" ColumnName="TeamTournament_Id" />
+      </EndProperty>
+      <EndProperty Name="Team">
+        <ScalarProperty Name="Id" ColumnName="Team_Id" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

@@ -19,8 +19,8 @@ namespace WindowsFormsApp1
         {
             this.GameAsOne = new HashSet<TeamGame>();
             this.GameAsTwo = new HashSet<TeamGame>();
-            this.TeamTournament_Team = new HashSet<TeamTournament_Team>();
             this.Player = new HashSet<Player>();
+            this.TeamTournament = new HashSet<TeamTournament>();
         }
     
         public int Id { get; set; }
@@ -32,8 +32,8 @@ namespace WindowsFormsApp1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TeamGame> GameAsTwo { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeamTournament_Team> TeamTournament_Team { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Player> Player { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TeamTournament> TeamTournament { get; set; }
     }
 }
