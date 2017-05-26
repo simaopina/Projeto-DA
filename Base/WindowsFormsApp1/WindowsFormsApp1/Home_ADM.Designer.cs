@@ -68,6 +68,7 @@
             this.btnJogador = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.gpbxMenu = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxRank.SuspendLayout();
@@ -171,26 +172,26 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
             this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
@@ -439,6 +440,7 @@
             // 
             // gpbxMenu
             // 
+            this.gpbxMenu.Controls.Add(this.button1);
             this.gpbxMenu.Controls.Add(this.btnBaralhos);
             this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
             this.gpbxMenu.Controls.Add(this.btnEditCartas);
@@ -450,6 +452,17 @@
             this.gpbxMenu.TabIndex = 41;
             this.gpbxMenu.TabStop = false;
             this.gpbxMenu.Text = "Menu:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Fuchsia;
+            this.button1.Location = new System.Drawing.Point(34, 173);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 92);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Botao do Simao ;)";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Home_ADM
             // 
@@ -526,5 +539,6 @@
         private System.Windows.Forms.Button btnJogador;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox gpbxMenu;
+        private System.Windows.Forms.Button button1;
     }
 }
