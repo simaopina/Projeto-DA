@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
                 cbxTorneioEquipa.Items.Add(game.Date);
             }
 
-            foreach (Tournament torneio in container.TournamentSet.OfType<TeamTournament>())
+            foreach (Tournament torneio in container.TournamentSet.OfType<TeamTournament>() )
             {
                 listVJogosEquipa.Items.Add(torneio.Name);
             }
@@ -58,6 +58,7 @@ namespace WindowsFormsApp1
 
         }
 
+        //navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_ADM HAfrm = new Home_ADM();
