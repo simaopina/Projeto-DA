@@ -295,9 +295,6 @@
     <Compile Include="TeamTournament.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeamTournament_Team.cs">
-      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tournament.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>

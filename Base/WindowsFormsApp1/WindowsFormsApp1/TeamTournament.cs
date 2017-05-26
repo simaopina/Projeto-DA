@@ -18,13 +18,13 @@ namespace WindowsFormsApp1
         public TeamTournament()
         {
             this.Games = new HashSet<TeamGame>();
-            this.TeamTournament_Team = new HashSet<TeamTournament_Team>();
+            this.Team = new HashSet<Team>();
         }
     
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TeamGame> Games { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TeamTournament_Team> TeamTournament_Team { get; set; }
+        public virtual ICollection<Team> Team { get; set; }
     }
 }
