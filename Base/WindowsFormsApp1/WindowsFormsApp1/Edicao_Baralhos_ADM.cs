@@ -31,10 +31,10 @@ namespace WindowsFormsApp1
              }
 
 
-            /* foreach(Card cartas in container.CardSet)
+             foreach(Card cartas in container.CardSet)
             {
                 listVCartas.Items.Add(cartas.Name);
-            }*/
+            }
         }
         //Navegação
 
@@ -144,7 +144,7 @@ namespace WindowsFormsApp1
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string nome = dataGridCartas.CurrentRow.Cells[1].Value.ToString();
+            /*string nome = dataGridCartas.CurrentRow.Cells[1].Value.ToString();
             string facao= dataGridCartas.CurrentRow.Cells[2].Value.ToString();
             string tipo = dataGridCartas.CurrentRow.Cells[3].Value.ToString();
             string lealdade = dataGridCartas.CurrentRow.Cells[4].Value.ToString();
@@ -153,19 +153,27 @@ namespace WindowsFormsApp1
             string ataque = dataGridCartas.CurrentRow.Cells[7].Value.ToString();
             string defesa = dataGridCartas.CurrentRow.Cells[8].Value.ToString();
             string imagem = dataGridCartas.CurrentRow.Cells[9].Value.ToString();
-
+            
 
             id_cartas = (int)dataGridCartas.CurrentRow.Cells[0].Value;
+            
+
+
 
             Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
-            Info_cartas_ADM.Show();
+            Info_cartas_ADM.Show*/
 
         }
 
         private void Edicao_Baralhos_ADM_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baseDadosCartasEdição.CardSet' table. You can move, or remove it, as needed.
-            this.cardSetTableAdapter.Fill(this.baseDadosCartasEdição.CardSet);
+           // this.cardSetTableAdapter.Fill(this.baseDadosCartasEdição.CardSet);
+
+        }
+
+        private void listVCartas_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
 
         }
     }
