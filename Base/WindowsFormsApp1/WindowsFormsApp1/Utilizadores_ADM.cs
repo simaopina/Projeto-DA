@@ -21,6 +21,8 @@ namespace WindowsFormsApp1
 
         public string partefinal;
 
+        int id_ADM = 0;
+
         public Utilizadores_ADM()
         {
             InitializeComponent();
@@ -285,17 +287,38 @@ namespace WindowsFormsApp1
         private void btnEliminar_ADM_Click(object sender, EventArgs e)
         {
 
-            /*arbitroSeleciona = container.UserSet.Find();
+            string Username = administradorSelecionado.Username;
+            
+            var query = container.UserSet.Where(admin => admin.Id.Equals(administradorSelecionado.Username));
 
-            container.CardSet.Remove(cartaselecionada);
+            container.UserSet.Remove(administradorSelecionado);
 
             container.SaveChanges();
 
+            administradorSelecionado = null;
 
             MessageBox.Show("Eliminado com sucesso!");
 
-            refresh_datagrid();*/
+            refresh_listviewADM();
 
+
+        }
+
+        private void btn_eliminarArbitro_Click(object sender, EventArgs e)
+        {
+            string Username = arbitroSeleciona.Username;
+
+            var query = container.UserSet.Where(arbitro => arbitro.Id.Equals(arbitroSeleciona.Username));
+
+            container.UserSet.Remove(arbitroSeleciona);
+
+            container.SaveChanges();
+
+            arbitroSeleciona = null;
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_listviewARB();
 
         }
     }

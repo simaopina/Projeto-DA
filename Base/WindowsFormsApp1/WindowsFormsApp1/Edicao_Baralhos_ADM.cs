@@ -98,35 +98,35 @@ namespace WindowsFormsApp1
 
         private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string nome = BaralhoSelecionado.Name;
+            //List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+            List<Card> cards = container.Deck_CardSet.OfType<Card>().ToList();
 
+            string nome = cbxBaralho.SelectedItem.ToString();
+                        
             Deck baralho = new Deck
             {
                 Name = nome
+
             };
-
+            
             baralho = container.DeckSet.Find(id_baralho);
-            baralho.Name = nome;
-
+           
 
             var query = container.Deck_CardSet.Where(CartaEmBaralho => CartaEmBaralho.DeckId.Equals(id_baralho));
             query.ToList();
 
-
-            int id = CartaSelecionada.Id;
-
-            Card cartas = new Card
-            {
-                Id = id
-            };
+            Card cartas;
 
             foreach(var id_card in query.ToList())
             {
                 Card carta = container.CardSet.Find(id_cartas);
-
-                container.Deck_CardSet.Add(id_card);
-                
             }
+
+
+
+            
+
+            //container.Deck_CardSet.Add(cards);
 
             refreshlistvbaralhos();
 
