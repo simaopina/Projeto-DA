@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
         Referee arbitroSeleciona = null;
 
+        public string partefinal;
 
         public Utilizadores_ADM()
         {
@@ -182,7 +183,7 @@ namespace WindowsFormsApp1
             txtbNickName_ARB.Text = arbitroSeleciona.Username;
             txtbNome_ARB.Text = arbitroSeleciona.Name;
             txtbPassword_ARB.Text = arbitroSeleciona.Password;
-           // linkLAvatar_ARB.Image = Image.FromFile(caminhoFicheiro);
+            linkLAvatar_ARB.Text = partefinal;
 
 
         }
@@ -238,7 +239,7 @@ namespace WindowsFormsApp1
                 caminhoFicheiro.Contains(".png");
 
                 string[] partes = caminhoFicheiro.Split('\\');
-
+                partefinal = partes.Last();
                 File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
 
                 linkLAvatar_ARB.Text = partes.Last();
@@ -259,7 +260,7 @@ namespace WindowsFormsApp1
 
             if (arbitroSeleciona != null)
             {
-                //User_ADM = container.UserSet.Find(id_ADM);
+               // User_ADM = container.UserSet.Find(id_ADM);
 
                 arbitroSeleciona.Username = Username;
                 arbitroSeleciona.Password = Password;
@@ -283,10 +284,19 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_ADM_Click(object sender, EventArgs e)
         {
-           /* if (administradorSelecionado != null)
-            {
 
-            }*/
+            /*arbitroSeleciona = container.UserSet.Find();
+
+            container.CardSet.Remove(cartaselecionada);
+
+            container.SaveChanges();
+
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_datagrid();*/
+
+
         }
     }
 }
