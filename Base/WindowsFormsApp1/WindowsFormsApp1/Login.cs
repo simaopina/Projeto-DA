@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
 
                     Administrator db = new Administrator();
                     var query1 = from User in db.Email where db.Email == tbxemail.Text select User;
-                    char validacao = query1.FirstOrDefault();
+                    //char validacao = query1.FirstOrDefault();
 
                     if (query1 != null || query1.Count() == 0)
                     {
