@@ -166,6 +166,8 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Avatar" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Player1" Type="int" Nullable="false" />
+    <Property Name="Player2" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TournamentSet">
     <Key>
@@ -684,6 +686,8 @@
           <NavigationProperty Name="GameAsTwo" Relationship="DiagramaEntidadesArcmage.TeamTeamGame1" FromRole="Team" ToRole="TeamGame" />
           <NavigationProperty Name="Player" Relationship="DiagramaEntidadesArcmage.TeamPlayer" FromRole="Team" ToRole="Player" />
           <NavigationProperty Name="TeamTournament" Relationship="DiagramaEntidadesArcmage.TeamTournamentTeam" FromRole="Team" ToRole="TeamTournament" />
+          <Property Name="Player1" Type="Int32" Nullable="false" />
+          <Property Name="Player2" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Tournament">
           <Key>
@@ -984,6 +988,8 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Player1" ColumnName="Player1" />
+          <ScalarProperty Name="Player2" ColumnName="Player2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
