@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
 
         public void refreshlistVcartas()
         {
-
+            listVCartas.Items.Clear();
             foreach (Card cartas in container.CardSet)
             {
                 ListViewItem CartaList = new ListViewItem(cartas.Name);
@@ -178,7 +178,7 @@ namespace WindowsFormsApp1
 
             MessageBox.Show("Alterado com sucesso!");
 
-            refresh_datagrid();
+            refreshlistVcartas();
 
             
         }
