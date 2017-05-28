@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         string ParteFinalNome;
 
-        Card cartaselecionada = null;
+        Card cartaselecionada;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Cartas_ADM()
@@ -63,8 +63,10 @@ namespace WindowsFormsApp1
 
         private void Cartas_ADM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosCartas.CardSet' table. You can move, or remove it, as needed.
+            this.cardSetTableAdapter3.Fill(this.baseDadosCartas.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet3.CardSet' table. You can move, or remove it, as needed.
-            this.cardSetTableAdapter2.Fill(this.baseDadosDataSet3.CardSet);
+          //  this.cardSetTableAdapter2.Fill(this.baseDadosDataSet3.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet_Cards.CardSet' table. You can move, or remove it, as needed.
         //    this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet.CardSet' table. You can move, or remove it, as needed.
@@ -75,9 +77,7 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //Carta_selecionada = true;
-
-
+         
             txtNome.Text = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
             txtFacao.Text = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
             txtTipo.Text = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
@@ -96,8 +96,7 @@ namespace WindowsFormsApp1
 
         public void refresh_datagrid()
         {
-
-            this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
+            this.cardSetTableAdapter3.Fill(this.baseDadosCartas.CardSet);
             DataGridCartas.DataSource = cardSetBindingSource1;
 
         }
@@ -139,9 +138,10 @@ namespace WindowsFormsApp1
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            if (cartaselecionada != null)
-            {
 
+                Card cartas;
+
+                //var procurar = container.CardSet.Where(id => id.Id.Equals(id_carta));
                 cartaselecionada = container.CardSet.Find(id_carta);
 
                 container.CardSet.Remove(cartaselecionada);
@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
 
                 refresh_datagrid();
 
-            }
+            
 
             
 

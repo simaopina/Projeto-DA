@@ -98,21 +98,16 @@ namespace WindowsFormsApp1
 
         private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
-            List<Card> cards = container.Deck_CardSet.OfType<Card>().ToList();
+            
 
             string nome = cbxBaralho.SelectedItem.ToString();
                         
-            Deck baralho = new Deck
-            {
-                Name = nome
-
-            };
+            Deck baralho;
             
             baralho = container.DeckSet.Find(id_baralho);
            
 
-            var query = container.Deck_CardSet.Where(CartaEmBaralho => CartaEmBaralho.DeckId.Equals(id_baralho));
+            /*var query = container.Deck_CardSet.Where(CartaEmBaralho => CartaEmBaralho.DeckId.Equals(id_baralho));
             query.ToList();
 
             Card cartas;
@@ -120,17 +115,20 @@ namespace WindowsFormsApp1
             foreach(var id_card in query.ToList())
             {
                 Card carta = container.CardSet.Find(id_cartas);
+
             }
 
+            Deck_Card cartaBaralho = new Deck_Card
+            {
+                CardId = id_cartas
 
+            };
 
-            
-
-            //container.Deck_CardSet.Add(cards);
+            container.Deck_CardSet.Add(id_cartas);*/
 
             refreshlistvbaralhos();
 
-            refreshlistvcartas();
+            //refreshlistvcartas();
             
            
              }
@@ -213,6 +211,11 @@ namespace WindowsFormsApp1
 
         private void btnAdicionarBaralho_Click(object sender, EventArgs e)
         {
+
+            Card cartas;
+            Deck_Card cartaBaralho;
+
+
             foreach (var selectedItem in this.listVCartas.SelectedItems)
             {
                 var item = (selectedItem as ListViewItem);
@@ -221,9 +224,25 @@ namespace WindowsFormsApp1
             }
 
 
-          
-            container.DeckSet.Add(BaralhoSelecionado);
-            container.SaveChanges();
+            var id_cartas = from id in container.Deck_CardSet where id.DeckId == id_baralho select id;
+           
+
+            foreach (ListViewItem item in listVBaralho.Items)
+            {
+                var procurar = container.CardSet.Where(nome => nome.Name.Equals(item.Text));
+                cartas = procurar.ToList<Card>().First<Card>();
+
+                cartaBaralho = new Deck_Card();
+                cartaBaralho.DeckId = id_baralho;
+                cartaBaralho.CardId = cartas.Id;
+
+                container.Deck_CardSet.Add(cartaBaralho);
+
+            }   
+
+            //container.SaveChanges();
+
+            refreshlistvbaralhos();
 
         }
 

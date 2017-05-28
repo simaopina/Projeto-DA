@@ -76,12 +76,12 @@
             this.baseDadosDataSet = new WindowsFormsApp1.BaseDadosDataSet();
             this.cardSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTableAdapters.CardSetTableAdapter();
             this.DataGridCartas = new System.Windows.Forms.DataGridView();
+            this.cardSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSet3 = new WindowsFormsApp1.BaseDadosDataSet3();
             this.cardSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
             this.cardSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter();
             this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
-            this.baseDadosDataSet3 = new WindowsFormsApp1.BaseDadosDataSet3();
-            this.cardSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cardSetTableAdapter2 = new WindowsFormsApp1.BaseDadosDataSet3TableAdapters.CardSetTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +93,9 @@
             this.ruleTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.attackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.baseDadosCartas = new WindowsFormsApp1.BaseDadosCartas();
+            this.cardSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.cardSetTableAdapter3 = new WindowsFormsApp1.BaseDadosCartasTableAdapters.CardSetTableAdapter();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).BeginInit();
@@ -102,10 +105,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosCartas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCartasADM
@@ -143,14 +148,15 @@
             // 
             this.pictImagem.Location = new System.Drawing.Point(454, 24);
             this.pictImagem.Name = "pictImagem";
-            this.pictImagem.Size = new System.Drawing.Size(100, 50);
+            this.pictImagem.Size = new System.Drawing.Size(57, 74);
+            this.pictImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictImagem.TabIndex = 25;
             this.pictImagem.TabStop = false;
             // 
             // LinkLabelImagem
             // 
             this.LinkLabelImagem.AutoSize = true;
-            this.LinkLabelImagem.Location = new System.Drawing.Point(479, 81);
+            this.LinkLabelImagem.Location = new System.Drawing.Point(451, 110);
             this.LinkLabelImagem.Name = "LinkLabelImagem";
             this.LinkLabelImagem.Size = new System.Drawing.Size(60, 13);
             this.LinkLabelImagem.TabIndex = 24;
@@ -174,7 +180,7 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(314, 137);
+            this.btnRemover.Location = new System.Drawing.Point(404, 136);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 23);
             this.btnRemover.TabIndex = 20;
@@ -194,7 +200,7 @@
             // 
             // btAdicionarCartas
             // 
-            this.btAdicionarCartas.Location = new System.Drawing.Point(395, 137);
+            this.btAdicionarCartas.Location = new System.Drawing.Point(323, 136);
             this.btAdicionarCartas.Name = "btAdicionarCartas";
             this.btAdicionarCartas.Size = new System.Drawing.Size(75, 23);
             this.btAdicionarCartas.TabIndex = 18;
@@ -515,7 +521,7 @@
             this.ruleTextDataGridViewTextBoxColumn,
             this.attackDataGridViewTextBoxColumn,
             this.imageDataGridViewTextBoxColumn});
-            this.DataGridCartas.DataSource = this.cardSetBindingSource2;
+            this.DataGridCartas.DataSource = this.cardSetBindingSource3;
             this.DataGridCartas.Location = new System.Drawing.Point(25, 253);
             this.DataGridCartas.Name = "DataGridCartas";
             this.DataGridCartas.ReadOnly = true;
@@ -524,6 +530,16 @@
             this.DataGridCartas.TabIndex = 32;
             this.DataGridCartas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.DataGridCartas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridCartas_CellContentDoubleClick);
+            // 
+            // cardSetBindingSource2
+            // 
+            this.cardSetBindingSource2.DataMember = "CardSet";
+            this.cardSetBindingSource2.DataSource = this.baseDadosDataSet3;
+            // 
+            // baseDadosDataSet3
+            // 
+            this.baseDadosDataSet3.DataSetName = "BaseDadosDataSet3";
+            this.baseDadosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cardSetBindingSource1
             // 
@@ -542,16 +558,6 @@
             // caminhoImagem
             // 
             this.caminhoImagem.FileName = "caminhoImagem";
-            // 
-            // baseDadosDataSet3
-            // 
-            this.baseDadosDataSet3.DataSetName = "BaseDadosDataSet3";
-            this.baseDadosDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cardSetBindingSource2
-            // 
-            this.cardSetBindingSource2.DataMember = "CardSet";
-            this.cardSetBindingSource2.DataSource = this.baseDadosDataSet3;
             // 
             // cardSetTableAdapter2
             // 
@@ -626,6 +632,21 @@
             this.imageDataGridViewTextBoxColumn.HeaderText = "Image";
             this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
             this.imageDataGridViewTextBoxColumn.ReadOnly = true;
+            this.imageDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // baseDadosCartas
+            // 
+            this.baseDadosCartas.DataSetName = "BaseDadosCartas";
+            this.baseDadosCartas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cardSetBindingSource3
+            // 
+            this.cardSetBindingSource3.DataMember = "CardSet";
+            this.cardSetBindingSource3.DataSource = this.baseDadosCartas;
+            // 
+            // cardSetTableAdapter3
+            // 
+            this.cardSetTableAdapter3.ClearBeforeFill = true;
             // 
             // Cartas_ADM
             // 
@@ -652,10 +673,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosCartas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,5 +750,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ruleTextDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn attackDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
+        private BaseDadosCartas baseDadosCartas;
+        private System.Windows.Forms.BindingSource cardSetBindingSource3;
+        private BaseDadosCartasTableAdapters.CardSetTableAdapter cardSetTableAdapter3;
     }
 }
