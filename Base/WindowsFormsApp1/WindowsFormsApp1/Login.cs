@@ -23,6 +23,12 @@ namespace WindowsFormsApp1
             string useremail = tbxemail.Text;
             string password = tbxPW.Text;
 
+            if (tbxemail.Text == "")
+            {
+                MessageBox.Show("Insira uma email valido!");
+                tbxemail.Focus();
+            }
+
 
             Home_Arbitro HAfrm = new Home_Arbitro();
 
