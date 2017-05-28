@@ -21,8 +21,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             foreach (StardadGame game in container.GameSet)
-            {
-                cbxTorneioEquipa.Items.Add(game.Date);
+            { 
+                listVJogosStandard.Items.Add(game.Description);
             }
 
             foreach (Tournament torneio in container.TournamentSet.OfType<TeamTournament>() )
@@ -32,12 +32,14 @@ namespace WindowsFormsApp1
 
             foreach (TeamGame Tgame in container.GameSet)
             {
-                cbxTorneioStandard.Items.Add(Tgame.Date);
+                
+                listVJogosEquipa.Items.Add(Tgame.Description);
             }
 
             foreach (Tournament torneio in container.TournamentSet.OfType<StandadTournament>())
             {
-                listVJogosEquipa.Items.Add(torneio.Name);
+                
+                cbxTorneioStandard.Items.Add(torneio.Date);
             }
 
 
