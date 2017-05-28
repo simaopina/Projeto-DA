@@ -23,15 +23,15 @@ namespace WindowsFormsApp1
 
             foreach (Deck baralho in container.DeckSet)
             {
-                cbxBaralhoEquipa1.Items.Add(baralho.Id.ToString());
+                cbxBaralhoEquipa1.Items.Add(baralho.Name.ToString());
             }
             foreach (Deck baralho in container.DeckSet)
             {
-                cbxBaralhoEquipa2.Items.Add(baralho.Id.ToString());
+                cbxBaralhoEquipa2.Items.Add(baralho.Name.ToString());
             }
-            foreach (Tournament torn in container.TournamentSet)
+            foreach (Tournament torn in container.TournamentSet.OfType<StandadTournament>())
             {
-                cbxTorneio.Items.Add(torn.Id.ToString());
+                cbxTorneio.Items.Add(torn.Name.ToString());
             }
 
         }
