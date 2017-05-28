@@ -149,6 +149,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDataSet_Referee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet_Referee.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosData_ADM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -505,6 +510,17 @@
     </None>
     <None Include="BaseDadosDataSet_Cards.xss">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet_Referee.xsc">
+      <DependentUpon>BaseDadosDataSet_Referee.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet_Referee.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet_Referee.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet_Referee.xss">
+      <DependentUpon>BaseDadosDataSet_Referee.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosData_ADM.xsc">
       <DependentUpon>BaseDadosData_ADM.xsd</DependentUpon>
