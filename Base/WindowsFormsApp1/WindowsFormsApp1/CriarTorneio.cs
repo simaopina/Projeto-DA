@@ -21,6 +21,20 @@ namespace WindowsFormsApp1
         public CriarTorneio()
         {
             InitializeComponent();
+
+            List<TeamTournament> listteamtorneio = container.TournamentSet.OfType<TeamTournament>().ToList();
+
+            foreach (TeamTournament TeamT in listteamtorneio)
+            {
+                listVEquipas.Items.Add(TeamT.Name);
+            }
+
+            List<StandadTournament> liststandardtorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
+
+            foreach (StandadTournament StandT in liststandardtorneio)
+            {
+                listVStandard.Items.Add(StandT.Name);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
