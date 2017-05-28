@@ -105,5 +105,10 @@ namespace WindowsFormsApp1
             tjsfrm.Show();
             Close();
         }
+
+        private void btnPesquisarJogador1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
