@@ -247,7 +247,7 @@
             this.gbxJogador1.Size = new System.Drawing.Size(276, 145);
             this.gbxJogador1.TabIndex = 36;
             this.gbxJogador1.TabStop = false;
-            this.gbxJogador1.Text = "Equipa1";
+            this.gbxJogador1.Text = "Jogador 1";
             // 
             // listVJogador1
             // 
@@ -277,7 +277,7 @@
             this.gbxJogador2.Size = new System.Drawing.Size(277, 144);
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
-            this.gbxJogador2.Text = "Equipa2";
+            this.gbxJogador2.Text = "Jogador 2";
             // 
             // listVJogador2
             // 
