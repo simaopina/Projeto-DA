@@ -33,5 +33,11 @@ namespace WindowsFormsApp1
 
            
         }
+
+        private void iiiiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CriarTorneio ctfrm = new CriarTorneio();
+            ctfrm.Show();
+        }
     }
 }

@@ -84,6 +84,7 @@ namespace WindowsFormsApp1
 
             container.PlayerSet.Add(jogador);
             container.SaveChanges();
+            refreshJogador();
         }
 
         private void refreshJogador()

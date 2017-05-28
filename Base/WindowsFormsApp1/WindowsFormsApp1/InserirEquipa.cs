@@ -22,11 +22,11 @@ namespace WindowsFormsApp1
 
             foreach (Player jogador in container.PlayerSet)
             {
-                lbxJogador1.Items.Add(jogador.Name.ToString());
+                cbxJogador1.Items.Add(jogador.Name.ToString());
             }
             foreach (Player jogador in container.PlayerSet)
             {
-                lbxJogador2.Items.Add(jogador.Name.ToString());
+                cbxJogador2.Items.Add(jogador.Name.ToString());
             }
         }
 
@@ -48,15 +48,16 @@ namespace WindowsFormsApp1
         {
             string nome = tbxNome.Text;
             string imagem = picbxAvatar.Text;
-            string jogador1 = lbxJogador1.Text;
-            string jogador2 = lbxJogador2.Text;
+            int jogador1 = Convert.ToInt32(cbxJogador1.Text);
+            int jogador2 = Convert.ToInt32(cbxJogador2.Text);
 
 
             Team equipa = new Team
             {
                 Name = nome,
-                Avatar = imagem
-                
+                Avatar = imagem,
+                Player1 = jogador1,
+                Player2 = jogador2
             };
 
             container.TeamSet.Add(equipa);
