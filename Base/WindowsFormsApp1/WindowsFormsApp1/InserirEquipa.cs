@@ -19,6 +19,15 @@ namespace WindowsFormsApp1
         public InserirEquipa()
         {
             InitializeComponent();
+
+            foreach (Player jogador in container.PlayerSet)
+            {
+                lbxJogador1.Items.Add(jogador.Name.ToString());
+            }
+            foreach (Player jogador in container.PlayerSet)
+            {
+                lbxJogador2.Items.Add(jogador.Name.ToString());
+            }
         }
 
         private void lbxEquipa_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,17 +48,20 @@ namespace WindowsFormsApp1
         {
             string nome = tbxNome.Text;
             string imagem = picbxAvatar.Text;
-            //ver isto.
+            string jogador1 = lbxJogador1.Text;
+            string jogador2 = lbxJogador2.Text;
 
 
             Team equipa = new Team
             {
                 Name = nome,
                 Avatar = imagem
+                
             };
 
             container.TeamSet.Add(equipa);
             container.SaveChanges();
+            refreshEquipa();
         }
 
         private void refreshEquipa()
