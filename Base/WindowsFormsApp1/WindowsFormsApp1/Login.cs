@@ -12,6 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Login : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+        Administrator adminSelect = null;
+
+        int id_admin = 0;
+
         public Login()
         {
             InitializeComponent();
@@ -28,10 +34,37 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Insira uma email valido!");
                 tbxemail.Focus();
             }
+            else{
+                if (tbxPW.Text == "")
+                {
+                    MessageBox.Show("Insira uma password valida!");
+                    tbxPW.Focus();
+                }
+
+               // foreach (User user in container.UserSet.OfType<Administrator>())
+                //{
+                    if (tbxemail.Text.Length > 0)
+                    {
+                   
+                   //var query = container.UserSet.OfType<Administrator>().Where(email => email.Email.Contains(tbxemail.Text));
+
+                    Administrator db = new Administrator();
+                    var query1 = from User in db.Email where db.Email == tbxemail.Text select User;
+                    char validacao = query1.FirstOrDefault();
+
+                    if (validacao != null)
+                    {
+                        Home_ADM HAdmfrm = new Home_ADM();
+                        HAdmfrm.Show();
+                        Close();
+                    }
+                    }
+                //}
+               
+            }
 
 
-        Home_Arbitro HAfrm = new Home_Arbitro();
-
+            //Home_Arbitro HAfrm = new Home_Arbitro();
             //HAfrm.Show();
             //Close();
         }
