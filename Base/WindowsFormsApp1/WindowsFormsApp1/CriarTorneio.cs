@@ -24,14 +24,14 @@ namespace WindowsFormsApp1
 
             List<TeamTournament> listteamtorneio = container.TournamentSet.OfType<TeamTournament>().ToList();
 
-            foreach (TeamTournament TeamT in listteamtorneio)
+            foreach (Tournament TeamT in listteamtorneio)
             {
                 listVEquipas.Items.Add(TeamT.Name);
             }
 
             //List<StandadTournament> liststandardtorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
 
-            foreach (StandadTournament StandT in container.TournamentSet.OfType<StandadTournament>())//liststandardtorneio)
+            foreach (Tournament StandT in container.TournamentSet.OfType<StandadTournament>())//liststandardtorneio)
             {
                 listVStandard.Items.Add(StandT.Name);
             }
