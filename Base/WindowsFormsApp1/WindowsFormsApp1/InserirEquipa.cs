@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             {
                 equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString())).First();
                 tbxNome.Text = equipaSelected.Name;
-                picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar);
+                picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + equipaSelected.Avatar);
             }
             else
             {
