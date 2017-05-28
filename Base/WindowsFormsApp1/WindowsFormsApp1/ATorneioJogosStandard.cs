@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         int id_torneio = 0;
+        int id_jogo = 0;
 
         public ATorneioJogosStandard()
         {
@@ -57,9 +58,55 @@ namespace WindowsFormsApp1
 
         private void listVCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void listVTorneiosStandard_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nome = cbxTorneioStandard.SelectedItem.ToString();
+
+            Tournament torneioS;
+
+            //torneioS = container.TournamentSet.OfType<StandadTournament>();
 
         }
 
+        public void RefreshListVStandardTournament()
+        {
+            foreach (StandadTournament torneio in container.TournamentSet.OfType<StandadTournament>())
+            {
+                cbxTorneioStandard.Items.Add(torneio.Name);
+            }
+
+        }
+
+        public void RefreshListVEquipaTournament()
+        {
+            foreach (TeamTournament torneio in container.TournamentSet.OfType<TeamTournament>())
+            {
+                cbxTorneioEquipa.Items.Add(torneio.Name);
+            }
+
+        }
+
+        private void btnRemoverStandard_Click(object sender, EventArgs e)
+        {
+            foreach (var selecteditem in listVTorneiosStandard.SelectedItems)
+            {
+                var item = (selecteditem as ListViewItem);
+                listVTorneiosStandard.Items.Remove(item);
+                this.listVTorneiosStandard.Items.Add(item);
+            }
+        }
+
+        private void btnRetirarEquipa_Click(object sender, EventArgs e)
+        {
+            foreach (var selecteditem in listVTorneiosEquipa.SelectedItems)
+            {
+                var item = (selecteditem as ListViewItem);
+                listVTorneiosEquipa.Items.Remove(item);
+                this.listVTorneiosEquipa.Items.Add(item);
+            }
+        }
         //navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -135,5 +182,7 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
     }
-}
+    }
+
