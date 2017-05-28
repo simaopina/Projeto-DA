@@ -312,6 +312,7 @@
             this.btnAdicionarStandard.TabIndex = 15;
             this.btnAdicionarStandard.Text = "<";
             this.btnAdicionarStandard.UseVisualStyleBackColor = false;
+            this.btnAdicionarStandard.Click += new System.EventHandler(this.btnAdicionarStandard_Click);
             // 
             // btnRemoverStandard
             // 

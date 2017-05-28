@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
             foreach (StardadGame game in container.GameSet)
             { 
-                listVJogosStandard.Items.Add(game.Description);
+                listVJogosStandard.Items.Add(game.Id.ToString());
             }
 
             foreach (Tournament torneio in container.TournamentSet.OfType<TeamTournament>() )
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             foreach (TeamGame Tgame in container.GameSet)
             {
                 
-                listVJogosEquipa.Items.Add(Tgame.Description);
+                listVJogosEquipa.Items.Add(Tgame.Id.ToString());
             }
 
             foreach (Tournament torneio in container.TournamentSet.OfType<StandadTournament>())
@@ -183,6 +183,21 @@ namespace WindowsFormsApp1
             Close();
         }
 
+        private void btnAdicionarStandard_Click(object sender, EventArgs e)
+        {
+            Game game;
+            StandadTournament tornament;
+
+            foreach (var selecteditem in this.listVJogosStandard.SelectedItems)
+            {
+                var item = (selecteditem as ListViewItem);
+                listVJogosStandard.Items.Remove(item);
+                this.listVTorneiosStandard.Items.Add(item);
+            }
+
+            var id_jogo = from id in container.TournamentSet.OfType<StandadTournament>() where id.Id == id_torneio select id;
+
+        }
     }
     }
 

@@ -19,6 +19,11 @@ namespace WindowsFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+            string useremail = tbxemail.Text;
+            string password = tbxPW.Text;
+
+
             Home_Arbitro HAfrm = new Home_Arbitro();
 
             HAfrm.Show();
