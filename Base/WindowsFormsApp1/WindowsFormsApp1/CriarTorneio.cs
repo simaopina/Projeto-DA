@@ -73,8 +73,8 @@ namespace WindowsFormsApp1
             };
             container.TournamentSet.Add(tournament);
             container.SaveChanges();
-            MessageBox.Show("Torneio Inserido com sucesso");
             refresh_listViewStandard();
+            MessageBox.Show("Torneio Inserido com sucesso");
 
         }
 
@@ -150,30 +150,36 @@ namespace WindowsFormsApp1
 
         private void listVStandard_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string STorneioU = listVStandard.SelectedItems[0].Text;
-            SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
+            if (listVStandard.SelectedItems.Count < 0)
+            {
+                string STorneioU = listVStandard.SelectedItems[0].Text;
+                SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
-            List<Tournament> tournament = container.TournamentSet.ToList();
+                List<Tournament> tournament = container.TournamentSet.ToList();
 
-            tbxNomeStandard.Text = SSTorneioSelected.Name;
-            tbxDescricaoStandard.Text = SSTorneioSelected.Description;
-            dateTimeDataStandard.Value = SSTorneioSelected.Date;
+                tbxNomeStandard.Text = SSTorneioSelected.Name;
+                tbxDescricaoStandard.Text = SSTorneioSelected.Description;
+                dateTimeDataStandard.Value = SSTorneioSelected.Date;
 
-            refresh_listViewStandard();
+                refresh_listViewStandard();
+            }
         }
 
         private void listVEquipas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string TTorneioU = listVEquipas.SelectedItems[0].Text;
-            TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
+            if (listVEquipas.SelectedItems.Count < 0)
+            {
+                string TTorneioU = listVEquipas.SelectedItems[0].Text;
+                TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
 
-            List<Tournament> tournament = container.TournamentSet.ToList();
+                List<Tournament> tournament = container.TournamentSet.ToList();
 
-            tbxNomeEquipas.Text = TTorneioSelected.Name;
-            tbxDescricao.Text = TTorneioSelected.Description;
-            dateTEquipas.Value = TTorneioSelected.Date;
+                tbxNomeEquipas.Text = TTorneioSelected.Name;
+                tbxDescricao.Text = TTorneioSelected.Description;
+                dateTEquipas.Value = TTorneioSelected.Date;
 
-            refresh_listViewEquipas();
+                refresh_listViewEquipas();
+            }
         }
     }
 }
