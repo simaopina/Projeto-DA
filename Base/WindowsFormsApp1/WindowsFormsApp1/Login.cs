@@ -14,10 +14,6 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        Administrator adminSelect = null;
-
-        int id_admin = 0;
-
         public Login()
         {
             InitializeComponent();
