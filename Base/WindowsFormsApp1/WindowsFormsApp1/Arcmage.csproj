@@ -204,6 +204,12 @@
     <Compile Include="Game.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
+    <Compile Include="GestaoTorneioEquipas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoTorneioEquipas.Designer.cs">
+      <DependentUpon>GestaoTorneioEquipas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestaoTorneioJogadores.cs">
       <SubType>Form</SubType>
     </Compile>
