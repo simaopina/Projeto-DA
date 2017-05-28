@@ -36,9 +36,14 @@ namespace WindowsFormsApp1
             AddJogador();
 
             refreshJogador();
+
+
+
+
         }
 
 
+       
         private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
         {
             refreshJogador();

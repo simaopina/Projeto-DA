@@ -313,11 +313,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 217);
+            this.label1.Location = new System.Drawing.Point(96, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Utilizador";
+            this.label1.Text = "Administrador";
             // 
             // userSetBindingSource
             // 
