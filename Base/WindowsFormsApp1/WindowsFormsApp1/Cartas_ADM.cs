@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
                 CartaList.SubItems.Add(cartas.RuleText);
                 CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
                 CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(cartas.Image);
+                CartaList.SubItems.Add(ParteFinalNome);
 
                 listVCartas.Items.Add(CartaList);
             }
@@ -53,8 +53,8 @@ namespace WindowsFormsApp1
             int lealdade = Convert.ToInt32(txtLealdade.Text);
             int custo = Convert.ToInt32(txtcusto.Text);
             string regras = txtRegras.Text;
-            int ataque = Convert.ToInt32(txtAtaque.Text);
-            int defesa = Convert.ToInt32(txtDefesa.Text);
+            int ataque = Convert.ToInt32(numericAtaque.Text);
+            int defesa = Convert.ToInt32(numericDefesa.Text);
             string imagem = ParteFinalNome;
            
             Card carta = new Card
@@ -70,9 +70,11 @@ namespace WindowsFormsApp1
                 Image = imagem
             };
 
+          
 
             container.CardSet.Add(carta);
-            //container.SaveChanges();
+           
+            container.SaveChanges();
 
             refreshlistVcartas();
             
@@ -92,7 +94,7 @@ namespace WindowsFormsApp1
                 CartaList.SubItems.Add(cartas.RuleText);
                 CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
                 CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(cartas.Image);
+                CartaList.SubItems.Add(ParteFinalNome);
 
                 listVCartas.Items.Add(CartaList);
             }
@@ -151,8 +153,8 @@ namespace WindowsFormsApp1
             int lealdade = Convert.ToInt32(txtLealdade.Text);
             int custo = Convert.ToInt32(txtLealdade.Text);
             string regras = txtRegras.Text;
-            int ataque = Convert.ToInt32(txtAtaque.Text);
-            int defesa = Convert.ToInt32(txtDefesa.Text);
+            int ataque = Convert.ToInt32(numericAtaque.Text);
+            int defesa = Convert.ToInt32(numericDefesa.Text);
             string imagem = ParteFinalNome;
 
             // objeto já criado
@@ -210,7 +212,7 @@ namespace WindowsFormsApp1
 
                 MessageBox.Show("Eliminado com sucesso!");
 
-                refresh_datagrid();
+                refreshlistVcartas();
             }
             
 
@@ -381,10 +383,10 @@ namespace WindowsFormsApp1
             txtFacao.Text = cartaselecionada.Faction;
             txtTipo.Text = cartaselecionada.Type;
             txtLealdade.Text = (Convert.ToString(cartaselecionada.Loyalty));
-            txtAtaque.Text = (Convert.ToString(cartaselecionada.Attack));
+            numericAtaque.Text = (Convert.ToString(cartaselecionada.Attack));
             txtcusto.Text = (Convert.ToString(cartaselecionada.Cost));
             txtRegras.Text = cartaselecionada.RuleText;
-            txtDefesa.Text = (Convert.ToString(cartaselecionada.Defense));
+            numericDefesa.Text = (Convert.ToString(cartaselecionada.Defense));
             LinkLabelImagem.Text = cartaselecionada.Image;
 
         }

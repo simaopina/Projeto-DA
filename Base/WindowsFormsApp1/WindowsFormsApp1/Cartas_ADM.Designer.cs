@@ -93,10 +93,9 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.txtAtaque = new System.Windows.Forms.TextBox();
-            this.txtDefesa = new System.Windows.Forms.TextBox();
+            this.numericAtaque = new System.Windows.Forms.NumericUpDown();
+            this.numericDefesa = new System.Windows.Forms.NumericUpDown();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictImagem)).BeginInit();
             this.menuStripHome.SuspendLayout();
@@ -109,12 +108,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosCartas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxCartasADM
             // 
-            this.gbxCartasADM.Controls.Add(this.txtDefesa);
-            this.gbxCartasADM.Controls.Add(this.txtAtaque);
+            this.gbxCartasADM.Controls.Add(this.numericDefesa);
+            this.gbxCartasADM.Controls.Add(this.numericAtaque);
             this.gbxCartasADM.Controls.Add(this.pictImagem);
             this.gbxCartasADM.Controls.Add(this.LinkLabelImagem);
             this.gbxCartasADM.Controls.Add(this.btnRemover);
@@ -545,7 +546,6 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8,
-            this.columnHeader9,
             this.columnHeader10});
             this.listVCartas.Location = new System.Drawing.Point(25, 248);
             this.listVCartas.Name = "listVCartas";
@@ -587,27 +587,23 @@
             // 
             this.columnHeader8.Text = "Ataque";
             // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Defesa";
-            // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Imagem";
             // 
-            // txtAtaque
+            // numericAtaque
             // 
-            this.txtAtaque.Location = new System.Drawing.Point(282, 45);
-            this.txtAtaque.Name = "txtAtaque";
-            this.txtAtaque.Size = new System.Drawing.Size(100, 20);
-            this.txtAtaque.TabIndex = 26;
+            this.numericAtaque.Location = new System.Drawing.Point(282, 47);
+            this.numericAtaque.Name = "numericAtaque";
+            this.numericAtaque.Size = new System.Drawing.Size(100, 20);
+            this.numericAtaque.TabIndex = 28;
             // 
-            // txtDefesa
+            // numericDefesa
             // 
-            this.txtDefesa.Location = new System.Drawing.Point(282, 75);
-            this.txtDefesa.Name = "txtDefesa";
-            this.txtDefesa.Size = new System.Drawing.Size(100, 20);
-            this.txtDefesa.TabIndex = 27;
+            this.numericDefesa.Location = new System.Drawing.Point(282, 81);
+            this.numericDefesa.Name = "numericDefesa";
+            this.numericDefesa.Size = new System.Drawing.Size(100, 20);
+            this.numericDefesa.TabIndex = 29;
             // 
             // Cartas_ADM
             // 
@@ -637,6 +633,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Cards)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosCartas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,9 +705,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.TextBox txtDefesa;
-        private System.Windows.Forms.TextBox txtAtaque;
+        private System.Windows.Forms.NumericUpDown numericDefesa;
+        private System.Windows.Forms.NumericUpDown numericAtaque;
     }
 }
