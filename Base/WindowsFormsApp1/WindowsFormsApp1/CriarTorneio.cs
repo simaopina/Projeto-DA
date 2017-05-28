@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
                 listVStandard.Items.Add(item);
             }
         }
+
         public void refresh_listViewEquipas()
         {
             listVStandard.Items.Clear();

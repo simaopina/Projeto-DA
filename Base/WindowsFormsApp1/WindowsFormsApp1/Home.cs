@@ -20,9 +20,9 @@ namespace WindowsFormsApp1
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Utilizadores_ADM UTILIZADORESfrm = new Utilizadores_ADM();
+            /*Utilizadores_ADM UTILIZADORESfrm = new Utilizadores_ADM();
             UTILIZADORESfrm.Show();
-            Hide();
+            Hide();*/
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
