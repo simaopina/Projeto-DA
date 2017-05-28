@@ -39,7 +39,9 @@ namespace WindowsFormsApp1
 
             container.TournamentSet.Add(tournament);
             container.SaveChanges();
+            refresh_listViewEquipas();
             MessageBox.Show("Torneio Inserido com sucesso");
+
         }
 
         private void btnGuardarStandard_Click(object sender, EventArgs e)
@@ -58,6 +60,7 @@ namespace WindowsFormsApp1
             container.TournamentSet.Add(tournament);
             container.SaveChanges();
             MessageBox.Show("Torneio Inserido com sucesso");
+            refresh_listViewStandard();
 
         }
 
