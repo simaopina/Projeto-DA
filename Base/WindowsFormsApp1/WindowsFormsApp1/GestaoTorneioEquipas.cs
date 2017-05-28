@@ -12,13 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class GestaoTorneioEquipas : Form
     {
-
         public GestaoTorneioEquipas()
         {
             InitializeComponent();
         }
 
-        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
 
         //Navegação
@@ -81,49 +79,6 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarEquipa1_Click(object sender, EventArgs e)
         {
-            if (tbxEquipa1.Text.Length > 0)
-            {
-
-                var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa1.Text));
-
-                dataGridEquipa1.DataSource = query.ToList();
-            }
-
-            else
-            {
-                refresh_datagrid();
-            }
-        }
-
-        private void GestaoTorneioEquipas_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'baseDadosDataSet_TeamSet.TeamSet' table. You can move, or remove it, as needed.
-            this.teamSetTableAdapter.Fill(this.baseDadosDataSet_TeamSet.TeamSet);
-
-        }
-
-        private void dataGridEquipa2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (tbxEquipa2.Text.Length > 0)
-            {
-
-                var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa2.Text));
-
-                dataGridEquipa2.DataSource = query.ToList();
-            }
-
-            else
-            {
-                refresh_datagrid();
-            }
-        }
-
-        public void refresh_datagrid()
-        {
-
-            this.teamSetTableAdapter.Fill(this.baseDadosDataSet_TeamSet.TeamSet);
-            dataGridEquipa1.DataSource = teamSetBindingSource;
-            dataGridEquipa2.DataSource = teamSetBindingSource;
 
         }
     }

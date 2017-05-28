@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cartas_ADM));
             this.gbxCartasADM = new System.Windows.Forms.GroupBox();
             this.pictImagem = new System.Windows.Forms.PictureBox();
             this.LinkLabelImagem = new System.Windows.Forms.LinkLabel();
-            this.NumericDefesa = new System.Windows.Forms.NumericUpDown();
-            this.NumericAtaque = new System.Windows.Forms.NumericUpDown();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btAlterarCarta = new System.Windows.Forms.Button();
             this.btAdicionarCartas = new System.Windows.Forms.Button();
@@ -75,7 +74,6 @@
             this.cardSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet = new WindowsFormsApp1.BaseDadosDataSet();
             this.cardSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTableAdapters.CardSetTableAdapter();
-            this.DataGridCartas = new System.Windows.Forms.DataGridView();
             this.cardSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet3 = new WindowsFormsApp1.BaseDadosDataSet3();
             this.cardSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -83,28 +81,28 @@
             this.cardSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter();
             this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
             this.cardSetTableAdapter2 = new WindowsFormsApp1.BaseDadosDataSet3TableAdapters.CardSetTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.factionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loyaltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.defenseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ruleTextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.attackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.baseDadosCartas = new WindowsFormsApp1.BaseDadosCartas();
             this.cardSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.cardSetTableAdapter3 = new WindowsFormsApp1.BaseDadosCartasTableAdapters.CardSetTableAdapter();
+            this.listVCartas = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtAtaque = new System.Windows.Forms.TextBox();
+            this.txtDefesa = new System.Windows.Forms.TextBox();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictImagem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).BeginInit();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).BeginInit();
@@ -115,10 +113,10 @@
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.txtDefesa);
+            this.gbxCartasADM.Controls.Add(this.txtAtaque);
             this.gbxCartasADM.Controls.Add(this.pictImagem);
             this.gbxCartasADM.Controls.Add(this.LinkLabelImagem);
-            this.gbxCartasADM.Controls.Add(this.NumericDefesa);
-            this.gbxCartasADM.Controls.Add(this.NumericAtaque);
             this.gbxCartasADM.Controls.Add(this.btnRemover);
             this.gbxCartasADM.Controls.Add(this.btAlterarCarta);
             this.gbxCartasADM.Controls.Add(this.btAdicionarCartas);
@@ -163,20 +161,6 @@
             this.LinkLabelImagem.TabStop = true;
             this.LinkLabelImagem.Text = "Adicionar...";
             this.LinkLabelImagem.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelImagem_LinkClicked);
-            // 
-            // NumericDefesa
-            // 
-            this.NumericDefesa.Location = new System.Drawing.Point(282, 79);
-            this.NumericDefesa.Name = "NumericDefesa";
-            this.NumericDefesa.Size = new System.Drawing.Size(47, 20);
-            this.NumericDefesa.TabIndex = 23;
-            // 
-            // NumericAtaque
-            // 
-            this.NumericAtaque.Location = new System.Drawing.Point(282, 48);
-            this.NumericAtaque.Name = "NumericAtaque";
-            this.NumericAtaque.Size = new System.Drawing.Size(47, 20);
-            this.NumericAtaque.TabIndex = 21;
             // 
             // btnRemover
             // 
@@ -483,7 +467,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(25, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
@@ -503,33 +487,6 @@
             // cardSetTableAdapter
             // 
             this.cardSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // DataGridCartas
-            // 
-            this.DataGridCartas.AllowUserToAddRows = false;
-            this.DataGridCartas.AllowUserToDeleteRows = false;
-            this.DataGridCartas.AutoGenerateColumns = false;
-            this.DataGridCartas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridCartas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.factionDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.loyaltyDataGridViewTextBoxColumn,
-            this.defenseDataGridViewTextBoxColumn,
-            this.costDataGridViewTextBoxColumn,
-            this.ruleTextDataGridViewTextBoxColumn,
-            this.attackDataGridViewTextBoxColumn,
-            this.imageDataGridViewTextBoxColumn});
-            this.DataGridCartas.DataSource = this.cardSetBindingSource3;
-            this.DataGridCartas.Location = new System.Drawing.Point(25, 253);
-            this.DataGridCartas.Name = "DataGridCartas";
-            this.DataGridCartas.ReadOnly = true;
-            this.DataGridCartas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridCartas.Size = new System.Drawing.Size(568, 98);
-            this.DataGridCartas.TabIndex = 32;
-            this.DataGridCartas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.DataGridCartas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridCartas_CellContentDoubleClick);
             // 
             // cardSetBindingSource2
             // 
@@ -563,77 +520,6 @@
             // 
             this.cardSetTableAdapter2.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // factionDataGridViewTextBoxColumn
-            // 
-            this.factionDataGridViewTextBoxColumn.DataPropertyName = "Faction";
-            this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
-            this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
-            this.factionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // loyaltyDataGridViewTextBoxColumn
-            // 
-            this.loyaltyDataGridViewTextBoxColumn.DataPropertyName = "Loyalty";
-            this.loyaltyDataGridViewTextBoxColumn.HeaderText = "Loyalty";
-            this.loyaltyDataGridViewTextBoxColumn.Name = "loyaltyDataGridViewTextBoxColumn";
-            this.loyaltyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // defenseDataGridViewTextBoxColumn
-            // 
-            this.defenseDataGridViewTextBoxColumn.DataPropertyName = "Defense";
-            this.defenseDataGridViewTextBoxColumn.HeaderText = "Defense";
-            this.defenseDataGridViewTextBoxColumn.Name = "defenseDataGridViewTextBoxColumn";
-            this.defenseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ruleTextDataGridViewTextBoxColumn
-            // 
-            this.ruleTextDataGridViewTextBoxColumn.DataPropertyName = "RuleText";
-            this.ruleTextDataGridViewTextBoxColumn.HeaderText = "RuleText";
-            this.ruleTextDataGridViewTextBoxColumn.Name = "ruleTextDataGridViewTextBoxColumn";
-            this.ruleTextDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // attackDataGridViewTextBoxColumn
-            // 
-            this.attackDataGridViewTextBoxColumn.DataPropertyName = "Attack";
-            this.attackDataGridViewTextBoxColumn.HeaderText = "Attack";
-            this.attackDataGridViewTextBoxColumn.Name = "attackDataGridViewTextBoxColumn";
-            this.attackDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // imageDataGridViewTextBoxColumn
-            // 
-            this.imageDataGridViewTextBoxColumn.DataPropertyName = "Image";
-            this.imageDataGridViewTextBoxColumn.HeaderText = "Image";
-            this.imageDataGridViewTextBoxColumn.Name = "imageDataGridViewTextBoxColumn";
-            this.imageDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imageDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // baseDadosCartas
             // 
             this.baseDadosCartas.DataSetName = "BaseDadosCartas";
@@ -648,12 +534,87 @@
             // 
             this.cardSetTableAdapter3.ClearBeforeFill = true;
             // 
+            // listVCartas
+            // 
+            this.listVCartas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.listVCartas.Location = new System.Drawing.Point(25, 248);
+            this.listVCartas.Name = "listVCartas";
+            this.listVCartas.Size = new System.Drawing.Size(580, 115);
+            this.listVCartas.TabIndex = 32;
+            this.listVCartas.UseCompatibleStateImageBehavior = false;
+            this.listVCartas.View = System.Windows.Forms.View.Details;
+            this.listVCartas.SelectedIndexChanged += new System.EventHandler(this.listVCartas_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nome";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Fração";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tipo";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Lealdade";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Defesa";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Custo";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Regras";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Ataque";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Defesa";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Imagem";
+            // 
+            // txtAtaque
+            // 
+            this.txtAtaque.Location = new System.Drawing.Point(282, 45);
+            this.txtAtaque.Name = "txtAtaque";
+            this.txtAtaque.Size = new System.Drawing.Size(100, 20);
+            this.txtAtaque.TabIndex = 26;
+            // 
+            // txtDefesa
+            // 
+            this.txtDefesa.Location = new System.Drawing.Point(282, 75);
+            this.txtDefesa.Name = "txtDefesa";
+            this.txtDefesa.Size = new System.Drawing.Size(100, 20);
+            this.txtDefesa.TabIndex = 27;
+            // 
             // Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 540);
-            this.Controls.Add(this.DataGridCartas);
+            this.Controls.Add(this.listVCartas);
             this.Controls.Add(this.gbxCartasADM);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -665,14 +626,11 @@
             this.gbxCartasADM.ResumeLayout(false);
             this.gbxCartasADM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictImagem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericDefesa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumericAtaque)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridCartas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource1)).EndInit();
@@ -720,13 +678,10 @@
         private System.Windows.Forms.BindingSource cardSetBindingSource;
         private BaseDadosDataSetTableAdapters.CardSetTableAdapter cardSetTableAdapter;
         private System.Windows.Forms.Button btAlterarCarta;
-        private System.Windows.Forms.DataGridView DataGridCartas;
         private BaseDadosDataSet_Cards baseDadosDataSet_Cards;
         private System.Windows.Forms.BindingSource cardSetBindingSource1;
         private BaseDadosDataSet_CardsTableAdapters.CardSetTableAdapter cardSetTableAdapter1;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.NumericUpDown NumericDefesa;
-        private System.Windows.Forms.NumericUpDown NumericAtaque;
         private System.Windows.Forms.LinkLabel LinkLabelImagem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem novaEquipaToolStripMenuItem;
@@ -740,18 +695,21 @@
         private BaseDadosDataSet3 baseDadosDataSet3;
         private System.Windows.Forms.BindingSource cardSetBindingSource2;
         private BaseDadosDataSet3TableAdapters.CardSetTableAdapter cardSetTableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn factionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loyaltyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn defenseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ruleTextDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn attackDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageDataGridViewTextBoxColumn;
         private BaseDadosCartas baseDadosCartas;
         private System.Windows.Forms.BindingSource cardSetBindingSource3;
         private BaseDadosCartasTableAdapters.CardSetTableAdapter cardSetTableAdapter3;
+        private System.Windows.Forms.ListView listVCartas;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.TextBox txtDefesa;
+        private System.Windows.Forms.TextBox txtAtaque;
     }
 }
