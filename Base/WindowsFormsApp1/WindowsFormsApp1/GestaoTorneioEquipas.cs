@@ -76,5 +76,10 @@ namespace WindowsFormsApp1
             Utifrm.Show();
             Close();
         }
+
+        private void btnPesquisarEquipa1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
