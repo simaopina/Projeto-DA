@@ -33,6 +33,5 @@ namespace WindowsFormsApp1
         public virtual DbSet<Tournament> TournamentSet { get; set; }
         public virtual DbSet<Player> PlayerSet { get; set; }
         public virtual DbSet<Deck_Card> Deck_CardSet { get; set; }
-        public virtual DbSet<TeamTournament_Team> TeamTournament_TeamSet { get; set; }
     }
 }

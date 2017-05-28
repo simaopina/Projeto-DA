@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         public Nullable<int> RefereeId { get; set; }
         public Nullable<int> DeckIOneld { get; set; }
         public Nullable<int> DeckITwold { get; set; }
+        public System.DateTime Hour { get; set; }
     
         public virtual Referee Referee { get; set; }
         public virtual Deck DeckOne { get; set; }

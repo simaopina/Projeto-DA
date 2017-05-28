@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,9 @@ namespace WindowsFormsApp1
         /// </summary>
         int id_carta = 0;
 
-       // Boolean Carta_selecionada = false;
+        string ParteFinalNome;
+
+        Card cartaselecionada;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Cartas_ADM()
@@ -35,8 +38,8 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
-
+            string imagem = ParteFinalNome;
+           
             Card carta = new Card
             {
                 Name = nome,
@@ -50,6 +53,7 @@ namespace WindowsFormsApp1
                 Image = imagem
             };
 
+
             container.CardSet.Add(carta);
             container.SaveChanges();
 
@@ -59,8 +63,12 @@ namespace WindowsFormsApp1
 
         private void Cartas_ADM_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosCartas.CardSet' table. You can move, or remove it, as needed.
+            this.cardSetTableAdapter3.Fill(this.baseDadosCartas.CardSet);
+            // TODO: This line of code loads data into the 'baseDadosDataSet3.CardSet' table. You can move, or remove it, as needed.
+          //  this.cardSetTableAdapter2.Fill(this.baseDadosDataSet3.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet_Cards.CardSet' table. You can move, or remove it, as needed.
-            this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
+        //    this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet.CardSet' table. You can move, or remove it, as needed.
             /*this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);*/
 
@@ -69,9 +77,7 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //Carta_selecionada = true;
-
-
+         
             txtNome.Text = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
             txtFacao.Text = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
             txtTipo.Text = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
@@ -90,8 +96,7 @@ namespace WindowsFormsApp1
 
         public void refresh_datagrid()
         {
-
-            this.cardSetTableAdapter1.Fill(this.baseDadosDataSet_Cards.CardSet);
+            this.cardSetTableAdapter3.Fill(this.baseDadosCartas.CardSet);
             DataGridCartas.DataSource = cardSetBindingSource1;
 
         }
@@ -105,7 +110,7 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
+            string imagem = ParteFinalNome;
 
             // objeto já criado
             Card carta;
@@ -134,16 +139,23 @@ namespace WindowsFormsApp1
         private void btnRemover_Click(object sender, EventArgs e)
         {
 
-            Card carta = container.CardSet.Find(id_carta);
+                Card cartas;
 
-            container.CardSet.Remove(carta);
+                //var procurar = container.CardSet.Where(id => id.Id.Equals(id_carta));
+                cartaselecionada = container.CardSet.Find(id_carta);
 
-            container.SaveChanges();
+                container.CardSet.Remove(cartaselecionada);
+
+                container.SaveChanges();
 
 
-            MessageBox.Show("Eliminado com sucesso!");
+                MessageBox.Show("Eliminado com sucesso!");
 
-            refresh_datagrid();
+                refresh_datagrid();
+
+            
+
+            
 
         }
 
@@ -256,6 +268,27 @@ namespace WindowsFormsApp1
             GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
             Gtefrm.Show();
             Close();
+        }
+
+        private void LinkLabelImagem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            if (caminhoImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = caminhoImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                ParteFinalNome = partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                pictImagem.Image = Image.FromFile(caminhoFicheiro);
+
+            }
         }
     }
 }

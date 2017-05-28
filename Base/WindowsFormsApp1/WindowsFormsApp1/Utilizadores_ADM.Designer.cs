@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn = new System.Windows.Forms.Button();
+            this.btn_eliminarArbitro = new System.Windows.Forms.Button();
             this.btnAlterar_ARB = new System.Windows.Forms.Button();
             this.txtbNome_ARB = new System.Windows.Forms.TextBox();
             this.btnGuarda_ARB = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -193,7 +194,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn);
+            this.groupBox2.Controls.Add(this.btn_eliminarArbitro);
             this.groupBox2.Controls.Add(this.btnAlterar_ARB);
             this.groupBox2.Controls.Add(this.txtbNome_ARB);
             this.groupBox2.Controls.Add(this.btnGuarda_ARB);
@@ -211,15 +212,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Árbitro";
             // 
-            // btn
+            // btn_eliminarArbitro
             // 
-            this.btn.Location = new System.Drawing.Point(146, 117);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(57, 23);
-            this.btn.TabIndex = 11;
-            this.btn.Text = "Eliminar";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
+            this.btn_eliminarArbitro.Location = new System.Drawing.Point(146, 117);
+            this.btn_eliminarArbitro.Name = "btn_eliminarArbitro";
+            this.btn_eliminarArbitro.Size = new System.Drawing.Size(57, 23);
+            this.btn_eliminarArbitro.TabIndex = 11;
+            this.btn_eliminarArbitro.Text = "Eliminar";
+            this.btn_eliminarArbitro.UseVisualStyleBackColor = true;
+            this.btn_eliminarArbitro.Click += new System.EventHandler(this.btn_eliminarArbitro_Click);
             // 
             // btnAlterar_ARB
             // 
@@ -312,11 +313,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 230);
+            this.label1.Location = new System.Drawing.Point(91, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Adicionar utilizador";
+            this.label1.Text = "Utilizador";
             // 
             // userSetBindingSource
             // 
@@ -426,11 +427,21 @@
             // 
             this.caminhoImagem.FileName = "openFileDialog1";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(412, 217);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Arbitro";
+            // 
             // Utilizadores_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 512);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.listVArbitro);
             this.Controls.Add(this.listVADM);
             this.Controls.Add(this.label1);
@@ -481,7 +492,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtbNome_ARB;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btn_eliminarArbitro;
         private System.Windows.Forms.Button btnAlterar_ARB;
         private System.Windows.Forms.Button btnGuarda_ARB;
         private System.Windows.Forms.BindingSource baseDadosDataADMBindingSource;
@@ -504,5 +515,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.OpenFileDialog caminhoImagem;
+        private System.Windows.Forms.Label label9;
     }
 }

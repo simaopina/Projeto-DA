@@ -35,12 +35,10 @@
         <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerStardadGame1" />
         <EntityTypeShape EntityType="DiagramaEntidadesArcmage.Deck_Card" Width="1.5" PointX="7.5" PointY="4.25" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.DeckDeck_Card" />
-        <EntityTypeShape EntityType="DiagramaEntidadesArcmage.TeamTournament_Team" Width="1.5" PointX="12.25" PointY="5.625" />
-        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeamTournament" />
-        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournament_TeamTeam" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.TeamPlayer" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.PlayerStandadTournament" />
         <AssociationConnector Association="DiagramaEntidadesArcmage.CardDeck_Card" />
+        <AssociationConnector Association="DiagramaEntidadesArcmage.TeamTournamentTeam" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

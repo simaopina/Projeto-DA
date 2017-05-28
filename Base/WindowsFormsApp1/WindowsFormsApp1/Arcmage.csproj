@@ -104,6 +104,16 @@
     <Compile Include="Baralho_Arbitro.Designer.cs">
       <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosCartas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosCartasEdição.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,20 +134,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="BaseDadosDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseDadosDataSet4.xsd</DependentUpon>
-    </Compile>
     <Compile Include="BaseDadosDataSet_Cards.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDadosDataSet_TeamSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BaseDadosDataSet_TeamSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BaseDadosData_ADM.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -305,9 +305,6 @@
     <Compile Include="TeamTournament.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeamTournament_Team.cs">
-      <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
-    </Compile>
     <Compile Include="Tournament.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -400,6 +397,28 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="BaseDadosCartas.xsc">
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosCartas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosCartas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosCartas.xss">
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosCartasEdição.xsc">
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosCartasEdição.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosCartasEdição.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosCartasEdição.xss">
+      <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
+    </None>
     <None Include="BaseDadosDataSet.xsc">
       <DependentUpon>BaseDadosDataSet.xsd</DependentUpon>
     </None>
@@ -444,17 +463,6 @@
     <None Include="BaseDadosDataSet3.xss">
       <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="BaseDadosDataSet4.xsc">
-      <DependentUpon>BaseDadosDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="BaseDadosDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaseDadosDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BaseDadosDataSet4.xss">
-      <DependentUpon>BaseDadosDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="BaseDadosDataSet_Cards.xsc">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
     </None>
@@ -465,17 +473,6 @@
     </None>
     <None Include="BaseDadosDataSet_Cards.xss">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
-    </None>
-    <None Include="BaseDadosDataSet_TeamSet.xsc">
-      <DependentUpon>BaseDadosDataSet_TeamSet.xsd</DependentUpon>
-    </None>
-    <None Include="BaseDadosDataSet_TeamSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BaseDadosDataSet_TeamSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BaseDadosDataSet_TeamSet.xss">
-      <DependentUpon>BaseDadosDataSet_TeamSet.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosData_ADM.xsc">
       <DependentUpon>BaseDadosData_ADM.xsd</DependentUpon>

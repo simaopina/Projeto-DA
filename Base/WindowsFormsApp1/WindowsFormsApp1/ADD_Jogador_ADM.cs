@@ -278,5 +278,15 @@ namespace WindowsFormsApp1
             }
         
     }
+
+        private void picbxAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void caminhoImagem_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

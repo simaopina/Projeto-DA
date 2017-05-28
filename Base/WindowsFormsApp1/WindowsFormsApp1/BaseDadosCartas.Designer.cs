@@ -20,9 +20,9 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BaseDadosDataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BaseDadosCartas")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BaseDadosDataSet3 : global::System.Data.DataSet {
+    public partial class BaseDadosCartas : global::System.Data.DataSet {
         
         private CardSetDataTable tableCardSet;
         
@@ -30,7 +30,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BaseDadosDataSet3() {
+        public BaseDadosCartas() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected BaseDadosDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BaseDadosCartas(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BaseDadosDataSet3 cln = ((BaseDadosDataSet3)(base.Clone()));
+            BaseDadosCartas cln = ((BaseDadosCartas)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BaseDadosDataSet3";
+            this.DataSetName = "BaseDadosCartas";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BaseDadosDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/BaseDadosCartas.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCardSet = new CardSetDataTable();
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BaseDadosDataSet3 ds = new BaseDadosDataSet3();
+            BaseDadosCartas ds = new BaseDadosCartas();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -615,7 +615,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BaseDadosDataSet3 ds = new BaseDadosDataSet3();
+                BaseDadosCartas ds = new BaseDadosCartas();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -834,7 +834,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1.BaseDadosDataSet3TableAdapters {
+namespace WindowsFormsApp1.BaseDadosCartasTableAdapters {
     
     
     /// <summary>
@@ -1038,7 +1038,7 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BaseDadosDataSet3.CardSetDataTable dataTable) {
+        public virtual int Fill(BaseDadosCartas.CardSetDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1051,9 +1051,9 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BaseDadosDataSet3.CardSetDataTable GetData() {
+        public virtual BaseDadosCartas.CardSetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            BaseDadosDataSet3.CardSetDataTable dataTable = new BaseDadosDataSet3.CardSetDataTable();
+            BaseDadosCartas.CardSetDataTable dataTable = new BaseDadosCartas.CardSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1061,14 +1061,14 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BaseDadosDataSet3.CardSetDataTable dataTable) {
+        public virtual int Update(BaseDadosCartas.CardSetDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BaseDadosDataSet3 dataSet) {
+        public virtual int Update(BaseDadosCartas dataSet) {
             return this.Adapter.Update(dataSet, "CardSet");
         }
         
@@ -1329,7 +1329,7 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(BaseDadosDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BaseDadosCartas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cardSetTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CardSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1348,7 +1348,7 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(BaseDadosDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BaseDadosCartas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cardSetTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CardSet.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1366,7 +1366,7 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(BaseDadosDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BaseDadosCartas dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._cardSetTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CardSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1408,7 +1408,7 @@ SELECT Id, Name, Faction, Type, Loyalty, Defense, Cost, RuleText, Attack, Image 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(BaseDadosDataSet3 dataSet) {
+        public virtual int UpdateAll(BaseDadosCartas dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
