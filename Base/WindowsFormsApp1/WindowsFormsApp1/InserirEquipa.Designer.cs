@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lbxJogador2 = new System.Windows.Forms.ListBox();
-            this.lbxJogador1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbxEquipa = new System.Windows.Forms.ListBox();
@@ -51,6 +49,8 @@
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbxJogador2 = new System.Windows.Forms.ComboBox();
+            this.cbxJogador1 = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,8 +59,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lbxJogador2);
-            this.groupBox3.Controls.Add(this.lbxJogador1);
+            this.groupBox3.Controls.Add(this.cbxJogador1);
+            this.groupBox3.Controls.Add(this.cbxJogador2);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.lbxEquipa);
@@ -77,22 +77,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Inserir Equipa";
             // 
-            // lbxJogador2
-            // 
-            this.lbxJogador2.FormattingEnabled = true;
-            this.lbxJogador2.Location = new System.Drawing.Point(384, 240);
-            this.lbxJogador2.Name = "lbxJogador2";
-            this.lbxJogador2.Size = new System.Drawing.Size(183, 43);
-            this.lbxJogador2.TabIndex = 54;
-            // 
-            // lbxJogador1
-            // 
-            this.lbxJogador1.FormattingEnabled = true;
-            this.lbxJogador1.Location = new System.Drawing.Point(384, 184);
-            this.lbxJogador1.Name = "lbxJogador1";
-            this.lbxJogador1.Size = new System.Drawing.Size(183, 43);
-            this.lbxJogador1.TabIndex = 53;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -105,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(269, 184);
+            this.label1.Location = new System.Drawing.Point(269, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 51;
@@ -255,6 +239,22 @@
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             // 
+            // cbxJogador2
+            // 
+            this.cbxJogador2.FormattingEnabled = true;
+            this.cbxJogador2.Location = new System.Drawing.Point(384, 237);
+            this.cbxJogador2.Name = "cbxJogador2";
+            this.cbxJogador2.Size = new System.Drawing.Size(183, 21);
+            this.cbxJogador2.TabIndex = 55;
+            // 
+            // cbxJogador1
+            // 
+            this.cbxJogador1.FormattingEnabled = true;
+            this.cbxJogador1.Location = new System.Drawing.Point(384, 192);
+            this.cbxJogador1.Name = "cbxJogador1";
+            this.cbxJogador1.Size = new System.Drawing.Size(183, 21);
+            this.cbxJogador1.TabIndex = 56;
+            // 
             // InserirEquipa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +299,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbxEquipa;
-        private System.Windows.Forms.ListBox lbxJogador2;
-        private System.Windows.Forms.ListBox lbxJogador1;
+        private System.Windows.Forms.ComboBox cbxJogador1;
+        private System.Windows.Forms.ComboBox cbxJogador2;
     }
 }
