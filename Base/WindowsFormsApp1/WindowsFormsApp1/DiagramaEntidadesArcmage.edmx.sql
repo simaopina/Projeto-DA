@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2017 09:55:21
+-- Date Created: 05/28/2017 21:49:00
 -- Generated from EDMX file: C:\Users\sawak\Desktop\Ipleiria\2º Semestre\Desenvolvimento de aplicações\Repositorio\Base\WindowsFormsApp1\WindowsFormsApp1\DiagramaEntidadesArcmage.edmx
 -- --------------------------------------------------
 
@@ -61,6 +61,12 @@ IF OBJECT_ID(N'[dbo].[FK_PlayerStandadTournament_StandadTournament]', 'F') IS NO
 GO
 IF OBJECT_ID(N'[dbo].[FK_CardDeck_Card]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Deck_CardSet] DROP CONSTRAINT [FK_CardDeck_Card];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTournamentTeam_TeamTournament]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TeamTournamentTeam] DROP CONSTRAINT [FK_TeamTournamentTeam_TeamTournament];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TeamTournamentTeam_Team]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TeamTournamentTeam] DROP CONSTRAINT [FK_TeamTournamentTeam_Team];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Referee_inherits_User]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[UserSet_Referee] DROP CONSTRAINT [FK_Referee_inherits_User];
@@ -133,6 +139,9 @@ GO
 IF OBJECT_ID(N'[dbo].[PlayerStandadTournament]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PlayerStandadTournament];
 GO
+IF OBJECT_ID(N'[dbo].[TeamTournamentTeam]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TeamTournamentTeam];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -172,7 +181,7 @@ GO
 CREATE TABLE [dbo].[GameSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Description] nvarchar(max)  NOT NULL,
-    [Date] time  NOT NULL,
+    [Date] datetime  NOT NULL,
     [Number] int  NOT NULL,
     [RefereeId] int  NULL,
     [DeckIOneld] int  NULL,
@@ -193,7 +202,7 @@ GO
 CREATE TABLE [dbo].[TournamentSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Name] nvarchar(max)  NOT NULL,
-    [Date] time  NOT NULL,
+    [Date] datetime  NOT NULL,
     [Description] nvarchar(max)  NOT NULL
 );
 GO

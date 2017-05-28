@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public System.TimeSpan Date { get; set; }
+        public System.DateTime Date { get; set; }
         public string Description { get; set; }
     }
 }

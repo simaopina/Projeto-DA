@@ -152,7 +152,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="time" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
     <Property Name="Number" Type="int" Nullable="false" />
     <Property Name="RefereeId" Type="int" Nullable="true" />
     <Property Name="DeckIOneld" Type="int" Nullable="true" />
@@ -173,7 +173,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Date" Type="time" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="PlayerSet">
@@ -663,7 +663,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="String" Nullable="false" />
-          <Property Name="Date" Type="Time" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
           <Property Name="Number" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Referee" Relationship="DiagramaEntidadesArcmage.RefereeGame" FromRole="Game" ToRole="Referee" />
           <Property Name="RefereeId" Type="Int32" Nullable="true" />
@@ -691,7 +691,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
-          <Property Name="Date" Type="Time" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Player">
