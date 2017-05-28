@@ -29,9 +29,9 @@ namespace WindowsFormsApp1
                 listVEquipas.Items.Add(TeamT.Name);
             }
 
-            //List<StandadTournament> liststandardtorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
+            List<StandadTournament> liststandardtorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
 
-            foreach (Tournament StandT in container.TournamentSet.OfType<StandadTournament>())//liststandardtorneio)
+            foreach (Tournament StandT in /*container.TournamentSet.OfType<StandadTournament>())*/liststandardtorneio)
             {
                 listVStandard.Items.Add(StandT.Name);
             }
