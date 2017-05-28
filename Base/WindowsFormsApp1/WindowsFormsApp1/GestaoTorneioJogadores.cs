@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class GestaoTorneioJogadores : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public GestaoTorneioJogadores()
         {
             InitializeComponent();
@@ -108,7 +110,51 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarJogador1_Click(object sender, EventArgs e)
         {
+            if (tbxJogador1.Text.Length > 0)
+            {
+
+                var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador1.Text));
+
+                dataGridJogador1.DataSource = query.ToList();
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
+        }
+
+        private void btnPesquisarJogador2_Click(object sender, EventArgs e)
+        {
+            if (tbxJogador2.Text.Length > 0)
+            {
+
+                var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador2.Text));
+
+                dataGridJogador2.DataSource = query.ToList();
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
+        }
+
+        public void refresh_datagrid()
+        {
+
+            this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
+            dataGridJogador1.DataSource = playerSetBindingSource;
+            dataGridJogador2.DataSource = playerSetBindingSource;
 
         }
+
+        private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'baseDadosDataSet4.PlayerSet' table. You can move, or remove it, as needed.
+            this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
+
+        }
+
     }
 }

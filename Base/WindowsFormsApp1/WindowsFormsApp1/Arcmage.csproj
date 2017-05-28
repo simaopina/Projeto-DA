@@ -134,6 +134,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosDataSetTeamSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSetTeamSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosDataSet_Cards.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -341,6 +351,9 @@
     <EmbeddedResource Include="Edicao_Baralhos_ADM.resx">
       <DependentUpon>Edicao_Baralhos_ADM.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestaoTorneioEquipas.resx">
+      <DependentUpon>GestaoTorneioEquipas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoTorneioJogadores.resx">
       <DependentUpon>GestaoTorneioJogadores.cs</DependentUpon>
     </EmbeddedResource>
@@ -459,6 +472,28 @@
     </None>
     <None Include="BaseDadosDataSet3.xss">
       <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet41.xsc">
+      <DependentUpon>BaseDadosDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet41.xss">
+      <DependentUpon>BaseDadosDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSetTeamSet.xsc">
+      <DependentUpon>BaseDadosDataSetTeamSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSetTeamSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSetTeamSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSetTeamSet.xss">
+      <DependentUpon>BaseDadosDataSetTeamSet.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosDataSet_Cards.xsc">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
