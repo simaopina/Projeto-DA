@@ -75,16 +75,27 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-             Home_ADM Perfrm = new Home_ADM();
-
-             Perfrm.Show();
-            Close();
+             
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home Hfrm = new Home();
             Hfrm.Show();
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Home_Arbitro HArbfrm = new Home_Arbitro();
+            HArbfrm.Show();
             Close();
         }
     }
