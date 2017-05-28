@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\User\Desktop\Projeto-DA\Base\WindowsFormsApp1\WindowsFormsApp1\DiagramaEntidadesArcmage.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\sawak\Desktop\Ipleiria\2º Semestre\Desenvolvimento de aplicações\Repositorio\Base\WindowsFormsApp1\WindowsFormsApp1\DiagramaEntidadesArcmage.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
         public int Id { get; set; }
         public string Name { get; set; }
         public string Avatar { get; set; }
+        public int Player1 { get; set; }
+        public int Player2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TeamGame> GameAsOne { get; set; }

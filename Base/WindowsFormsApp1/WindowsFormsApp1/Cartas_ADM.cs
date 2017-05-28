@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             int custo = Convert.ToInt32(txtcusto.Text);
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(txtAtaque.Text);
-            int defesa = Convert.ToInt32(txtFacao.Text);
+            int defesa = Convert.ToInt32(txtDefesa.Text);
             string imagem = ParteFinalNome;
            
             Card carta = new Card
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
 
 
             container.CardSet.Add(carta);
-            container.SaveChanges();
+            //container.SaveChanges();
 
             refreshlistVcartas();
             
