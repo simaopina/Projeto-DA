@@ -189,6 +189,12 @@
     <Compile Include="Cartas_Arbitro.Designer.cs">
       <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="CriarTorneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarTorneio.Designer.cs">
+      <DependentUpon>CriarTorneio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Deck.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -352,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cartas_Arbitro.resx">
       <DependentUpon>Cartas_Arbitro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarTorneio.resx">
+      <DependentUpon>CriarTorneio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edicao_Baralhos_ADM.resx">
       <DependentUpon>Edicao_Baralhos_ADM.cs</DependentUpon>
