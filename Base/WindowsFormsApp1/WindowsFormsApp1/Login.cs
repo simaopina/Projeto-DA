@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
                     var query1 = from User in db.Email where db.Email == tbxemail.Text select User;
                     char validacao = query1.FirstOrDefault();
 
-                    if (validacao != null)
+                    if (query1 != null || query1.Count() == 0)
                     {
                         Home_ADM HAdmfrm = new Home_ADM();
                         HAdmfrm.Show();
@@ -75,7 +75,9 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-             
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

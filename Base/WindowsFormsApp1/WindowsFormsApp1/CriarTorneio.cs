@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
             List<StandadTournament> liststandardtorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
 
-            foreach (Tournament StandT in /*container.TournamentSet.OfType<StandadTournament>())*/liststandardtorneio)
+            foreach (Tournament StandT in liststandardtorneio)
             {
                 listVStandard.Items.Add(StandT.Name);
             }
@@ -152,6 +152,9 @@ namespace WindowsFormsApp1
         {
             if (listVStandard.SelectedItems.Count < 0)
             {
+                tbxNomeStandard.Clear();
+                tbxDescricaoStandard.Clear();
+               
                 string STorneioU = listVStandard.SelectedItems[0].Text;
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
@@ -169,6 +172,9 @@ namespace WindowsFormsApp1
         {
             if (listVEquipas.SelectedItems.Count < 0)
             {
+                tbxNomeEquipas.Clear();
+                tbxDescricao.Clear();
+
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
 
