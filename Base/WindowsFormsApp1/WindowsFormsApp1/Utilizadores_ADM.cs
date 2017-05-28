@@ -19,6 +19,9 @@ namespace WindowsFormsApp1
 
         Referee arbitroSeleciona = null;
 
+        public string partefinal;
+
+        int id_ADM = 0;
 
         public Utilizadores_ADM()
         {
@@ -182,7 +185,7 @@ namespace WindowsFormsApp1
             txtbNickName_ARB.Text = arbitroSeleciona.Username;
             txtbNome_ARB.Text = arbitroSeleciona.Name;
             txtbPassword_ARB.Text = arbitroSeleciona.Password;
-           // linkLAvatar_ARB.Image = Image.FromFile(caminhoFicheiro);
+            linkLAvatar_ARB.Text = partefinal;
 
 
         }
@@ -238,7 +241,7 @@ namespace WindowsFormsApp1
                 caminhoFicheiro.Contains(".png");
 
                 string[] partes = caminhoFicheiro.Split('\\');
-
+                partefinal = partes.Last();
                 File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
 
                 linkLAvatar_ARB.Text = partes.Last();
@@ -259,7 +262,7 @@ namespace WindowsFormsApp1
 
             if (arbitroSeleciona != null)
             {
-                //User_ADM = container.UserSet.Find(id_ADM);
+               // User_ADM = container.UserSet.Find(id_ADM);
 
                 arbitroSeleciona.Username = Username;
                 arbitroSeleciona.Password = Password;
@@ -283,10 +286,40 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_ADM_Click(object sender, EventArgs e)
         {
-           /* if (administradorSelecionado != null)
-            {
 
-            }*/
+            string Username = administradorSelecionado.Username;
+            
+            var query = container.UserSet.Where(admin => admin.Id.Equals(administradorSelecionado.Username));
+
+            container.UserSet.Remove(administradorSelecionado);
+
+            container.SaveChanges();
+
+            administradorSelecionado = null;
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_listviewADM();
+
+
+        }
+
+        private void btn_eliminarArbitro_Click(object sender, EventArgs e)
+        {
+            string Username = arbitroSeleciona.Username;
+
+            var query = container.UserSet.Where(arbitro => arbitro.Id.Equals(arbitroSeleciona.Username));
+
+            container.UserSet.Remove(arbitroSeleciona);
+
+            container.SaveChanges();
+
+            arbitroSeleciona = null;
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_listviewARB();
+
         }
     }
 }

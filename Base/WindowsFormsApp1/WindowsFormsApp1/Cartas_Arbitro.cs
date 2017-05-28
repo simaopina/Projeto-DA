@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
+            //int imagem = 0;
 
             Card carta = new Card
             {
@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
                 RuleText = regras,
                 Attack = ataque,
                 Defense = defesa,
-                Image = imagem
+               // Image = imagem
             };
 
             container.CardSet.Add(carta);
@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
             string regras = txtRegras.Text;
             int ataque = Convert.ToInt32(NumericAtaque.Text);
             int defesa = Convert.ToInt32(NumericDefesa.Text);
-            int imagem = 0;
+           // int imagem = 0;
 
             Card carta;
 
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             carta.RuleText = regras;
             carta.Attack = ataque;
             carta.Defense = defesa;
-            carta.Image = imagem;
+            //carta.Image = imagem;
 
             container.Entry(carta).State = System.Data.Entity.EntityState.Modified;
             container.SaveChanges();

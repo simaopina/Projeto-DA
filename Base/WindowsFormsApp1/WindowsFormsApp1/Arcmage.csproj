@@ -104,6 +104,11 @@
     <Compile Include="Baralho_Arbitro.Designer.cs">
       <DependentUpon>Baralho_Arbitro.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosCartas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosCartasEdição.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -123,6 +128,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="BaseDadosDataSet_Cards.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -387,6 +397,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="BaseDadosCartas.xsc">
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosCartas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosCartas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosCartas.xss">
+      <DependentUpon>BaseDadosCartas.xsd</DependentUpon>
+    </None>
     <None Include="BaseDadosCartasEdição.xsc">
       <DependentUpon>BaseDadosCartasEdição.xsd</DependentUpon>
     </None>
@@ -430,6 +451,17 @@
     </None>
     <None Include="BaseDadosDataSet2.xss">
       <DependentUpon>BaseDadosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet3.xsc">
+      <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet3.xss">
+      <DependentUpon>BaseDadosDataSet3.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosDataSet_Cards.xsc">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
