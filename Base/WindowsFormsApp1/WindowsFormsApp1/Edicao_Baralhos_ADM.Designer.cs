@@ -30,8 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbxEdBaralhoADM = new System.Windows.Forms.GroupBox();
-            this.cardSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baseDadosCartasEdição = new WindowsFormsApp1.BaseDadosCartasEdição();
+            this.listVCartas = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -41,6 +49,8 @@
             this.cbxBaralho = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.listVBaralho = new System.Windows.Forms.ListView();
+            this.cardSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosCartasEdição = new WindowsFormsApp1.BaseDadosCartasEdição();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,16 +72,6 @@
             this.baseDadosDataSet_Cards = new WindowsFormsApp1.BaseDadosDataSet_Cards();
             this.baseDadosDataSetCardsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cardSetTableAdapter = new WindowsFormsApp1.BaseDadosCartasEdiçãoTableAdapters.CardSetTableAdapter();
-            this.listVCartas = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxEdBaralhoADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cardSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosCartasEdição)).BeginInit();
@@ -101,15 +101,61 @@
             this.gbxEdBaralhoADM.Text = "Edição Baralho";
             this.gbxEdBaralhoADM.Enter += new System.EventHandler(this.gbxEdBaralhoADM_Enter);
             // 
-            // cardSetBindingSource
+            // listVCartas
             // 
-            this.cardSetBindingSource.DataMember = "CardSet";
-            this.cardSetBindingSource.DataSource = this.baseDadosCartasEdição;
+            this.listVCartas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.listVCartas.Location = new System.Drawing.Point(306, 62);
+            this.listVCartas.Name = "listVCartas";
+            this.listVCartas.Size = new System.Drawing.Size(201, 168);
+            this.listVCartas.TabIndex = 10;
+            this.listVCartas.UseCompatibleStateImageBehavior = false;
+            this.listVCartas.View = System.Windows.Forms.View.Details;
+            this.listVCartas.SelectedIndexChanged += new System.EventHandler(this.listVCartas_SelectedIndexChanged_1);
             // 
-            // baseDadosCartasEdição
+            // columnHeader1
             // 
-            this.baseDadosCartasEdição.DataSetName = "BaseDadosCartasEdição";
-            this.baseDadosCartasEdição.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.columnHeader1.Text = "Nome";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Fação";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tipo";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Lealdade";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Custo";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Regras";
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Ataque";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Defesa";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Imagem";
             // 
             // label13
             // 
@@ -151,6 +197,7 @@
             this.btnGuardarAlterações.TabIndex = 6;
             this.btnGuardarAlterações.Text = "Guardar alterações";
             this.btnGuardarAlterações.UseVisualStyleBackColor = false;
+            this.btnGuardarAlterações.Click += new System.EventHandler(this.btnGuardarAlterações_Click);
             // 
             // btnAdicionarBaralho
             // 
@@ -183,7 +230,6 @@
             this.cbxBaralho.Name = "cbxBaralho";
             this.cbxBaralho.Size = new System.Drawing.Size(121, 21);
             this.cbxBaralho.TabIndex = 2;
-            this.cbxBaralho.SelectedIndexChanged += new System.EventHandler(this.cbxBaralho_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -202,6 +248,16 @@
             this.listVBaralho.TabIndex = 0;
             this.listVBaralho.UseCompatibleStateImageBehavior = false;
             this.listVBaralho.View = System.Windows.Forms.View.List;
+            // 
+            // cardSetBindingSource
+            // 
+            this.cardSetBindingSource.DataMember = "CardSet";
+            this.cardSetBindingSource.DataSource = this.baseDadosCartasEdição;
+            // 
+            // baseDadosCartasEdição
+            // 
+            this.baseDadosCartasEdição.DataSetName = "BaseDadosCartasEdição";
+            this.baseDadosCartasEdição.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // homeToolStripMenuItem
             // 
@@ -356,62 +412,6 @@
             // cardSetTableAdapter
             // 
             this.cardSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // listVCartas
-            // 
-            this.listVCartas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listVCartas.Location = new System.Drawing.Point(306, 62);
-            this.listVCartas.Name = "listVCartas";
-            this.listVCartas.Size = new System.Drawing.Size(201, 168);
-            this.listVCartas.TabIndex = 10;
-            this.listVCartas.UseCompatibleStateImageBehavior = false;
-            this.listVCartas.View = System.Windows.Forms.View.Details;
-            this.listVCartas.SelectedIndexChanged += new System.EventHandler(this.listVCartas_SelectedIndexChanged_1);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Nome";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Fação";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tipo";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Lealdade";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Custo";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Regras";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Ataque";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Defesa";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Imagem";
             // 
             // Edicao_Baralhos_ADM
             // 

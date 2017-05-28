@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
 
         int id_cartas = 0;
 
+      
+
         Card CartaSelecionada;
 
         Deck BaralhoSelecionado;
@@ -51,6 +53,12 @@ namespace WindowsFormsApp1
                 CartaList.SubItems.Add(cartas.Image);
 
                 listVCartas.Items.Add(CartaList);
+            }
+
+
+            foreach (Deck_Card baralho in container.Deck_CardSet)
+            {
+                listVBaralho.Items.Add(baralho.CardId.ToString());
             }
         }
 
@@ -96,15 +104,14 @@ namespace WindowsFormsApp1
 
         }
 
-        private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+        //private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
+       // {           
 
-            string nome = cbxBaralho.SelectedItem.ToString();
+           /* string nome = Convert.ToString(cbxBaralho.SelectedItem);
                         
             Deck baralho;
             
-            baralho = container.DeckSet.Find(id_baralho);
+            baralho = container.DeckSet.Find(id_baralho);*/
            
 
             /*var query = container.Deck_CardSet.Where(CartaEmBaralho => CartaEmBaralho.DeckId.Equals(id_baralho));
@@ -126,21 +133,17 @@ namespace WindowsFormsApp1
 
             container.Deck_CardSet.Add(id_cartas);*/
 
-            refreshlistvbaralhos();
+           // refreshlistvbaralhos();
 
             //refreshlistvcartas();
             
            
-             }
+           //  }
 
 
         private void listVCartas_SelectedIndexChanged(object sender, EventArgs e)
         {
            
-            
-           
-
-    
 
 
         }
@@ -211,9 +214,14 @@ namespace WindowsFormsApp1
 
         private void btnAdicionarBaralho_Click(object sender, EventArgs e)
         {
+            
+	        string nome = Convert.ToString(cbxBaralho.SelectedItem);
+                        
+            Deck baralho;
+            
+            baralho = container.DeckSet.Find(id_baralho);
 
-            Card cartas;
-            Deck_Card cartaBaralho;
+            refreshlistvbaralhos();
 
 
             foreach (var selectedItem in this.listVCartas.SelectedItems)
@@ -223,32 +231,23 @@ namespace WindowsFormsApp1
                 this.listVBaralho.Items.Add(item);
             }
 
-
-            var id_cartas = from id in container.Deck_CardSet where id.DeckId == id_baralho select id;
-           
-
-            foreach (ListViewItem item in listVBaralho.Items)
-            {
-                var procurar = container.CardSet.Where(nome => nome.Name.Equals(item.Text));
-                cartas = procurar.ToList<Card>().First<Card>();
-
-                cartaBaralho = new Deck_Card();
-                cartaBaralho.DeckId = id_baralho;
-                cartaBaralho.CardId = cartas.Id;
-
-                container.Deck_CardSet.Add(cartaBaralho);
-
-            }   
-
-            //container.SaveChanges();
-
+         
             refreshlistvbaralhos();
 
         }
 
-        public void refreshlistvcartas()
+        public void refreshcmb()
         {
 
+            foreach (Deck baralho in container.DeckSet)
+            {
+                cbxBaralho.Items.Add(baralho.Name);
+            }
+        }
+
+        public void refreshlistvcartas()
+        {
+                   
             foreach (Card cartas in container.CardSet)
             {
                 ListViewItem CartaList = new ListViewItem(cartas.Name);
@@ -269,12 +268,12 @@ namespace WindowsFormsApp1
 
         public void refreshlistvbaralhos()
         {
-
-            foreach (Deck baralho in container.DeckSet)
+           
+            foreach (Deck_Card baralho in container.Deck_CardSet)
             {
-                cbxBaralho.Items.Add(baralho.Name);
+                listVBaralho.Items.Add(baralho.CardId.ToString());
             }
-            
+
         }
 
         private void btnRemoverBaralho_Click(object sender, EventArgs e)
@@ -285,6 +284,52 @@ namespace WindowsFormsApp1
                 listVBaralho.Items.Remove(item);
                 this.listVCartas.Items.Add(item);
             }
+        }
+
+        private void btnGuardarAlterações_Click(object sender, EventArgs e)
+        {
+
+            Card cartas;
+            Deck_Card cartaBaralho;
+            Deck BaralhoSelecionado;
+
+            cartaBaralho = container.Deck_CardSet.Find(id_baralho);
+
+            var id_cartas_antiga = 
+                from ant in container.Deck_CardSet
+                where ant.DeckId == id_baralho
+                select ant;
+
+            container.Deck_CardSet.RemoveRange(id_cartas_antiga.ToList<Deck_Card>());
+
+
+            //var id_baralho = from id in container.Deck_CardSet where id.DeckId == id_baralho select id;
+
+          
+
+            foreach (ListViewItem item in listVBaralho.Items)
+            {
+                var procurar = container.CardSet.Where(nome => nome.Name.Equals(item.Text));
+                cartas = procurar.ToList<Card>().First<Card>();
+
+                cartaBaralho = new Deck_Card();
+                cartaBaralho.DeckId = id_baralho;
+                cartaBaralho.CardId = cartas.Id;
+
+                container.Deck_CardSet.Add(cartaBaralho);
+               
+            }
+
+
+            container.Entry(CartaSelecionada).State = System.Data.Entity.EntityState.Modified;
+            container.SaveChanges();
+
+            refreshlistvbaralhos();
+           // refreshlistvcartas();
+           // refreshcmb();
+
+
+     
         }
     }
     }
