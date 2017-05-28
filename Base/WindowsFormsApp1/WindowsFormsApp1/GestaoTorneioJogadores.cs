@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
             {
                 cbxBaralhoJogador2.Items.Add(baralho.Id.ToString());
             }
-            foreach (Tournament torn in container.TournamentSet)
+            foreach (Tournament torn in container.TournamentSet.OfType<StandadTournament>())
             {
                 cbxTorneio.Items.Add(torn.Id.ToString());
             }
