@@ -44,8 +44,16 @@
             this.btnPesquisarEquipa1 = new System.Windows.Forms.Button();
             this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.dataGridEquipa2 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSetTeamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSetTeamSet = new WindowsFormsApp1.BaseDadosDataSetTeamSet();
             this.tbxEquipa2 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.dataGridEquipa1 = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,26 +74,18 @@
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridEquipa1 = new System.Windows.Forms.DataGridView();
-            this.dataGridEquipa2 = new System.Windows.Forms.DataGridView();
-            this.baseDadosDataSetTeamSet = new WindowsFormsApp1.BaseDadosDataSetTeamSet();
-            this.teamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teamSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTeamSetTableAdapters.TeamSetTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.baseDadosDataSetTeamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teamSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxGestaoTorneios.SuspendLayout();
             this.gbxJogador2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).BeginInit();
             this.gbxJogador1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).BeginInit();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -232,6 +232,42 @@
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Equipa 2";
             // 
+            // dataGridEquipa2
+            // 
+            this.dataGridEquipa2.AllowUserToAddRows = false;
+            this.dataGridEquipa2.AllowUserToDeleteRows = false;
+            this.dataGridEquipa2.AutoGenerateColumns = false;
+            this.dataGridEquipa2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEquipa2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn1});
+            this.dataGridEquipa2.DataSource = this.teamSetBindingSource1;
+            this.dataGridEquipa2.Location = new System.Drawing.Point(7, 56);
+            this.dataGridEquipa2.Name = "dataGridEquipa2";
+            this.dataGridEquipa2.ReadOnly = true;
+            this.dataGridEquipa2.Size = new System.Drawing.Size(259, 77);
+            this.dataGridEquipa2.TabIndex = 37;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // teamSetBindingSource1
+            // 
+            this.teamSetBindingSource1.DataMember = "TeamSet";
+            this.teamSetBindingSource1.DataSource = this.baseDadosDataSetTeamSetBindingSource;
+            // 
+            // baseDadosDataSetTeamSetBindingSource
+            // 
+            this.baseDadosDataSetTeamSetBindingSource.DataSource = this.baseDadosDataSetTeamSet;
+            this.baseDadosDataSetTeamSetBindingSource.Position = 0;
+            // 
+            // baseDadosDataSetTeamSet
+            // 
+            this.baseDadosDataSetTeamSet.DataSetName = "BaseDadosDataSetTeamSet";
+            this.baseDadosDataSetTeamSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tbxEquipa2
             // 
             this.tbxEquipa2.Location = new System.Drawing.Point(6, 29);
@@ -251,6 +287,33 @@
             this.gbxJogador1.TabIndex = 42;
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Equipa 1";
+            // 
+            // dataGridEquipa1
+            // 
+            this.dataGridEquipa1.AllowUserToAddRows = false;
+            this.dataGridEquipa1.AllowUserToDeleteRows = false;
+            this.dataGridEquipa1.AutoGenerateColumns = false;
+            this.dataGridEquipa1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEquipa1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn});
+            this.dataGridEquipa1.DataSource = this.teamSetBindingSource;
+            this.dataGridEquipa1.Location = new System.Drawing.Point(6, 57);
+            this.dataGridEquipa1.Name = "dataGridEquipa1";
+            this.dataGridEquipa1.ReadOnly = true;
+            this.dataGridEquipa1.Size = new System.Drawing.Size(260, 77);
+            this.dataGridEquipa1.TabIndex = 37;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // teamSetBindingSource
+            // 
+            this.teamSetBindingSource.DataMember = "TeamSet";
+            this.teamSetBindingSource.DataSource = this.baseDadosDataSetTeamSet;
             // 
             // menuStripHome
             // 
@@ -406,65 +469,9 @@
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridEquipa1
-            // 
-            this.dataGridEquipa1.AutoGenerateColumns = false;
-            this.dataGridEquipa1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEquipa1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridEquipa1.DataSource = this.teamSetBindingSource;
-            this.dataGridEquipa1.Location = new System.Drawing.Point(6, 57);
-            this.dataGridEquipa1.Name = "dataGridEquipa1";
-            this.dataGridEquipa1.Size = new System.Drawing.Size(260, 77);
-            this.dataGridEquipa1.TabIndex = 37;
-            // 
-            // dataGridEquipa2
-            // 
-            this.dataGridEquipa2.AutoGenerateColumns = false;
-            this.dataGridEquipa2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEquipa2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn1});
-            this.dataGridEquipa2.DataSource = this.teamSetBindingSource1;
-            this.dataGridEquipa2.Location = new System.Drawing.Point(7, 56);
-            this.dataGridEquipa2.Name = "dataGridEquipa2";
-            this.dataGridEquipa2.Size = new System.Drawing.Size(259, 77);
-            this.dataGridEquipa2.TabIndex = 37;
-            // 
-            // baseDadosDataSetTeamSet
-            // 
-            this.baseDadosDataSetTeamSet.DataSetName = "BaseDadosDataSetTeamSet";
-            this.baseDadosDataSetTeamSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // teamSetBindingSource
-            // 
-            this.teamSetBindingSource.DataMember = "TeamSet";
-            this.teamSetBindingSource.DataSource = this.baseDadosDataSetTeamSet;
-            // 
             // teamSetTableAdapter
             // 
             this.teamSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // baseDadosDataSetTeamSetBindingSource
-            // 
-            this.baseDadosDataSetTeamSetBindingSource.DataSource = this.baseDadosDataSetTeamSet;
-            this.baseDadosDataSetTeamSetBindingSource.Position = 0;
-            // 
-            // teamSetBindingSource1
-            // 
-            this.teamSetBindingSource1.DataMember = "TeamSet";
-            this.teamSetBindingSource1.DataSource = this.baseDadosDataSetTeamSetBindingSource;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
             // 
             // GestaoTorneioEquipas
             // 
@@ -483,17 +490,17 @@
             this.gbxGestaoTorneios.PerformLayout();
             this.gbxJogador2.ResumeLayout(false);
             this.gbxJogador2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).EndInit();
             this.gbxJogador1.ResumeLayout(false);
             this.gbxJogador1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
