@@ -13,9 +13,27 @@ namespace WindowsFormsApp1
     public partial class GestaoTorneioEquipas : Form
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+        TeamGame teamSelecionado = null;
+
+
         public GestaoTorneioEquipas()
         {
             InitializeComponent();
+
+            foreach (Deck baralho in container.DeckSet)
+            {
+                cbxBaralhoEquipa1.Items.Add(baralho.Id.ToString());
+            }
+            foreach (Deck baralho in container.DeckSet)
+            {
+                cbxBaralhoEquipa2.Items.Add(baralho.Id.ToString());
+            }
+            foreach (Tournament torn in container.TournamentSet)
+            {
+                cbxTorneio.Items.Add(torn.Id.ToString());
+            }
+
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,14 +163,81 @@ namespace WindowsFormsApp1
             this.teamSetTableAdapter.Fill(this.baseDadosDataSetTeamSet.TeamSet);
             dataGridEquipa1.DataSource = teamSetBindingSource;
             dataGridEquipa2.DataSource = teamSetBindingSource;
+            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
+            dataGridReferee.DataSource = userSetRefereeBindingSource.OfType<Referee>();
 
+        }
+
+        public void validacao_pesquisar()
+        {
+            if (tbxEquipa1.Text == tbxEquipa2.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxEquipa1.Focus();
+                refresh_datagrid();
+            }
+            else if (tbxEquipa2.Text == tbxEquipa1.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxEquipa2.Focus();
+                refresh_datagrid();
+            }
         }
 
         private void GestaoTorneioEquipas_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
+            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
             // TODO: This line of code loads data into the 'baseDadosDataSetTeamSet.TeamSet' table. You can move, or remove it, as needed.
             this.teamSetTableAdapter.Fill(this.baseDadosDataSetTeamSet.TeamSet);
 
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            int numero = Convert.ToInt32(tbxNumero.Text);
+            DateTime data = datetimeData.Value;
+            DateTime hora = datetimeHora.Value;
+            string descricao = tbxDescricao.Text;
+            int TeamId = (int)dataGridEquipa1.CurrentRow.Cells[0].Value;
+            int TeamId1 = (int)dataGridEquipa2.CurrentRow.Cells[0].Value;
+            int Referee = (int)dataGridReferee.CurrentRow.Cells[0].Value;
+            int deck1 = Convert.ToInt32(cbxBaralhoEquipa1.Text);
+            int deck2 = Convert.ToInt32(cbxBaralhoEquipa2.Text);
+            int torneio = Convert.ToInt32(cbxTorneio.Text);
+
+            TeamGame jogo = new TeamGame
+            {
+                TeamId = TeamId,
+                TeamId1 = TeamId1,
+                Hour = hora,
+                Date = data,
+                Number = numero,
+                DeckIOneld = deck1,
+                DeckITwold = deck2,
+                Description = descricao,
+                TeamTournamentId = torneio
+            };
+            container.GameSet.Add(jogo);
+            container.SaveChanges();
+
+
+        }
+
+        private void btnPesquisarArbitro_Click(object sender, EventArgs e)
+        {
+            if (tbxArbitro.Text.Length > 0)
+            {
+
+                var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
+
+                dataGridReferee.DataSource = query.ToList();
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
         }
     }
 }

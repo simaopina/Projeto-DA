@@ -177,9 +177,12 @@ namespace WindowsFormsApp1
             MessageBox.Show("Alterado com sucesso!");
 
             refresh_datagrid();
+
+            
         }
 
-        private void btnRemover_Click(object sender, EventArgs e)
+
+            private void btnRemover_Click(object sender, EventArgs e)
         {
          
             if (listVCartas.SelectedItems != null)

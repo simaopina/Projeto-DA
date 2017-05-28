@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public System.TimeSpan Date { get; set; }
+        public System.DateTime Date { get; set; }
         public int Number { get; set; }
         public Nullable<int> RefereeId { get; set; }
         public Nullable<int> DeckIOneld { get; set; }

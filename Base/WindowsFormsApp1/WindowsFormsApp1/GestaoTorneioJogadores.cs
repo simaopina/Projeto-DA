@@ -14,9 +14,24 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //StardadGame jogadorSelecionado = null;
+
         public GestaoTorneioJogadores()
         {
             InitializeComponent();
+
+            foreach (Deck baralho in container.DeckSet)
+            {
+                cbxBaralhoJogador1.Items.Add(baralho.Id.ToString());
+            }
+            foreach (Deck baralho in container.DeckSet)
+            {
+                cbxBaralhoJogador2.Items.Add(baralho.Id.ToString());
+            }
+            foreach (Tournament torn in container.TournamentSet)
+            {
+                cbxTorneio.Items.Add(torn.Id.ToString());
+            }
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,6 +125,7 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarJogador1_Click(object sender, EventArgs e)
         {
+            validacao_pesquisar();
             if (tbxJogador1.Text.Length > 0)
             {
 
@@ -126,12 +142,15 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarJogador2_Click(object sender, EventArgs e)
         {
+            validacao_pesquisar();
             if (tbxJogador2.Text.Length > 0)
             {
 
                 var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador2.Text));
 
                 dataGridJogador2.DataSource = query.ToList();
+
+
             }
 
             else
@@ -139,6 +158,23 @@ namespace WindowsFormsApp1
                 refresh_datagrid();
             }
         }
+
+        public void validacao_pesquisar()
+        {
+            if (tbxJogador1.Text == tbxJogador2.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxJogador1.Focus();
+                refresh_datagrid();
+            }
+            else if(tbxJogador2.Text == tbxJogador1.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxJogador2.Focus();
+                refresh_datagrid();
+            }
+        }
+
 
         public void refresh_datagrid()
         {
@@ -151,10 +187,56 @@ namespace WindowsFormsApp1
 
         private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
+            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
             // TODO: This line of code loads data into the 'baseDadosDataSet4.PlayerSet' table. You can move, or remove it, as needed.
             this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
 
         }
 
+        private void btnPesquisarArbitro_Click(object sender, EventArgs e)
+        {
+            if (tbxArbitro.Text.Length > 0)
+            {
+
+                var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
+
+                dataGridReferee.DataSource = query.ToList();
+            }
+
+            else
+            {
+                refresh_datagrid();
+            }
+        }
+
+        private void btnCriar_Click(object sender, EventArgs e)
+        {
+            int numero = Convert.ToInt32(tbxNumero.Text);
+            DateTime data = datetimeData.Value;
+            DateTime hora = datetimeHora.Value;
+            string descricao = tbxDescricao.Text;
+            int TeamId = (int)dataGridJogador1.CurrentRow.Cells[0].Value;
+            int TeamId1 = (int)dataGridJogador2.CurrentRow.Cells[0].Value;
+            int Referee = (int)dataGridReferee.CurrentRow.Cells[0].Value;
+            int deck1 = Convert.ToInt32(cbxBaralhoJogador1.Text);
+            int deck2 = Convert.ToInt32(cbxBaralhoJogador2.Text);
+            int torneio = Convert.ToInt32(cbxTorneio.Text);
+
+            TeamGame jogo = new TeamGame
+            {
+                TeamId = TeamId,
+                TeamId1 = TeamId1,
+                Hour = hora,
+                Date = data,
+                Number = numero,
+                DeckIOneld = deck1,
+                DeckITwold = deck2,
+                Description = descricao,
+                TeamTournamentId = torneio
+            };
+            container.GameSet.Add(jogo);
+            container.SaveChanges();
+        }
     }
 }
