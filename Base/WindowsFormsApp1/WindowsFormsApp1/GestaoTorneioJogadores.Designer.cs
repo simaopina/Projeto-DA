@@ -51,12 +51,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.cbxBaralhoJogador1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridJogador1 = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.playerSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet4 = new WindowsFormsApp1.BaseDadosDataSet4();
             this.btnPesquisarJogador1 = new System.Windows.Forms.Button();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.cbxBaralhoJogador2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.dataGridJogador2 = new System.Windows.Forms.DataGridView();
             this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPesquisarJogador2 = new System.Windows.Forms.Button();
@@ -67,12 +71,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbxDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbxNome = new System.Windows.Forms.TextBox();
+            this.tbxNumero = new System.Windows.Forms.TextBox();
             this.datetimeHora = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.datetimeData = new System.Windows.Forms.DateTimePicker();
             this.playerSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter();
+            this.dataGridReferee = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisarArbitro = new System.Windows.Forms.Button();
+            this.tbxArbitro = new System.Windows.Forms.TextBox();
+            this.userSet_RefereeTableAdapter = new WindowsFormsApp1.BaseDadosDataSet_RefereeTableAdapters.UserSet_RefereeTableAdapter();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Torneio = new System.Windows.Forms.Label();
+            this.cbxTorneio = new System.Windows.Forms.ComboBox();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
@@ -82,6 +98,12 @@
             this.gbxJogador2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador2)).BeginInit();
             this.gbxGestaoTorneios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetRefereeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripHome
@@ -94,7 +116,7 @@
             this.terminarSessãoToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
-            this.menuStripHome.Size = new System.Drawing.Size(624, 24);
+            this.menuStripHome.Size = new System.Drawing.Size(641, 24);
             this.menuStripHome.TabIndex = 21;
             this.menuStripHome.Text = "menuStrip1";
             // 
@@ -232,9 +254,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(577, 158);
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -243,21 +265,40 @@
             // 
             this.tbxJogador1.Location = new System.Drawing.Point(6, 30);
             this.tbxJogador1.Name = "tbxJogador1";
-            this.tbxJogador1.Size = new System.Drawing.Size(179, 20);
+            this.tbxJogador1.Size = new System.Drawing.Size(119, 20);
             this.tbxJogador1.TabIndex = 34;
             this.tbxJogador1.Text = "Pesquisar Jogador 1";
             // 
             // gbxJogador1
             // 
+            this.gbxJogador1.Controls.Add(this.cbxBaralhoJogador1);
+            this.gbxJogador1.Controls.Add(this.label5);
             this.gbxJogador1.Controls.Add(this.dataGridJogador1);
             this.gbxJogador1.Controls.Add(this.btnPesquisarJogador1);
             this.gbxJogador1.Controls.Add(this.tbxJogador1);
-            this.gbxJogador1.Location = new System.Drawing.Point(23, 187);
+            this.gbxJogador1.Location = new System.Drawing.Point(6, 187);
             this.gbxJogador1.Name = "gbxJogador1";
-            this.gbxJogador1.Size = new System.Drawing.Size(276, 145);
+            this.gbxJogador1.Size = new System.Drawing.Size(209, 179);
             this.gbxJogador1.TabIndex = 36;
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Jogador 1";
+            // 
+            // cbxBaralhoJogador1
+            // 
+            this.cbxBaralhoJogador1.FormattingEnabled = true;
+            this.cbxBaralhoJogador1.Location = new System.Drawing.Point(50, 149);
+            this.cbxBaralhoJogador1.Name = "cbxBaralhoJogador1";
+            this.cbxBaralhoJogador1.Size = new System.Drawing.Size(153, 21);
+            this.cbxBaralhoJogador1.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Baralho";
             // 
             // dataGridJogador1
             // 
@@ -271,7 +312,7 @@
             this.dataGridJogador1.Location = new System.Drawing.Point(6, 57);
             this.dataGridJogador1.Name = "dataGridJogador1";
             this.dataGridJogador1.ReadOnly = true;
-            this.dataGridJogador1.Size = new System.Drawing.Size(261, 77);
+            this.dataGridJogador1.Size = new System.Drawing.Size(200, 77);
             this.dataGridJogador1.TabIndex = 37;
             // 
             // nameDataGridViewTextBoxColumn
@@ -293,7 +334,7 @@
             // 
             // btnPesquisarJogador1
             // 
-            this.btnPesquisarJogador1.Location = new System.Drawing.Point(192, 30);
+            this.btnPesquisarJogador1.Location = new System.Drawing.Point(131, 28);
             this.btnPesquisarJogador1.Name = "btnPesquisarJogador1";
             this.btnPesquisarJogador1.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisarJogador1.TabIndex = 35;
@@ -303,15 +344,34 @@
             // 
             // gbxJogador2
             // 
+            this.gbxJogador2.Controls.Add(this.cbxBaralhoJogador2);
+            this.gbxJogador2.Controls.Add(this.label6);
             this.gbxJogador2.Controls.Add(this.dataGridJogador2);
             this.gbxJogador2.Controls.Add(this.btnPesquisarJogador2);
             this.gbxJogador2.Controls.Add(this.tbxJogador2);
-            this.gbxJogador2.Location = new System.Drawing.Point(326, 188);
+            this.gbxJogador2.Location = new System.Drawing.Point(218, 189);
             this.gbxJogador2.Name = "gbxJogador2";
-            this.gbxJogador2.Size = new System.Drawing.Size(277, 144);
+            this.gbxJogador2.Size = new System.Drawing.Size(214, 183);
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Jogador 2";
+            // 
+            // cbxBaralhoJogador2
+            // 
+            this.cbxBaralhoJogador2.FormattingEnabled = true;
+            this.cbxBaralhoJogador2.Location = new System.Drawing.Point(48, 147);
+            this.cbxBaralhoJogador2.Name = "cbxBaralhoJogador2";
+            this.cbxBaralhoJogador2.Size = new System.Drawing.Size(159, 21);
+            this.cbxBaralhoJogador2.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(43, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Baralho";
             // 
             // dataGridJogador2
             // 
@@ -325,7 +385,7 @@
             this.dataGridJogador2.Location = new System.Drawing.Point(7, 56);
             this.dataGridJogador2.Name = "dataGridJogador2";
             this.dataGridJogador2.ReadOnly = true;
-            this.dataGridJogador2.Size = new System.Drawing.Size(259, 77);
+            this.dataGridJogador2.Size = new System.Drawing.Size(200, 77);
             this.dataGridJogador2.TabIndex = 37;
             // 
             // nameDataGridViewTextBoxColumn1
@@ -337,7 +397,7 @@
             // 
             // btnPesquisarJogador2
             // 
-            this.btnPesquisarJogador2.Location = new System.Drawing.Point(191, 29);
+            this.btnPesquisarJogador2.Location = new System.Drawing.Point(132, 29);
             this.btnPesquisarJogador2.Name = "btnPesquisarJogador2";
             this.btnPesquisarJogador2.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisarJogador2.TabIndex = 36;
@@ -349,41 +409,40 @@
             // 
             this.tbxJogador2.Location = new System.Drawing.Point(6, 29);
             this.tbxJogador2.Name = "tbxJogador2";
-            this.tbxJogador2.Size = new System.Drawing.Size(178, 20);
+            this.tbxJogador2.Size = new System.Drawing.Size(119, 20);
             this.tbxJogador2.TabIndex = 35;
             this.tbxJogador2.Text = "Pesquisar Jogador 2";
             // 
             // btnCriar
             // 
-            this.btnCriar.Location = new System.Drawing.Point(50, 157);
+            this.btnCriar.Location = new System.Drawing.Point(28, 124);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(75, 23);
             this.btnCriar.TabIndex = 38;
             this.btnCriar.Text = "Criar";
             this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnCriar.Click += new System.EventHandler(this.btnCriar_Click);
             // 
             // gbxGestaoTorneios
             // 
-            this.gbxGestaoTorneios.Controls.Add(this.btnCancelar);
             this.gbxGestaoTorneios.Controls.Add(this.label4);
             this.gbxGestaoTorneios.Controls.Add(this.tbxDescricao);
             this.gbxGestaoTorneios.Controls.Add(this.label3);
-            this.gbxGestaoTorneios.Controls.Add(this.tbxNome);
+            this.gbxGestaoTorneios.Controls.Add(this.tbxNumero);
             this.gbxGestaoTorneios.Controls.Add(this.datetimeHora);
             this.gbxGestaoTorneios.Controls.Add(this.label2);
             this.gbxGestaoTorneios.Controls.Add(this.label1);
             this.gbxGestaoTorneios.Controls.Add(this.datetimeData);
-            this.gbxGestaoTorneios.Controls.Add(this.btnCriar);
-            this.gbxGestaoTorneios.Location = new System.Drawing.Point(23, 339);
+            this.gbxGestaoTorneios.Location = new System.Drawing.Point(6, 370);
             this.gbxGestaoTorneios.Name = "gbxGestaoTorneios";
-            this.gbxGestaoTorneios.Size = new System.Drawing.Size(580, 193);
+            this.gbxGestaoTorneios.Size = new System.Drawing.Size(426, 162);
             this.gbxGestaoTorneios.TabIndex = 39;
             this.gbxGestaoTorneios.TabStop = false;
             this.gbxGestaoTorneios.Text = "Gestão Jogadores - Jogos";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(132, 157);
+            this.btnCancelar.Location = new System.Drawing.Point(110, 124);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 47;
@@ -393,7 +452,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(306, 35);
+            this.label4.Location = new System.Drawing.Point(204, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 46;
@@ -401,32 +460,32 @@
             // 
             // tbxDescricao
             // 
-            this.tbxDescricao.Location = new System.Drawing.Point(309, 55);
+            this.tbxDescricao.Location = new System.Drawing.Point(207, 46);
             this.tbxDescricao.Multiline = true;
             this.tbxDescricao.Name = "tbxDescricao";
-            this.tbxDescricao.Size = new System.Drawing.Size(246, 99);
+            this.tbxDescricao.Size = new System.Drawing.Size(212, 99);
             this.tbxDescricao.TabIndex = 45;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 38);
+            this.label3.Location = new System.Drawing.Point(9, 26);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 44;
-            this.label3.Text = "Nome";
+            this.label3.Text = "Número";
             // 
-            // tbxNome
+            // tbxNumero
             // 
-            this.tbxNome.Location = new System.Drawing.Point(105, 35);
-            this.tbxNome.Name = "tbxNome";
-            this.tbxNome.Size = new System.Drawing.Size(183, 20);
-            this.tbxNome.TabIndex = 43;
+            this.tbxNumero.Location = new System.Drawing.Point(67, 23);
+            this.tbxNumero.Name = "tbxNumero";
+            this.tbxNumero.Size = new System.Drawing.Size(121, 20);
+            this.tbxNumero.TabIndex = 43;
             // 
             // datetimeHora
             // 
             this.datetimeHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.datetimeHora.Location = new System.Drawing.Point(105, 114);
+            this.datetimeHora.Location = new System.Drawing.Point(67, 102);
             this.datetimeHora.Name = "datetimeHora";
             this.datetimeHora.Size = new System.Drawing.Size(121, 20);
             this.datetimeHora.TabIndex = 42;
@@ -434,7 +493,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 120);
+            this.label2.Location = new System.Drawing.Point(9, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 41;
@@ -443,7 +502,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 77);
+            this.label1.Location = new System.Drawing.Point(9, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 40;
@@ -452,7 +511,7 @@
             // datetimeData
             // 
             this.datetimeData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetimeData.Location = new System.Drawing.Point(105, 77);
+            this.datetimeData.Location = new System.Drawing.Point(67, 65);
             this.datetimeData.Name = "datetimeData";
             this.datetimeData.Size = new System.Drawing.Size(121, 20);
             this.datetimeData.TabIndex = 39;
@@ -461,11 +520,114 @@
             // 
             this.playerSetTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridReferee
+            // 
+            this.dataGridReferee.AllowUserToAddRows = false;
+            this.dataGridReferee.AllowUserToDeleteRows = false;
+            this.dataGridReferee.AutoGenerateColumns = false;
+            this.dataGridReferee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridReferee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameDataGridViewTextBoxColumn2});
+            this.dataGridReferee.DataSource = this.userSetRefereeBindingSource;
+            this.dataGridReferee.Location = new System.Drawing.Point(2, 55);
+            this.dataGridReferee.Name = "dataGridReferee";
+            this.dataGridReferee.ReadOnly = true;
+            this.dataGridReferee.Size = new System.Drawing.Size(195, 121);
+            this.dataGridReferee.TabIndex = 2;
+            // 
+            // nameDataGridViewTextBoxColumn2
+            // 
+            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
+            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // userSetRefereeBindingSource
+            // 
+            this.userSetRefereeBindingSource.DataMember = "UserSet_Referee";
+            this.userSetRefereeBindingSource.DataSource = this.baseDadosDataSetRefereeBindingSource;
+            // 
+            // baseDadosDataSetRefereeBindingSource
+            // 
+            this.baseDadosDataSetRefereeBindingSource.DataSource = this.baseDadosDataSet_Referee;
+            this.baseDadosDataSetRefereeBindingSource.Position = 0;
+            // 
+            // baseDadosDataSet_Referee
+            // 
+            this.baseDadosDataSet_Referee.DataSetName = "BaseDadosDataSet_Referee";
+            this.baseDadosDataSet_Referee.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridReferee);
+            this.groupBox1.Controls.Add(this.btnPesquisarArbitro);
+            this.groupBox1.Controls.Add(this.tbxArbitro);
+            this.groupBox1.Location = new System.Drawing.Point(435, 190);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(203, 182);
+            this.groupBox1.TabIndex = 46;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Arbitro";
+            // 
+            // btnPesquisarArbitro
+            // 
+            this.btnPesquisarArbitro.Location = new System.Drawing.Point(122, 27);
+            this.btnPesquisarArbitro.Name = "btnPesquisarArbitro";
+            this.btnPesquisarArbitro.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisarArbitro.TabIndex = 1;
+            this.btnPesquisarArbitro.Text = "Pesquisar";
+            this.btnPesquisarArbitro.UseVisualStyleBackColor = true;
+            this.btnPesquisarArbitro.Click += new System.EventHandler(this.btnPesquisarArbitro_Click);
+            // 
+            // tbxArbitro
+            // 
+            this.tbxArbitro.Location = new System.Drawing.Point(2, 28);
+            this.tbxArbitro.Name = "tbxArbitro";
+            this.tbxArbitro.Size = new System.Drawing.Size(114, 20);
+            this.tbxArbitro.TabIndex = 0;
+            this.tbxArbitro.Text = "Pesquisar Arbitro";
+            // 
+            // userSet_RefereeTableAdapter
+            // 
+            this.userSet_RefereeTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Torneio);
+            this.groupBox2.Controls.Add(this.cbxTorneio);
+            this.groupBox2.Controls.Add(this.btnCriar);
+            this.groupBox2.Controls.Add(this.btnCancelar);
+            this.groupBox2.Location = new System.Drawing.Point(435, 370);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(206, 162);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Torneio";
+            // 
+            // Torneio
+            // 
+            this.Torneio.AutoSize = true;
+            this.Torneio.Location = new System.Drawing.Point(6, 30);
+            this.Torneio.Name = "Torneio";
+            this.Torneio.Size = new System.Drawing.Size(90, 13);
+            this.Torneio.TabIndex = 49;
+            this.Torneio.Text = "Adicionar Torneio";
+            // 
+            // cbxTorneio
+            // 
+            this.cbxTorneio.FormattingEnabled = true;
+            this.cbxTorneio.Location = new System.Drawing.Point(9, 49);
+            this.cbxTorneio.Name = "cbxTorneio";
+            this.cbxTorneio.Size = new System.Drawing.Size(188, 21);
+            this.cbxTorneio.TabIndex = 48;
+            // 
             // GestaoTorneioJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 544);
+            this.ClientSize = new System.Drawing.Size(641, 544);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbxGestaoTorneios);
             this.Controls.Add(this.gbxJogador2);
             this.Controls.Add(this.gbxJogador1);
@@ -487,6 +649,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridJogador2)).EndInit();
             this.gbxGestaoTorneios.ResumeLayout(false);
             this.gbxGestaoTorneios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetRefereeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,7 +687,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbxDescricao;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbxNome;
+        private System.Windows.Forms.TextBox tbxNumero;
         private System.Windows.Forms.DateTimePicker datetimeHora;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -538,5 +708,21 @@
         private BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter playerSetTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView dataGridReferee;
+        private System.Windows.Forms.BindingSource baseDadosDataSetRefereeBindingSource;
+        private BaseDadosDataSet_Referee baseDadosDataSet_Referee;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnPesquisarArbitro;
+        private System.Windows.Forms.TextBox tbxArbitro;
+        private System.Windows.Forms.BindingSource userSetRefereeBindingSource;
+        private BaseDadosDataSet_RefereeTableAdapters.UserSet_RefereeTableAdapter userSet_RefereeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ComboBox cbxBaralhoJogador1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxBaralhoJogador2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label Torneio;
+        private System.Windows.Forms.ComboBox cbxTorneio;
     }
 }
