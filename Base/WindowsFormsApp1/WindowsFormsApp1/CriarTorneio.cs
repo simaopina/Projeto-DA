@@ -80,7 +80,7 @@ namespace WindowsFormsApp1
 
         public void refresh_listViewStandard()
         {
-            listVEquipas.Items.Clear();
+            listVStandard.Items.Clear();
             List<StandadTournament> STorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
 
             foreach (StandadTournament Storneio in STorneio)
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
 
         public void refresh_listViewEquipas()
         {
-            listVStandard.Items.Clear();
+            listVEquipas.Items.Clear();
 
             List<TeamTournament> TTorneio = container.TournamentSet.OfType<TeamTournament>().ToList();
 
