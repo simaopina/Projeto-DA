@@ -50,6 +50,7 @@
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabStandard = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnAlterarStandard = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.listVStandard = new System.Windows.Forms.ListView();
             this.button3 = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             this.tbxDescricaoStandard = new System.Windows.Forms.TextBox();
             this.tbxNomeStandard = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAlterarEquipas = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listVEquipas = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,8 +75,6 @@
             this.dateTEquipas = new System.Windows.Forms.DateTimePicker();
             this.tbxDescricao = new System.Windows.Forms.TextBox();
             this.tbxNomeEquipas = new System.Windows.Forms.TextBox();
-            this.btnAlterarStandard = new System.Windows.Forms.Button();
-            this.btnAlterarEquipas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabStandard.SuspendLayout();
@@ -257,6 +257,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Standard";
             // 
+            // btnAlterarStandard
+            // 
+            this.btnAlterarStandard.Location = new System.Drawing.Point(413, 284);
+            this.btnAlterarStandard.Name = "btnAlterarStandard";
+            this.btnAlterarStandard.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarStandard.TabIndex = 20;
+            this.btnAlterarStandard.Text = "Alterar";
+            this.btnAlterarStandard.UseVisualStyleBackColor = true;
+            this.btnAlterarStandard.Click += new System.EventHandler(this.btnAlterarStandard_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -273,6 +283,7 @@
             this.listVStandard.Size = new System.Drawing.Size(204, 266);
             this.listVStandard.TabIndex = 16;
             this.listVStandard.UseCompatibleStateImageBehavior = false;
+            this.listVStandard.View = System.Windows.Forms.View.List;
             this.listVStandard.SelectedIndexChanged += new System.EventHandler(this.listVStandard_SelectedIndexChanged);
             // 
             // button3
@@ -374,6 +385,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipas";
             // 
+            // btnAlterarEquipas
+            // 
+            this.btnAlterarEquipas.Location = new System.Drawing.Point(405, 274);
+            this.btnAlterarEquipas.Name = "btnAlterarEquipas";
+            this.btnAlterarEquipas.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterarEquipas.TabIndex = 21;
+            this.btnAlterarEquipas.Text = "Alterar";
+            this.btnAlterarEquipas.UseVisualStyleBackColor = true;
+            this.btnAlterarEquipas.Click += new System.EventHandler(this.btnAlterarEquipas_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -390,6 +411,7 @@
             this.listVEquipas.Size = new System.Drawing.Size(204, 266);
             this.listVEquipas.TabIndex = 17;
             this.listVEquipas.UseCompatibleStateImageBehavior = false;
+            this.listVEquipas.View = System.Windows.Forms.View.List;
             this.listVEquipas.SelectedIndexChanged += new System.EventHandler(this.listVEquipas_SelectedIndexChanged);
             // 
             // button2
@@ -468,26 +490,6 @@
             this.tbxNomeEquipas.Name = "tbxNomeEquipas";
             this.tbxNomeEquipas.Size = new System.Drawing.Size(206, 20);
             this.tbxNomeEquipas.TabIndex = 6;
-            // 
-            // btnAlterarStandard
-            // 
-            this.btnAlterarStandard.Location = new System.Drawing.Point(413, 284);
-            this.btnAlterarStandard.Name = "btnAlterarStandard";
-            this.btnAlterarStandard.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarStandard.TabIndex = 20;
-            this.btnAlterarStandard.Text = "Alterar";
-            this.btnAlterarStandard.UseVisualStyleBackColor = true;
-            this.btnAlterarStandard.Click += new System.EventHandler(this.btnAlterarStandard_Click);
-            // 
-            // btnAlterarEquipas
-            // 
-            this.btnAlterarEquipas.Location = new System.Drawing.Point(405, 274);
-            this.btnAlterarEquipas.Name = "btnAlterarEquipas";
-            this.btnAlterarEquipas.Size = new System.Drawing.Size(75, 23);
-            this.btnAlterarEquipas.TabIndex = 21;
-            this.btnAlterarEquipas.Text = "Alterar";
-            this.btnAlterarEquipas.UseVisualStyleBackColor = true;
-            this.btnAlterarEquipas.Click += new System.EventHandler(this.btnAlterarEquipas_Click);
             // 
             // CriarTorneio
             // 
