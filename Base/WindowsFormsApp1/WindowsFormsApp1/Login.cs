@@ -58,6 +58,10 @@ namespace WindowsFormsApp1
                         HAdmfrm.Show();
                         Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Credencias erradas!");
+                    }
                     }
                 //}
                
