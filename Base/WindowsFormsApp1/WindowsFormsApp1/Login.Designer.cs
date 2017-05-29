@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.gbxLogin = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.tbxPW = new System.Windows.Forms.TextBox();
-            this.tbxemail = new System.Windows.Forms.TextBox();
+            this.tbxUsername = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.menustripLogin = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbxLogin.SuspendLayout();
             this.menustripLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,7 +55,7 @@
             this.gbxLogin.Controls.Add(this.btnCancelar);
             this.gbxLogin.Controls.Add(this.btnLogin);
             this.gbxLogin.Controls.Add(this.tbxPW);
-            this.gbxLogin.Controls.Add(this.tbxemail);
+            this.gbxLogin.Controls.Add(this.tbxUsername);
             this.gbxLogin.Controls.Add(this.label12);
             this.gbxLogin.Controls.Add(this.label11);
             this.gbxLogin.Location = new System.Drawing.Point(25, 188);
@@ -64,6 +64,17 @@
             this.gbxLogin.TabIndex = 30;
             this.gbxLogin.TabStop = false;
             this.gbxLogin.Text = "Login";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(134, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 24);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Introduza as credenciais de login:";
             // 
             // button2
             // 
@@ -115,12 +126,12 @@
             this.tbxPW.Size = new System.Drawing.Size(188, 20);
             this.tbxPW.TabIndex = 3;
             // 
-            // tbxemail
+            // tbxUsername
             // 
-            this.tbxemail.Location = new System.Drawing.Point(212, 102);
-            this.tbxemail.Name = "tbxemail";
-            this.tbxemail.Size = new System.Drawing.Size(188, 20);
-            this.tbxemail.TabIndex = 2;
+            this.tbxUsername.Location = new System.Drawing.Point(212, 102);
+            this.tbxUsername.Name = "tbxUsername";
+            this.tbxUsername.Size = new System.Drawing.Size(188, 20);
+            this.tbxUsername.TabIndex = 2;
             // 
             // label12
             // 
@@ -134,11 +145,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(171, 105);
+            this.label11.Location = new System.Drawing.Point(148, 105);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 13);
+            this.label11.Size = new System.Drawing.Size(58, 13);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Email:";
+            this.label11.Text = "Username:";
             // 
             // menustripLogin
             // 
@@ -173,17 +184,6 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(134, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 24);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Introduza as credenciais de login:";
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox tbxPW;
-        private System.Windows.Forms.TextBox tbxemail;
+        private System.Windows.Forms.TextBox tbxUsername;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
