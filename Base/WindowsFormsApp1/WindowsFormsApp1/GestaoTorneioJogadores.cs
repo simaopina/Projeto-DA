@@ -25,8 +25,7 @@ namespace WindowsFormsApp1
 
             foreach (Player jogador in container.PlayerSet)
             {
-                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Id));
-                jogadorList.SubItems.Add(jogador.Name);
+                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Name));
 
                 listVJogador1.Items.Add(jogadorList);
 
@@ -34,16 +33,14 @@ namespace WindowsFormsApp1
 
             foreach (Player jogador in container.PlayerSet)
             {
-                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Id));
-                jogadorList.SubItems.Add(jogador.Name);
+                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Name));
 
                 listVJogador2.Items.Add(jogadorList);
             }
 
             foreach (Referee arbitro in container.UserSet.OfType<Referee>())
             {
-                ListViewItem arbitroList = new ListViewItem(Convert.ToString(arbitro.Id));
-                arbitroList.SubItems.Add(arbitro.Name);
+                ListViewItem arbitroList = new ListViewItem(Convert.ToString(arbitro.Name));
 
                 listVArbitro1.Items.Add(arbitroList);
             }
@@ -186,7 +183,6 @@ namespace WindowsFormsApp1
 
                 //dataGridJogador2.DataSource = query.ToList();
 
-
             }
 
             else
@@ -258,9 +254,9 @@ namespace WindowsFormsApp1
             DateTime data = datetimeData.Value;
             DateTime hora = datetimeHora.Value;
             string descricao = tbxDescricao.Text;
-            int Player = Convert.ToInt32(listVJogador1.Items.ToString());
-            int Player1 = Convert.ToInt32(listVJogador2.Items.ToString());
-            int Referee = Convert.ToInt32(listVArbitro1.Items.ToString());
+            int Player = Convert.ToInt32(numericJogador1.Value);
+            int Player1 = Convert.ToInt32(numericJogador2.Value);
+            int Referee = Convert.ToInt32(numericArbitro.Value);
             int deck1 = Convert.ToInt32(cbxBaralhoJogador1.Text);
             int deck2 = Convert.ToInt32(cbxBaralhoJogador2.Text);
             int torneio = Convert.ToInt32(cbxTorneio.Text);
@@ -292,11 +288,11 @@ namespace WindowsFormsApp1
                 string jogador = listVJogador1.SelectedItems[0].Text;
 
                 //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
-                jogadorSelecionado = container.PlayerSet.Where(pla => pla.Id.Equals(listVJogador1.SelectedItems.ToString())).First();
+                jogadorSelecionado = container.PlayerSet.Where(pla => pla.Name.Equals(jogador)).First();
 
                 List<Player> player = container.PlayerSet.ToList();
-                
 
+                numericJogador1.Value = jogadorSelecionado.Id;
             }
             else
             {
@@ -311,7 +307,11 @@ namespace WindowsFormsApp1
                 string jogador = listVJogador2.SelectedItems[0].Text;
 
 
-                jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
+                jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+
+                List<Player> player = container.PlayerSet.ToList();
+
+                numericJogador2.Value = jogadorSelecionado.Id;
 
             }
             else
@@ -325,10 +325,13 @@ namespace WindowsFormsApp1
         {
             if (listVArbitro1.SelectedItems.Count > 0)
             {
-                string team = listVArbitro1.SelectedItems[0].Text;
+                string arb = listVArbitro1.SelectedItems[0].Text;
 
-                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Id.Equals(listVArbitro1.SelectedItems.ToString())).First();
+                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
 
+                List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
+
+                numericArbitro.Value = userSelect.Id;
             }
             else
             {
@@ -344,8 +347,7 @@ namespace WindowsFormsApp1
 
             foreach (Player pl1 in container.PlayerSet)
             {
-                ListViewItem Jogador1List = new ListViewItem(Convert.ToString(pl1.Id));
-                Jogador1List.SubItems.Add(pl1.Name);
+                ListViewItem Jogador1List = new ListViewItem(Convert.ToString(pl1.Name));
 
                 listVJogador1.Items.Add(Jogador1List);
             }
@@ -361,8 +363,7 @@ namespace WindowsFormsApp1
             foreach (Player pl in container.PlayerSet)
             {
 
-                ListViewItem Jogador2List = new ListViewItem(Convert.ToString(pl.Id));
-                Jogador2List.SubItems.Add(pl.Name);
+                ListViewItem Jogador2List = new ListViewItem(Convert.ToString(pl.Name));
 
                 listVJogador2.Items.Add(Jogador2List);
             }
@@ -378,8 +379,7 @@ namespace WindowsFormsApp1
             foreach (Referee refs in container.UserSet)
             {
 
-                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Id));
-                refereeList.SubItems.Add(refs.Name);
+                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Name));
 
                 listVArbitro1.Items.Add(refereeList);
             }

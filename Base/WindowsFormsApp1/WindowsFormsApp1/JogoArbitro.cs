@@ -22,9 +22,14 @@ namespace WindowsFormsApp1
 
             foreach (Game game in listgame)
             {
-                listVJogo.Items.Add(game.Description);
-            }
-            
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToString());
+                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.RefereeId.ToString());
+
+                listVJogo.Items.Add(item);
+            }                       
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

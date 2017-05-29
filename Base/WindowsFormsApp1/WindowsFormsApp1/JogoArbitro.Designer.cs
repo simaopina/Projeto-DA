@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.gbxJogosArbitro = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.listVNumeroJogo = new System.Windows.Forms.ListView();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.listVData = new System.Windows.Forms.ListView();
             this.listVJogo = new System.Windows.Forms.ListView();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -49,6 +44,11 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Referee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,11 +56,6 @@
             // 
             // gbxJogosArbitro
             // 
-            this.gbxJogosArbitro.Controls.Add(this.label13);
-            this.gbxJogosArbitro.Controls.Add(this.listVNumeroJogo);
-            this.gbxJogosArbitro.Controls.Add(this.label12);
-            this.gbxJogosArbitro.Controls.Add(this.label11);
-            this.gbxJogosArbitro.Controls.Add(this.listVData);
             this.gbxJogosArbitro.Controls.Add(this.listVJogo);
             this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 272);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
@@ -69,56 +64,20 @@
             this.gbxJogosArbitro.TabStop = false;
             this.gbxJogosArbitro.Text = "Jogos Arbitro";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 13);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Nº";
-            // 
-            // listVNumeroJogo
-            // 
-            this.listVNumeroJogo.Location = new System.Drawing.Point(7, 33);
-            this.listVNumeroJogo.Name = "listVNumeroJogo";
-            this.listVNumeroJogo.Size = new System.Drawing.Size(40, 209);
-            this.listVNumeroJogo.TabIndex = 4;
-            this.listVNumeroJogo.UseCompatibleStateImageBehavior = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(409, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Data";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 17);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Jogo";
-            // 
-            // listVData
-            // 
-            this.listVData.Location = new System.Drawing.Point(412, 33);
-            this.listVData.Name = "listVData";
-            this.listVData.Size = new System.Drawing.Size(140, 209);
-            this.listVData.TabIndex = 1;
-            this.listVData.UseCompatibleStateImageBehavior = false;
-            // 
             // listVJogo
             // 
-            this.listVJogo.Location = new System.Drawing.Point(56, 33);
+            this.listVJogo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nº,
+            this.Description,
+            this.Hour,
+            this.Date,
+            this.Referee});
+            this.listVJogo.Location = new System.Drawing.Point(6, 19);
             this.listVJogo.Name = "listVJogo";
-            this.listVJogo.Size = new System.Drawing.Size(346, 209);
+            this.listVJogo.Size = new System.Drawing.Size(556, 223);
             this.listVJogo.TabIndex = 0;
             this.listVJogo.UseCompatibleStateImageBehavior = false;
+            this.listVJogo.View = System.Windows.Forms.View.Details;
             // 
             // tbxpesquisa
             // 
@@ -233,6 +192,27 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // Nº
+            // 
+            this.Nº.Text = "Nº";
+            // 
+            // Description
+            // 
+            this.Description.Text = "Descrição";
+            // 
+            // Hour
+            // 
+            this.Hour.Text = "Hora";
+            this.Hour.Width = 138;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Data";
+            // 
+            // Referee
+            // 
+            this.Referee.Text = "Arbitro";
+            // 
             // JogoArbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +226,6 @@
             this.Name = "JogoArbitro";
             this.Text = "JogoArbitro";
             this.gbxJogosArbitro.ResumeLayout(false);
-            this.gbxJogosArbitro.PerformLayout();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -264,9 +243,6 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListView listVData;
         private System.Windows.Forms.ListView listVJogo;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -276,7 +252,10 @@
         private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListView listVNumeroJogo;
+        private System.Windows.Forms.ColumnHeader Nº;
+        private System.Windows.Forms.ColumnHeader Description;
+        private System.Windows.Forms.ColumnHeader Hour;
+        private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.ColumnHeader Referee;
     }
 }

@@ -16,11 +16,34 @@ namespace WindowsFormsApp1
 
         Team teamSelecionado = null;
         User userSelect = null;
+        List<Player> Items = new List<Player>();
+        List<Referee> Id = new List<Referee>();
 
         public GestaoTorneioEquipas()
         {
             InitializeComponent();
 
+            foreach (Team team in container.TeamSet)
+            {
+                ListViewItem teamList = new ListViewItem(Convert.ToString(team.Name));
+
+                listVEquipa1.Items.Add(teamList);
+
+            }
+
+            foreach (Team team in container.TeamSet)
+            {
+                ListViewItem teamList = new ListViewItem(Convert.ToString(team.Name));
+
+                listVEquipa2.Items.Add(teamList);
+            }
+
+            foreach (Referee arbitro in container.UserSet.OfType<Referee>())
+            {
+                ListViewItem arbitroList = new ListViewItem(Convert.ToString(arbitro.Name));
+
+                listVArbitro.Items.Add(arbitroList);
+            }
             foreach (Deck baralho in container.DeckSet)
             {
                 cbxBaralhoEquipa1.Items.Add(baralho.Name.ToString());
@@ -188,9 +211,9 @@ namespace WindowsFormsApp1
             DateTime data = datetimeData.Value;
             DateTime hora = datetimeHora.Value;
             string descricao = tbxDescricao.Text;
-            int TeamId = Convert.ToInt32(listVEquipa1.Items.ToString());
-            int TeamId1 = Convert.ToInt32(listVEquipa1.Items.ToString());
-            int Referee = Convert.ToInt32(listVArbitro.Items.ToString());
+            int TeamId = Convert.ToInt32(numericEquipa1.Value);
+            int TeamId1 = Convert.ToInt32(numericEquipa2.Value);
+            int Referee = Convert.ToInt32(numericArbitro.Value);
             int deck1 = Convert.ToInt32(cbxBaralhoEquipa1.Text);
             int deck2 = Convert.ToInt32(cbxBaralhoEquipa2.Text);
             int torneio = Convert.ToInt32(cbxTorneio.Text);
@@ -239,8 +262,6 @@ namespace WindowsFormsApp1
             {
                 string team = listVEquipa1.SelectedItems[0].Text;
 
-
-                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
                 teamSelecionado = container.TeamSet.Where(tea => tea.Id.Equals(listVEquipa1.SelectedItems.ToString())).First();
 
             }
