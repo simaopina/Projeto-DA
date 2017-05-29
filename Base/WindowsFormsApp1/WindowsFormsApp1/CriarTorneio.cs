@@ -335,6 +335,7 @@ namespace WindowsFormsApp1
         {
             ADD_Jogador_ADM ADDJogfrm = new ADD_Jogador_ADM();
             ADDJogfrm.Show();
+            Close();
         }
 
         private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
