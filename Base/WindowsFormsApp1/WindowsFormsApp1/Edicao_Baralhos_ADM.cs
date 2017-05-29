@@ -182,9 +182,7 @@ namespace WindowsFormsApp1
 
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_ADM BAdmfrm = new Baralho_ADM();
-            BAdmfrm.Show();
-            Close();
+            
         }
 
         private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -247,6 +245,13 @@ namespace WindowsFormsApp1
         {
             Home Hfrm = new Home();
             Hfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BAdmfrm = new Baralho_ADM();
+            BAdmfrm.Show();
             Close();
         }
     }
