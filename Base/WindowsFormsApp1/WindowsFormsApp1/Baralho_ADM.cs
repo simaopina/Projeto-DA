@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
         public Baralho_ADM()
         {
             InitializeComponent();
+
+            refresh_listview();
         }
 
         private void signoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -113,6 +115,64 @@ namespace WindowsFormsApp1
             else
             {
                 //refresh_datagrid();
+            }
+        }
+
+
+
+
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Name = deckselecionado.Name;
+
+            var query = container.DeckSet.Where(deck => deck.Name.Equals(deckselecionado.Name));
+
+            container.DeckSet.Remove(deckselecionado);
+
+            container.SaveChanges();
+
+            deckselecionado = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            tbxpesquisa.ResetText();
+
+            refresh_listview();
+
+        }
+
+        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVBaralhos.SelectedItems != null)
+            {
+                string DeckU = listVBaralhos.SelectedItems[0].Text;
+                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
+
+                tbxpesquisa.Text = deckselecionado.Name;
+
+                refresh_listview();
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string Nome = tbxpesquisa.Text;
+
+            List<Deck> deck = container.DeckSet.ToList();
+
+            if(deckselecionado != null)
+            {
+                deckselecionado.Name = Nome;
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listview();
+                tbxpesquisa.ResetText();
             }
         }
 
@@ -212,57 +272,6 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string Name = deckselecionado.Name;
-
-            var query = container.DeckSet.Where(deck => deck.Name.Equals(deckselecionado.Name));
-
-            container.DeckSet.Remove(deckselecionado);
-
-            container.SaveChanges();
-
-            deckselecionado = null;
-
-            MessageBox.Show("Torneio elimindado com sucesso!");
-
-            tbxpesquisa.ResetText();
-
-        }
-
-        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVBaralhos.SelectedItems != null)
-            {
-                string DeckU = listVBaralhos.SelectedItems[0].Text;
-                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
-
-                tbxpesquisa.Text = deckselecionado.Name;
-
-                refresh_listview();
-
-            }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            string Nome = tbxpesquisa.Text;
-
-            List<Deck> deck = container.DeckSet.ToList();
-
-            if(deckselecionado != null)
-            {
-                deckselecionado.Name = Nome;
-
-                container.SaveChanges();
-
-                MessageBox.Show("Alterado com sucesso!");
-
-                refresh_listview();
-                tbxpesquisa.ResetText();
-            }
         }
     }
 }
