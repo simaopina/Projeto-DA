@@ -142,5 +142,12 @@ namespace WindowsFormsApp1
             HAdmfrm.Show();
             Close();
         }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EBAdmfrm = new Edicao_Baralhos_ADM();
+            EBAdmfrm.Show();
+            Close();
+        }
     }
 }
