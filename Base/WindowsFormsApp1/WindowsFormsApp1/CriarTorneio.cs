@@ -158,9 +158,9 @@ namespace WindowsFormsApp1
 
                 refresh_listViewEquipas();
 
-                tbxNomeStandard.ResetText();
-                tbxDescricaoStandard.ResetText();
-                dateTimeDataStandard.Value = DateTime.Now;
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
 
             }
         }
@@ -215,6 +215,10 @@ namespace WindowsFormsApp1
 
             refresh_listViewStandard();
 
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+
         }
 
         private void btnEliminarEquipas_Click(object sender, EventArgs e)
@@ -232,6 +236,10 @@ namespace WindowsFormsApp1
             MessageBox.Show("Torneio eliminado com sucesso!");
 
             refresh_listViewEquipas();
+
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
         }
 
         private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
