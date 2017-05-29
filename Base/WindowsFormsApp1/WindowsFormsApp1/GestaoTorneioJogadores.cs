@@ -153,19 +153,19 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarJogador1_Click(object sender, EventArgs e)
         {
-            string overdose = listVJogador1.Items.ToString();
+            //string overdose = listVJogador1.Items.ToString();
             validacao_pesquisar();
             if (tbxJogador1.Text.Length > 0)
             {
 
                 //var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador1.Text));
 
-                if (overdose.StartsWith(tbxJogador1.Text) = true)
-                {
-                listVJogador1.Items.Clear();
+                //if (overdose.StartsWith(tbxJogador1.Text))
+                //{
+                //listVJogador1.Items.Clear();
 
-                    listVJogador1.Items.AddRange(listVJogador1.Items.ToString().StartsWith(tbxJogador1.Text));
-            }
+                //    listVJogador1.Items.AddRange(overdose.StartsWith(tbxJogador1.Text));
+                //}
 
                 //dataGridJogador1.DataSource = query.ToList();
             }
@@ -291,10 +291,11 @@ namespace WindowsFormsApp1
             {
                 string jogador = listVJogador1.SelectedItems[0].Text;
 
-
                 //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
                 jogadorSelecionado = container.PlayerSet.Where(pla => pla.Id.Equals(listVJogador1.SelectedItems.ToString())).First();
 
+                List<Player> player = container.PlayerSet.ToList();
+                
 
             }
             else
