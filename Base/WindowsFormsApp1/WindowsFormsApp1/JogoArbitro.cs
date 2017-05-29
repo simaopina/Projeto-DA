@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
                 item.SubItems.Add(game.Description);
                 item.SubItems.Add(game.Hour.ToString());
                 item.SubItems.Add(game.Date.ToString());
-                item.SubItems.Add(game.Referee.ToString());
+                item.SubItems.Add(game.RefereeId.ToString());
 
                 listVJogo.Items.Add(item);
             }                       
