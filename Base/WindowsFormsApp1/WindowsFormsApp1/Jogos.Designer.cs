@@ -46,6 +46,7 @@
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listVJogos = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameSetStardadGameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosGameStardad)).BeginInit();
@@ -108,19 +109,19 @@
             // baralhoToolStripMenuItem
             // 
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.baralhoToolStripMenuItem.Text = "Baralho";
             this.baralhoToolStripMenuItem.Click += new System.EventHandler(this.baralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
             // cartaToolStripMenuItem
             // 
             this.cartaToolStripMenuItem.Name = "cartaToolStripMenuItem";
-            this.cartaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartaToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.cartaToolStripMenuItem.Text = "Cartas";
             this.cartaToolStripMenuItem.Click += new System.EventHandler(this.cartaToolStripMenuItem_Click);
             // 
@@ -164,27 +165,43 @@
             // 
             // listVJogos
             // 
-            this.listVJogos.Location = new System.Drawing.Point(13, 249);
+            this.listVJogos.Location = new System.Drawing.Point(13, 237);
             this.listVJogos.Name = "listVJogos";
-            this.listVJogos.Size = new System.Drawing.Size(582, 214);
+            this.listVJogos.Size = new System.Drawing.Size(160, 226);
             this.listVJogos.TabIndex = 35;
             this.listVJogos.UseCompatibleStateImageBehavior = false;
+            this.listVJogos.View = System.Windows.Forms.View.List;
+            this.listVJogos.SelectedIndexChanged += new System.EventHandler(this.listVJogos_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(259, 209);
+            this.label1.Location = new System.Drawing.Point(37, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 36;
             this.label1.Text = "Jogos:";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Gray;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEliminar.Location = new System.Drawing.Point(314, 277);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(133, 109);
+            this.btnEliminar.TabIndex = 37;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // Jogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 475);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listVJogos);
             this.Controls.Add(this.menuStripHome);
@@ -221,5 +238,6 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.ListView listVJogos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
