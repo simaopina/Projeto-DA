@@ -46,7 +46,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Referee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +69,9 @@
             this.listVJogo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nº,
             this.Description,
-            this.Data});
+            this.Hour,
+            this.Date,
+            this.Referee});
             this.listVJogo.Location = new System.Drawing.Point(6, 19);
             this.listVJogo.Name = "listVJogo";
             this.listVJogo.Size = new System.Drawing.Size(556, 223);
@@ -196,10 +200,18 @@
             // 
             this.Description.Text = "Descrição";
             // 
-            // Data
+            // Hour
             // 
-            this.Data.Text = "Data";
-            this.Data.Width = 262;
+            this.Hour.Text = "Hora";
+            this.Hour.Width = 138;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Data";
+            // 
+            // Referee
+            // 
+            this.Referee.Text = "Arbitro";
             // 
             // JogoArbitro
             // 
@@ -242,6 +254,8 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader Nº;
         private System.Windows.Forms.ColumnHeader Description;
-        private System.Windows.Forms.ColumnHeader Data;
+        private System.Windows.Forms.ColumnHeader Hour;
+        private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.ColumnHeader Referee;
     }
 }
