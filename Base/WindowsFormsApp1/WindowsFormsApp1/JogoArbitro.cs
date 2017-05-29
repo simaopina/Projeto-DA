@@ -22,7 +22,11 @@ namespace WindowsFormsApp1
 
             foreach (Game game in listgame)
             {
-                listVJogo.Items.Add(game.Description);
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToString());
+
+                listVJogo.Items.Add(item);
             }
             
         }

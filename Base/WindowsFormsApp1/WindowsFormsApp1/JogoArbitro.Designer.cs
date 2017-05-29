@@ -30,10 +30,8 @@
         {
             this.gbxJogosArbitro = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.listVNumeroJogo = new System.Windows.Forms.ListView();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listVData = new System.Windows.Forms.ListView();
             this.listVJogo = new System.Windows.Forms.ListView();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -49,6 +47,9 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,10 +58,8 @@
             // gbxJogosArbitro
             // 
             this.gbxJogosArbitro.Controls.Add(this.label13);
-            this.gbxJogosArbitro.Controls.Add(this.listVNumeroJogo);
             this.gbxJogosArbitro.Controls.Add(this.label12);
             this.gbxJogosArbitro.Controls.Add(this.label11);
-            this.gbxJogosArbitro.Controls.Add(this.listVData);
             this.gbxJogosArbitro.Controls.Add(this.listVJogo);
             this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 272);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
@@ -77,14 +76,6 @@
             this.label13.Size = new System.Drawing.Size(19, 13);
             this.label13.TabIndex = 5;
             this.label13.Text = "Nº";
-            // 
-            // listVNumeroJogo
-            // 
-            this.listVNumeroJogo.Location = new System.Drawing.Point(7, 33);
-            this.listVNumeroJogo.Name = "listVNumeroJogo";
-            this.listVNumeroJogo.Size = new System.Drawing.Size(40, 209);
-            this.listVNumeroJogo.TabIndex = 4;
-            this.listVNumeroJogo.UseCompatibleStateImageBehavior = false;
             // 
             // label12
             // 
@@ -104,21 +95,18 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Jogo";
             // 
-            // listVData
-            // 
-            this.listVData.Location = new System.Drawing.Point(412, 33);
-            this.listVData.Name = "listVData";
-            this.listVData.Size = new System.Drawing.Size(140, 209);
-            this.listVData.TabIndex = 1;
-            this.listVData.UseCompatibleStateImageBehavior = false;
-            // 
             // listVJogo
             // 
-            this.listVJogo.Location = new System.Drawing.Point(56, 33);
+            this.listVJogo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nº,
+            this.Description,
+            this.Data});
+            this.listVJogo.Location = new System.Drawing.Point(6, 33);
             this.listVJogo.Name = "listVJogo";
-            this.listVJogo.Size = new System.Drawing.Size(346, 209);
+            this.listVJogo.Size = new System.Drawing.Size(556, 209);
             this.listVJogo.TabIndex = 0;
             this.listVJogo.UseCompatibleStateImageBehavior = false;
+            this.listVJogo.View = System.Windows.Forms.View.List;
             // 
             // tbxpesquisa
             // 
@@ -266,7 +254,6 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ListView listVData;
         private System.Windows.Forms.ListView listVJogo;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -277,6 +264,8 @@
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListView listVNumeroJogo;
+        private System.Windows.Forms.ColumnHeader Nº;
+        private System.Windows.Forms.ColumnHeader Description;
+        private System.Windows.Forms.ColumnHeader Data;
     }
 }
