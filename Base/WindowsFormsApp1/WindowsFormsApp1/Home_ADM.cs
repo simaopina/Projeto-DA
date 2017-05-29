@@ -97,5 +97,12 @@ namespace WindowsFormsApp1
             Sefrm.Show();
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM uti = new Utilizadores_ADM();
+            uti.Show();
+            
+        }
     }
 }

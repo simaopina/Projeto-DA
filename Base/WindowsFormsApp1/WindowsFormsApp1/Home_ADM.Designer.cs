@@ -69,6 +69,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.gpbxMenu = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxRank.SuspendLayout();
@@ -440,6 +441,7 @@
             // 
             // gpbxMenu
             // 
+            this.gpbxMenu.Controls.Add(this.button2);
             this.gpbxMenu.Controls.Add(this.button1);
             this.gpbxMenu.Controls.Add(this.btnBaralhos);
             this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
@@ -463,6 +465,16 @@
             this.button1.Text = "Botao do Simao ;)";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(297, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Home_ADM
             // 
@@ -540,5 +552,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox gpbxMenu;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
