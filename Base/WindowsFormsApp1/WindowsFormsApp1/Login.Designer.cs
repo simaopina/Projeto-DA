@@ -42,6 +42,8 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rbArb = new System.Windows.Forms.RadioButton();
+            this.rbAdm = new System.Windows.Forms.RadioButton();
             this.gbxLogin.SuspendLayout();
             this.menustripLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +51,8 @@
             // 
             // gbxLogin
             // 
+            this.gbxLogin.Controls.Add(this.rbAdm);
+            this.gbxLogin.Controls.Add(this.rbArb);
             this.gbxLogin.Controls.Add(this.label1);
             this.gbxLogin.Controls.Add(this.button2);
             this.gbxLogin.Controls.Add(this.button1);
@@ -184,6 +188,28 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // rbArb
+            // 
+            this.rbArb.AutoSize = true;
+            this.rbArb.Location = new System.Drawing.Point(212, 79);
+            this.rbArb.Name = "rbArb";
+            this.rbArb.Size = new System.Drawing.Size(55, 17);
+            this.rbArb.TabIndex = 9;
+            this.rbArb.TabStop = true;
+            this.rbArb.Text = "Árbitro";
+            this.rbArb.UseVisualStyleBackColor = true;
+            // 
+            // rbAdm
+            // 
+            this.rbAdm.AutoSize = true;
+            this.rbAdm.Location = new System.Drawing.Point(312, 79);
+            this.rbAdm.Name = "rbAdm";
+            this.rbAdm.Size = new System.Drawing.Size(88, 17);
+            this.rbAdm.TabIndex = 10;
+            this.rbAdm.TabStop = true;
+            this.rbAdm.Text = "Administrador";
+            this.rbAdm.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,5 +246,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rbAdm;
+        private System.Windows.Forms.RadioButton rbArb;
     }
 }
