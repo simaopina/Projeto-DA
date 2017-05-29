@@ -187,5 +187,39 @@ namespace WindowsFormsApp1
                 refresh_listViewEquipas();
             }
         }
+
+        private void btnEliminarStandard_Click(object sender, EventArgs e)
+        {
+            string Name = SSTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(SSTorneioSelected.Name));
+
+            container.TournamentSet.Remove(SSTorneioSelected);
+
+            container.SaveChanges();
+
+            SSTorneioSelected = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            refresh_listViewStandard();
+        }
+
+        private void btnEliminarEquipas_Click(object sender, EventArgs e)
+        {
+            string Name = TTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(TTorneioSelected.Name));
+
+            container.TournamentSet.Remove(TTorneioSelected);
+
+            container.SaveChanges();
+
+            TTorneioSelected = null;
+
+            MessageBox.Show("Torneio eliminado com sucesso!");
+
+            refresh_listViewEquipas();
+        }
     }
 }

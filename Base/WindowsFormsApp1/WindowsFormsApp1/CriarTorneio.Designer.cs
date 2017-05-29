@@ -75,6 +75,8 @@
             this.dateTEquipas = new System.Windows.Forms.DateTimePicker();
             this.tbxDescricao = new System.Windows.Forms.TextBox();
             this.tbxNomeEquipas = new System.Windows.Forms.TextBox();
+            this.btnEliminarStandard = new System.Windows.Forms.Button();
+            this.btnEliminarEquipas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabStandard.SuspendLayout();
@@ -238,6 +240,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage1.Controls.Add(this.btnEliminarStandard);
             this.tabPage1.Controls.Add(this.btnAlterarStandard);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.listVStandard);
@@ -297,7 +300,7 @@
             // 
             // btnGuardarStandard
             // 
-            this.btnGuardarStandard.Location = new System.Drawing.Point(332, 284);
+            this.btnGuardarStandard.Location = new System.Drawing.Point(251, 284);
             this.btnGuardarStandard.Name = "btnGuardarStandard";
             this.btnGuardarStandard.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarStandard.TabIndex = 14;
@@ -366,6 +369,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage2.Controls.Add(this.btnEliminarEquipas);
             this.tabPage2.Controls.Add(this.btnAlterarEquipas);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.listVEquipas);
@@ -425,7 +429,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(324, 275);
+            this.btnGuardar.Location = new System.Drawing.Point(243, 274);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 13;
@@ -490,6 +494,26 @@
             this.tbxNomeEquipas.Name = "tbxNomeEquipas";
             this.tbxNomeEquipas.Size = new System.Drawing.Size(206, 20);
             this.tbxNomeEquipas.TabIndex = 6;
+            // 
+            // btnEliminarStandard
+            // 
+            this.btnEliminarStandard.Location = new System.Drawing.Point(332, 284);
+            this.btnEliminarStandard.Name = "btnEliminarStandard";
+            this.btnEliminarStandard.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarStandard.TabIndex = 21;
+            this.btnEliminarStandard.Text = "Eliminar";
+            this.btnEliminarStandard.UseVisualStyleBackColor = true;
+            this.btnEliminarStandard.Click += new System.EventHandler(this.btnEliminarStandard_Click);
+            // 
+            // btnEliminarEquipas
+            // 
+            this.btnEliminarEquipas.Location = new System.Drawing.Point(324, 274);
+            this.btnEliminarEquipas.Name = "btnEliminarEquipas";
+            this.btnEliminarEquipas.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarEquipas.TabIndex = 22;
+            this.btnEliminarEquipas.Text = "Eliminar";
+            this.btnEliminarEquipas.UseVisualStyleBackColor = true;
+            this.btnEliminarEquipas.Click += new System.EventHandler(this.btnEliminarEquipas_Click);
             // 
             // CriarTorneio
             // 
@@ -563,5 +587,7 @@
         private System.Windows.Forms.ListView listVEquipas;
         private System.Windows.Forms.Button btnAlterarStandard;
         private System.Windows.Forms.Button btnAlterarEquipas;
+        private System.Windows.Forms.Button btnEliminarStandard;
+        private System.Windows.Forms.Button btnEliminarEquipas;
     }
 }
