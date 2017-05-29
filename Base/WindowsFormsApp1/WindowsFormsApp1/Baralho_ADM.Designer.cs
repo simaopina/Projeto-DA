@@ -35,9 +35,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ListaBaralhoUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
-            this.DataGridBaralho = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deckSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosdeck = new WindowsFormsApp1.BaseDadosdeck();
             this.deckSetTableAdapter = new WindowsFormsApp1.BaseDadosdeckTableAdapters.DeckSetTableAdapter();
@@ -65,8 +62,8 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listVBaralhos = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridBaralho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).BeginInit();
             this.menuStripHome.SuspendLayout();
@@ -199,36 +196,6 @@
             this.ListaBaralhoUneasyAlliance.Images.SetKeyName(43, "44.PNG");
             this.ListaBaralhoUneasyAlliance.Images.SetKeyName(44, "45.PNG");
             // 
-            // DataGridBaralho
-            // 
-            this.DataGridBaralho.AllowUserToAddRows = false;
-            this.DataGridBaralho.AllowUserToDeleteRows = false;
-            this.DataGridBaralho.AutoGenerateColumns = false;
-            this.DataGridBaralho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridBaralho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn});
-            this.DataGridBaralho.DataSource = this.deckSetBindingSource;
-            this.DataGridBaralho.Location = new System.Drawing.Point(44, 273);
-            this.DataGridBaralho.Name = "DataGridBaralho";
-            this.DataGridBaralho.ReadOnly = true;
-            this.DataGridBaralho.Size = new System.Drawing.Size(245, 228);
-            this.DataGridBaralho.TabIndex = 32;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // deckSetBindingSource
             // 
             this.deckSetBindingSource.DataMember = "DeckSet";
@@ -277,6 +244,7 @@
             this.btnEditar.TabIndex = 36;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -286,6 +254,7 @@
             this.btnEliminar.TabIndex = 37;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // menuStripHome
             // 
@@ -359,31 +328,31 @@
             // novoJogadorToolStripMenuItem
             // 
             this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
-            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novoJogadorToolStripMenuItem.Text = "Jogador";
             this.novoJogadorToolStripMenuItem.Click += new System.EventHandler(this.novoJogadorToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
             // 
             // novaEquipaToolStripMenuItem
             // 
             this.novaEquipaToolStripMenuItem.Name = "novaEquipaToolStripMenuItem";
-            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novaEquipaToolStripMenuItem.Text = "Nova Equipa";
             this.novaEquipaToolStripMenuItem.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
             // 
             // utilizadoresToolStripMenuItem
             // 
             this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
-            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
             this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click_1);
             // 
@@ -431,18 +400,27 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
+            // listVBaralhos
+            // 
+            this.listVBaralhos.Location = new System.Drawing.Point(25, 231);
+            this.listVBaralhos.Name = "listVBaralhos";
+            this.listVBaralhos.Size = new System.Drawing.Size(270, 296);
+            this.listVBaralhos.TabIndex = 39;
+            this.listVBaralhos.UseCompatibleStateImageBehavior = false;
+            this.listVBaralhos.SelectedIndexChanged += new System.EventHandler(this.listVBaralhos_SelectedIndexChanged);
+            // 
             // Baralho_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 539);
+            this.Controls.Add(this.listVBaralhos);
             this.Controls.Add(this.menuStripHome);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtbNome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DataGridBaralho);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
@@ -450,7 +428,6 @@
             this.Text = "Baralho_ADM";
             this.Load += new System.EventHandler(this.Baralho_ADM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridBaralho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).EndInit();
             this.menuStripHome.ResumeLayout(false);
@@ -466,12 +443,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList ListaBaralhoUneasyAlliance;
         private System.Windows.Forms.ImageList ListaBaralhoGaianloveforlife;
-        private System.Windows.Forms.DataGridView DataGridBaralho;
         private BaseDadosdeck baseDadosdeck;
         private System.Windows.Forms.BindingSource deckSetBindingSource;
         private BaseDadosdeckTableAdapters.DeckSetTableAdapter deckSetTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbNome;
         private System.Windows.Forms.Button btnGuardar;
@@ -496,5 +470,6 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ListView listVBaralhos;
     }
 }

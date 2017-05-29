@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
                 List<Tournament> tournament = container.TournamentSet.ToList();
-
+                    
                 tbxNomeStandard.Text = SSTorneioSelected.Name;
                 tbxDescricaoStandard.Text = SSTorneioSelected.Description;
                 dateTimeDataStandard.Value = SSTorneioSelected.Date;

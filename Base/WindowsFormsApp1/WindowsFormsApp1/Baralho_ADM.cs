@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         int id_baralho = 0;
+        Deck deckselecionado = null;
 
         public Baralho_ADM()
         {
@@ -61,8 +62,7 @@ namespace WindowsFormsApp1
             foreach (Card carta in container.CardSet)
             {
                 ListViewItem item = new ListViewItem(carta.Name);
-                //item.ImageIndex = carta.Image;
-//                ListVBaralhoADM.Items.Add(item);
+                listVBaralhos.Items.Add(carta.Name);
 
             }
         }
@@ -83,13 +83,21 @@ namespace WindowsFormsApp1
 
             container.DeckSet.Add(baralho);
             container.SaveChanges();
-            refresh_datagrid();
+            refresh_listview();
+            tbxpesquisa.ResetText();
         }
 
-        public void refresh_datagrid()
+        public void refresh_listview()
         {
-            this.deckSetTableAdapter.Fill(this.baseDadosdeck.DeckSet);
-            DataGridBaralho.DataSource = deckSetBindingSource;
+            listVBaralhos.Items.Clear();
+            List<Deck> Sdeck = container.DeckSet.ToList();
+
+            foreach (Deck deck in Sdeck)
+            {
+                ListViewItem item = new ListViewItem(deck.Name);
+                listVBaralhos.Items.Add(item);
+            }
+            
 
         }
 
@@ -97,14 +105,14 @@ namespace WindowsFormsApp1
         {
             if (tbxpesquisa.Text.Length > 0)
             {
-                var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
-                DataGridBaralho.DataSource = query.ToList();
+                //var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
+                //DataGridBaralho.DataSource = query.ToList();
 
             }
 
             else
             {
-                refresh_datagrid();
+                //refresh_datagrid();
             }
         }
 
@@ -204,6 +212,57 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Name = deckselecionado.Name;
+
+            var query = container.DeckSet.Where(deck => deck.Name.Equals(deckselecionado.Name));
+
+            container.DeckSet.Remove(deckselecionado);
+
+            container.SaveChanges();
+
+            deckselecionado = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            tbxpesquisa.ResetText();
+
+        }
+
+        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVBaralhos.SelectedItems != null)
+            {
+                string DeckU = listVBaralhos.SelectedItems[0].Text;
+                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
+
+                tbxpesquisa.Text = deckselecionado.Name;
+
+                refresh_listview();
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string Nome = tbxpesquisa.Text;
+
+            List<Deck> deck = container.DeckSet.ToList();
+
+            if(deckselecionado != null)
+            {
+                deckselecionado.Name = Nome;
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listview();
+                tbxpesquisa.ResetText();
+            }
         }
     }
 }
