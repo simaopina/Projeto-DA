@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         Referee arbitroSeleciona = null;
 
-        public string partefinal;
+        string partefinal;
 
         int id_ADM = 0;
 
@@ -64,7 +64,8 @@ namespace WindowsFormsApp1
         {
             string Username = txtbNickName_ADM.Text;
             string Password = txtbPassword_ADM.Text;
-            string Email = txtbPassword_ADM.Text;
+            string Email = txtbEmail_ADM.Text;
+           
 
 
             Administrator User_ADM = new Administrator
@@ -72,6 +73,7 @@ namespace WindowsFormsApp1
                 Username = Username,
                 Password = Password,
                 Email = Email
+
 
             };
 
@@ -151,7 +153,7 @@ namespace WindowsFormsApp1
 
         private void listVADM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVADM.SelectedItems.Count > 0)
+            if (listVArbitro.SelectedItems.Count > 0)
             {
                 string adminU = listVADM.SelectedItems[0].Text;
                 administradorSelecionado = container.UserSet.OfType<Administrator>().Where(user => user.Username.Equals(adminU)).First();
@@ -194,8 +196,8 @@ namespace WindowsFormsApp1
         {
             if (listVArbitro.SelectedItems.Count > 0)
             {
-                string adminU = listVArbitro.SelectedItems[0].Text;
-                arbitroSeleciona = container.UserSet.OfType<Referee>().Where(user => user.Username.Equals(adminU)).First();
+                string arbU = listVArbitro.SelectedItems[0].Text;
+                arbitroSeleciona = container.UserSet.OfType<Referee>().Where(user => user.Username.Equals(arbU)).First();
 
                 CarregaDadosARB();
 
@@ -213,7 +215,7 @@ namespace WindowsFormsApp1
             string Username = txtbNickName_ARB.Text;
             string Password = txtbPassword_ARB.Text;
             string Nome = txtbNome_ARB.Text;
-            string Avatar = partefinal;
+            string avatar = partefinal;
 
 
             Referee User_ARB = new Referee
@@ -221,7 +223,7 @@ namespace WindowsFormsApp1
                 Username = Username,
                 Password = Password,
                 Name = Nome,
-                Avatar = Avatar
+                Avatar = avatar
 
             };
 
@@ -244,7 +246,7 @@ namespace WindowsFormsApp1
                 partefinal = partes.Last();
                 File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
 
-                linkLAvatar_ARB.Text = partes.Last();
+                linkLAvatar_ARB.Image = Image.FromFile(caminhoFicheiro);
 
             }
         }
@@ -286,6 +288,10 @@ namespace WindowsFormsApp1
 
         private void btnEliminar_ADM_Click(object sender, EventArgs e)
         {
+
+            string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + arbitroSeleciona.Avatar;
+
+            File.Delete(caminhoImagem);
 
             string Username = administradorSelecionado.Username;
             
@@ -397,6 +403,11 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
