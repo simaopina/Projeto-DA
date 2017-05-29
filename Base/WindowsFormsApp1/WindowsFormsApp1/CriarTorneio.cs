@@ -369,5 +369,19 @@ namespace WindowsFormsApp1
             GTEfrm.Show();
             Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
+        }
     }
 }
