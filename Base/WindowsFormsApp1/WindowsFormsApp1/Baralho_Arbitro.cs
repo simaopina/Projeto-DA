@@ -17,31 +17,38 @@ namespace WindowsFormsApp1
         public Baralho_Arbitro()
         {
             InitializeComponent();
+
+            List<Deck> listdeck = container.DeckSet.ToList();
+
+            foreach (Deck deck in listdeck)
+            {
+                listVbaralho.Items.Add(deck.Name);
+            }
         }
 
         private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
         {
-            listVbaralhoArbitro.LargeImageList = listaBaralhoArbitroGaianloveforlife;
-            listVbaralhoArbitro.Items.Clear();
+            listVbaralho.LargeImageList = listaBaralhoArbitroGaianloveforlife;
+            listVbaralho.Items.Clear();
 
             foreach (Card carta in container.CardSet)
             {
                 ListViewItem item = new ListViewItem(carta.Name);
                 //item.ImageIndex = carta.Image;
-                listVbaralhoArbitro.Items.Add(item);
+                listVbaralho.Items.Add(item);
             }
         }
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
-            listVbaralhoArbitro.LargeImageList = listaBaralhoArbitroUneasyAlliance;
-            listVbaralhoArbitro.Items.Clear();
+            listVbaralho.LargeImageList = listaBaralhoArbitroUneasyAlliance;
+            listVbaralho.Items.Clear();
 
             foreach (Card carta in container.CardSet)
             {
                 ListViewItem item = new ListViewItem(carta.Name);
                // item.ImageIndex = carta.Image;
-                listVbaralhoArbitro.Items.Add(item);
+                listVbaralho.Items.Add(item);
             }
         }
 
@@ -97,6 +104,20 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
+        }
+
+        private void listVbaralho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVbaralho.SelectedItems != null)
+            {
+                Deck deckSelecionado = (Deck)atum.SelectedItem;
+
+                if (deckSelecionado != null)
+                {
+                    atum.Items.Clear();
+                    atum.Items.AddRange(deckSelecionado.Deck_Card.ToArray());
+                }
+            }
         }
     }
 }
