@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,11 +24,13 @@ namespace WindowsFormsApp1
         Card cartaselecionada;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+
         public Cartas_ADM()
         {
             InitializeComponent();
 
-
+          
             foreach (Card cartas in container.CardSet)
             {
                 ListViewItem CartaList = new ListViewItem(cartas.Name);
@@ -38,7 +41,15 @@ namespace WindowsFormsApp1
                 CartaList.SubItems.Add(cartas.RuleText);
                 CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
                 CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(ParteFinalNome);
+                if (cartas.Image == "SemImagem")
+                {
+                    CartaList.SubItems.Add(cartas.Name);
+                }
+                else
+                {
+                    CartaList.SubItems.Add(ParteFinalNome);
+                }
+                
 
                 listVCartas.Items.Add(CartaList);
             }
@@ -139,12 +150,7 @@ namespace WindowsFormsApp1
             
         }
 
-        public void refresh_datagrid()
-        {
-           /* this.cardSetTableAdapter3.Fill(this.baseDadosCartas.CardSet);
-            DataGridCartas.DataSource = cardSetBindingSource1;*/
-
-        }
+      
         private void btAlterarCarta_Click(object sender, EventArgs e)
         {
             string nome = txtNome.Text;
@@ -238,7 +244,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                refresh_datagrid();
+               // refresh_datagrid();
             }
         }
 
@@ -366,6 +372,63 @@ namespace WindowsFormsApp1
             Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
             EdBaAdmfrm.Show();
             Close();
+        }
+
+       
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (openFileDialogImportar.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialogImportar.FileName;
+
+                string linha = "";
+                int nCartasTotais = 0;
+                int nCartasImportadas = 0;
+
+                using (StreamReader ficheiro = new StreamReader(path))
+                {
+                
+                    Card carta;
+                 
+
+                    linha = ficheiro.ReadLine();
+
+                    
+                    while (ficheiro.EndOfStream == false)
+                    {
+                        carta = new Card();
+
+                        ficheiro.ReadLine();
+
+                        carta.Name = ficheiro.ReadLine();
+
+                        carta.Faction = ficheiro.ReadLine();
+
+                        carta.Type = ficheiro.ReadLine();
+
+                        carta.Cost = Convert.ToInt32(ficheiro.ReadLine());
+
+                        carta.Loyalty = Convert.ToInt32(ficheiro.ReadLine());
+
+                        carta.RuleText = ficheiro.ReadLine();
+
+                        carta.Attack = Convert.ToInt32(ficheiro.ReadLine());
+
+                        carta.Defense = Convert.ToInt32(ficheiro.ReadLine());
+
+                        carta.Image = "SemImagem";
+
+                        container.CardSet.Add(carta);
+                        nCartasImportadas++;
+                    }
+                }
+
+               // container.SaveChanges();
+
+               MessageBox.Show("Importadas " + nCartasImportadas);
+
+                refreshlistVcartas();
+            }
         }
     }
 }

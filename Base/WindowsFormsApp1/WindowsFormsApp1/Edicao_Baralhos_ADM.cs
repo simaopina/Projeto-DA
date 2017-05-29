@@ -249,5 +249,10 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
+        private void listBoxBaralho_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            carregar_Carta_Baralho();
+        }
     }
 }
