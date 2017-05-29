@@ -152,9 +152,11 @@ namespace WindowsFormsApp1
         {
             if (listVStandard.SelectedItems.Count < 0)
             {
-                tbxNomeStandard.Clear();
-                tbxDescricaoStandard.Clear();
-               
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+                    
+
                 string STorneioU = listVStandard.SelectedItems[0].Text;
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
@@ -172,8 +174,10 @@ namespace WindowsFormsApp1
         {
             if (listVEquipas.SelectedItems.Count < 0)
             {
-                tbxNomeEquipas.Clear();
-                tbxDescricao.Clear();
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
+               
 
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
