@@ -129,7 +129,7 @@
             this.listBoxBaralho.Name = "listBoxBaralho";
             this.listBoxBaralho.Size = new System.Drawing.Size(217, 238);
             this.listBoxBaralho.TabIndex = 65;
-            this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged_1);
+            //this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged_1);
             // 
             // menuStripHome
             // 
