@@ -130,6 +130,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Alterado com Sucesso!");
 
                 refresh_listViewStandard();
+
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+
             }
         }
 
@@ -152,6 +157,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Alterado com sucesso!");
 
                 refresh_listViewEquipas();
+
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+
             }
         }
 
@@ -175,9 +185,7 @@ namespace WindowsFormsApp1
         private void listVEquipas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listVEquipas.SelectedItems.Count < 0)
-            {
-      
-
+            {     
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
 
@@ -206,6 +214,7 @@ namespace WindowsFormsApp1
             MessageBox.Show("Torneio elimindado com sucesso!");
 
             refresh_listViewStandard();
+
         }
 
         private void btnEliminarEquipas_Click(object sender, EventArgs e)
