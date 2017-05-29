@@ -52,7 +52,6 @@
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
             this.listVJogador1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,7 +60,6 @@
             this.baseDadosDataSet4 = new WindowsFormsApp1.BaseDadosDataSet4();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
             this.listVJogador2 = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,7 +82,6 @@
             this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listVArbitro1 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
             this.tbxArbitro = new System.Windows.Forms.TextBox();
@@ -99,6 +96,12 @@
             this.playerSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.playerSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_PlayerTableAdapters.PlayerSetTableAdapter();
             this.playerSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.numericJogador1 = new System.Windows.Forms.NumericUpDown();
+            this.numericJogador2 = new System.Windows.Forms.NumericUpDown();
+            this.numericArbitro = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
@@ -117,6 +120,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripHome
@@ -284,6 +290,8 @@
             // 
             // gbxJogador1
             // 
+            this.gbxJogador1.Controls.Add(this.label7);
+            this.gbxJogador1.Controls.Add(this.numericJogador1);
             this.gbxJogador1.Controls.Add(this.listVJogador1);
             this.gbxJogador1.Controls.Add(this.cbxBaralhoJogador1);
             this.gbxJogador1.Controls.Add(this.label5);
@@ -299,7 +307,6 @@
             // listVJogador1
             // 
             this.listVJogador1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
             this.columnHeader2});
             this.listVJogador1.Location = new System.Drawing.Point(6, 58);
             this.listVJogador1.Name = "listVJogador1";
@@ -309,10 +316,6 @@
             this.listVJogador1.View = System.Windows.Forms.View.Details;
             this.listVJogador1.SelectedIndexChanged += new System.EventHandler(this.listVJogador1_SelectedIndexChanged);
             // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Nome";
@@ -320,7 +323,7 @@
             // cbxBaralhoJogador1
             // 
             this.cbxBaralhoJogador1.FormattingEnabled = true;
-            this.cbxBaralhoJogador1.Location = new System.Drawing.Point(50, 149);
+            this.cbxBaralhoJogador1.Location = new System.Drawing.Point(51, 167);
             this.cbxBaralhoJogador1.Name = "cbxBaralhoJogador1";
             this.cbxBaralhoJogador1.Size = new System.Drawing.Size(153, 21);
             this.cbxBaralhoJogador1.TabIndex = 39;
@@ -328,7 +331,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 152);
+            this.label5.Location = new System.Drawing.Point(7, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 38;
@@ -356,6 +359,8 @@
             // 
             // gbxJogador2
             // 
+            this.gbxJogador2.Controls.Add(this.label8);
+            this.gbxJogador2.Controls.Add(this.numericJogador2);
             this.gbxJogador2.Controls.Add(this.listVJogador2);
             this.gbxJogador2.Controls.Add(this.cbxBaralhoJogador2);
             this.gbxJogador2.Controls.Add(this.label6);
@@ -371,19 +376,14 @@
             // listVJogador2
             // 
             this.listVJogador2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
             this.columnHeader4});
             this.listVJogador2.Location = new System.Drawing.Point(7, 58);
             this.listVJogador2.Name = "listVJogador2";
-            this.listVJogador2.Size = new System.Drawing.Size(200, 77);
+            this.listVJogador2.Size = new System.Drawing.Size(200, 74);
             this.listVJogador2.TabIndex = 40;
             this.listVJogador2.UseCompatibleStateImageBehavior = false;
             this.listVJogador2.View = System.Windows.Forms.View.Details;
             this.listVJogador2.SelectedIndexChanged += new System.EventHandler(this.listVJogador2_SelectedIndexChanged);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "ID";
             // 
             // columnHeader4
             // 
@@ -392,7 +392,7 @@
             // cbxBaralhoJogador2
             // 
             this.cbxBaralhoJogador2.FormattingEnabled = true;
-            this.cbxBaralhoJogador2.Location = new System.Drawing.Point(48, 147);
+            this.cbxBaralhoJogador2.Location = new System.Drawing.Point(49, 165);
             this.cbxBaralhoJogador2.Name = "cbxBaralhoJogador2";
             this.cbxBaralhoJogador2.Size = new System.Drawing.Size(159, 21);
             this.cbxBaralhoJogador2.TabIndex = 39;
@@ -400,7 +400,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 150);
+            this.label6.Location = new System.Drawing.Point(5, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 38;
@@ -548,6 +548,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.numericArbitro);
             this.groupBox1.Controls.Add(this.listVArbitro1);
             this.groupBox1.Controls.Add(this.btnPesquisarArbitro);
             this.groupBox1.Controls.Add(this.tbxArbitro);
@@ -561,19 +563,14 @@
             // listVArbitro1
             // 
             this.listVArbitro1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
             this.columnHeader6});
             this.listVArbitro1.Location = new System.Drawing.Point(3, 57);
             this.listVArbitro1.Name = "listVArbitro1";
-            this.listVArbitro1.Size = new System.Drawing.Size(193, 119);
+            this.listVArbitro1.Size = new System.Drawing.Size(193, 96);
             this.listVArbitro1.TabIndex = 3;
             this.listVArbitro1.UseCompatibleStateImageBehavior = false;
             this.listVArbitro1.View = System.Windows.Forms.View.Details;
             this.listVArbitro1.SelectedIndexChanged += new System.EventHandler(this.listVArbitro1_SelectedIndexChanged);
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "ID";
             // 
             // columnHeader6
             // 
@@ -665,6 +662,60 @@
             this.playerSetBindingSource3.DataMember = "PlayerSet";
             this.playerSetBindingSource3.DataSource = this.baseDadosDataSet4BindingSource;
             // 
+            // numericJogador1
+            // 
+            this.numericJogador1.InterceptArrowKeys = false;
+            this.numericJogador1.Location = new System.Drawing.Point(78, 140);
+            this.numericJogador1.Name = "numericJogador1";
+            this.numericJogador1.ReadOnly = true;
+            this.numericJogador1.Size = new System.Drawing.Size(125, 20);
+            this.numericJogador1.TabIndex = 41;
+            // 
+            // numericJogador2
+            // 
+            this.numericJogador2.InterceptArrowKeys = false;
+            this.numericJogador2.Location = new System.Drawing.Point(79, 138);
+            this.numericJogador2.Name = "numericJogador2";
+            this.numericJogador2.ReadOnly = true;
+            this.numericJogador2.Size = new System.Drawing.Size(125, 20);
+            this.numericJogador2.TabIndex = 42;
+            // 
+            // numericArbitro
+            // 
+            this.numericArbitro.InterceptArrowKeys = false;
+            this.numericArbitro.Location = new System.Drawing.Point(61, 159);
+            this.numericArbitro.Name = "numericArbitro";
+            this.numericArbitro.ReadOnly = true;
+            this.numericArbitro.Size = new System.Drawing.Size(133, 20);
+            this.numericArbitro.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "ID Jogador1";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "ID Jogador2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 162);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "ID Arbitro";
+            // 
             // GestaoTorneioJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,6 +755,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -773,13 +827,16 @@
         private BaseDadosDataSet_PlayerTableAdapters.PlayerSetTableAdapter playerSetTableAdapter1;
         private System.Windows.Forms.BindingSource playerSetBindingSource3;
         private System.Windows.Forms.ListView listVJogador1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListView listVJogador2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ListView listVArbitro1;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.NumericUpDown numericJogador1;
+        private System.Windows.Forms.NumericUpDown numericJogador2;
+        private System.Windows.Forms.NumericUpDown numericArbitro;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
