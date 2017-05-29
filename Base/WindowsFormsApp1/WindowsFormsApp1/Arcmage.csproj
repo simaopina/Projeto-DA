@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -148,6 +148,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDadosDataSet_Player.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDataSet_Player.xsd</DependentUpon>
     </Compile>
     <Compile Include="BaseDadosDataSet_Referee.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -523,6 +528,17 @@
     <None Include="BaseDadosDataSet_Cards.xss">
       <DependentUpon>BaseDadosDataSet_Cards.xsd</DependentUpon>
     </None>
+    <None Include="BaseDadosDataSet_Player.xsc">
+      <DependentUpon>BaseDadosDataSet_Player.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDataSet_Player.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDataSet_Player.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDataSet_Player.xss">
+      <DependentUpon>BaseDadosDataSet_Player.xsd</DependentUpon>
+    </None>
     <None Include="BaseDadosDataSet_Referee.xsc">
       <DependentUpon>BaseDadosDataSet_Referee.xsd</DependentUpon>
     </None>
@@ -604,6 +620,13 @@
     <None Include="Resources\17813900_1281975635190102_1290798384_n.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BaseDados.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BaseDados_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BaseDados.mdf</DependentUpon>
+    </Content>
     <Content Include="DiagramaEntidadesArcmage.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DiagramaEntidadesArcmage.Context.cs</LastGenOutput>

@@ -157,9 +157,11 @@ namespace WindowsFormsApp1
         {
             if (listVStandard.SelectedItems.Count < 0)
             {
-                tbxNomeStandard.Clear();
-                tbxDescricaoStandard.Clear();
-               
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+                    
+
                 string STorneioU = listVStandard.SelectedItems[0].Text;
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
@@ -177,8 +179,10 @@ namespace WindowsFormsApp1
         {
             if (listVEquipas.SelectedItems.Count < 0)
             {
-                tbxNomeEquipas.Clear();
-                tbxDescricao.Clear();
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
+               
 
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
@@ -191,6 +195,40 @@ namespace WindowsFormsApp1
 
                 refresh_listViewEquipas();
             }
+        }
+
+        private void btnEliminarStandard_Click(object sender, EventArgs e)
+        {
+            string Name = SSTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(SSTorneioSelected.Name));
+
+            container.TournamentSet.Remove(SSTorneioSelected);
+
+            container.SaveChanges();
+
+            SSTorneioSelected = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            refresh_listViewStandard();
+        }
+
+        private void btnEliminarEquipas_Click(object sender, EventArgs e)
+        {
+            string Name = TTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(TTorneioSelected.Name));
+
+            container.TournamentSet.Remove(TTorneioSelected);
+
+            container.SaveChanges();
+
+            TTorneioSelected = null;
+
+            MessageBox.Show("Torneio eliminado com sucesso!");
+
+            refresh_listViewEquipas();
         }
     }
 }

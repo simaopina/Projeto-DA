@@ -14,11 +14,35 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        //StardadGame jogadorSelecionado = null;
+        Player jogadorSelecionado = null;
 
         public GestaoTorneioJogadores()
         {
             InitializeComponent();
+
+            foreach (Player jogador in container.PlayerSet)
+            {
+                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Id));
+                jogadorList.SubItems.Add(jogador.Name);
+
+                listVJogador1.Items.Add(jogadorList);
+            }
+
+            foreach (Player jogador in container.PlayerSet)
+            {
+                ListViewItem jogadorList = new ListViewItem(Convert.ToString(jogador.Id));
+                jogadorList.SubItems.Add(jogador.Name);
+
+                listVJogador2.Items.Add(jogadorList);
+            }
+
+            foreach (Referee arbitro in container.UserSet.OfType<Referee>())
+            {
+                ListViewItem arbitroList = new ListViewItem(Convert.ToString(arbitro.Id));
+                arbitroList.SubItems.Add(arbitro.Name);
+
+                listVArbitro1.Items.Add(arbitroList);
+            }
 
             foreach (Deck baralho in container.DeckSet)
             {
@@ -28,7 +52,7 @@ namespace WindowsFormsApp1
             {
                 cbxBaralhoJogador2.Items.Add(baralho.Id.ToString());
             }
-            foreach (Tournament torn in container.TournamentSet)
+            foreach (Tournament torn in container.TournamentSet.OfType<StandadTournament>())
             {
                 cbxTorneio.Items.Add(torn.Id.ToString());
             }
@@ -131,12 +155,12 @@ namespace WindowsFormsApp1
 
                 var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador1.Text));
 
-                dataGridJogador1.DataSource = query.ToList();
+                //listVJogador1.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_datagrid();
+                refresh_list();
             }
         }
 
@@ -148,14 +172,14 @@ namespace WindowsFormsApp1
 
                 var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador2.Text));
 
-                dataGridJogador2.DataSource = query.ToList();
+                //dataGridJogador2.DataSource = query.ToList();
 
 
             }
 
             else
             {
-                refresh_datagrid();
+                refresh_list();
             }
         }
 
@@ -165,28 +189,30 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxJogador1.Focus();
-                refresh_datagrid();
+                refresh_list();
             }
             else if(tbxJogador2.Text == tbxJogador1.Text)
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxJogador2.Focus();
-                refresh_datagrid();
+                refresh_list();
             }
         }
 
 
-        public void refresh_datagrid()
+        public void refresh_list()
         {
 
             this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
-            dataGridJogador1.DataSource = playerSetBindingSource;
-            dataGridJogador2.DataSource = playerSetBindingSource;
+            //dataGridJogador1.DataSource = playerSetBindingSource;
+            //dataGridJogador2.DataSource = playerSetBindingSource;
 
         }
 
         private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Player.PlayerSet' table. You can move, or remove it, as needed.
+            this.playerSetTableAdapter1.Fill(this.baseDadosDataSet_Player.PlayerSet);
             // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
             this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
             // TODO: This line of code loads data into the 'baseDadosDataSet4.PlayerSet' table. You can move, or remove it, as needed.
@@ -206,7 +232,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                refresh_datagrid();
+                refresh_list();
             }
         }
 
@@ -216,9 +242,9 @@ namespace WindowsFormsApp1
             DateTime data = datetimeData.Value;
             DateTime hora = datetimeHora.Value;
             string descricao = tbxDescricao.Text;
-            int TeamId = (int)dataGridJogador1.CurrentRow.Cells[0].Value;
-            int TeamId1 = (int)dataGridJogador2.CurrentRow.Cells[0].Value;
-            int Referee = (int)dataGridReferee.CurrentRow.Cells[0].Value;
+            int TeamId = Convert.ToInt32(listVJogador1.Items.ToString());
+            int TeamId1 = Convert.ToInt32(listVJogador1.Items.ToString());
+            int Referee = Convert.ToInt32(listVJogador1.Items.ToString());
             int deck1 = Convert.ToInt32(cbxBaralhoJogador1.Text);
             int deck2 = Convert.ToInt32(cbxBaralhoJogador2.Text);
             int torneio = Convert.ToInt32(cbxTorneio.Text);
@@ -227,6 +253,7 @@ namespace WindowsFormsApp1
             {
                 TeamId = TeamId,
                 TeamId1 = TeamId1,
+                RefereeId = Referee,
                 Hour = hora,
                 Date = data,
                 Number = numero,
@@ -237,6 +264,40 @@ namespace WindowsFormsApp1
             };
             container.GameSet.Add(jogo);
             container.SaveChanges();
+        }
+
+        private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVJogador1.SelectedItems.Count > 0)
+            {
+                string jogador = listVJogador1.SelectedItems[0].Text;
+
+
+                jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
+
+                //jogadorSelecionado.Refresh();
+            }
+            else
+            {
+                jogadorSelecionado = null;
+            }
+        }
+
+        private void listVJogador2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVJogador2.SelectedItems.Count > 0)
+            {
+                string jogador = listVJogador2.SelectedItems[0].Text;
+
+
+                jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
+
+                //jogadorSelecionado.Refresh();
+            }
+            else
+            {
+                jogadorSelecionado = null;
+            }
         }
     }
 }
