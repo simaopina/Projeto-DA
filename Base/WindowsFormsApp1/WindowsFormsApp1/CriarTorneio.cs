@@ -306,5 +306,51 @@ namespace WindowsFormsApp1
             EBAfrm.Show();
             Close();
         }
+
+        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cartas_ADM CAMfrm = new Cartas_ADM();
+            CAMfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM ADDJogfrm = new ADD_Jogador_ADM();
+            ADDJogfrm.Show();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa InsEqfrm = new InserirEquipa();
+            InsEqfrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
+            Utilfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
+            GTJfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
+            GTEfrm.Show();
+            Close();
+        }
     }
 }
