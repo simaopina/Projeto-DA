@@ -291,7 +291,7 @@
             this.gbxJogador1.Controls.Add(this.tbxJogador1);
             this.gbxJogador1.Location = new System.Drawing.Point(6, 187);
             this.gbxJogador1.Name = "gbxJogador1";
-            this.gbxJogador1.Size = new System.Drawing.Size(209, 179);
+            this.gbxJogador1.Size = new System.Drawing.Size(209, 192);
             this.gbxJogador1.TabIndex = 36;
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Jogador 1";
@@ -363,7 +363,7 @@
             this.gbxJogador2.Controls.Add(this.tbxJogador2);
             this.gbxJogador2.Location = new System.Drawing.Point(218, 189);
             this.gbxJogador2.Name = "gbxJogador2";
-            this.gbxJogador2.Size = new System.Drawing.Size(214, 183);
+            this.gbxJogador2.Size = new System.Drawing.Size(214, 190);
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Jogador 2";
@@ -444,9 +444,9 @@
             this.gbxGestaoTorneios.Controls.Add(this.label2);
             this.gbxGestaoTorneios.Controls.Add(this.label1);
             this.gbxGestaoTorneios.Controls.Add(this.datetimeData);
-            this.gbxGestaoTorneios.Location = new System.Drawing.Point(6, 370);
+            this.gbxGestaoTorneios.Location = new System.Drawing.Point(6, 378);
             this.gbxGestaoTorneios.Name = "gbxGestaoTorneios";
-            this.gbxGestaoTorneios.Size = new System.Drawing.Size(426, 162);
+            this.gbxGestaoTorneios.Size = new System.Drawing.Size(426, 154);
             this.gbxGestaoTorneios.TabIndex = 39;
             this.gbxGestaoTorneios.TabStop = false;
             this.gbxGestaoTorneios.Text = "Gestão Jogadores - Jogos";
@@ -553,7 +553,7 @@
             this.groupBox1.Controls.Add(this.tbxArbitro);
             this.groupBox1.Location = new System.Drawing.Point(435, 190);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(203, 182);
+            this.groupBox1.Size = new System.Drawing.Size(203, 189);
             this.groupBox1.TabIndex = 46;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbitro";
@@ -607,9 +607,9 @@
             this.groupBox2.Controls.Add(this.cbxTorneio);
             this.groupBox2.Controls.Add(this.btnCriar);
             this.groupBox2.Controls.Add(this.btnCancelar);
-            this.groupBox2.Location = new System.Drawing.Point(435, 370);
+            this.groupBox2.Location = new System.Drawing.Point(435, 378);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(206, 162);
+            this.groupBox2.Size = new System.Drawing.Size(206, 154);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Torneio";
