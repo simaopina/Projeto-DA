@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
         private void Cartas_Arbitro_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baseDadosDataSet_Cards.CardSet' table. You can move, or remove it, as needed.
-            this.cardSetTableAdapter.Fill(this.baseDadosDataSet_Cards.CardSet);
+            //this.cardSetTableAdapter.Fill(this.baseDadosDataSet_Cards.CardSet);
 
         }
 
