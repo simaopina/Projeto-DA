@@ -30,6 +30,10 @@
         {
             this.gbxJogosArbitro = new System.Windows.Forms.GroupBox();
             this.listVJogo = new System.Windows.Forms.ListView();
+            this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Hour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,11 +48,6 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Hour = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Referee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,14 +69,30 @@
             this.Nº,
             this.Description,
             this.Hour,
-            this.Date,
-            this.Referee});
+            this.Date});
             this.listVJogo.Location = new System.Drawing.Point(6, 19);
             this.listVJogo.Name = "listVJogo";
             this.listVJogo.Size = new System.Drawing.Size(556, 223);
             this.listVJogo.TabIndex = 0;
             this.listVJogo.UseCompatibleStateImageBehavior = false;
             this.listVJogo.View = System.Windows.Forms.View.Details;
+            // 
+            // Nº
+            // 
+            this.Nº.Text = "Nº";
+            // 
+            // Description
+            // 
+            this.Description.Text = "Descrição";
+            // 
+            // Hour
+            // 
+            this.Hour.Text = "Hora";
+            this.Hour.Width = 138;
+            // 
+            // Date
+            // 
+            this.Date.Text = "Data";
             // 
             // tbxpesquisa
             // 
@@ -192,27 +207,6 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // Nº
-            // 
-            this.Nº.Text = "Nº";
-            // 
-            // Description
-            // 
-            this.Description.Text = "Descrição";
-            // 
-            // Hour
-            // 
-            this.Hour.Text = "Hora";
-            this.Hour.Width = 138;
-            // 
-            // Date
-            // 
-            this.Date.Text = "Data";
-            // 
-            // Referee
-            // 
-            this.Referee.Text = "Arbitro";
-            // 
             // JogoArbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +250,5 @@
         private System.Windows.Forms.ColumnHeader Description;
         private System.Windows.Forms.ColumnHeader Hour;
         private System.Windows.Forms.ColumnHeader Date;
-        private System.Windows.Forms.ColumnHeader Referee;
     }
 }
