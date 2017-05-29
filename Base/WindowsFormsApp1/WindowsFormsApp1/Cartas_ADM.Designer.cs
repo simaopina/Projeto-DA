@@ -98,6 +98,8 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.openFileDialogImportar = new System.Windows.Forms.OpenFileDialog();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
@@ -116,6 +118,8 @@
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.linkLabel1);
+            this.gbxCartasADM.Controls.Add(this.listVCartas);
             this.gbxCartasADM.Controls.Add(this.numericDefesa);
             this.gbxCartasADM.Controls.Add(this.numericAtaque);
             this.gbxCartasADM.Controls.Add(this.pictImagem);
@@ -138,30 +142,30 @@
             this.gbxCartasADM.Controls.Add(this.label13);
             this.gbxCartasADM.Controls.Add(this.label12);
             this.gbxCartasADM.Controls.Add(this.label11);
-            this.gbxCartasADM.Location = new System.Drawing.Point(25, 369);
+            this.gbxCartasADM.Location = new System.Drawing.Point(25, 253);
             this.gbxCartasADM.Name = "gbxCartasADM";
-            this.gbxCartasADM.Size = new System.Drawing.Size(580, 172);
+            this.gbxCartasADM.Size = new System.Drawing.Size(580, 336);
             this.gbxCartasADM.TabIndex = 30;
             this.gbxCartasADM.TabStop = false;
             this.gbxCartasADM.Text = "Cartas";
             // 
             // numericDefesa
             // 
-            this.numericDefesa.Location = new System.Drawing.Point(282, 81);
+            this.numericDefesa.Location = new System.Drawing.Point(281, 255);
             this.numericDefesa.Name = "numericDefesa";
             this.numericDefesa.Size = new System.Drawing.Size(100, 20);
             this.numericDefesa.TabIndex = 29;
             // 
             // numericAtaque
             // 
-            this.numericAtaque.Location = new System.Drawing.Point(282, 47);
+            this.numericAtaque.Location = new System.Drawing.Point(281, 221);
             this.numericAtaque.Name = "numericAtaque";
             this.numericAtaque.Size = new System.Drawing.Size(100, 20);
             this.numericAtaque.TabIndex = 28;
             // 
             // pictImagem
             // 
-            this.pictImagem.Location = new System.Drawing.Point(454, 24);
+            this.pictImagem.Location = new System.Drawing.Point(453, 198);
             this.pictImagem.Name = "pictImagem";
             this.pictImagem.Size = new System.Drawing.Size(57, 74);
             this.pictImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,7 +175,7 @@
             // LinkLabelImagem
             // 
             this.LinkLabelImagem.AutoSize = true;
-            this.LinkLabelImagem.Location = new System.Drawing.Point(451, 110);
+            this.LinkLabelImagem.Location = new System.Drawing.Point(450, 284);
             this.LinkLabelImagem.Name = "LinkLabelImagem";
             this.LinkLabelImagem.Size = new System.Drawing.Size(60, 13);
             this.LinkLabelImagem.TabIndex = 24;
@@ -181,7 +185,7 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(404, 136);
+            this.btnRemover.Location = new System.Drawing.Point(403, 310);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 23);
             this.btnRemover.TabIndex = 20;
@@ -191,7 +195,7 @@
             // 
             // btAlterarCarta
             // 
-            this.btAlterarCarta.Location = new System.Drawing.Point(493, 136);
+            this.btAlterarCarta.Location = new System.Drawing.Point(492, 310);
             this.btAlterarCarta.Name = "btAlterarCarta";
             this.btAlterarCarta.Size = new System.Drawing.Size(75, 23);
             this.btAlterarCarta.TabIndex = 19;
@@ -201,7 +205,7 @@
             // 
             // btAdicionarCartas
             // 
-            this.btAdicionarCartas.Location = new System.Drawing.Point(323, 136);
+            this.btAdicionarCartas.Location = new System.Drawing.Point(322, 310);
             this.btAdicionarCartas.Name = "btAdicionarCartas";
             this.btAdicionarCartas.Size = new System.Drawing.Size(75, 23);
             this.btAdicionarCartas.TabIndex = 18;
@@ -211,42 +215,42 @@
             // 
             // txtRegras
             // 
-            this.txtRegras.Location = new System.Drawing.Point(282, 21);
+            this.txtRegras.Location = new System.Drawing.Point(281, 195);
             this.txtRegras.Name = "txtRegras";
             this.txtRegras.Size = new System.Drawing.Size(100, 20);
             this.txtRegras.TabIndex = 14;
             // 
             // txtcusto
             // 
-            this.txtcusto.Location = new System.Drawing.Point(75, 136);
+            this.txtcusto.Location = new System.Drawing.Point(74, 310);
             this.txtcusto.Name = "txtcusto";
             this.txtcusto.Size = new System.Drawing.Size(100, 20);
             this.txtcusto.TabIndex = 13;
             // 
             // txtLealdade
             // 
-            this.txtLealdade.Location = new System.Drawing.Point(75, 107);
+            this.txtLealdade.Location = new System.Drawing.Point(74, 281);
             this.txtLealdade.Name = "txtLealdade";
             this.txtLealdade.Size = new System.Drawing.Size(100, 20);
             this.txtLealdade.TabIndex = 12;
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(75, 78);
+            this.txtTipo.Location = new System.Drawing.Point(74, 252);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(100, 20);
             this.txtTipo.TabIndex = 11;
             // 
             // txtFacao
             // 
-            this.txtFacao.Location = new System.Drawing.Point(75, 48);
+            this.txtFacao.Location = new System.Drawing.Point(74, 222);
             this.txtFacao.Name = "txtFacao";
             this.txtFacao.Size = new System.Drawing.Size(100, 20);
             this.txtFacao.TabIndex = 10;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(75, 22);
+            this.txtNome.Location = new System.Drawing.Point(74, 196);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 9;
@@ -254,7 +258,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(401, 28);
+            this.label19.Location = new System.Drawing.Point(400, 202);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 8;
@@ -263,7 +267,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(225, 81);
+            this.label18.Location = new System.Drawing.Point(224, 255);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(44, 13);
             this.label18.TabIndex = 7;
@@ -272,7 +276,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(225, 48);
+            this.label17.Location = new System.Drawing.Point(224, 222);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 13);
             this.label17.TabIndex = 6;
@@ -281,7 +285,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(225, 24);
+            this.label16.Location = new System.Drawing.Point(224, 198);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 13);
             this.label16.TabIndex = 5;
@@ -290,7 +294,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 136);
+            this.label15.Location = new System.Drawing.Point(17, 310);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(37, 13);
             this.label15.TabIndex = 4;
@@ -299,7 +303,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 107);
+            this.label14.Location = new System.Drawing.Point(17, 281);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 13);
             this.label14.TabIndex = 3;
@@ -308,7 +312,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 78);
+            this.label13.Location = new System.Drawing.Point(17, 252);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(31, 13);
             this.label13.TabIndex = 2;
@@ -317,7 +321,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(18, 52);
+            this.label12.Location = new System.Drawing.Point(17, 226);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 1;
@@ -326,7 +330,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 25);
+            this.label11.Location = new System.Drawing.Point(17, 199);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 0;
@@ -432,9 +436,9 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader10});
-            this.listVCartas.Location = new System.Drawing.Point(25, 248);
+            this.listVCartas.Location = new System.Drawing.Point(6, 48);
             this.listVCartas.Name = "listVCartas";
-            this.listVCartas.Size = new System.Drawing.Size(580, 115);
+            this.listVCartas.Size = new System.Drawing.Size(568, 115);
             this.listVCartas.TabIndex = 32;
             this.listVCartas.UseCompatibleStateImageBehavior = false;
             this.listVCartas.View = System.Windows.Forms.View.Details;
@@ -511,14 +515,14 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
@@ -613,13 +617,28 @@
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(262, 16);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(81, 20);
+            this.linkLabel1.TabIndex = 33;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Importar...";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // openFileDialogImportar
+            // 
+            this.openFileDialogImportar.FileName = "openFileDialog1";
+            // 
             // Cartas_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 540);
+            this.ClientSize = new System.Drawing.Size(637, 601);
             this.Controls.Add(this.menuStripHome);
-            this.Controls.Add(this.listVCartas);
             this.Controls.Add(this.gbxCartasADM);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -718,5 +737,7 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImportar;
     }
 }

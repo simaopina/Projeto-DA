@@ -338,9 +338,9 @@
             // atum
             // 
             this.atum.FormattingEnabled = true;
-            this.atum.Location = new System.Drawing.Point(13, 36);
+            this.atum.Location = new System.Drawing.Point(223, 36);
             this.atum.Name = "atum";
-            this.atum.Size = new System.Drawing.Size(185, 238);
+            this.atum.Size = new System.Drawing.Size(276, 251);
             this.atum.TabIndex = 4;
             // 
             // Baralho_Arbitro
