@@ -213,7 +213,7 @@ namespace WindowsFormsApp1
             string Username = txtbNickName_ARB.Text;
             string Password = txtbPassword_ARB.Text;
             string Nome = txtbNome_ARB.Text;
-            string Avatar = linkLAvatar_ARB.Text;
+            string Avatar = partefinal;
 
 
             Referee User_ARB = new Referee
@@ -254,7 +254,7 @@ namespace WindowsFormsApp1
             string Username = txtbNickName_ADM.Text;
             string Password = txtbPassword_ADM.Text;
             string Name = txtbNome_ARB.Text;
-            string avatar = linkLAvatar_ARB.Text;
+            string avatar = partefinal;
 
             List<Referee> arb = container.UserSet.OfType<Referee>().ToList();
 
