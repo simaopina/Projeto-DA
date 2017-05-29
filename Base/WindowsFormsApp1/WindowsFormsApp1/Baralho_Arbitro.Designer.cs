@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baralho_Arbitro));
             this.gbxBaralhoArbitro = new System.Windows.Forms.GroupBox();
-            this.listVbaralho = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,11 +49,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
             this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listVCartas = new System.Windows.Forms.ListView();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.atum = new System.Windows.Forms.ListBox();
+            this.listBoxBaralho = new System.Windows.Forms.ListBox();
+            this.listBoxCartasBaralho = new System.Windows.Forms.ListBox();
             this.gbxBaralhoArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,11 +58,10 @@
             // 
             // gbxBaralhoArbitro
             // 
-            this.gbxBaralhoArbitro.Controls.Add(this.atum);
-            this.gbxBaralhoArbitro.Controls.Add(this.listVCartas);
+            this.gbxBaralhoArbitro.Controls.Add(this.listBoxCartasBaralho);
+            this.gbxBaralhoArbitro.Controls.Add(this.listBoxBaralho);
             this.gbxBaralhoArbitro.Controls.Add(this.label2);
             this.gbxBaralhoArbitro.Controls.Add(this.label1);
-            this.gbxBaralhoArbitro.Controls.Add(this.listVbaralho);
             this.gbxBaralhoArbitro.Location = new System.Drawing.Point(12, 232);
             this.gbxBaralhoArbitro.Name = "gbxBaralhoArbitro";
             this.gbxBaralhoArbitro.Size = new System.Drawing.Size(612, 286);
@@ -73,21 +69,23 @@
             this.gbxBaralhoArbitro.TabStop = false;
             this.gbxBaralhoArbitro.Text = "Baralho";
             // 
-            // listVbaralho
+            // label2
             // 
-            this.listVbaralho.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listVbaralho.Location = new System.Drawing.Point(6, 36);
-            this.listVbaralho.Name = "listVbaralho";
-            this.listVbaralho.Size = new System.Drawing.Size(202, 250);
-            this.listVbaralho.TabIndex = 0;
-            this.listVbaralho.UseCompatibleStateImageBehavior = false;
-            this.listVbaralho.View = System.Windows.Forms.View.List;
-            this.listVbaralho.SelectedIndexChanged += new System.EventHandler(this.listVbaralho_SelectedIndexChanged);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(220, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cartas";
             // 
-            // columnHeader1
+            // label1
             // 
-            this.columnHeader1.Text = "Carta";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Baralho";
             // 
             // tbxpesquisa
             // 
@@ -302,46 +300,22 @@
             this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(43, "44.PNG");
             this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(44, "45.PNG");
             // 
-            // label1
+            // listBoxBaralho
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Baralho";
+            this.listBoxBaralho.FormattingEnabled = true;
+            this.listBoxBaralho.Location = new System.Drawing.Point(16, 36);
+            this.listBoxBaralho.Name = "listBoxBaralho";
+            this.listBoxBaralho.Size = new System.Drawing.Size(151, 225);
+            this.listBoxBaralho.TabIndex = 3;
+            this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged);
             // 
-            // label2
+            // listBoxCartasBaralho
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cartas";
-            // 
-            // listVCartas
-            // 
-            this.listVCartas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader2});
-            this.listVCartas.Location = new System.Drawing.Point(223, 36);
-            this.listVCartas.Name = "listVCartas";
-            this.listVCartas.Size = new System.Drawing.Size(383, 250);
-            this.listVCartas.TabIndex = 3;
-            this.listVCartas.UseCompatibleStateImageBehavior = false;
-            this.listVCartas.View = System.Windows.Forms.View.List;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Carta";
-            // 
-            // atum
-            // 
-            this.atum.FormattingEnabled = true;
-            this.atum.Location = new System.Drawing.Point(223, 36);
-            this.atum.Name = "atum";
-            this.atum.Size = new System.Drawing.Size(276, 251);
-            this.atum.TabIndex = 4;
+            this.listBoxCartasBaralho.FormattingEnabled = true;
+            this.listBoxCartasBaralho.Location = new System.Drawing.Point(223, 36);
+            this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
+            this.listBoxCartasBaralho.Size = new System.Drawing.Size(151, 225);
+            this.listBoxCartasBaralho.TabIndex = 4;
             // 
             // Baralho_Arbitro
             // 
@@ -375,7 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.ListView listVbaralho;
         private System.Windows.Forms.ImageList listaBaralhoArbitroUneasyAlliance;
         private System.Windows.Forms.ImageList listaBaralhoArbitroGaianloveforlife;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
@@ -385,12 +358,10 @@
         private System.Windows.Forms.ToolStripMenuItem jogosADecorrerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
-        private System.Windows.Forms.ListView listVCartas;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox atum;
+        private System.Windows.Forms.ListBox listBoxCartasBaralho;
+        private System.Windows.Forms.ListBox listBoxBaralho;
     }
 }
