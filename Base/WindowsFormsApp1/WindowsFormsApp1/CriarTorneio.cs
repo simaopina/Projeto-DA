@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home Hfrm = new Home();
+            Home_ADM Hfrm = new Home_ADM();
             Hfrm.Show();
             Close();
         }

@@ -28,20 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCartas = new System.Windows.Forms.Button();
-            this.btnBaralhos = new System.Windows.Forms.Button();
-            this.btnEditBaralhos = new System.Windows.Forms.Button();
-            this.btnJogador = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.gpbxMenu = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,71 +48,20 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCartas = new System.Windows.Forms.Button();
+            this.btnJogador = new System.Windows.Forms.Button();
+            this.btnEditBaralhos = new System.Windows.Forms.Button();
+            this.btnBaralhos = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnGestaoTorneios = new System.Windows.Forms.Button();
+            this.btnGestaoDeJogosST = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnGestaoDeJogosTeam = new System.Windows.Forms.Button();
+            this.gpbxMenu = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gpbxMenu.SuspendLayout();
             this.menuStripHome.SuspendLayout();
+            this.gpbxMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tbxpesquisa
-            // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(237, 205);
-            this.tbxpesquisa.Name = "tbxpesquisa";
-            this.tbxpesquisa.Size = new System.Drawing.Size(274, 20);
-            this.tbxpesquisa.TabIndex = 26;
-            this.tbxpesquisa.Text = "Pesquisar...";
-            // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 235);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 235);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 235);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 235);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(518, 205);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 21;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -135,79 +71,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnCartas
-            // 
-            this.btnCartas.Location = new System.Drawing.Point(62, 52);
-            this.btnCartas.Name = "btnCartas";
-            this.btnCartas.Size = new System.Drawing.Size(98, 92);
-            this.btnCartas.TabIndex = 33;
-            this.btnCartas.Text = "Cartas";
-            this.btnCartas.UseVisualStyleBackColor = true;
-            this.btnCartas.Click += new System.EventHandler(this.btnCartas_Click);
-            // 
-            // btnBaralhos
-            // 
-            this.btnBaralhos.Location = new System.Drawing.Point(261, 52);
-            this.btnBaralhos.Name = "btnBaralhos";
-            this.btnBaralhos.Size = new System.Drawing.Size(98, 92);
-            this.btnBaralhos.TabIndex = 34;
-            this.btnBaralhos.Text = "Baralhos";
-            this.btnBaralhos.UseVisualStyleBackColor = true;
-            this.btnBaralhos.Click += new System.EventHandler(this.btnBaralhos_Click);
-            // 
-            // btnEditBaralhos
-            // 
-            this.btnEditBaralhos.Location = new System.Drawing.Point(273, 29);
-            this.btnEditBaralhos.Name = "btnEditBaralhos";
-            this.btnEditBaralhos.Size = new System.Drawing.Size(75, 23);
-            this.btnEditBaralhos.TabIndex = 35;
-            this.btnEditBaralhos.Text = "Edição";
-            this.btnEditBaralhos.UseVisualStyleBackColor = true;
-            this.btnEditBaralhos.Click += new System.EventHandler(this.btnEditBaralhos_Click);
-            // 
-            // btnJogador
-            // 
-            this.btnJogador.Location = new System.Drawing.Point(62, 173);
-            this.btnJogador.Name = "btnJogador";
-            this.btnJogador.Size = new System.Drawing.Size(98, 92);
-            this.btnJogador.TabIndex = 37;
-            this.btnJogador.Text = "Adicionar Jogador";
-            this.btnJogador.UseVisualStyleBackColor = true;
-            this.btnJogador.Click += new System.EventHandler(this.btnJogador_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(405, 263);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 13);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Welcome!";
-            // 
-            // gpbxMenu
-            // 
-            this.gpbxMenu.Controls.Add(this.button2);
-            this.gpbxMenu.Controls.Add(this.btnBaralhos);
-            this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
-            this.gpbxMenu.Controls.Add(this.btnJogador);
-            this.gpbxMenu.Controls.Add(this.btnCartas);
-            this.gpbxMenu.Location = new System.Drawing.Point(221, 250);
-            this.gpbxMenu.Name = "gpbxMenu";
-            this.gpbxMenu.Size = new System.Drawing.Size(407, 295);
-            this.gpbxMenu.TabIndex = 41;
-            this.gpbxMenu.TabStop = false;
-            this.gpbxMenu.Text = "Menu:";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(261, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 92);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Utilizadores";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStripHome
             // 
@@ -354,6 +217,121 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
+            // btnCartas
+            // 
+            this.btnCartas.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCartas.Location = new System.Drawing.Point(51, 173);
+            this.btnCartas.Name = "btnCartas";
+            this.btnCartas.Size = new System.Drawing.Size(98, 92);
+            this.btnCartas.TabIndex = 33;
+            this.btnCartas.Text = "Cartas";
+            this.btnCartas.UseVisualStyleBackColor = false;
+            this.btnCartas.Click += new System.EventHandler(this.btnCartas_Click);
+            // 
+            // btnJogador
+            // 
+            this.btnJogador.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnJogador.Location = new System.Drawing.Point(257, 52);
+            this.btnJogador.Name = "btnJogador";
+            this.btnJogador.Size = new System.Drawing.Size(98, 92);
+            this.btnJogador.TabIndex = 37;
+            this.btnJogador.Text = "Adicionar Jogador";
+            this.btnJogador.UseVisualStyleBackColor = false;
+            this.btnJogador.Click += new System.EventHandler(this.btnJogador_Click);
+            // 
+            // btnEditBaralhos
+            // 
+            this.btnEditBaralhos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnEditBaralhos.Location = new System.Drawing.Point(61, 24);
+            this.btnEditBaralhos.Name = "btnEditBaralhos";
+            this.btnEditBaralhos.Size = new System.Drawing.Size(75, 23);
+            this.btnEditBaralhos.TabIndex = 35;
+            this.btnEditBaralhos.Text = "Edição";
+            this.btnEditBaralhos.UseVisualStyleBackColor = false;
+            this.btnEditBaralhos.Click += new System.EventHandler(this.btnEditBaralhos_Click);
+            // 
+            // btnBaralhos
+            // 
+            this.btnBaralhos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnBaralhos.Location = new System.Drawing.Point(51, 52);
+            this.btnBaralhos.Name = "btnBaralhos";
+            this.btnBaralhos.Size = new System.Drawing.Size(98, 92);
+            this.btnBaralhos.TabIndex = 34;
+            this.btnBaralhos.Text = "Baralhos";
+            this.btnBaralhos.UseVisualStyleBackColor = false;
+            this.btnBaralhos.Click += new System.EventHandler(this.btnBaralhos_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(257, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 92);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Utilizadores";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnGestaoTorneios
+            // 
+            this.btnGestaoTorneios.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGestaoTorneios.Location = new System.Drawing.Point(465, 52);
+            this.btnGestaoTorneios.Name = "btnGestaoTorneios";
+            this.btnGestaoTorneios.Size = new System.Drawing.Size(98, 92);
+            this.btnGestaoTorneios.TabIndex = 40;
+            this.btnGestaoTorneios.Text = "Gestão de torneios";
+            this.btnGestaoTorneios.UseVisualStyleBackColor = false;
+            this.btnGestaoTorneios.Click += new System.EventHandler(this.btnGestaoTorneios_Click);
+            // 
+            // btnGestaoDeJogosST
+            // 
+            this.btnGestaoDeJogosST.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGestaoDeJogosST.Location = new System.Drawing.Point(465, 173);
+            this.btnGestaoDeJogosST.Name = "btnGestaoDeJogosST";
+            this.btnGestaoDeJogosST.Size = new System.Drawing.Size(98, 44);
+            this.btnGestaoDeJogosST.TabIndex = 41;
+            this.btnGestaoDeJogosST.Text = "Gestão de jogos Standard";
+            this.btnGestaoDeJogosST.UseVisualStyleBackColor = false;
+            this.btnGestaoDeJogosST.Click += new System.EventHandler(this.btnGestaoDeJogosST_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(256, 187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 25);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Welcome!";
+            // 
+            // btnGestaoDeJogosTeam
+            // 
+            this.btnGestaoDeJogosTeam.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGestaoDeJogosTeam.Location = new System.Drawing.Point(465, 221);
+            this.btnGestaoDeJogosTeam.Name = "btnGestaoDeJogosTeam";
+            this.btnGestaoDeJogosTeam.Size = new System.Drawing.Size(98, 44);
+            this.btnGestaoDeJogosTeam.TabIndex = 42;
+            this.btnGestaoDeJogosTeam.Text = "Gestão de jogos team";
+            this.btnGestaoDeJogosTeam.UseVisualStyleBackColor = false;
+            this.btnGestaoDeJogosTeam.Click += new System.EventHandler(this.btnGestaoDeJogosTeam_Click);
+            // 
+            // gpbxMenu
+            // 
+            this.gpbxMenu.Controls.Add(this.btnGestaoDeJogosTeam);
+            this.gpbxMenu.Controls.Add(this.btnGestaoDeJogosST);
+            this.gpbxMenu.Controls.Add(this.btnGestaoTorneios);
+            this.gpbxMenu.Controls.Add(this.button2);
+            this.gpbxMenu.Controls.Add(this.btnBaralhos);
+            this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
+            this.gpbxMenu.Controls.Add(this.btnJogador);
+            this.gpbxMenu.Controls.Add(this.btnCartas);
+            this.gpbxMenu.Location = new System.Drawing.Point(12, 250);
+            this.gpbxMenu.Name = "gpbxMenu";
+            this.gpbxMenu.Size = new System.Drawing.Size(616, 295);
+            this.gpbxMenu.TabIndex = 41;
+            this.gpbxMenu.TabStop = false;
+            this.gpbxMenu.Text = "Menu:";
+            // 
             // Home_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,40 +339,21 @@
             this.ClientSize = new System.Drawing.Size(640, 540);
             this.Controls.Add(this.menuStripHome);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gpbxMenu);
             this.Name = "Home_ADM";
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gpbxMenu.ResumeLayout(false);
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
+            this.gpbxMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnCartas;
-        private System.Windows.Forms.Button btnBaralhos;
-        private System.Windows.Forms.Button btnEditBaralhos;
-        private System.Windows.Forms.Button btnJogador;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox gpbxMenu;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
@@ -414,5 +373,15 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.Button btnCartas;
+        private System.Windows.Forms.Button btnJogador;
+        private System.Windows.Forms.Button btnEditBaralhos;
+        private System.Windows.Forms.Button btnBaralhos;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGestaoTorneios;
+        private System.Windows.Forms.Button btnGestaoDeJogosST;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnGestaoDeJogosTeam;
+        private System.Windows.Forms.GroupBox gpbxMenu;
     }
 }
