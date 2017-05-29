@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
 
             foreach (Game game in listgame)
             {
-                listVJogos.Items.Add(game.Id.ToString());
+                listVJogos.Items.Add(game.Description.ToString());
             }
 
         }
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             if (listVJogos.SelectedItems != null)
             {
                 string JogosU = listVJogos.SelectedItems[0].Text;
-                JogoSelecionado = container.GameSet.Where(gam => gam.Id.Equals(JogosU)).First();
+                JogoSelecionado = container.GameSet.Where(gam => gam.Description.Equals(JogosU)).First();
 
                 List<Game> game = container.GameSet.ToList();
                 refresh_ListView();
@@ -155,16 +155,16 @@ namespace WindowsFormsApp1
 
             foreach (Game game in listgame)
             {
-                listVJogos.Items.Add(game.Id.ToString());
+                listVJogos.Items.Add(game.Description);
 
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string Name = JogoSelecionado.Id.ToString();
+            string Name = JogoSelecionado.Description.ToString();
 
-            var query = container.GameSet.Where(torn => torn.Id.Equals(JogoSelecionado.Id));
+            var query = container.GameSet.Where(torn => torn.Description.Equals(JogoSelecionado.Description));
 
             container.GameSet.Remove(JogoSelecionado);
 
