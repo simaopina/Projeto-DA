@@ -184,7 +184,7 @@ namespace WindowsFormsApp1
 
         private void listVEquipas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVEquipas.SelectedItems.Count < 0)
+            if (listVEquipas.SelectedItems != null)
             {     
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
