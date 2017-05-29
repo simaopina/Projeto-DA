@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbxNovoJogadorADM = new System.Windows.Forms.GroupBox();
+            this.listVJogos = new System.Windows.Forms.ListView();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.rbtnCartas = new System.Windows.Forms.RadioButton();
             this.rbtnTorneio = new System.Windows.Forms.RadioButton();
@@ -47,7 +48,6 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
@@ -55,13 +55,21 @@
             // 
             // gbxNovoJogadorADM
             // 
-            this.gbxNovoJogadorADM.Controls.Add(this.listView1);
+            this.gbxNovoJogadorADM.Controls.Add(this.listVJogos);
             this.gbxNovoJogadorADM.Location = new System.Drawing.Point(12, 271);
             this.gbxNovoJogadorADM.Name = "gbxNovoJogadorADM";
             this.gbxNovoJogadorADM.Size = new System.Drawing.Size(575, 248);
             this.gbxNovoJogadorADM.TabIndex = 42;
             this.gbxNovoJogadorADM.TabStop = false;
             this.gbxNovoJogadorADM.Text = "Planeamento de Jogos";
+            // 
+            // listVJogos
+            // 
+            this.listVJogos.Location = new System.Drawing.Point(7, 20);
+            this.listVJogos.Name = "listVJogos";
+            this.listVJogos.Size = new System.Drawing.Size(562, 222);
+            this.listVJogos.TabIndex = 0;
+            this.listVJogos.UseCompatibleStateImageBehavior = false;
             // 
             // tbxpesquisa
             // 
@@ -220,14 +228,6 @@
             this.signOutToolStripMenuItem.Text = "Terminar Sessão";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(7, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(266, 222);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // Arbitro_JogosOndeTou
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listVJogos;
     }
 }
