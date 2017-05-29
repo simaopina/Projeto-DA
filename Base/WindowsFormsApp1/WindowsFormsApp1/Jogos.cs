@@ -74,5 +74,54 @@ namespace WindowsFormsApp1
             hfrm.Show();
             Close();
         }
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_Arbitro HArbfrm = new Home_Arbitro();
+            HArbfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baralho_Arbitro BAfrm = new Baralho_Arbitro();
+            BAfrm.Show();
+            Close();
+        }
+
+        private void cartaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cartas_Arbitro CArbfrm = new Cartas_Arbitro();
+            CArbfrm.Show();
+            Close();
+        }
+
+        private void jogosADecorrerToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Jogos Jogfrm = new Jogos();
+            Jogfrm.Show();
+            Close();
+        }
+
+        private void planeamentoDeJogosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Arbitro_JogosOndeTou AJONTfrm = new Arbitro_JogosOndeTou();
+            AJONTfrm.Show();
+            Close();
+        }
+
+        private void historicoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Hitorico_Arbitro HArbfrm = new Hitorico_Arbitro();
+            HArbfrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }

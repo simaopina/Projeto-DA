@@ -179,5 +179,75 @@ namespace WindowsFormsApp1
         {
             carregar_Carta_Baralho();
         }
+
+        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BAdmfrm = new Baralho_ADM();
+            BAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBarAdmfrm = new Edicao_Baralhos_ADM();
+            EdBarAdmfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM CarAdmfrm = new Cartas_ADM();
+            CarAdmfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM Addjogfrm = new ADD_Jogador_ADM();
+            Addjogfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InserirEquipa InsEqufrm = new InserirEquipa();
+            InsEqufrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
+            Utilfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CTornfrm = new CriarTorneio();
+            CTornfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GesTorJogfrm = new GestaoTorneioJogadores();
+            GesTorJogfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GesTorEqufrm = new GestaoTorneioEquipas();
+            GesTorEqufrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }

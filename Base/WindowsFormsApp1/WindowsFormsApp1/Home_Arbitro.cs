@@ -58,5 +58,12 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_Arbitro HArbfrm = new Home_Arbitro();
+            HArbfrm.Show();
+            Close();
+        }
     }
 }

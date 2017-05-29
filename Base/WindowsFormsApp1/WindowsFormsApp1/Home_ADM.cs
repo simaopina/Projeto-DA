@@ -104,5 +104,82 @@ namespace WindowsFormsApp1
             uti.Show();
             
         }
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Baralho_ADM BarAdmfrm = new Baralho_ADM();
+            BarAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBarAdmfrm = new Edicao_Baralhos_ADM();
+            EdBarAdmfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM CartAdmsfrm = new Cartas_ADM();
+            CartAdmsfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM AddJogfrm = new ADD_Jogador_ADM();
+            AddJogfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa InsEquifrm = new InserirEquipa();
+            InsEquifrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
+            Utilfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CriarTornfrm = new CriarTorneio();
+            CriarTornfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GesTornJogfrm = new GestaoTorneioJogadores();
+            GesTornJogfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GesTornEqufrm = new GestaoTorneioEquipas();
+            GesTornEqufrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }
