@@ -45,7 +45,6 @@
             this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
             this.listVEquipa2 = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@
             this.baseDadosDataSetTeamSet = new WindowsFormsApp1.BaseDadosDataSetTeamSet();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
             this.listVEquipa1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -83,7 +81,6 @@
             this.teamSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTeamSetTableAdapters.TeamSetTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listVArbitro = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
             this.tbxArbitro = new System.Windows.Forms.TextBox();
@@ -179,11 +176,13 @@
             // 
             // datetimeHora
             // 
+            this.datetimeHora.CustomFormat = "";
             this.datetimeHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.datetimeHora.Location = new System.Drawing.Point(75, 106);
             this.datetimeHora.Name = "datetimeHora";
             this.datetimeHora.Size = new System.Drawing.Size(121, 20);
             this.datetimeHora.TabIndex = 42;
+            this.datetimeHora.Value = new System.DateTime(2017, 5, 29, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -205,6 +204,7 @@
             // 
             // datetimeData
             // 
+            this.datetimeData.CustomFormat = "";
             this.datetimeData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datetimeData.Location = new System.Drawing.Point(75, 69);
             this.datetimeData.Name = "datetimeData";
@@ -268,7 +268,6 @@
             // listVEquipa2
             // 
             this.listVEquipa2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
             this.columnHeader4});
             this.listVEquipa2.Location = new System.Drawing.Point(10, 57);
             this.listVEquipa2.Name = "listVEquipa2";
@@ -277,10 +276,6 @@
             this.listVEquipa2.UseCompatibleStateImageBehavior = false;
             this.listVEquipa2.View = System.Windows.Forms.View.Details;
             this.listVEquipa2.SelectedIndexChanged += new System.EventHandler(this.listVEquipa2_SelectedIndexChanged);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "ID";
             // 
             // columnHeader4
             // 
@@ -345,7 +340,6 @@
             // listVEquipa1
             // 
             this.listVEquipa1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
             this.columnHeader2});
             this.listVEquipa1.Location = new System.Drawing.Point(9, 58);
             this.listVEquipa1.Name = "listVEquipa1";
@@ -354,10 +348,6 @@
             this.listVEquipa1.UseCompatibleStateImageBehavior = false;
             this.listVEquipa1.View = System.Windows.Forms.View.Details;
             this.listVEquipa1.SelectedIndexChanged += new System.EventHandler(this.listVEquipa1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
             // 
             // columnHeader2
             // 
@@ -560,7 +550,6 @@
             // listVArbitro
             // 
             this.listVArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
             this.columnHeader6});
             this.listVArbitro.Location = new System.Drawing.Point(3, 58);
             this.listVArbitro.Name = "listVArbitro";
@@ -569,10 +558,6 @@
             this.listVArbitro.UseCompatibleStateImageBehavior = false;
             this.listVArbitro.View = System.Windows.Forms.View.Details;
             this.listVArbitro.SelectedIndexChanged += new System.EventHandler(this.listVArbitro_SelectedIndexChanged);
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "ID";
             // 
             // columnHeader6
             // 
@@ -690,7 +675,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 549);
+            this.ClientSize = new System.Drawing.Size(628, 546);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -790,11 +775,8 @@
         private System.Windows.Forms.ListView listVEquipa2;
         private System.Windows.Forms.ListView listVEquipa1;
         private System.Windows.Forms.ListView listVArbitro;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numericEquipa2;

@@ -279,6 +279,8 @@ namespace WindowsFormsApp1
             refresh_listview_Jogador1();
             refresh_listview_Jogador2();
             refresh_listview_Arbitro();
+
+            MessageBox.Show("Inserido com sucesso!");
         }
 
         private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
