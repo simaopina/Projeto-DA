@@ -14,14 +14,16 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        Game JogoSelecionado;
+
         public Jogos()
         {
-            /*inserir/editar/eliminar*/       
+        
             InitializeComponent();
 
-            List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
+            List<Game> listgame = container.GameSet.ToList();
 
-            foreach (StardadGame game in listgame)
+            foreach (Game game in listgame)
             {
                 listVJogos.Items.Add(game.Number.ToString());
             }
@@ -131,6 +133,48 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
+        }
+
+        private void listVJogos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVJogos.SelectedItems != null)
+            {
+                string JogosU = listVJogos.SelectedItems[0].Text;
+                JogoSelecionado = container.GameSet.Where(gam => gam.Number.Equals(JogosU)).First();
+
+                List<Game> game = container.GameSet.ToList();
+                refresh_ListView();
+            }
+        }
+
+        public void refresh_ListView()
+        {
+            listVJogos.Items.Clear();
+
+            List<Game> listgame = container.GameSet.ToList();
+
+            foreach (Game game in listgame)
+            {
+                listVJogos.Items.Add(game.Number.ToString());
+
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Name = JogoSelecionado.Number.ToString();
+
+            var query = container.GameSet.Where(torn => torn.Number.Equals(JogoSelecionado.Number));
+
+            container.GameSet.Remove(JogoSelecionado);
+
+            container.SaveChanges();
+
+            JogoSelecionado = null;
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_ListView();
         }
     }
 }
