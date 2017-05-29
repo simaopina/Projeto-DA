@@ -12,11 +12,20 @@ namespace WindowsFormsApp1
 {
     public partial class Jogos : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public Jogos()
         {
-
-            /*inserir/editar/eliminar*/
+            /*inserir/editar/eliminar*/       
             InitializeComponent();
+
+            List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
+
+            foreach (StardadGame game in listgame)
+            {
+                listVJogos.Items.Add(game.Number.ToString());
+            }
+
         }
 
         private void Jogos_Load(object sender, EventArgs e)

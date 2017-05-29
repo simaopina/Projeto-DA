@@ -14,8 +14,8 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        TeamGame teamSelecionado = null;
-
+        Team teamSelecionado = null;
+        User userSelect = null;
 
         public GestaoTorneioEquipas()
         {
@@ -132,12 +132,12 @@ namespace WindowsFormsApp1
 
                 var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa1.Text));
 
-                dataGridEquipa1.DataSource = query.ToList();
+                //dataGridEquipa1.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_datagrid();
+                refresh_listview_Equipa1();
             }
         }
 
@@ -148,24 +148,13 @@ namespace WindowsFormsApp1
 
                 var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa2.Text));
 
-                dataGridEquipa2.DataSource = query.ToList();
+                //dataGridEquipa2.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_datagrid();
+                refresh_listview_Equipa2();
             }
-        }
-
-        public void refresh_datagrid()
-        {
-
-            this.teamSetTableAdapter.Fill(this.baseDadosDataSetTeamSet.TeamSet);
-            dataGridEquipa1.DataSource = teamSetBindingSource;
-            dataGridEquipa2.DataSource = teamSetBindingSource;
-            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
-            dataGridReferee.DataSource = userSetRefereeBindingSource.OfType<Referee>();
-
         }
 
         public void validacao_pesquisar()
@@ -174,13 +163,13 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxEquipa1.Focus();
-                refresh_datagrid();
+                refresh_listview_Equipa1();
             }
             else if (tbxEquipa2.Text == tbxEquipa1.Text)
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxEquipa2.Focus();
-                refresh_datagrid();
+                refresh_listview_Equipa2();
             }
         }
 
@@ -199,9 +188,9 @@ namespace WindowsFormsApp1
             DateTime data = datetimeData.Value;
             DateTime hora = datetimeHora.Value;
             string descricao = tbxDescricao.Text;
-            int TeamId = (int)dataGridEquipa1.CurrentRow.Cells[0].Value;
-            int TeamId1 = (int)dataGridEquipa2.CurrentRow.Cells[0].Value;
-            int Referee = (int)dataGridReferee.CurrentRow.Cells[0].Value;
+            int TeamId = Convert.ToInt32(listVEquipa1.Items.ToString());
+            int TeamId1 = Convert.ToInt32(listVEquipa1.Items.ToString());
+            int Referee = Convert.ToInt32(listVArbitro.Items.ToString());
             int deck1 = Convert.ToInt32(cbxBaralhoEquipa1.Text);
             int deck2 = Convert.ToInt32(cbxBaralhoEquipa2.Text);
             int torneio = Convert.ToInt32(cbxTorneio.Text);
@@ -210,6 +199,7 @@ namespace WindowsFormsApp1
             {
                 TeamId = TeamId,
                 TeamId1 = TeamId1,
+                RefereeId = Referee,
                 Hour = hora,
                 Date = data,
                 Number = numero,
@@ -220,6 +210,9 @@ namespace WindowsFormsApp1
             };
             container.GameSet.Add(jogo);
             container.SaveChanges();
+            refresh_listview_Equipa1();
+            refresh_listview_Equipa2();
+            refresh_listview_Arbitro();
 
 
         }
@@ -231,13 +224,105 @@ namespace WindowsFormsApp1
 
                 var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
 
-                dataGridReferee.DataSource = query.ToList();
+                //dataGridReferee.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_datagrid();
+                refresh_listview_Arbitro();
             }
+        }
+
+        private void listVEquipa1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVEquipa1.SelectedItems.Count > 0)
+            {
+                string team = listVEquipa1.SelectedItems[0].Text;
+
+
+                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+                teamSelecionado = container.TeamSet.Where(tea => tea.Id.Equals(listVEquipa1.SelectedItems.ToString())).First();
+
+            }
+            else
+            {
+                teamSelecionado = null;
+            }
+        }
+
+        private void listVEquipa2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVEquipa2.SelectedItems.Count > 0)
+            {
+                string team = listVEquipa2.SelectedItems[0].Text;
+
+
+                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+                teamSelecionado = container.TeamSet.Where(tea => tea.Id.Equals(listVEquipa2.SelectedItems.ToString())).First();
+
+            }
+            else
+            {
+                teamSelecionado = null;
+            }
+        }
+
+        private void listVArbitro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVArbitro.SelectedItems.Count > 0)
+            {
+                string team = listVArbitro.SelectedItems[0].Text;
+
+                
+                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Id.Equals(listVArbitro.SelectedItems.ToString())).First();
+
+            }
+            else
+            {
+                userSelect = null;
+            }
+        }
+
+        public void refresh_listview_Equipa1()
+        {
+            listVEquipa1.Items.Clear();
+
+
+
+            foreach (Player pl in container.PlayerSet)
+            {
+                listVEquipa1.Items.Add(pl.Id.ToString());
+                listVEquipa1.Items.Add(pl.Name);
+            }
+
+        }
+
+        public void refresh_listview_Equipa2()
+        {
+            listVEquipa2.Items.Clear();
+
+
+
+            foreach (Player pl in container.PlayerSet)
+            {
+                listVEquipa2.Items.Add(pl.Id.ToString());
+                listVEquipa2.Items.Add(pl.Name);
+            }
+
+        }
+
+        public void refresh_listview_Arbitro()
+        {
+            listVArbitro.Items.Clear();
+
+
+
+            foreach (Referee refs in container.UserSet)
+            {
+                listVArbitro.Items.Add(refs.Id.ToString());
+                listVArbitro.Items.Add(refs.Name);
+            }
+
         }
     }
 }

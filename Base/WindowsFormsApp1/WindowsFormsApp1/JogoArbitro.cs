@@ -12,9 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class JogoArbitro : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public JogoArbitro()
         {
             InitializeComponent();
+
+            List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
+
+            foreach (StardadGame game in listgame)
+            {
+                listVJogo.Items.Add(game.Number.ToString());
+            }
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

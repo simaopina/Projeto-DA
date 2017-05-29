@@ -15,6 +15,9 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         Player jogadorSelecionado = null;
+        User userSelect = null;
+        List<Player> Items = new List<Player>();
+        List<Referee> Id = new List<Referee>();
 
         public GestaoTorneioJogadores()
         {
@@ -26,6 +29,7 @@ namespace WindowsFormsApp1
                 jogadorList.SubItems.Add(jogador.Name);
 
                 listVJogador1.Items.Add(jogadorList);
+
             }
 
             foreach (Player jogador in container.PlayerSet)
@@ -160,7 +164,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                refresh_list();
+                refresh_listview_Jogador1();
             }
         }
 
@@ -179,7 +183,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                refresh_list();
+                refresh_listview_Jogador2();
             }
         }
 
@@ -189,25 +193,16 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxJogador1.Focus();
-                refresh_list();
+                refresh_listview_Jogador1();
             }
             else if(tbxJogador2.Text == tbxJogador1.Text)
             {
                 MessageBox.Show("Não poderá procurar esse jogador");
                 tbxJogador2.Focus();
-                refresh_list();
+                refresh_listview_Jogador2();
             }
         }
 
-
-        public void refresh_list()
-        {
-
-            this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
-            //dataGridJogador1.DataSource = playerSetBindingSource;
-            //dataGridJogador2.DataSource = playerSetBindingSource;
-
-        }
 
         private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
         {
@@ -227,12 +222,25 @@ namespace WindowsFormsApp1
 
                 var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
 
+                foreach (Referee refs in query.ToList())
+                {
+
+                    ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Id));
+                    refereeList.SubItems.Add(refs.Name);
+
+                    listVArbitro1.Items.Add(refereeList);
+                }
+
+                listVArbitro1.Items.Clear();
+
+                listVArbitro1.Items.AddRange(Id.Where(i => string.IsNullOrEmpty(tbxArbitro.Text) || i.Name.StartsWith(tbxArbitro.Text)).Select(c => new ListViewItem(c.Name)).ToArray());
+
                 //dataGridReferee.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_listview();
+                refresh_listview_Arbitro();
             }
         }
 
@@ -242,17 +250,17 @@ namespace WindowsFormsApp1
             DateTime data = datetimeData.Value;
             DateTime hora = datetimeHora.Value;
             string descricao = tbxDescricao.Text;
-            int TeamId = Convert.ToInt32(listVJogador1.Items.ToString());
-            int TeamId1 = Convert.ToInt32(listVJogador1.Items.ToString());
-            int Referee = Convert.ToInt32(listVJogador1.Items.ToString());
+            int Player = Convert.ToInt32(listVJogador1.Items.ToString());
+            int Player1 = Convert.ToInt32(listVJogador2.Items.ToString());
+            int Referee = Convert.ToInt32(listVArbitro1.Items.ToString());
             int deck1 = Convert.ToInt32(cbxBaralhoJogador1.Text);
             int deck2 = Convert.ToInt32(cbxBaralhoJogador2.Text);
             int torneio = Convert.ToInt32(cbxTorneio.Text);
 
-            TeamGame jogo = new TeamGame
+            StardadGame jogo = new StardadGame
             {
-                TeamId = TeamId,
-                TeamId1 = TeamId1,
+                PlayerId = Player,
+                PlayerId1 = Player1,
                 RefereeId = Referee,
                 Hour = hora,
                 Date = data,
@@ -260,11 +268,13 @@ namespace WindowsFormsApp1
                 DeckIOneld = deck1,
                 DeckITwold = deck2,
                 Description = descricao,
-                TeamTournamentId = torneio
+                StandadTournamentId = torneio
             };
             container.GameSet.Add(jogo);
             container.SaveChanges();
-            refresh_listview();
+            refresh_listview_Jogador1();
+            refresh_listview_Jogador2();
+            refresh_listview_Arbitro();
         }
 
         private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
@@ -294,22 +304,77 @@ namespace WindowsFormsApp1
 
                 jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
 
-                refresh_listview();
             }
-           
+            else
+            {
+                jogadorSelecionado = null;
+
+            }
         }
 
-        public void refresh_listview()
+        private void listVArbitro1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVArbitro1.SelectedItems.Count > 0)
+            {
+                string team = listVArbitro1.SelectedItems[0].Text;
+
+                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Id.Equals(listVArbitro1.SelectedItems.ToString())).First();
+
+            }
+            else
+            {
+                userSelect = null;
+            }
+        }
+
+        public void refresh_listview_Jogador1()
         {
             listVJogador1.Items.Clear();
 
 
 
+            foreach (Player pl1 in container.PlayerSet)
+            {
+                ListViewItem Jogador1List = new ListViewItem(Convert.ToString(pl1.Id));
+                Jogador1List.SubItems.Add(pl1.Name);
+
+                listVJogador1.Items.Add(Jogador1List);
+            }
+
+        }
+
+        public void refresh_listview_Jogador2()
+        {
+            listVJogador2.Items.Clear();
+
+
+
             foreach (Player pl in container.PlayerSet)
             {
-             listVJogador1.Items.Add(pl.Id.ToString());
-             listVJogador1.Items.Add(pl.Name);
+
+                ListViewItem Jogador2List = new ListViewItem(Convert.ToString(pl.Id));
+                Jogador2List.SubItems.Add(pl.Name);
+
+                listVJogador2.Items.Add(Jogador2List);
             }
+
+        }
+
+        public void refresh_listview_Arbitro()
+        {
+            listVArbitro1.Items.Clear();
+
+
+
+            foreach (Referee refs in container.UserSet)
+            {
+
+                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Id));
+                refereeList.SubItems.Add(refs.Name);
+
+                listVArbitro1.Items.Add(refereeList);
+            }
+
 
         }
     }

@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.standadTournamentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerId1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gameSetStardadGameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosGameStardad = new WindowsFormsApp1.BaseDadosGameStardad();
             this.gameSet_StardadGameTableAdapter = new WindowsFormsApp1.BaseDadosGameStardadTableAdapters.GameSet_StardadGameTableAdapter();
@@ -49,8 +44,9 @@
             this.planeamentoDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listVJogos = new System.Windows.Forms.ListView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameSetStardadGameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosGameStardad)).BeginInit();
             this.menuStripHome.SuspendLayout();
@@ -64,52 +60,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.standadTournamentIdDataGridViewTextBoxColumn,
-            this.playerIdDataGridViewTextBoxColumn,
-            this.playerId1DataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.gameSetStardadGameBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 194);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 230);
-            this.dataGridView1.TabIndex = 33;
-            // 
-            // standadTournamentIdDataGridViewTextBoxColumn
-            // 
-            this.standadTournamentIdDataGridViewTextBoxColumn.DataPropertyName = "StandadTournamentId";
-            this.standadTournamentIdDataGridViewTextBoxColumn.HeaderText = "StandadTournamentId";
-            this.standadTournamentIdDataGridViewTextBoxColumn.Name = "standadTournamentIdDataGridViewTextBoxColumn";
-            this.standadTournamentIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // playerIdDataGridViewTextBoxColumn
-            // 
-            this.playerIdDataGridViewTextBoxColumn.DataPropertyName = "PlayerId";
-            this.playerIdDataGridViewTextBoxColumn.HeaderText = "PlayerId";
-            this.playerIdDataGridViewTextBoxColumn.Name = "playerIdDataGridViewTextBoxColumn";
-            this.playerIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // playerId1DataGridViewTextBoxColumn
-            // 
-            this.playerId1DataGridViewTextBoxColumn.DataPropertyName = "PlayerId1";
-            this.playerId1DataGridViewTextBoxColumn.HeaderText = "PlayerId1";
-            this.playerId1DataGridViewTextBoxColumn.Name = "playerId1DataGridViewTextBoxColumn";
-            this.playerId1DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gameSetStardadGameBindingSource
             // 
@@ -165,7 +115,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // cartaToolStripMenuItem
             // 
@@ -212,19 +162,37 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
             // 
+            // listVJogos
+            // 
+            this.listVJogos.Location = new System.Drawing.Point(13, 249);
+            this.listVJogos.Name = "listVJogos";
+            this.listVJogos.Size = new System.Drawing.Size(582, 214);
+            this.listVJogos.TabIndex = 35;
+            this.listVJogos.UseCompatibleStateImageBehavior = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(259, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Jogos:";
+            // 
             // Jogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 475);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listVJogos);
             this.Controls.Add(this.menuStripHome);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Jogos";
             this.Text = "Jogos";
             this.Load += new System.EventHandler(this.Jogos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameSetStardadGameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosGameStardad)).EndInit();
             this.menuStripHome.ResumeLayout(false);
@@ -237,14 +205,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private BaseDadosGameStardad baseDadosGameStardad;
         private System.Windows.Forms.BindingSource gameSetStardadGameBindingSource;
         private BaseDadosGameStardadTableAdapters.GameSet_StardadGameTableAdapter gameSet_StardadGameTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn standadTournamentIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn playerIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn playerId1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
@@ -256,5 +219,7 @@
         private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ListView listVJogos;
+        private System.Windows.Forms.Label label1;
     }
 }

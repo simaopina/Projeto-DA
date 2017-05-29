@@ -44,19 +44,21 @@
             this.btnPesquisarEquipa1 = new System.Windows.Forms.Button();
             this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.listVEquipa2 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridEquipa2 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSetTeamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSetTeamSet = new WindowsFormsApp1.BaseDadosDataSetTeamSet();
             this.tbxEquipa2 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.listVEquipa1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridEquipa1 = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,29 +82,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.teamSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTeamSetTableAdapters.TeamSetTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridReferee = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listVArbitro = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.userSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
             this.tbxArbitro = new System.Windows.Forms.TextBox();
             this.userSet_RefereeTableAdapter = new WindowsFormsApp1.BaseDadosDataSet_RefereeTableAdapters.UserSet_RefereeTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxTorneio = new System.Windows.Forms.ComboBox();
             this.Torneio = new System.Windows.Forms.Label();
+            this.cbxTorneio = new System.Windows.Forms.ComboBox();
             this.gbxGestaoTorneios.SuspendLayout();
             this.gbxJogador2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).BeginInit();
             this.gbxJogador1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).BeginInit();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -242,9 +242,9 @@
             // 
             // gbxJogador2
             // 
+            this.gbxJogador2.Controls.Add(this.listVEquipa2);
             this.gbxJogador2.Controls.Add(this.cbxBaralhoEquipa2);
             this.gbxJogador2.Controls.Add(this.label6);
-            this.gbxJogador2.Controls.Add(this.dataGridEquipa2);
             this.gbxJogador2.Controls.Add(this.btnPesquisarEquipa2);
             this.gbxJogador2.Controls.Add(this.tbxEquipa2);
             this.gbxJogador2.Location = new System.Drawing.Point(212, 191);
@@ -253,6 +253,27 @@
             this.gbxJogador2.TabIndex = 43;
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Equipa 2";
+            // 
+            // listVEquipa2
+            // 
+            this.listVEquipa2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listVEquipa2.Location = new System.Drawing.Point(10, 57);
+            this.listVEquipa2.Name = "listVEquipa2";
+            this.listVEquipa2.Size = new System.Drawing.Size(183, 77);
+            this.listVEquipa2.TabIndex = 41;
+            this.listVEquipa2.UseCompatibleStateImageBehavior = false;
+            this.listVEquipa2.View = System.Windows.Forms.View.Details;
+            this.listVEquipa2.SelectedIndexChanged += new System.EventHandler(this.listVEquipa2_SelectedIndexChanged);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nome";
             // 
             // cbxBaralhoEquipa2
             // 
@@ -270,28 +291,6 @@
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 38;
             this.label6.Text = "Baralho";
-            // 
-            // dataGridEquipa2
-            // 
-            this.dataGridEquipa2.AllowUserToAddRows = false;
-            this.dataGridEquipa2.AllowUserToDeleteRows = false;
-            this.dataGridEquipa2.AutoGenerateColumns = false;
-            this.dataGridEquipa2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEquipa2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn1});
-            this.dataGridEquipa2.DataSource = this.teamSetBindingSource1;
-            this.dataGridEquipa2.Location = new System.Drawing.Point(7, 56);
-            this.dataGridEquipa2.Name = "dataGridEquipa2";
-            this.dataGridEquipa2.ReadOnly = true;
-            this.dataGridEquipa2.Size = new System.Drawing.Size(186, 77);
-            this.dataGridEquipa2.TabIndex = 37;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // teamSetBindingSource1
             // 
@@ -318,9 +317,9 @@
             // 
             // gbxJogador1
             // 
+            this.gbxJogador1.Controls.Add(this.listVEquipa1);
             this.gbxJogador1.Controls.Add(this.cbxBaralhoEquipa1);
             this.gbxJogador1.Controls.Add(this.label5);
-            this.gbxJogador1.Controls.Add(this.dataGridEquipa1);
             this.gbxJogador1.Controls.Add(this.btnPesquisarEquipa1);
             this.gbxJogador1.Controls.Add(this.tbxEquipa1);
             this.gbxJogador1.Location = new System.Drawing.Point(14, 189);
@@ -329,6 +328,27 @@
             this.gbxJogador1.TabIndex = 42;
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Equipa 1";
+            // 
+            // listVEquipa1
+            // 
+            this.listVEquipa1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listVEquipa1.Location = new System.Drawing.Point(9, 58);
+            this.listVEquipa1.Name = "listVEquipa1";
+            this.listVEquipa1.Size = new System.Drawing.Size(183, 77);
+            this.listVEquipa1.TabIndex = 40;
+            this.listVEquipa1.UseCompatibleStateImageBehavior = false;
+            this.listVEquipa1.View = System.Windows.Forms.View.Details;
+            this.listVEquipa1.SelectedIndexChanged += new System.EventHandler(this.listVEquipa1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
             // 
             // cbxBaralhoEquipa1
             // 
@@ -346,28 +366,6 @@
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 38;
             this.label5.Text = "Baralho";
-            // 
-            // dataGridEquipa1
-            // 
-            this.dataGridEquipa1.AllowUserToAddRows = false;
-            this.dataGridEquipa1.AllowUserToDeleteRows = false;
-            this.dataGridEquipa1.AutoGenerateColumns = false;
-            this.dataGridEquipa1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEquipa1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn});
-            this.dataGridEquipa1.DataSource = this.teamSetBindingSource;
-            this.dataGridEquipa1.Location = new System.Drawing.Point(6, 57);
-            this.dataGridEquipa1.Name = "dataGridEquipa1";
-            this.dataGridEquipa1.ReadOnly = true;
-            this.dataGridEquipa1.Size = new System.Drawing.Size(186, 77);
-            this.dataGridEquipa1.TabIndex = 37;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // teamSetBindingSource
             // 
@@ -534,7 +532,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridReferee);
+            this.groupBox1.Controls.Add(this.listVArbitro);
             this.groupBox1.Controls.Add(this.btnPesquisarArbitro);
             this.groupBox1.Controls.Add(this.tbxArbitro);
             this.groupBox1.Location = new System.Drawing.Point(416, 192);
@@ -544,27 +542,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbitro";
             // 
-            // dataGridReferee
+            // listVArbitro
             // 
-            this.dataGridReferee.AllowUserToAddRows = false;
-            this.dataGridReferee.AllowUserToDeleteRows = false;
-            this.dataGridReferee.AutoGenerateColumns = false;
-            this.dataGridReferee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReferee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn2});
-            this.dataGridReferee.DataSource = this.userSetRefereeBindingSource;
-            this.dataGridReferee.Location = new System.Drawing.Point(2, 55);
-            this.dataGridReferee.Name = "dataGridReferee";
-            this.dataGridReferee.ReadOnly = true;
-            this.dataGridReferee.Size = new System.Drawing.Size(195, 122);
-            this.dataGridReferee.TabIndex = 2;
+            this.listVArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listVArbitro.Location = new System.Drawing.Point(3, 58);
+            this.listVArbitro.Name = "listVArbitro";
+            this.listVArbitro.Size = new System.Drawing.Size(197, 123);
+            this.listVArbitro.TabIndex = 42;
+            this.listVArbitro.UseCompatibleStateImageBehavior = false;
+            this.listVArbitro.View = System.Windows.Forms.View.Details;
+            this.listVArbitro.SelectedIndexChanged += new System.EventHandler(this.listVArbitro_SelectedIndexChanged);
             // 
-            // nameDataGridViewTextBoxColumn2
+            // columnHeader5
             // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.columnHeader5.Text = "ID";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Nome";
             // 
             // userSetRefereeBindingSource
             // 
@@ -609,14 +606,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Torneio";
             // 
-            // cbxTorneio
-            // 
-            this.cbxTorneio.FormattingEnabled = true;
-            this.cbxTorneio.Location = new System.Drawing.Point(9, 52);
-            this.cbxTorneio.Name = "cbxTorneio";
-            this.cbxTorneio.Size = new System.Drawing.Size(188, 21);
-            this.cbxTorneio.TabIndex = 0;
-            // 
             // Torneio
             // 
             this.Torneio.AutoSize = true;
@@ -625,6 +614,14 @@
             this.Torneio.Size = new System.Drawing.Size(90, 13);
             this.Torneio.TabIndex = 1;
             this.Torneio.Text = "Adicionar Torneio";
+            // 
+            // cbxTorneio
+            // 
+            this.cbxTorneio.FormattingEnabled = true;
+            this.cbxTorneio.Location = new System.Drawing.Point(9, 52);
+            this.cbxTorneio.Name = "cbxTorneio";
+            this.cbxTorneio.Size = new System.Drawing.Size(188, 21);
+            this.cbxTorneio.TabIndex = 0;
             // 
             // GestaoTorneioEquipas
             // 
@@ -647,20 +644,17 @@
             this.gbxGestaoTorneios.PerformLayout();
             this.gbxJogador2.ResumeLayout(false);
             this.gbxJogador2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).EndInit();
             this.gbxJogador1.ResumeLayout(false);
             this.gbxJogador1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEquipa1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -705,20 +699,14 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dataGridEquipa1;
-        private System.Windows.Forms.DataGridView dataGridEquipa2;
         private BaseDadosDataSetTeamSet baseDadosDataSetTeamSet;
         private System.Windows.Forms.BindingSource teamSetBindingSource;
         private BaseDadosDataSetTeamSetTableAdapters.TeamSetTableAdapter teamSetTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource teamSetBindingSource1;
         private System.Windows.Forms.BindingSource baseDadosDataSetTeamSetBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxNumero;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridReferee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button btnPesquisarArbitro;
         private System.Windows.Forms.TextBox tbxArbitro;
         private BaseDadosDataSet_Referee baseDadosDataSet_Referee;
@@ -733,5 +721,14 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label Torneio;
         private System.Windows.Forms.ComboBox cbxTorneio;
+        private System.Windows.Forms.ListView listVEquipa2;
+        private System.Windows.Forms.ListView listVEquipa1;
+        private System.Windows.Forms.ListView listVArbitro;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
