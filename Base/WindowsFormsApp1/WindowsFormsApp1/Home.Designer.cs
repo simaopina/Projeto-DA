@@ -55,10 +55,14 @@
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.gbxNoticias = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.menuStripHome.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
             this.gbxCuriosidades.SuspendLayout();
+            this.gbxNoticias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -303,12 +307,16 @@
             // 
             // gbxNoticias
             // 
+            this.gbxNoticias.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbxNoticias.Controls.Add(this.label13);
+            this.gbxNoticias.Controls.Add(this.label12);
+            this.gbxNoticias.Controls.Add(this.label11);
             this.gbxNoticias.Location = new System.Drawing.Point(245, 270);
             this.gbxNoticias.Name = "gbxNoticias";
             this.gbxNoticias.Size = new System.Drawing.Size(348, 248);
             this.gbxNoticias.TabIndex = 18;
             this.gbxNoticias.TabStop = false;
-            this.gbxNoticias.Text = "Noticias";
+            this.gbxNoticias.Text = "Informações";
             // 
             // pictureBox1
             // 
@@ -318,6 +326,33 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(322, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Arcmage é um jogo cartas, inspirado no jogo Magic The Gathering,";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(4, 34);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(325, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = " com o tema de fantasia em desenvolvimento por uma comunidade ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(7, 48);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(169, 13);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "de criadores de jogos e jogadores.";
             // 
             // Home
             // 
@@ -348,6 +383,8 @@
             this.gbxEquipas.ResumeLayout(false);
             this.gbxEquipas.PerformLayout();
             this.gbxCuriosidades.ResumeLayout(false);
+            this.gbxNoticias.ResumeLayout(false);
+            this.gbxNoticias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -383,6 +420,9 @@
         private System.Windows.Forms.GroupBox gbxCuriosidades;
         private System.Windows.Forms.GroupBox gbxNoticias;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
 
