@@ -294,5 +294,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Baralho_ADM BAdmfmr = new Baralho_ADM();
+            BAdmfmr.Show();
+            Close();
+        }
     }
 }
