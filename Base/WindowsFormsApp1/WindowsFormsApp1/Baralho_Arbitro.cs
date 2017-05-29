@@ -18,17 +18,56 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            List<Deck> listdeck = container.DeckSet.ToList();
+            carregar_Baralho();
+            carregar_Carta_Baralho();
+            
+        }
 
-            foreach (Deck deck in listdeck)
+        private void carregar_Baralho()
+        {
+            List<Deck> baralhos = (from d in container.DeckSet
+                                   select d).ToList();
+
+            listBoxBaralho.Items.Clear();
+            listBoxBaralho.Items.AddRange(baralhos.ToArray());
+        }
+
+        private void carregar_Carta_Baralho()
+        {
+            Deck deckSelecionado = (Deck)listBoxBaralho.SelectedItem;
+
+            if (deckSelecionado != null)
             {
-                listVbaralho.Items.Add(deck.Name);
+                listBoxCartasBaralho.Items.Clear();
+                listBoxCartasBaralho.Items.AddRange(deckSelecionado.Deck_Card.ToArray());
             }
         }
 
+        public void vercartas()
+        {
+
+            Deck deckSelecionado = (Deck)listBoxBaralho.SelectedItem;
+
+            Deck baralhos = (Deck)listBoxBaralho.SelectedItem;
+
+            listBoxCartasBaralho.Items.Clear();
+
+            List<Deck_Card> cartaembaralhos = (from d in container.Deck_CardSet
+                                               select d).ToList();
+
+            if (deckSelecionado != null)
+            {
+                listBoxCartasBaralho.Items.Clear();
+
+
+                listBoxCartasBaralho.Items.AddRange(deckSelecionado.Deck_Card.ToArray());
+            }
+        }
+
+
         private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
         {
-            listVbaralho.LargeImageList = listaBaralhoArbitroGaianloveforlife;
+            /*listVbaralho.LargeImageList = listaBaralhoArbitroGaianloveforlife;
             listVbaralho.Items.Clear();
 
             foreach (Card carta in container.CardSet)
@@ -36,12 +75,12 @@ namespace WindowsFormsApp1
                 ListViewItem item = new ListViewItem(carta.Name);
                 //item.ImageIndex = carta.Image;
                 listVbaralho.Items.Add(item);
-            }
+            }*/
         }
 
         private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
         {
-            listVbaralho.LargeImageList = listaBaralhoArbitroUneasyAlliance;
+            /*listVbaralho.LargeImageList = listaBaralhoArbitroUneasyAlliance;
             listVbaralho.Items.Clear();
 
             foreach (Card carta in container.CardSet)
@@ -49,7 +88,7 @@ namespace WindowsFormsApp1
                 ListViewItem item = new ListViewItem(carta.Name);
                // item.ImageIndex = carta.Image;
                 listVbaralho.Items.Add(item);
-            }
+            }*/
         }
 
         private void Baralho_Arbitro_Load(object sender, EventArgs e)
@@ -108,16 +147,14 @@ namespace WindowsFormsApp1
 
         private void listVbaralho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVbaralho.SelectedItems != null)
-            {
-                Deck deckSelecionado = (Deck)atum.SelectedItem;
 
-                if (deckSelecionado != null)
-                {
-                    atum.Items.Clear();
-                    atum.Items.AddRange(deckSelecionado.Deck_Card.ToArray());
-                }
-            }
+        }
+
+        private void listBoxBaralho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxCartasBaralho.Items.Clear();
+            vercartas();
+            
         }
     }
 }

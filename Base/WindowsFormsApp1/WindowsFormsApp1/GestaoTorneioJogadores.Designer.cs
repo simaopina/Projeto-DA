@@ -79,8 +79,6 @@
             this.datetimeData = new System.Windows.Forms.DateTimePicker();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.playerSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter();
-            this.dataGridReferee = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
@@ -108,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4)).BeginInit();
             this.gbxJogador2.SuspendLayout();
             this.gbxGestaoTorneios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).BeginInit();
@@ -534,28 +531,6 @@
             // 
             this.playerSetTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridReferee
-            // 
-            this.dataGridReferee.AllowUserToAddRows = false;
-            this.dataGridReferee.AllowUserToDeleteRows = false;
-            this.dataGridReferee.AutoGenerateColumns = false;
-            this.dataGridReferee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridReferee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn2});
-            this.dataGridReferee.DataSource = this.userSetRefereeBindingSource;
-            this.dataGridReferee.Location = new System.Drawing.Point(2, 55);
-            this.dataGridReferee.Name = "dataGridReferee";
-            this.dataGridReferee.ReadOnly = true;
-            this.dataGridReferee.Size = new System.Drawing.Size(195, 121);
-            this.dataGridReferee.TabIndex = 2;
-            // 
-            // nameDataGridViewTextBoxColumn2
-            // 
-            this.nameDataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn2.Name = "nameDataGridViewTextBoxColumn2";
-            this.nameDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // userSetRefereeBindingSource
             // 
             this.userSetRefereeBindingSource.DataMember = "UserSet_Referee";
@@ -574,7 +549,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listVArbitro1);
-            this.groupBox1.Controls.Add(this.dataGridReferee);
             this.groupBox1.Controls.Add(this.btnPesquisarArbitro);
             this.groupBox1.Controls.Add(this.tbxArbitro);
             this.groupBox1.Location = new System.Drawing.Point(435, 190);
@@ -589,7 +563,7 @@
             this.listVArbitro1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6});
-            this.listVArbitro1.Location = new System.Drawing.Point(3, 56);
+            this.listVArbitro1.Location = new System.Drawing.Point(3, 57);
             this.listVArbitro1.Name = "listVArbitro1";
             this.listVArbitro1.Size = new System.Drawing.Size(193, 119);
             this.listVArbitro1.TabIndex = 3;
@@ -717,7 +691,6 @@
             this.gbxJogador2.PerformLayout();
             this.gbxGestaoTorneios.ResumeLayout(false);
             this.gbxGestaoTorneios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridReferee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetRefereeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).EndInit();
@@ -778,7 +751,6 @@
         private BaseDadosDataSet4 baseDadosDataSet4;
         private System.Windows.Forms.BindingSource playerSetBindingSource;
         private BaseDadosDataSet4TableAdapters.PlayerSetTableAdapter playerSetTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridReferee;
         private System.Windows.Forms.BindingSource baseDadosDataSetRefereeBindingSource;
         private BaseDadosDataSet_Referee baseDadosDataSet_Referee;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -786,7 +758,6 @@
         private System.Windows.Forms.TextBox tbxArbitro;
         private System.Windows.Forms.BindingSource userSetRefereeBindingSource;
         private BaseDadosDataSet_RefereeTableAdapters.UserSet_RefereeTableAdapter userSet_RefereeTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn2;
         private System.Windows.Forms.ComboBox cbxBaralhoJogador1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbxBaralhoJogador2;

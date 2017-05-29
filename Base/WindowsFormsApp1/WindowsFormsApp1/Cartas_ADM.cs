@@ -325,54 +325,7 @@ namespace WindowsFormsApp1
             LinkLabelImagem.Text = cartaselecionada.Image;
 
         }
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InserirEquipa Iefrm = new InserirEquipa();
-            Iefrm.Show();
-            Close();
-        }
-
-        private void utilizadoreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
-            Uadmfrm.Show();
-            Close();
-        }
-
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
-            Gtjfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
-            Gtefrm.Show();
-            Close();
-        }
-
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM HAdmfrm = new Home_ADM();
-            HAdmfrm.Show();
-            Close();
-        }
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Baralho_ADM BaAdmfrm = new Baralho_ADM();
-            BaAdmfrm.Show();
-            Close();
-        }
-
-        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
-            EdBaAdmfrm.Show();
-            Close();
-        }
+    
 
        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -429,6 +382,103 @@ namespace WindowsFormsApp1
 
                 refreshlistVcartas();
             }
+        }
+    private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa Iefrm = new InserirEquipa();
+            Iefrm.Show();
+            Close();
+        }
+
+        private void utilizadoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
+            Uadmfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BaAdmfrm = new Baralho_ADM();
+            BaAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
+            EdBaAdmfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM adjfrm = new ADD_Jogador_ADM();
+            adjfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InserirEquipa EquFrm = new InserirEquipa();
+            EquFrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM utifrm = new Utilizadores_ADM();
+            utifrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio tornfrm = new CriarTorneio();
+            tornfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home hfrm = new Home();
+            hfrm.Show();
+            Close();
         }
     }
 }
