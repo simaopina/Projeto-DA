@@ -22,11 +22,11 @@ namespace WindowsFormsApp1
 
             foreach (Player jogador in container.PlayerSet)
             {
-                cbxJogador1.Items.Add(jogador.Name.ToString());
+                cbxJogador1.Items.Add(jogador.Id.ToString());
             }
             foreach (Player jogador in container.PlayerSet)
             {
-                cbxJogador2.Items.Add(jogador.Name.ToString());
+                cbxJogador2.Items.Add(jogador.Id.ToString());
             }
         }
 

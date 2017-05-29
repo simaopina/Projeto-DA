@@ -51,12 +51,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.listVJogador1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnPesquisarJogador1 = new System.Windows.Forms.Button();
             this.playerSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet4 = new WindowsFormsApp1.BaseDadosDataSet4();
-            this.btnPesquisarJogador1 = new System.Windows.Forms.Button();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.listVJogador2 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnPesquisarJogador2 = new System.Windows.Forms.Button();
@@ -79,6 +85,9 @@
             this.baseDadosDataSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listVArbitro1 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
             this.tbxArbitro = new System.Windows.Forms.TextBox();
             this.userSet_RefereeTableAdapter = new WindowsFormsApp1.BaseDadosDataSet_RefereeTableAdapters.UserSet_RefereeTableAdapter();
@@ -92,15 +101,6 @@
             this.playerSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.playerSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_PlayerTableAdapters.PlayerSetTableAdapter();
             this.playerSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.listVJogador1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listVJogador2 = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listVArbitro1 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
@@ -299,6 +299,27 @@
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Jogador 1";
             // 
+            // listVJogador1
+            // 
+            this.listVJogador1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listVJogador1.Location = new System.Drawing.Point(6, 58);
+            this.listVJogador1.Name = "listVJogador1";
+            this.listVJogador1.Size = new System.Drawing.Size(200, 76);
+            this.listVJogador1.TabIndex = 40;
+            this.listVJogador1.UseCompatibleStateImageBehavior = false;
+            this.listVJogador1.View = System.Windows.Forms.View.Details;
+            this.listVJogador1.SelectedIndexChanged += new System.EventHandler(this.listVJogador1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            // 
             // cbxBaralhoJogador1
             // 
             this.cbxBaralhoJogador1.FormattingEnabled = true;
@@ -316,16 +337,6 @@
             this.label5.TabIndex = 38;
             this.label5.Text = "Baralho";
             // 
-            // playerSetBindingSource
-            // 
-            this.playerSetBindingSource.DataMember = "PlayerSet";
-            this.playerSetBindingSource.DataSource = this.baseDadosDataSet4;
-            // 
-            // baseDadosDataSet4
-            // 
-            this.baseDadosDataSet4.DataSetName = "BaseDadosDataSet4";
-            this.baseDadosDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // btnPesquisarJogador1
             // 
             this.btnPesquisarJogador1.Location = new System.Drawing.Point(131, 28);
@@ -335,6 +346,16 @@
             this.btnPesquisarJogador1.Text = "Pesquisar";
             this.btnPesquisarJogador1.UseVisualStyleBackColor = true;
             this.btnPesquisarJogador1.Click += new System.EventHandler(this.btnPesquisarJogador1_Click);
+            // 
+            // playerSetBindingSource
+            // 
+            this.playerSetBindingSource.DataMember = "PlayerSet";
+            this.playerSetBindingSource.DataSource = this.baseDadosDataSet4;
+            // 
+            // baseDadosDataSet4
+            // 
+            this.baseDadosDataSet4.DataSetName = "BaseDadosDataSet4";
+            this.baseDadosDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gbxJogador2
             // 
@@ -349,6 +370,27 @@
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Jogador 2";
+            // 
+            // listVJogador2
+            // 
+            this.listVJogador2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listVJogador2.Location = new System.Drawing.Point(7, 58);
+            this.listVJogador2.Name = "listVJogador2";
+            this.listVJogador2.Size = new System.Drawing.Size(200, 77);
+            this.listVJogador2.TabIndex = 40;
+            this.listVJogador2.UseCompatibleStateImageBehavior = false;
+            this.listVJogador2.View = System.Windows.Forms.View.Details;
+            this.listVJogador2.SelectedIndexChanged += new System.EventHandler(this.listVJogador2_SelectedIndexChanged);
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Nome";
             // 
             // cbxBaralhoJogador2
             // 
@@ -542,6 +584,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbitro";
             // 
+            // listVArbitro1
+            // 
+            this.listVArbitro1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listVArbitro1.Location = new System.Drawing.Point(3, 56);
+            this.listVArbitro1.Name = "listVArbitro1";
+            this.listVArbitro1.Size = new System.Drawing.Size(193, 119);
+            this.listVArbitro1.TabIndex = 3;
+            this.listVArbitro1.UseCompatibleStateImageBehavior = false;
+            this.listVArbitro1.View = System.Windows.Forms.View.Details;
+            this.listVArbitro1.SelectedIndexChanged += new System.EventHandler(this.listVArbitro1_SelectedIndexChanged);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ID";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Nome";
+            // 
             // btnPesquisarArbitro
             // 
             this.btnPesquisarArbitro.Location = new System.Drawing.Point(122, 27);
@@ -627,68 +690,6 @@
             // 
             this.playerSetBindingSource3.DataMember = "PlayerSet";
             this.playerSetBindingSource3.DataSource = this.baseDadosDataSet4BindingSource;
-            // 
-            // listVJogador1
-            // 
-            this.listVJogador1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listVJogador1.Location = new System.Drawing.Point(6, 58);
-            this.listVJogador1.Name = "listVJogador1";
-            this.listVJogador1.Size = new System.Drawing.Size(200, 76);
-            this.listVJogador1.TabIndex = 40;
-            this.listVJogador1.UseCompatibleStateImageBehavior = false;
-            this.listVJogador1.View = System.Windows.Forms.View.Details;
-            this.listVJogador1.SelectedIndexChanged += new System.EventHandler(this.listVJogador1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Nome";
-            // 
-            // listVJogador2
-            // 
-            this.listVJogador2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-            this.listVJogador2.Location = new System.Drawing.Point(7, 58);
-            this.listVJogador2.Name = "listVJogador2";
-            this.listVJogador2.Size = new System.Drawing.Size(200, 77);
-            this.listVJogador2.TabIndex = 40;
-            this.listVJogador2.UseCompatibleStateImageBehavior = false;
-            this.listVJogador2.View = System.Windows.Forms.View.Details;
-            this.listVJogador2.SelectedIndexChanged += new System.EventHandler(this.listVJogador2_SelectedIndexChanged);
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "ID";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Nome";
-            // 
-            // listVArbitro1
-            // 
-            this.listVArbitro1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listVArbitro1.Location = new System.Drawing.Point(3, 56);
-            this.listVArbitro1.Name = "listVArbitro1";
-            this.listVArbitro1.Size = new System.Drawing.Size(193, 119);
-            this.listVArbitro1.TabIndex = 3;
-            this.listVArbitro1.UseCompatibleStateImageBehavior = false;
-            this.listVArbitro1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "ID";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Nome";
             // 
             // GestaoTorneioJogadores
             // 
