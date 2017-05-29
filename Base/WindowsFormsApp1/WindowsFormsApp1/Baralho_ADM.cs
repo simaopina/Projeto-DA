@@ -67,37 +67,8 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Navegação
 
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM EBfrm = new Edicao_Baralhos_ADM();
-            EBfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Cartas_ADM Cfrm = new Cartas_ADM();
-
-            Cfrm.Show();
-            Close();
-        }
-
-        private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ADD_Jogador_ADM addJofrm = new ADD_Jogador_ADM();
-
-            addJofrm.Show();
-            Close();
-        }
-
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM Hadmfrm = new Home_ADM();
-            Hadmfrm.Show();
-            Close();
-        }
+     
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -162,6 +133,13 @@ namespace WindowsFormsApp1
         {
             GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
             Gtefrm.Show();
+            Close();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
             Close();
         }
     }

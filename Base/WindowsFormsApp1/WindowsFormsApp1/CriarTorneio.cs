@@ -230,5 +230,66 @@ namespace WindowsFormsApp1
 
             refresh_listViewEquipas();
         }
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Baralho_ADM BarAdmfrm = new Baralho_ADM();
+            BarAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
+            EdBaAdmfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM CAdmfrm = new Cartas_ADM();
+            CAdmfrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM UtiAdmfrm = new Utilizadores_ADM();
+            UtiAdmfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GesTorJogfrm = new GestaoTorneioJogadores();
+            GesTorJogfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GesTorEqfrm = new GestaoTorneioEquipas();
+            GesTorEqfrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }

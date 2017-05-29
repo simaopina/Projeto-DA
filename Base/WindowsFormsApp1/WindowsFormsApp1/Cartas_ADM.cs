@@ -243,49 +243,6 @@ namespace WindowsFormsApp1
         }
 
 
-        //navegação
-
-
-        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Baralho_ADM Barfrm = new Baralho_ADM();
-            Barfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM ECfrm = new Edicao_Baralhos_ADM();
-            ECfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addJogadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ADD_Jogador_ADM addjfrm = new ADD_Jogador_ADM();
-            addjfrm.Show();
-            Close();
-        }
-
-        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-            Hfrm.Show();
-            Close();
-        }
-
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM H_ADM = new Home_ADM();
-            H_ADM.Show();
-            Close();
-
-        }
 
         private void DataGridCartas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -301,34 +258,6 @@ namespace WindowsFormsApp1
 
             Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
             Info_cartas_ADM.Show();*/
-        }
-
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InserirEquipa Iefrm = new InserirEquipa();
-            Iefrm.Show();
-            Close();
-        }
-
-        private void utilizadoreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
-            Uadmfrm.Show();
-            Close();
-        }
-
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
-            Gtjfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
-            Gtefrm.Show();
-            Close();
         }
 
         private void LinkLabelImagem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -390,5 +319,53 @@ namespace WindowsFormsApp1
             LinkLabelImagem.Text = cartaselecionada.Image;
 
         }
-            }
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa Iefrm = new InserirEquipa();
+            Iefrm.Show();
+            Close();
+        }
+
+        private void utilizadoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
+            Uadmfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
+            Gtjfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
+            Gtefrm.Show();
+            Close();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BaAdmfrm = new Baralho_ADM();
+            BaAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
+            EdBaAdmfrm.Show();
+            Close();
+        }
+    }
 }
