@@ -56,8 +56,9 @@ namespace WindowsFormsApp1
             refresh_listViewEquipas();
             MessageBox.Show("Torneio Inserido com sucesso");
 
-            tbxNomeStandard.Clear();
-            tbxDescricaoStandard.Clear();
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
         }
 
         private void btnGuardarStandard_Click(object sender, EventArgs e)
@@ -78,8 +79,9 @@ namespace WindowsFormsApp1
             refresh_listViewStandard();
             MessageBox.Show("Torneio Inserido com sucesso");
 
-            tbxNomeStandard.Clear();
-            tbxDescricaoStandard.Clear();
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
 
         }
 
@@ -128,6 +130,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Alterado com Sucesso!");
 
                 refresh_listViewStandard();
+
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+
             }
         }
 
@@ -150,23 +157,23 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Alterado com sucesso!");
 
                 refresh_listViewEquipas();
+
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
+
             }
         }
 
         private void listVStandard_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVStandard.SelectedItems.Count < 0)
-            {
-                tbxNomeStandard.ResetText();
-                tbxDescricaoStandard.ResetText();
-                dateTimeDataStandard.Value = DateTime.Now;
-                    
-
+            if (listVStandard.SelectedItems != null)
+            {           
                 string STorneioU = listVStandard.SelectedItems[0].Text;
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
                 List<Tournament> tournament = container.TournamentSet.ToList();
-
+                    
                 tbxNomeStandard.Text = SSTorneioSelected.Name;
                 tbxDescricaoStandard.Text = SSTorneioSelected.Description;
                 dateTimeDataStandard.Value = SSTorneioSelected.Date;
@@ -177,13 +184,8 @@ namespace WindowsFormsApp1
 
         private void listVEquipas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVEquipas.SelectedItems.Count < 0)
-            {
-                tbxNomeEquipas.ResetText();
-                tbxDescricao.ResetText();
-                dateTEquipas.Value = DateTime.Now;
-               
-
+            if (listVEquipas.SelectedItems != null)
+            {     
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
 
@@ -212,6 +214,11 @@ namespace WindowsFormsApp1
             MessageBox.Show("Torneio elimindado com sucesso!");
 
             refresh_listViewStandard();
+
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+
         }
 
         private void btnEliminarEquipas_Click(object sender, EventArgs e)
@@ -229,6 +236,10 @@ namespace WindowsFormsApp1
             MessageBox.Show("Torneio eliminado com sucesso!");
 
             refresh_listViewEquipas();
+
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
         }
 
         private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -286,6 +297,95 @@ namespace WindowsFormsApp1
         }
 
         private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home_ADM Hfrm = new Home_ADM();
+            Hfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BAdmfrm = new Baralho_ADM();
+            BAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EBAfrm = new Edicao_Baralhos_ADM();
+            EBAfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cartas_ADM CAMfrm = new Cartas_ADM();
+            CAMfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM ADDJogfrm = new ADD_Jogador_ADM();
+            ADDJogfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa InsEqfrm = new InserirEquipa();
+            InsEqfrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
+            Utilfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
+            GTJfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
+            GTEfrm.Show();
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Home Hfrm = new Home();
             Hfrm.Show();

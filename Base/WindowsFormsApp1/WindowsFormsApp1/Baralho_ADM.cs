@@ -14,10 +14,13 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         int id_baralho = 0;
+        Deck deckselecionado = null;
 
         public Baralho_ADM()
         {
             InitializeComponent();
+
+            refresh_listview();
         }
 
         private void signoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,8 +64,7 @@ namespace WindowsFormsApp1
             foreach (Card carta in container.CardSet)
             {
                 ListViewItem item = new ListViewItem(carta.Name);
-                //item.ImageIndex = carta.Image;
-//                ListVBaralhoADM.Items.Add(item);
+                listVBaralhos.Items.Add(carta.Name);
 
             }
         }
@@ -72,7 +74,7 @@ namespace WindowsFormsApp1
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nome = txtbNome.Text;
+            string nome = tbxNome.Text;
 
             Deck baralho = new Deck
             {
@@ -83,13 +85,21 @@ namespace WindowsFormsApp1
 
             container.DeckSet.Add(baralho);
             container.SaveChanges();
-            refresh_datagrid();
+            refresh_listview();
+            tbxNome.ResetText();
         }
 
-        public void refresh_datagrid()
+        public void refresh_listview()
         {
-            this.deckSetTableAdapter.Fill(this.baseDadosdeck.DeckSet);
-            DataGridBaralho.DataSource = deckSetBindingSource;
+            listVBaralhos.Items.Clear();
+            List<Deck> Sdeck = container.DeckSet.ToList();
+
+            foreach (Deck deck in Sdeck)
+            {
+                ListViewItem item = new ListViewItem(deck.Name);
+                listVBaralhos.Items.Add(item);
+            }
+            
 
         }
 
@@ -97,14 +107,72 @@ namespace WindowsFormsApp1
         {
             if (tbxpesquisa.Text.Length > 0)
             {
-                var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
-                DataGridBaralho.DataSource = query.ToList();
+                //var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
+                //DataGridBaralho.DataSource = query.ToList();
 
             }
 
             else
             {
-                refresh_datagrid();
+                //refresh_datagrid();
+            }
+        }
+
+
+
+
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Name = deckselecionado.Name;
+
+            var query = container.DeckSet.Where(deck => deck.Name.Equals(deckselecionado.Name));
+
+            container.DeckSet.Remove(deckselecionado);
+
+            container.SaveChanges();
+
+            deckselecionado = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            tbxNome.ResetText();
+
+            refresh_listview();
+
+        }
+
+        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVBaralhos.SelectedItems != null)
+            {
+                string DeckU = listVBaralhos.SelectedItems[0].Text;
+                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
+
+                tbxNome.Text = deckselecionado.Name;
+
+                refresh_listview();
+
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            string Nome = tbxNome.Text;
+
+            List<Deck> deck = container.DeckSet.ToList();
+
+            if(deckselecionado != null)
+            {
+                deckselecionado.Name = Nome;
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listview();
+                tbxNome.ResetText();
             }
         }
 
@@ -140,6 +208,69 @@ namespace WindowsFormsApp1
         {
             Home_ADM HAdmfrm = new Home_ADM();
             HAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EBAdmfrm = new Edicao_Baralhos_ADM();
+            EBAdmfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cartas_ADM CarAdmfrm = new Cartas_ADM();
+            CarAdmfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM addfrm = new ADD_Jogador_ADM();
+            addfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InserirEquipa IEfrm = new InserirEquipa();
+            IEfrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilizadores_ADM UAfrm = new Utilizadores_ADM();
+            UAfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CTfrm = new CriarTorneio();
+            CTfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
+            GTJfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
+            GTEfrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
             Close();
         }
     }

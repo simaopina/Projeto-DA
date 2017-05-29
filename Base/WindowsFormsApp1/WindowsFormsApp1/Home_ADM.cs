@@ -102,6 +102,7 @@ namespace WindowsFormsApp1
         {
             Utilizadores_ADM uti = new Utilizadores_ADM();
             uti.Show();
+            Close();
             
         }
 
@@ -179,6 +180,27 @@ namespace WindowsFormsApp1
         {
             Home Hfrm = new Home();
             Hfrm.Show();
+            Close();
+        }
+
+        private void btnGestaoDeJogosST_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
+            GTJfrm.Show();
+            Close();
+        }
+
+        private void btnGestaoDeJogosTeam_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
+            GTEfrm.Show();
+            Close();
+        }
+
+        private void btnGestaoTorneios_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CTornfrm = new CriarTorneio();
+            CTornfrm.Show();
             Close();
         }
     }

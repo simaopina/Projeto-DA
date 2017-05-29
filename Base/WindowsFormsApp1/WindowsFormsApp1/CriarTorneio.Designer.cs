@@ -173,6 +173,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnGuardarStandard
             // 
@@ -312,6 +313,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnGuardar
             // 
@@ -386,6 +388,7 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem
             // 
@@ -403,12 +406,14 @@
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
             this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
+            this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
             this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
+            this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator1
             // 
@@ -420,6 +425,7 @@
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
             this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
+            this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click);
             // 
             // jogadoresToolStripMenuItem
             // 
@@ -438,6 +444,7 @@
             this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
             this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novoJogadorToolStripMenuItem.Text = "Jogador";
+            this.novoJogadorToolStripMenuItem.Click += new System.EventHandler(this.novoJogadorToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -449,6 +456,7 @@
             this.novaEquipaToolStripMenuItem.Name = "novaEquipaToolStripMenuItem";
             this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novaEquipaToolStripMenuItem.Text = "Nova Equipa";
+            this.novaEquipaToolStripMenuItem.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -460,6 +468,7 @@
             this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
             this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
+            this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItem1
             // 
@@ -477,6 +486,7 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(154, 22);
             this.toolStripMenuItem2.Text = "Torneios";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
             // 
             // toolStripSeparator4
             // 
@@ -488,18 +498,21 @@
             this.torneioIndividualToolStripMenuItem.Name = "torneioIndividualToolStripMenuItem";
             this.torneioIndividualToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.torneioIndividualToolStripMenuItem.Text = "Jogo Individual";
+            this.torneioIndividualToolStripMenuItem.Click += new System.EventHandler(this.torneioIndividualToolStripMenuItem_Click);
             // 
             // torneioEquipaToolStripMenuItem
             // 
             this.torneioEquipaToolStripMenuItem.Name = "torneioEquipaToolStripMenuItem";
             this.torneioEquipaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
+            this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
             // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
             // 
             // menuStripHome
             // 

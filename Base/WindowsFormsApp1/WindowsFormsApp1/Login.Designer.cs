@@ -37,16 +37,11 @@
             this.tbxemail = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.menustripLogin = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbxLogin.SuspendLayout();
             this.menustripLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +49,7 @@
             // 
             // gbxLogin
             // 
+            this.gbxLogin.Controls.Add(this.label1);
             this.gbxLogin.Controls.Add(this.button2);
             this.gbxLogin.Controls.Add(this.button1);
             this.gbxLogin.Controls.Add(this.btnCancelar);
@@ -62,9 +58,9 @@
             this.gbxLogin.Controls.Add(this.tbxemail);
             this.gbxLogin.Controls.Add(this.label12);
             this.gbxLogin.Controls.Add(this.label11);
-            this.gbxLogin.Location = new System.Drawing.Point(245, 268);
+            this.gbxLogin.Location = new System.Drawing.Point(25, 188);
             this.gbxLogin.Name = "gbxLogin";
-            this.gbxLogin.Size = new System.Drawing.Size(348, 248);
+            this.gbxLogin.Size = new System.Drawing.Size(587, 328);
             this.gbxLogin.TabIndex = 30;
             this.gbxLogin.TabStop = false;
             this.gbxLogin.Text = "Login";
@@ -72,7 +68,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(215, 193);
+            this.button2.Location = new System.Drawing.Point(325, 227);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -84,9 +80,9 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.ForeColor = System.Drawing.Color.Maroon;
-            this.button1.Location = new System.Drawing.Point(102, 193);
+            this.button1.Location = new System.Drawing.Point(212, 227);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = ":) - Admin";
             this.button1.UseVisualStyleBackColor = false;
@@ -94,7 +90,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(215, 164);
+            this.btnCancelar.Location = new System.Drawing.Point(325, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 5;
@@ -104,7 +100,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(102, 164);
+            this.btnLogin.Location = new System.Drawing.Point(212, 198);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -114,14 +110,14 @@
             // 
             // tbxPW
             // 
-            this.tbxPW.Location = new System.Drawing.Point(102, 107);
+            this.tbxPW.Location = new System.Drawing.Point(212, 141);
             this.tbxPW.Name = "tbxPW";
             this.tbxPW.Size = new System.Drawing.Size(188, 20);
             this.tbxPW.TabIndex = 3;
             // 
             // tbxemail
             // 
-            this.tbxemail.Location = new System.Drawing.Point(102, 68);
+            this.tbxemail.Location = new System.Drawing.Point(212, 102);
             this.tbxemail.Name = "tbxemail";
             this.tbxemail.Size = new System.Drawing.Size(188, 20);
             this.tbxemail.TabIndex = 2;
@@ -129,7 +125,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 110);
+            this.label12.Location = new System.Drawing.Point(150, 144);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 1;
@@ -138,72 +134,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(61, 71);
+            this.label11.Location = new System.Drawing.Point(171, 105);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 13);
             this.label11.TabIndex = 0;
             this.label11.Text = "Email:";
-            // 
-            // tbxpesquisa
-            // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(245, 201);
-            this.tbxpesquisa.Name = "tbxpesquisa";
-            this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
-            this.tbxpesquisa.TabIndex = 26;
-            this.tbxpesquisa.Text = "Pesquisar...";
-            // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 231);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 231);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 231);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 231);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(518, 201);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 21;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
             // 
             // menustripLogin
             // 
@@ -238,18 +173,23 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(134, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 24);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Introduza as credenciais de login:";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 544);
             this.Controls.Add(this.gbxLogin);
-            this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
-            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.menustripLogin);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
@@ -267,12 +207,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbxLogin;
-        private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
-        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.MenuStrip menustripLogin;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
@@ -285,5 +219,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

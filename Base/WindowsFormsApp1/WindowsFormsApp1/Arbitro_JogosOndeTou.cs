@@ -12,9 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class Arbitro_JogosOndeTou : Form
     {
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
         public Arbitro_JogosOndeTou()
         {
             InitializeComponent();
+
+            List<Game> game = container.GameSet.ToList();
+
+            foreach (Game games in game)
+            {
+                listVJogos.Items.Add(games.Description);
+            }
         }
 
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)

@@ -162,13 +162,13 @@
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
             this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.baralhoToolStripMenuItem.Text = "Baralho";
-            this.baralhoToolStripMenuItem.Click += new System.EventHandler(this.baralhoToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
+            this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
@@ -180,7 +180,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // cartasToolStripMenuItem
             // 

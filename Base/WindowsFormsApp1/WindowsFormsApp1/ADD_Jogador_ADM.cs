@@ -357,5 +357,12 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
+        private void novaEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InserirEquipa IEfrm = new InserirEquipa();
+            IEfrm.Show();
+            Close();
+        }
     }
 }
