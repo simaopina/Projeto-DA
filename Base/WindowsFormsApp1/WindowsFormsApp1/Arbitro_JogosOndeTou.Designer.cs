@@ -47,31 +47,34 @@
             this.adicionarNovoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.históricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxNovoJogadorADM
             // 
-            this.gbxNovoJogadorADM.Location = new System.Drawing.Point(239, 271);
+            this.gbxNovoJogadorADM.Controls.Add(this.listView1);
+            this.gbxNovoJogadorADM.Location = new System.Drawing.Point(12, 271);
             this.gbxNovoJogadorADM.Name = "gbxNovoJogadorADM";
-            this.gbxNovoJogadorADM.Size = new System.Drawing.Size(348, 248);
+            this.gbxNovoJogadorADM.Size = new System.Drawing.Size(575, 248);
             this.gbxNovoJogadorADM.TabIndex = 42;
             this.gbxNovoJogadorADM.TabStop = false;
             this.gbxNovoJogadorADM.Text = "Planeamento de Jogos";
             // 
             // tbxpesquisa
             // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(239, 204);
+            this.tbxpesquisa.Location = new System.Drawing.Point(19, 204);
             this.tbxpesquisa.Name = "tbxpesquisa";
-            this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
+            this.tbxpesquisa.Size = new System.Drawing.Size(486, 20);
             this.tbxpesquisa.TabIndex = 38;
             this.tbxpesquisa.Text = "Pesquisar...";
             // 
             // rbtnCartas
             // 
             this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(450, 234);
+            this.rbtnCartas.Location = new System.Drawing.Point(198, 234);
             this.rbtnCartas.Name = "rbtnCartas";
             this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
             this.rbtnCartas.TabIndex = 37;
@@ -82,7 +85,7 @@
             // rbtnTorneio
             // 
             this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(382, 234);
+            this.rbtnTorneio.Location = new System.Drawing.Point(140, 234);
             this.rbtnTorneio.Name = "rbtnTorneio";
             this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
             this.rbtnTorneio.TabIndex = 36;
@@ -93,7 +96,7 @@
             // rbtnJogadores
             // 
             this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(301, 234);
+            this.rbtnJogadores.Location = new System.Drawing.Point(71, 234);
             this.rbtnJogadores.Name = "rbtnJogadores";
             this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
             this.rbtnJogadores.TabIndex = 35;
@@ -104,7 +107,7 @@
             // rbtnArbitro
             // 
             this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(239, 234);
+            this.rbtnArbitro.Location = new System.Drawing.Point(19, 234);
             this.rbtnArbitro.Name = "rbtnArbitro";
             this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
             this.rbtnArbitro.TabIndex = 34;
@@ -217,6 +220,14 @@
             this.signOutToolStripMenuItem.Text = "Terminar Sessão";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(7, 20);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(266, 222);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // Arbitro_JogosOndeTou
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +244,7 @@
             this.Controls.Add(this.menuStripHome);
             this.Name = "Arbitro_JogosOndeTou";
             this.Text = "Planeamento de Jogos";
+            this.gbxNovoJogadorADM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
@@ -262,5 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem perfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem históricoToolStripMenuItem;
+        private System.Windows.Forms.ListView listView1;
     }
 }
