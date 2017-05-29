@@ -302,6 +302,9 @@
     <Compile Include="Home_ADM.Designer.cs">
       <DependentUpon>Home_ADM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Partial Classes\Card.cs" />
+    <Compile Include="Partial Classes\Deck.cs" />
+    <Compile Include="Partial Classes\Deck_Card.cs" />
     <Compile Include="Permissoes_ADM.cs">
       <SubType>Form</SubType>
     </Compile>
