@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
 
         private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Utilizadores_ADM Utilfrm = new Utilizadores_ADM)();
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
             Utilfrm.Show();
             Close();
         }
