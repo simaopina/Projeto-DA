@@ -170,6 +170,7 @@
             this.listVJogos.Size = new System.Drawing.Size(160, 226);
             this.listVJogos.TabIndex = 35;
             this.listVJogos.UseCompatibleStateImageBehavior = false;
+            this.listVJogos.View = System.Windows.Forms.View.List;
             this.listVJogos.SelectedIndexChanged += new System.EventHandler(this.listVJogos_SelectedIndexChanged);
             // 
             // label1
