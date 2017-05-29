@@ -56,6 +56,8 @@ namespace WindowsFormsApp1
             refresh_listViewEquipas();
             MessageBox.Show("Torneio Inserido com sucesso");
 
+            tbxNomeStandard.Clear();
+            tbxDescricaoStandard.Clear();
         }
 
         private void btnGuardarStandard_Click(object sender, EventArgs e)
@@ -75,6 +77,9 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             refresh_listViewStandard();
             MessageBox.Show("Torneio Inserido com sucesso");
+
+            tbxNomeStandard.Clear();
+            tbxDescricaoStandard.Clear();
 
         }
 
@@ -152,9 +157,11 @@ namespace WindowsFormsApp1
         {
             if (listVStandard.SelectedItems.Count < 0)
             {
-                tbxNomeStandard.Clear();
-                tbxDescricaoStandard.Clear();
-               
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+                    
+
                 string STorneioU = listVStandard.SelectedItems[0].Text;
                 SSTorneioSelected = container.TournamentSet.OfType<StandadTournament>().Where(user => user.Name.Equals(STorneioU)).First();
 
@@ -172,8 +179,10 @@ namespace WindowsFormsApp1
         {
             if (listVEquipas.SelectedItems.Count < 0)
             {
-                tbxNomeEquipas.Clear();
-                tbxDescricao.Clear();
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
+               
 
                 string TTorneioU = listVEquipas.SelectedItems[0].Text;
                 TTorneioSelected = container.TournamentSet.OfType<TeamTournament>().Where(user => user.Name.Equals(TTorneioU)).First();
@@ -186,6 +195,101 @@ namespace WindowsFormsApp1
 
                 refresh_listViewEquipas();
             }
+        }
+
+        private void btnEliminarStandard_Click(object sender, EventArgs e)
+        {
+            string Name = SSTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(SSTorneioSelected.Name));
+
+            container.TournamentSet.Remove(SSTorneioSelected);
+
+            container.SaveChanges();
+
+            SSTorneioSelected = null;
+
+            MessageBox.Show("Torneio elimindado com sucesso!");
+
+            refresh_listViewStandard();
+        }
+
+        private void btnEliminarEquipas_Click(object sender, EventArgs e)
+        {
+            string Name = TTorneioSelected.Name;
+
+            var query = container.TournamentSet.Where(torn => torn.Name.Equals(TTorneioSelected.Name));
+
+            container.TournamentSet.Remove(TTorneioSelected);
+
+            container.SaveChanges();
+
+            TTorneioSelected = null;
+
+            MessageBox.Show("Torneio eliminado com sucesso!");
+
+            refresh_listViewEquipas();
+        }
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_ADM HAdmfrm = new Home_ADM();
+            HAdmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Baralho_ADM BarAdmfrm = new Baralho_ADM();
+            BarAdmfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
+            EdBaAdmfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM CAdmfrm = new Cartas_ADM();
+            CAdmfrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM UtiAdmfrm = new Utilizadores_ADM();
+            UtiAdmfrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GesTorJogfrm = new GestaoTorneioJogadores();
+            GesTorJogfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GesTorEqfrm = new GestaoTorneioEquipas();
+            GesTorEqfrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
         }
     }
 }

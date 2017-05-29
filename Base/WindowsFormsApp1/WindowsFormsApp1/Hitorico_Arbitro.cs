@@ -17,17 +17,26 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         //Navegação
+       
+
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_Arbitro Hfrm = new Home_Arbitro();
+            Hfrm.Show();
+            Close();
+        }
+
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro HArfrm = new Home_Arbitro();
-            HArfrm.Show();
+            Home_Arbitro Hfrm = new Home_Arbitro();
+            Hfrm.Show();
             Close();
         }
 
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro Barfrm = new Baralho_Arbitro();
-            Barfrm.Show();
+            Baralho_Arbitro BArbfrm = new Baralho_Arbitro();
+            BArbfrm.Show();
             Close();
         }
 
@@ -40,15 +49,15 @@ namespace WindowsFormsApp1
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro ArbJogosfrm = new JogoArbitro();
-            ArbJogosfrm.Show();
+            Jogos Jogfrm = new Jogos();
+            Jogfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou();
-            ArbOndeToufrm.Show();
+            Arbitro_JogosOndeTou OndeTfrm = new Arbitro_JogosOndeTou();
+            OndeTfrm.Show();
             Close();
         }
 

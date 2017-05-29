@@ -20,24 +20,14 @@ namespace WindowsFormsApp1
 
         private void Home_Load(object sender, EventArgs e)
         {
-            /*Utilizadores_ADM UTILIZADORESfrm = new Utilizadores_ADM();
-            UTILIZADORESfrm.Show();
-            Hide();*/
+            
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login Lfrm = new Login();
             Lfrm.Show();
-            Hide();
-
-           
-        }
-
-        private void iiiiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CriarTorneio ctfrm = new CriarTorneio();
-            ctfrm.Show();
+            Hide();           
         }
     }
 }

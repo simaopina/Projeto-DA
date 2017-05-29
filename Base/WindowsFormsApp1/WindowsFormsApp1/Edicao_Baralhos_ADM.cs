@@ -10,64 +10,100 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-   
     public partial class Edicao_Baralhos_ADM : Form
     {
-        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        int id_baralho = 0;
-
-        int id_cartas = 0;
-
-      
-
-        Card CartaSelecionada;
-
-        Deck BaralhoSelecionado;
-
-        Deck_Card CartaEmBaralho;
-
-        ListViewItem CartaList; 
+        DiagramaEntidadesArcmageContainer dbAC;
 
         public Edicao_Baralhos_ADM()
         {
             InitializeComponent();
 
-            foreach (Deck baralho in container.DeckSet)
-             {
-                 cbxBaralho.Items.Add(baralho.Name);
-             }
+            //iniciar "base de dados"
+            dbAC = new DiagramaEntidadesArcmageContainer();
 
-       
+            carregar_Baralho();
+            carregar_Carta();
+            carregar_Carta_Baralho();
 
-            foreach (Card cartas in container.CardSet)
-            { 
-                ListViewItem CartaList = new ListViewItem(cartas.Name);
-                CartaList.SubItems.Add(cartas.Faction);
-                CartaList.SubItems.Add(cartas.Type);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Loyalty));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Cost));
-                CartaList.SubItems.Add(cartas.RuleText);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(cartas.Image);
+        }
 
-                listVCartas.Items.Add(CartaList);
-            }
+        private void carregar_Baralho()
+        {
+            List<Deck> baralhos = (from d in dbAC.DeckSet
+                                   select d).ToList();
 
+            listBoxBaralho.Items.Clear();
+            listBoxBaralho.Items.AddRange(baralhos.ToArray());
+        }
 
-            foreach (Deck_Card baralho in container.Deck_CardSet)
+        private void carregar_Carta()
+        {
+            List<Card> cartas = (from c in dbAC.CardSet
+                                 select c).ToList();
+
+            listBoxCartas.Items.Clear();
+            listBoxCartas.Items.AddRange(cartas.ToArray());
+        }
+
+        private void carregar_Carta_Baralho()
+        {
+            Deck deckSelecionado = (Deck)listBoxBaralho.SelectedItem;
+
+            if (deckSelecionado != null)
             {
-                listVBaralho.Items.Add(baralho.CardId.ToString());
+                listBoxCartasBaralho.Items.Clear();
+                listBoxCartasBaralho.Items.AddRange(deckSelecionado.Deck_Card.ToArray());
             }
         }
 
+        public void Adicionar()
+        {
+            Deck baralhos = (Deck)listBoxBaralho.SelectedItem;
+            Card cartas = (Card)listBoxCartas.SelectedItem;
+
+            if (baralhos != null && cartas != null)
+            {
+                Deck_Card novoBaralhoCarta = new Deck_Card();
+                novoBaralhoCarta.Deck = baralhos;
+                novoBaralhoCarta.Card = cartas;
+                novoBaralhoCarta.Quantity = 1.ToString();
+                dbAC.Deck_CardSet.Add(novoBaralhoCarta);
+                dbAC.SaveChanges();
+                carregar_Carta_Baralho();
+            }
+            else
+            {
+                MessageBox.Show("Tem que selecionar os registos!");
+            }
+
+        }
+
+        public void Remover()
+        {
+
+            Deck_Card baralhos_cartas = (Deck_Card)listBoxCartasBaralho.SelectedItem;
+
+            if (baralhos_cartas != null)
+            {
+                dbAC.Deck_CardSet.Remove(baralhos_cartas);
+                dbAC.SaveChanges();
+                carregar_Carta_Baralho();
+            }
+            else
+            {
+                MessageBox.Show("Tem que selecionar os registos!");
+            }
+
+        }
+
+
         //Navegação
 
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_ADM BarADMfrm = new Baralho_ADM();
-            BarADMfrm.Show();
+            Home_ADM Hadmfrm = new Home_ADM();
+            Hadmfrm.Show();
             Close();
         }
 
@@ -77,7 +113,7 @@ namespace WindowsFormsApp1
             Cfrm.Show();
             Close();
         }
-   
+
         private void addJogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM addJofrm = new ADD_Jogador_ADM();
@@ -91,64 +127,6 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
-
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM Hadmfrm = new Home_ADM();
-            Hadmfrm.Show();
-            Close();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //private void cbxBaralho_SelectedIndexChanged(object sender, EventArgs e)
-       // {           
-
-           /* string nome = Convert.ToString(cbxBaralho.SelectedItem);
-                        
-            Deck baralho;
-            
-            baralho = container.DeckSet.Find(id_baralho);*/
-           
-
-            /*var query = container.Deck_CardSet.Where(CartaEmBaralho => CartaEmBaralho.DeckId.Equals(id_baralho));
-            query.ToList();
-
-            Card cartas;
-
-            foreach(var id_card in query.ToList())
-            {
-                Card carta = container.CardSet.Find(id_cartas);
-
-            }
-
-            Deck_Card cartaBaralho = new Deck_Card
-            {
-                CardId = id_cartas
-
-            };
-
-            container.Deck_CardSet.Add(id_cartas);*/
-
-           // refreshlistvbaralhos();
-
-            //refreshlistvcartas();
-            
-           
-           //  }
-
-
-        private void listVCartas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-
-
-        }
-
-        
 
         private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -185,152 +163,91 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbxEdBaralhoADM_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void Edicao_Baralhos_ADM_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'baseDadosCartasEdição.CardSet' table. You can move, or remove it, as needed.
-           // this.cardSetTableAdapter.Fill(this.baseDadosCartasEdição.CardSet);
-
-        }
-
-        private void listVCartas_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-           
-
-
-        }
-
         private void btnAdicionarBaralho_Click(object sender, EventArgs e)
         {
-            
-	        string nome = Convert.ToString(cbxBaralho.SelectedItem);
-                        
-            Deck baralho;
-            
-            baralho = container.DeckSet.Find(id_baralho);
-
-            refreshlistvbaralhos();
-
-
-            foreach (var selectedItem in this.listVCartas.SelectedItems)
-            {
-                var item = (selectedItem as ListViewItem);
-                listVCartas.Items.Remove(item);
-                this.listVBaralho.Items.Add(item);
-            }
-
-         
-            refreshlistvbaralhos();
-
-        }
-
-        public void refreshcmb()
-        {
-
-            foreach (Deck baralho in container.DeckSet)
-            {
-                cbxBaralho.Items.Add(baralho.Name);
-            }
-        }
-
-        public void refreshlistvcartas()
-        {
-                   
-            foreach (Card cartas in container.CardSet)
-            {
-                ListViewItem CartaList = new ListViewItem(cartas.Name);
-                CartaList.SubItems.Add(cartas.Faction);
-                CartaList.SubItems.Add(cartas.Type);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Loyalty));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Cost));
-                CartaList.SubItems.Add(cartas.RuleText);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(cartas.Image);
-
-                listVCartas.Items.Add(CartaList);
-            }
-
-
-        }
-
-        public void refreshlistvbaralhos()
-        {
-           
-            foreach (Deck_Card baralho in container.Deck_CardSet)
-            {
-                listVBaralho.Items.Add(baralho.CardId.ToString());
-            }
+            Adicionar();
+            carregar_Carta_Baralho();
 
         }
 
         private void btnRemoverBaralho_Click(object sender, EventArgs e)
         {
-            foreach (var selectedItem in this.listVBaralho.SelectedItems)
-            {
-                var item = (selectedItem as ListViewItem);
-                listVBaralho.Items.Remove(item);
-                this.listVCartas.Items.Add(item);
-            }
+             Remover();
         }
 
-        private void btnGuardarAlterações_Click(object sender, EventArgs e)
+        private void listBoxBaralho_SelectedIndexChanged(object sender, EventArgs e)
         {
+            carregar_Carta_Baralho();
+        }
 
-            Card cartas;
-            Deck_Card cartaBaralho;
-            Deck BaralhoSelecionado;
+        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM BAdmfrm = new Baralho_ADM();
+            BAdmfrm.Show();
+            Close();
+        }
 
-            cartaBaralho = container.Deck_CardSet.Find(id_baralho);
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EdBarAdmfrm = new Edicao_Baralhos_ADM();
+            EdBarAdmfrm.Show();
+            Close();
+        }
 
-            var id_cartas_antiga = 
-                from ant in container.Deck_CardSet
-                where ant.DeckId == id_baralho
-                select ant;
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM CarAdmfrm = new Cartas_ADM();
+            CarAdmfrm.Show();
+            Close();
+        }
 
-            container.Deck_CardSet.RemoveRange(id_cartas_antiga.ToList<Deck_Card>());
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM Addjogfrm = new ADD_Jogador_ADM();
+            Addjogfrm.Show();
+            Close();
+        }
 
+        private void novaEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            InserirEquipa InsEqufrm = new InserirEquipa();
+            InsEqufrm.Show();
+            Close();
+        }
 
-            //var id_baralho = from id in container.Deck_CardSet where id.DeckId == id_baralho select id;
+        private void utilizadoresToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Utilizadores_ADM Utilfrm = new Utilizadores_ADM();
+            Utilfrm.Show();
+            Close();
+        }
 
-          
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CTornfrm = new CriarTorneio();
+            CTornfrm.Show();
+            Close();
+        }
 
-            foreach (ListViewItem item in listVBaralho.Items)
-            {
-                var procurar = container.CardSet.Where(nome => nome.Name.Equals(item.Text));
-                cartas = procurar.ToList<Card>().First<Card>();
+        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GesTorJogfrm = new GestaoTorneioJogadores();
+            GesTorJogfrm.Show();
+            Close();
+        }
 
-                cartaBaralho = new Deck_Card();
-                cartaBaralho.DeckId = id_baralho;
-                cartaBaralho.CardId = cartas.Id;
+        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GesTorEqufrm = new GestaoTorneioEquipas();
+            GesTorEqufrm.Show();
+            Close();
+        }
 
-                container.Deck_CardSet.Add(cartaBaralho);
-               
-            }
-
-
-            container.Entry(CartaSelecionada).State = System.Data.Entity.EntityState.Modified;
-            container.SaveChanges();
-
-            refreshlistvbaralhos();
-           // refreshlistvcartas();
-           // refreshcmb();
-
-
-     
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
         }
     }
-    }
-
+}

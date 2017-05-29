@@ -42,12 +42,12 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cartasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.torneioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jogosADecorrerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planeamentoDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,7 +80,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 194);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 110);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 230);
             this.dataGridView1.TabIndex = 33;
             // 
             // standadTournamentIdDataGridViewTextBoxColumn
@@ -130,8 +130,7 @@
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
             this.loginToolStripMenuItem,
-            this.baralhoToolStripMenuItem,
-            this.jogadoresToolStripMenuItem,
+            this.torneioToolStripMenuItem,
             this.terminarSessãoToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
@@ -144,66 +143,74 @@
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click_1);
             // 
             // loginToolStripMenuItem
             // 
+            this.loginToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baralhoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.cartaToolStripMenuItem});
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.loginToolStripMenuItem.Text = "Permissões";
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.loginToolStripMenuItem.Text = "Baralho";
             // 
             // baralhoToolStripMenuItem
             // 
-            this.baralhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.baralhoToolStripMenuItem1,
-            this.editarBaralhoToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.cartasToolStripMenuItem});
             this.baralhoToolStripMenuItem.Name = "baralhoToolStripMenuItem";
-            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.baralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.baralhoToolStripMenuItem.Text = "Baralho";
-            // 
-            // baralhoToolStripMenuItem1
-            // 
-            this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
-            this.baralhoToolStripMenuItem1.Text = "Baralho";
-            // 
-            // editarBaralhoToolStripMenuItem
-            // 
-            this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
+            this.baralhoToolStripMenuItem.Click += new System.EventHandler(this.baralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(111, 6);
             // 
-            // cartasToolStripMenuItem
+            // cartaToolStripMenuItem
             // 
-            this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.cartasToolStripMenuItem.Text = "Cartas";
+            this.cartaToolStripMenuItem.Name = "cartaToolStripMenuItem";
+            this.cartaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartaToolStripMenuItem.Text = "Cartas";
+            this.cartaToolStripMenuItem.Click += new System.EventHandler(this.cartaToolStripMenuItem_Click);
             // 
-            // jogadoresToolStripMenuItem
+            // torneioToolStripMenuItem
             // 
-            this.jogadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoJogadorToolStripMenuItem});
-            this.jogadoresToolStripMenuItem.Name = "jogadoresToolStripMenuItem";
-            this.jogadoresToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.jogadoresToolStripMenuItem.Text = "Jogadores";
+            this.torneioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jogosADecorrerToolStripMenuItem,
+            this.planeamentoDeJogosToolStripMenuItem,
+            this.historicoToolStripMenuItem});
+            this.torneioToolStripMenuItem.Name = "torneioToolStripMenuItem";
+            this.torneioToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.torneioToolStripMenuItem.Text = "Torneio";
             // 
-            // novoJogadorToolStripMenuItem
+            // jogosADecorrerToolStripMenuItem
             // 
-            this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
-            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.novoJogadorToolStripMenuItem.Text = "Adicionar Novo";
+            this.jogosADecorrerToolStripMenuItem.Name = "jogosADecorrerToolStripMenuItem";
+            this.jogosADecorrerToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.jogosADecorrerToolStripMenuItem.Text = "Jogos a decorrer";
+            this.jogosADecorrerToolStripMenuItem.Click += new System.EventHandler(this.jogosADecorrerToolStripMenuItem_Click_1);
+            // 
+            // planeamentoDeJogosToolStripMenuItem
+            // 
+            this.planeamentoDeJogosToolStripMenuItem.Name = "planeamentoDeJogosToolStripMenuItem";
+            this.planeamentoDeJogosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.planeamentoDeJogosToolStripMenuItem.Text = "Planeamento de jogos";
+            this.planeamentoDeJogosToolStripMenuItem.Click += new System.EventHandler(this.planeamentoDeJogosToolStripMenuItem_Click_1);
+            // 
+            // historicoToolStripMenuItem
+            // 
+            this.historicoToolStripMenuItem.Name = "historicoToolStripMenuItem";
+            this.historicoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.historicoToolStripMenuItem.Text = "Historico";
+            this.historicoToolStripMenuItem.Click += new System.EventHandler(this.historicoToolStripMenuItem_Click_1);
             // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
-            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
             // 
             // Jogos
             // 
@@ -242,12 +249,12 @@
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem cartasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoJogadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cartaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem torneioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem jogosADecorrerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planeamentoDeJogosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
     }
 }

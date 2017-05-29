@@ -41,14 +41,14 @@ namespace WindowsFormsApp1
                 //{
                     if (tbxemail.Text.Length > 0)
                     {
-                   
-                   //var query = container.UserSet.OfType<Administrator>().Where(email => email.Email.Contains(tbxemail.Text));
+
+                    //var query = container.UserSet.OfType<Administrator>().Where(email => email.Email.Contains(tbxemail.Text));
 
                     Administrator db = new Administrator();
-                    var query1 = from User in db.Email where db.Email == tbxemail.Text select User;
-                    //char validacao = query1.FirstOrDefault();
+                    var query = from User in db.Email where tbxemail.Text == db.Email select User;
+                    char query1 = query.FirstOrDefault();
 
-                    if (query1 != null || query1.Count() == 0)
+                    if (query1.ToString() != null || query1.ToString().Count() == 0)
                     {
                         Home_ADM HAdmfrm = new Home_ADM();
                         HAdmfrm.Show();
