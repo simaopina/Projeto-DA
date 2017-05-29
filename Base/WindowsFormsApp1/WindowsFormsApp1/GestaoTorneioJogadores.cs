@@ -227,12 +227,12 @@ namespace WindowsFormsApp1
 
                 var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
 
-                dataGridReferee.DataSource = query.ToList();
+                //dataGridReferee.DataSource = query.ToList();
             }
 
             else
             {
-                refresh_list();
+                refresh_listview();
             }
         }
 
@@ -264,6 +264,7 @@ namespace WindowsFormsApp1
             };
             container.GameSet.Add(jogo);
             container.SaveChanges();
+            refresh_listview();
         }
 
         private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
@@ -273,9 +274,10 @@ namespace WindowsFormsApp1
                 string jogador = listVJogador1.SelectedItems[0].Text;
 
 
-                jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
+                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+                jogadorSelecionado = container.PlayerSet.Where(pla => pla.Id.Equals(listVJogador1.SelectedItems.ToString())).First();
 
-                //jogadorSelecionado.Refresh();
+
             }
             else
             {
@@ -292,12 +294,23 @@ namespace WindowsFormsApp1
 
                 jogadorSelecionado = container.PlayerSet.Where(play => play.Id.Equals(jogador)).First();
 
-                //jogadorSelecionado.Refresh();
+                refresh_listview();
             }
-            else
+           
+        }
+
+        public void refresh_listview()
+        {
+            listVJogador1.Items.Clear();
+
+
+
+            foreach (Player pl in container.PlayerSet)
             {
-                jogadorSelecionado = null;
+             listVJogador1.Items.Add(pl.Id.ToString());
+             listVJogador1.Items.Add(pl.Name);
             }
+
         }
     }
 }
