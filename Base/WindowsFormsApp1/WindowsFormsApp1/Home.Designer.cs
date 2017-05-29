@@ -55,7 +55,6 @@
             this.gbxCuriosidades = new System.Windows.Forms.GroupBox();
             this.gbxNoticias = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iiiiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome.SuspendLayout();
             this.gbxRank.SuspendLayout();
             this.gbxEquipas.SuspendLayout();
@@ -67,8 +66,7 @@
             // 
             this.menuStripHome.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.loginToolStripMenuItem,
-            this.iiiiToolStripMenuItem});
+            this.loginToolStripMenuItem});
             this.menuStripHome.Location = new System.Drawing.Point(0, 0);
             this.menuStripHome.Name = "menuStripHome";
             this.menuStripHome.Size = new System.Drawing.Size(627, 24);
@@ -321,13 +319,6 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // iiiiToolStripMenuItem
-            // 
-            this.iiiiToolStripMenuItem.Name = "iiiiToolStripMenuItem";
-            this.iiiiToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
-            this.iiiiToolStripMenuItem.Text = "iiii";
-            this.iiiiToolStripMenuItem.Click += new System.EventHandler(this.iiiiToolStripMenuItem_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -392,7 +383,6 @@
         private System.Windows.Forms.GroupBox gbxCuriosidades;
         private System.Windows.Forms.GroupBox gbxNoticias;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripMenuItem iiiiToolStripMenuItem;
     }
 }
 
