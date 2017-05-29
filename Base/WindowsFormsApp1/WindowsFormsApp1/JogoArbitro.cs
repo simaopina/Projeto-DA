@@ -18,12 +18,13 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
+            List<Game> listgame = container.GameSet.ToList();
 
-            foreach (StardadGame game in listgame)
+            foreach (Game game in listgame)
             {
-                listVJogo.Items.Add(game.Number.ToString());
+                listVJogo.Items.Add(game.Description);
             }
+            
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
