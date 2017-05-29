@@ -56,6 +56,8 @@ namespace WindowsFormsApp1
             refresh_listViewEquipas();
             MessageBox.Show("Torneio Inserido com sucesso");
 
+            tbxNomeStandard.Clear();
+            tbxDescricaoStandard.Clear();
         }
 
         private void btnGuardarStandard_Click(object sender, EventArgs e)
@@ -75,6 +77,9 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             refresh_listViewStandard();
             MessageBox.Show("Torneio Inserido com sucesso");
+
+            tbxNomeStandard.Clear();
+            tbxDescricaoStandard.Clear();
 
         }
 
