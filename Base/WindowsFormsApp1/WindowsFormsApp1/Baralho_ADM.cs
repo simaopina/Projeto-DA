@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nome = txtbNome.Text;
+            string nome = tbxNome.Text;
 
             Deck baralho = new Deck
             {
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             container.DeckSet.Add(baralho);
             container.SaveChanges();
             refresh_listview();
-            tbxpesquisa.ResetText();
+            tbxNome.ResetText();
         }
 
         public void refresh_listview()
@@ -137,7 +137,7 @@ namespace WindowsFormsApp1
 
             MessageBox.Show("Torneio elimindado com sucesso!");
 
-            tbxpesquisa.ResetText();
+            tbxNome.ResetText();
 
             refresh_listview();
 
@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
                 string DeckU = listVBaralhos.SelectedItems[0].Text;
                 deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
 
-                tbxpesquisa.Text = deckselecionado.Name;
+                tbxNome.Text = deckselecionado.Name;
 
                 refresh_listview();
 
@@ -159,7 +159,7 @@ namespace WindowsFormsApp1
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string Nome = tbxpesquisa.Text;
+            string Nome = tbxNome.Text;
 
             List<Deck> deck = container.DeckSet.ToList();
 
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Alterado com sucesso!");
 
                 refresh_listview();
-                tbxpesquisa.ResetText();
+                tbxNome.ResetText();
             }
         }
 

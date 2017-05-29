@@ -39,7 +39,7 @@
             this.baseDadosdeck = new WindowsFormsApp1.BaseDadosdeck();
             this.deckSetTableAdapter = new WindowsFormsApp1.BaseDadosdeckTableAdapters.DeckSetTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtbNome = new System.Windows.Forms.TextBox();
+            this.tbxNome = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -219,12 +219,12 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Nome:";
             // 
-            // txtbNome
+            // tbxNome
             // 
-            this.txtbNome.Location = new System.Drawing.Point(392, 308);
-            this.txtbNome.Name = "txtbNome";
-            this.txtbNome.Size = new System.Drawing.Size(167, 20);
-            this.txtbNome.TabIndex = 34;
+            this.tbxNome.Location = new System.Drawing.Point(392, 308);
+            this.tbxNome.Name = "tbxNome";
+            this.tbxNome.Size = new System.Drawing.Size(167, 20);
+            this.tbxNome.TabIndex = 34;
             // 
             // btnGuardar
             // 
@@ -420,7 +420,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.txtbNome);
+            this.Controls.Add(this.tbxNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -448,7 +448,7 @@
         private System.Windows.Forms.BindingSource deckSetBindingSource;
         private BaseDadosdeckTableAdapters.DeckSetTableAdapter deckSetTableAdapter;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtbNome;
+        private System.Windows.Forms.TextBox tbxNome;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
