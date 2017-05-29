@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_ADM Hadmfrm = new Home_ADM();
+            Home_Arbitro Hadmfrm = new Home_Arbitro();
             Hadmfrm.Show();
             Close();
         }

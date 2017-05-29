@@ -36,10 +36,6 @@
             this.listVData = new System.Windows.Forms.ListView();
             this.listVJogo = new System.Windows.Forms.ListView();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
@@ -66,9 +62,9 @@
             this.gbxJogosArbitro.Controls.Add(this.label11);
             this.gbxJogosArbitro.Controls.Add(this.listVData);
             this.gbxJogosArbitro.Controls.Add(this.listVJogo);
-            this.gbxJogosArbitro.Location = new System.Drawing.Point(245, 272);
+            this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 272);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
-            this.gbxJogosArbitro.Size = new System.Drawing.Size(348, 248);
+            this.gbxJogosArbitro.Size = new System.Drawing.Size(568, 248);
             this.gbxJogosArbitro.TabIndex = 30;
             this.gbxJogosArbitro.TabStop = false;
             this.gbxJogosArbitro.Text = "Jogos Arbitro";
@@ -93,7 +89,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(236, 16);
+            this.label12.Location = new System.Drawing.Point(409, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 3;
@@ -110,71 +106,27 @@
             // 
             // listVData
             // 
-            this.listVData.Location = new System.Drawing.Point(238, 33);
+            this.listVData.Location = new System.Drawing.Point(412, 33);
             this.listVData.Name = "listVData";
-            this.listVData.Size = new System.Drawing.Size(104, 209);
+            this.listVData.Size = new System.Drawing.Size(140, 209);
             this.listVData.TabIndex = 1;
             this.listVData.UseCompatibleStateImageBehavior = false;
             // 
             // listVJogo
             // 
-            this.listVJogo.Location = new System.Drawing.Point(53, 33);
+            this.listVJogo.Location = new System.Drawing.Point(56, 33);
             this.listVJogo.Name = "listVJogo";
-            this.listVJogo.Size = new System.Drawing.Size(179, 209);
+            this.listVJogo.Size = new System.Drawing.Size(346, 209);
             this.listVJogo.TabIndex = 0;
             this.listVJogo.UseCompatibleStateImageBehavior = false;
             // 
             // tbxpesquisa
             // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(245, 205);
+            this.tbxpesquisa.Location = new System.Drawing.Point(25, 205);
             this.tbxpesquisa.Name = "tbxpesquisa";
-            this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
+            this.tbxpesquisa.Size = new System.Drawing.Size(486, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
-            // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 235);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 235);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 235);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 235);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 
@@ -288,10 +240,6 @@
             this.ClientSize = new System.Drawing.Size(640, 540);
             this.Controls.Add(this.gbxJogosArbitro);
             this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
@@ -311,10 +259,6 @@
 
         private System.Windows.Forms.GroupBox gbxJogosArbitro;
         private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;

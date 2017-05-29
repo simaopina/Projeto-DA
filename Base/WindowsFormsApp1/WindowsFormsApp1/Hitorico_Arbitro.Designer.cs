@@ -30,10 +30,6 @@
         {
             this.gbxHistorico = new System.Windows.Forms.GroupBox();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
-            this.rbtnCartas = new System.Windows.Forms.RadioButton();
-            this.rbtnTorneio = new System.Windows.Forms.RadioButton();
-            this.rbtnJogadores = new System.Windows.Forms.RadioButton();
-            this.rbtnArbitro = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,15 +43,18 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
+            this.listVHistorico = new System.Windows.Forms.ListView();
+            this.gbxHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxHistorico
             // 
-            this.gbxHistorico.Location = new System.Drawing.Point(245, 271);
+            this.gbxHistorico.Controls.Add(this.listVHistorico);
+            this.gbxHistorico.Location = new System.Drawing.Point(12, 271);
             this.gbxHistorico.Name = "gbxHistorico";
-            this.gbxHistorico.Size = new System.Drawing.Size(348, 248);
+            this.gbxHistorico.Size = new System.Drawing.Size(616, 248);
             this.gbxHistorico.TabIndex = 30;
             this.gbxHistorico.TabStop = false;
             this.gbxHistorico.Text = "Historico Arbitro";
@@ -67,50 +66,6 @@
             this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
-            // 
-            // rbtnCartas
-            // 
-            this.rbtnCartas.AutoSize = true;
-            this.rbtnCartas.Location = new System.Drawing.Point(456, 234);
-            this.rbtnCartas.Name = "rbtnCartas";
-            this.rbtnCartas.Size = new System.Drawing.Size(55, 17);
-            this.rbtnCartas.TabIndex = 25;
-            this.rbtnCartas.TabStop = true;
-            this.rbtnCartas.Text = "Cartas";
-            this.rbtnCartas.UseVisualStyleBackColor = true;
-            // 
-            // rbtnTorneio
-            // 
-            this.rbtnTorneio.AutoSize = true;
-            this.rbtnTorneio.Location = new System.Drawing.Point(388, 234);
-            this.rbtnTorneio.Name = "rbtnTorneio";
-            this.rbtnTorneio.Size = new System.Drawing.Size(61, 17);
-            this.rbtnTorneio.TabIndex = 24;
-            this.rbtnTorneio.TabStop = true;
-            this.rbtnTorneio.Text = "Torneio";
-            this.rbtnTorneio.UseVisualStyleBackColor = true;
-            // 
-            // rbtnJogadores
-            // 
-            this.rbtnJogadores.AutoSize = true;
-            this.rbtnJogadores.Location = new System.Drawing.Point(307, 234);
-            this.rbtnJogadores.Name = "rbtnJogadores";
-            this.rbtnJogadores.Size = new System.Drawing.Size(74, 17);
-            this.rbtnJogadores.TabIndex = 23;
-            this.rbtnJogadores.TabStop = true;
-            this.rbtnJogadores.Text = "Jogadores";
-            this.rbtnJogadores.UseVisualStyleBackColor = true;
-            // 
-            // rbtnArbitro
-            // 
-            this.rbtnArbitro.AutoSize = true;
-            this.rbtnArbitro.Location = new System.Drawing.Point(245, 234);
-            this.rbtnArbitro.Name = "rbtnArbitro";
-            this.rbtnArbitro.Size = new System.Drawing.Size(55, 17);
-            this.rbtnArbitro.TabIndex = 22;
-            this.rbtnArbitro.TabStop = true;
-            this.rbtnArbitro.Text = "Arbitro";
-            this.rbtnArbitro.UseVisualStyleBackColor = true;
             // 
             // btnPesquisar
             // 
@@ -217,6 +172,14 @@
             this.menuStripHome.TabIndex = 20;
             this.menuStripHome.Text = "menuStrip1";
             // 
+            // listVHistorico
+            // 
+            this.listVHistorico.Location = new System.Drawing.Point(13, 20);
+            this.listVHistorico.Name = "listVHistorico";
+            this.listVHistorico.Size = new System.Drawing.Size(580, 222);
+            this.listVHistorico.TabIndex = 0;
+            this.listVHistorico.UseCompatibleStateImageBehavior = false;
+            // 
             // Hitorico_Arbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,15 +187,12 @@
             this.ClientSize = new System.Drawing.Size(640, 533);
             this.Controls.Add(this.gbxHistorico);
             this.Controls.Add(this.tbxpesquisa);
-            this.Controls.Add(this.rbtnCartas);
-            this.Controls.Add(this.rbtnTorneio);
-            this.Controls.Add(this.rbtnJogadores);
-            this.Controls.Add(this.rbtnArbitro);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStripHome);
             this.Name = "Hitorico_Arbitro";
             this.Text = "Historico_Arbitro";
+            this.gbxHistorico.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
@@ -245,10 +205,6 @@
 
         private System.Windows.Forms.GroupBox gbxHistorico;
         private System.Windows.Forms.TextBox tbxpesquisa;
-        private System.Windows.Forms.RadioButton rbtnCartas;
-        private System.Windows.Forms.RadioButton rbtnTorneio;
-        private System.Windows.Forms.RadioButton rbtnJogadores;
-        private System.Windows.Forms.RadioButton rbtnArbitro;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -262,5 +218,6 @@
         private System.Windows.Forms.ToolStripMenuItem historicoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
+        private System.Windows.Forms.ListView listVHistorico;
     }
 }

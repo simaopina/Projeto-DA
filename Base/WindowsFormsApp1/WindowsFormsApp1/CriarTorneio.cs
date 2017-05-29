@@ -384,5 +384,12 @@ namespace WindowsFormsApp1
             tbxDescricao.ResetText();
             dateTEquipas.Value = DateTime.Now;
         }
+
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
+        }
     }
 }
