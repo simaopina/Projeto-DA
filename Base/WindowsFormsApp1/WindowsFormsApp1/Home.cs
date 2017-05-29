@@ -27,9 +27,7 @@ namespace WindowsFormsApp1
         {
             Login Lfrm = new Login();
             Lfrm.Show();
-            Hide();
-
-           
+            Hide();           
         }
     }
 }
