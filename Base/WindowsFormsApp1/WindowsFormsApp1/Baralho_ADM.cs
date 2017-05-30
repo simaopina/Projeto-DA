@@ -12,22 +12,18 @@ namespace WindowsFormsApp1
 {
     public partial class Baralho_ADM : Form
     {
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
-        int id_baralho = 0;
+
+        //Declaração de Variaveis
         Deck deckselecionado = null;
 
+        //Inicialização do Form
         public Baralho_ADM()
         {
             InitializeComponent();
 
             refresh_listview();
-        }
-
-        private void signoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-
-            Hfrm.Show();
         }
 
         private void Baralho_ADM_Load(object sender, EventArgs e)
@@ -37,28 +33,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnBaralhoGaianAMD_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
-        {
-         //   ListVBaralhoADM.SmallImageList = ListaBaralhoUneasyAlliance;
-
-        }
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Baralho_ADM form = new Baralho_ADM();
-            // Ao atribuirmos à propriedade FormPrincipal uma referência para o form atual (form MTADMMenu)
-            // podemos usar, o form ArmaForm, os métodos públicos do form principal e aceder, através de métodos
-            // próprios para o efeito (ex.: método AdicionarArma()), aos componentes existentes no form principal.
-           
-            form.Show();
-        }
-
+        //Funções
         private void ListVBaralhoADM_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Card carta in container.CardSet)
@@ -69,9 +44,35 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVBaralhos.SelectedItems != null)
+            {
+                string DeckU = listVBaralhos.SelectedItems[0].Text;
+                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
 
-     
+                tbxNome.Text = deckselecionado.Name;
 
+                refresh_listview();
+
+            }
+        }
+
+        public void refresh_listview()
+        {
+            listVBaralhos.Items.Clear();
+            List<Deck> Sdeck = container.DeckSet.ToList();
+
+            foreach (Deck deck in Sdeck)
+            {
+                ListViewItem item = new ListViewItem(deck.Name);
+                listVBaralhos.Items.Add(item);
+            }
+            
+
+        }
+
+        //Botões
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string nome = tbxNome.Text;
@@ -87,20 +88,6 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             refresh_listview();
             tbxNome.ResetText();
-        }
-
-        public void refresh_listview()
-        {
-            listVBaralhos.Items.Clear();
-            List<Deck> Sdeck = container.DeckSet.ToList();
-
-            foreach (Deck deck in Sdeck)
-            {
-                ListViewItem item = new ListViewItem(deck.Name);
-                listVBaralhos.Items.Add(item);
-            }
-            
-
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -129,11 +116,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-
-
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string Name = deckselecionado.Name;
@@ -152,20 +134,6 @@ namespace WindowsFormsApp1
 
             refresh_listview();
 
-        }
-
-        private void listVBaralhos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVBaralhos.SelectedItems != null)
-            {
-                string DeckU = listVBaralhos.SelectedItems[0].Text;
-                deckselecionado = container.DeckSet.Where(deck => deck.Name.Equals(DeckU)).First();
-
-                tbxNome.Text = deckselecionado.Name;
-
-                refresh_listview();
-
-            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -187,31 +155,24 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-            InserirEquipa Iepfrm = new InserirEquipa();
-            Iepfrm.Show();
+             tbxNome.ResetText();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
             Close();
         }
 
-        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
-            Uadmfrm.Show();
-            Close();
-        }
+        //Navegação
 
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
-            Gtjfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
-            Gtefrm.Show();
+            Baralho_ADM form = new Baralho_ADM();          
+            form.Show();
             Close();
         }
 
@@ -289,18 +250,6 @@ namespace WindowsFormsApp1
         {
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
-            Close();
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-             tbxNome.ResetText();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Home_ADM hfrm = new Home_ADM();
-            hfrm.Show();
             Close();
         }
     }

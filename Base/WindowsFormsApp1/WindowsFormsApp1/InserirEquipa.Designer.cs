@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InserirEquipa));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.tbxPesquisar = new System.Windows.Forms.TextBox();
             this.cbxJogador1 = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,9 @@
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +76,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnEliminar);
+            this.groupBox3.Controls.Add(this.btnAlterar);
             this.groupBox3.Controls.Add(this.btnLimpar);
             this.groupBox3.Controls.Add(this.btnPesquisar);
             this.groupBox3.Controls.Add(this.tbxPesquisar);
@@ -93,6 +98,17 @@
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Inserir Equipa";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(235, 312);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 49;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -163,6 +179,7 @@
             this.btnAbrirImagem.TabIndex = 49;
             this.btnAbrirImagem.Text = "Abrir Imagem";
             this.btnAbrirImagem.UseVisualStyleBackColor = true;
+            this.btnAbrirImagem.Click += new System.EventHandler(this.btnAbrirImagem_Click);
             // 
             // picbxAvatar
             // 
@@ -200,7 +217,7 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.Location = new System.Drawing.Point(411, 312);
+            this.btnInserir.Location = new System.Drawing.Point(279, 312);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(75, 23);
             this.btnInserir.TabIndex = 38;
@@ -370,16 +387,27 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
-            // btnLimpar
+            // openFileDialogImagem
             // 
-            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLimpar.Location = new System.Drawing.Point(367, 312);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
-            this.btnLimpar.TabIndex = 49;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.openFileDialogImagem.FileName = "openFileDialog1";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(360, 312);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.TabIndex = 59;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(432, 312);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 60;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // InserirEquipa
             // 
@@ -440,5 +468,8 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox tbxPesquisar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.OpenFileDialog openFileDialogImagem;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

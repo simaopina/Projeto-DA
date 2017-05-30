@@ -12,10 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Arbitro_JogosOndeTou : Form
     {
+        //Declaração de Variaveis
         public int id;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //Inicialização do Form
         public Arbitro_JogosOndeTou(int id_arb)
         {
             InitializeComponent();
@@ -46,6 +48,49 @@ namespace WindowsFormsApp1
 
         }
 
+        //Funções
+        public void refresh_listVHistorico()
+        {
+            listVJogos.Items.Clear();
+            foreach (Game game in container.GameSet)
+            {
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
+
+                listVJogos.Items.Add(item);
+            }
+        }
+
+        //Botões
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVJogos.Items.Count];
+                listVJogos.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
+
+                listVJogos.Items.Clear();
+                listVJogos.Items.AddRange(dados);
+
+                if (listVJogos.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listVHistorico();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
+            }
+            else
+            {
+                refresh_listVHistorico();
+            }
+        }
+
+        //Navegação
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             JogoArbitro JArbfrm = new JogoArbitro(id);
@@ -93,46 +138,6 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if (tbxpesquisa.Text.Length > 0)
-            {
-                ListViewItem[] dados = new ListViewItem[listVJogos.Items.Count];
-                listVJogos.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
-
-                listVJogos.Items.Clear();
-                listVJogos.Items.AddRange(dados);
-
-                if (listVJogos.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refresh_listVHistorico();
-                    tbxpesquisa.ResetText();
-                    tbxpesquisa.Focus();
-                }
-            }
-            else
-            {
-                refresh_listVHistorico();
-            }
-        }
-
-        public void refresh_listVHistorico()
-        {
-            listVJogos.Items.Clear();
-            foreach (Game game in container.GameSet)
-            {
-                ListViewItem item = new ListViewItem(game.Number.ToString());
-                item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToShortTimeString());
-                item.SubItems.Add(game.Date.ToShortDateString());
-
-                listVJogos.Items.Add(item);
-            }
         }
     }
 }

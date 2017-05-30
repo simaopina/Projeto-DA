@@ -12,10 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Baralho_Arbitro : Form
     {
+        //Declaração de Variaveis
         public int id;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
-
+        
+        //Inicialização do Form
         public Baralho_Arbitro(int id_arb)
         {
             InitializeComponent();
@@ -27,6 +29,65 @@ namespace WindowsFormsApp1
             
         }
 
+        private void Baralho_Arbitro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //Botões
+        private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
+        {
+            /*listVbaralho.LargeImageList = listaBaralhoArbitroGaianloveforlife;
+            listVbaralho.Items.Clear();
+
+            foreach (Card carta in container.CardSet)
+            {
+                ListViewItem item = new ListViewItem(carta.Name);
+                //item.ImageIndex = carta.Image;
+                listVbaralho.Items.Add(item);
+            }*/
+        }
+
+        private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
+        {
+            /*listVbaralho.LargeImageList = listaBaralhoArbitroUneasyAlliance;
+            listVbaralho.Items.Clear();
+
+            foreach (Card carta in container.CardSet)
+            {
+                ListViewItem item = new ListViewItem(carta.Name);
+               // item.ImageIndex = carta.Image;
+                listVbaralho.Items.Add(item);
+            }*/
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                string[] dados = new string[listBoxBaralho.Items.Count];
+                listBoxBaralho.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Contains(tbxpesquisa.Text)).ToArray();
+
+                listBoxBaralho.Items.Clear();
+                listBoxBaralho.Items.AddRange(dados);
+
+                if (listBoxBaralho.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
+            }
+            else
+            {
+                refresh();
+            }
+        }
+
+        //Função
         private void carregar_Baralho()
         {
             List<Deck> baralhos = (from d in container.DeckSet
@@ -68,37 +129,28 @@ namespace WindowsFormsApp1
             }
         }
 
-
-        private void btnBaralhoGaianArbitro_Click(object sender, EventArgs e)
+        private void listVbaralho_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*listVbaralho.LargeImageList = listaBaralhoArbitroGaianloveforlife;
-            listVbaralho.Items.Clear();
 
-            foreach (Card carta in container.CardSet)
+        }
+
+        private void listBoxBaralho_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBoxCartasBaralho.Items.Clear();
+            vercartas();
+            
+        }
+
+        public void refresh()
+        {
+            listBoxBaralho.Items.Clear();
+
+            foreach (Deck baralho in container.DeckSet)
             {
-                ListViewItem item = new ListViewItem(carta.Name);
-                //item.ImageIndex = carta.Image;
-                listVbaralho.Items.Add(item);
-            }*/
+                listBoxBaralho.Items.Add(baralho.Name);
+            }
         }
 
-        private void btnBaralhoUneasyADM_Click(object sender, EventArgs e)
-        {
-            /*listVbaralho.LargeImageList = listaBaralhoArbitroUneasyAlliance;
-            listVbaralho.Items.Clear();
-
-            foreach (Card carta in container.CardSet)
-            {
-                ListViewItem item = new ListViewItem(carta.Name);
-               // item.ImageIndex = carta.Image;
-                listVbaralho.Items.Add(item);
-            }*/
-        }
-
-        private void Baralho_Arbitro_Load(object sender, EventArgs e)
-        {
-
-        }
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -147,54 +199,6 @@ namespace WindowsFormsApp1
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
-        }
-
-        private void listVbaralho_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBoxBaralho_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBoxCartasBaralho.Items.Clear();
-            vercartas();
-            
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if (tbxpesquisa.Text.Length > 0)
-            {
-                string[] dados = new string[listBoxBaralho.Items.Count];
-                listBoxBaralho.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Contains(tbxpesquisa.Text)).ToArray();
-
-                listBoxBaralho.Items.Clear();
-                listBoxBaralho.Items.AddRange(dados);
-
-                if (listBoxBaralho.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refresh();
-                    tbxpesquisa.ResetText();
-                    tbxpesquisa.Focus();
-                }
-            }
-            else
-            {
-                refresh();
-            }
-        }
-
-        public void refresh()
-        {
-            listBoxBaralho.Items.Clear();
-
-            foreach (Deck baralho in container.DeckSet)
-            {
-                listBoxBaralho.Items.Add(baralho.Name);
-            }
         }
     }
 }
