@@ -294,7 +294,7 @@ namespace WindowsFormsApp1
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+             tbxNome.ResetText();
         }
     }
 }
