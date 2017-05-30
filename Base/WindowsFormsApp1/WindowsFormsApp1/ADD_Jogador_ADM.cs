@@ -112,6 +112,7 @@ namespace WindowsFormsApp1
                 picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar);
             }
             else
+            
             {
                 jogadorSelected = null;
             }

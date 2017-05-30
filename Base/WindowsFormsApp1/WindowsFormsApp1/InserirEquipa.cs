@@ -19,7 +19,22 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         public string ParteFinalNome;
-     
+
+        public InserirEquipa()
+        {
+            InitializeComponent();
+
+            foreach (Player jogador in container.PlayerSet)
+            {
+                cbxJogador1.Items.Add(jogador.Id.ToString());
+                refreshEquipa();
+            }
+            foreach (Player jogador in container.PlayerSet)
+            {
+                cbxJogador2.Items.Add(jogador.Id.ToString());
+                refreshEquipa();
+            }
+        }
         //Eventos
         private void lbxEquipa_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -29,6 +44,7 @@ namespace WindowsFormsApp1
                 tbxNome.Text = equipaSelected.Name;
                 cbxJogador1.Text = Convert.ToString(equipaSelected.Player1);
                 cbxJogador2.Text = Convert.ToString(equipaSelected.Player2);
+                //picbxAvatar.Text = ParteFinalNome;
                 picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + equipaSelected.Avatar);
             }
             else
@@ -36,7 +52,7 @@ namespace WindowsFormsApp1
                 equipaSelected = null;
             }
         }
-
+        
         private void btnInserir_Click(object sender, EventArgs e)
         {
             AddEquipa();
@@ -190,19 +206,7 @@ namespace WindowsFormsApp1
             refreshEquipa();
         }
 
-        public InserirEquipa()
-        {
-            InitializeComponent();
-
-            foreach (Player jogador in container.PlayerSet)
-            {
-                cbxJogador1.Items.Add(jogador.Id.ToString());
-            }
-            foreach (Player jogador in container.PlayerSet)
-            {
-                cbxJogador2.Items.Add(jogador.Id.ToString());
-            }
-        }
+        
 
         private void refreshEquipa()
         {

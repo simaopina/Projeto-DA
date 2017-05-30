@@ -12,13 +12,14 @@ namespace WindowsFormsApp1
 {
     public partial class Hitorico_Arbitro : Form
     {
-        //Declaração de variaveis
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
-
+        
+        //Declaração de Variaveis
         Game JogoSelecionado;
 
         public int id;
 
+        //Inicializador do Form
         public Hitorico_Arbitro(int id_arb)
         {
             InitializeComponent();
@@ -51,8 +52,24 @@ namespace WindowsFormsApp1
             
 
         }
+        
+        //Função
+        public void refresh_listVHistorico()
+        {
+            listVHistorico.Items.Clear();
+            foreach (Game game in container.GameSet)
+            {
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
-        //Eventos
+                listVHistorico.Items.Add(item);
+            }
+            
+        }
+
+        //Botão
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbxpesquisa.Text.Length > 0)
@@ -79,37 +96,14 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Funções
-        public void refresh_listVHistorico()
-        {
-            listVHistorico.Items.Clear();
-            foreach (Game game in container.GameSet)
-            {
-                ListViewItem item = new ListViewItem(game.Number.ToString());
-                item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToShortTimeString());
-                item.SubItems.Add(game.Date.ToShortDateString());
-
-                listVHistorico.Items.Add(item);
-            }
-            
-        }
-
-        //Navegação       
-        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Home_Arbitro Hfrm = new Home_Arbitro(id);
-            Hfrm.Show();
-            Close();
-        }
-
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_Arbitro Hfrm = new Home_Arbitro(id);
             Hfrm.Show();
             Close();
         }
-
+    
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Baralho_Arbitro BArbfrm = new Baralho_Arbitro(id);
@@ -151,6 +145,5 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
-
     }
 }
