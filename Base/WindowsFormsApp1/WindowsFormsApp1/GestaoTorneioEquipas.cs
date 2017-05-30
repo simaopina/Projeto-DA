@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         Team teamSelecionado = null;
+        Team teamSelecionado1 = null;
         User userSelect = null;
         List<Player> Items = new List<Player>();
         List<Referee> Id = new List<Referee>();
@@ -220,6 +221,22 @@ namespace WindowsFormsApp1
             }
         }
 
+        public void validacao()
+        {
+            if (teamSelecionado == teamSelecionado1)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericEquipa1.ResetText();
+                numericEquipa2.ResetText();
+            }
+            else if (teamSelecionado1 == teamSelecionado)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericEquipa1.ResetText();
+                numericEquipa2.ResetText();
+            }
+        }
+
         private void GestaoTorneioEquipas_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
@@ -261,7 +278,6 @@ namespace WindowsFormsApp1
             refresh_listview_Equipa2();
             refresh_listview_Arbitro();
             limparCampos();
-
             MessageBox.Show("Inserido Com Sucesso!");
 
         }
@@ -308,6 +324,7 @@ namespace WindowsFormsApp1
             }
         }
 
+
         private void listVEquipa1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listVEquipa1.SelectedItems.Count > 0)
@@ -315,6 +332,8 @@ namespace WindowsFormsApp1
                 string team = listVEquipa1.SelectedItems[0].Text;
 
                 teamSelecionado = container.TeamSet.Where(tea => tea.Name.Equals(team)).First();
+
+                validacao();
 
                 List<Team> equipa = container.TeamSet.ToList();
 
@@ -333,15 +352,17 @@ namespace WindowsFormsApp1
             {
                 string team = listVEquipa2.SelectedItems[0].Text;
 
-                teamSelecionado = container.TeamSet.Where(tea => tea.Name.Equals(team)).First();
+                teamSelecionado1 = container.TeamSet.Where(tea => tea.Name.Equals(team)).First();
+
+                validacao();
 
                 List<Team> equipa = container.TeamSet.ToList();
 
-                numericEquipa2.Value = teamSelecionado.Id;
+                numericEquipa2.Value = teamSelecionado1.Id;
             }
             else
             {
-                teamSelecionado = null;
+                teamSelecionado1 = null;
             }
         }
 
@@ -414,6 +435,11 @@ namespace WindowsFormsApp1
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
         }
     }
 }

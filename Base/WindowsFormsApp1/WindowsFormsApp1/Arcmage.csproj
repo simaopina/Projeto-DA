@@ -86,12 +86,6 @@
     <Compile Include="Arbitro_JogosOndeTou.Designer.cs">
       <DependentUpon>Arbitro_JogosOndeTou.cs</DependentUpon>
     </Compile>
-    <Compile Include="ATorneioJogosStandard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ATorneioJogosStandard.Designer.cs">
-      <DependentUpon>ATorneioJogosStandard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Baralho_ADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,12 +299,6 @@
     <Compile Include="Partial Classes\Card.cs" />
     <Compile Include="Partial Classes\Deck.cs" />
     <Compile Include="Partial Classes\Deck_Card.cs" />
-    <Compile Include="Permissoes_ADM.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Permissoes_ADM.Designer.cs">
-      <DependentUpon>Permissoes_ADM.cs</DependentUpon>
-    </Compile>
     <Compile Include="Player.cs">
       <DependentUpon>DiagramaEntidadesArcmage.tt</DependentUpon>
     </Compile>
@@ -351,9 +339,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Arbitro_JogosOndeTou.resx">
       <DependentUpon>Arbitro_JogosOndeTou.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ATorneioJogosStandard.resx">
-      <DependentUpon>ATorneioJogosStandard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Baralho_ADM.resx">
       <DependentUpon>Baralho_ADM.cs</DependentUpon>
@@ -408,9 +393,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home_ADM.resx">
       <DependentUpon>Home_ADM.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Permissoes_ADM.resx">
-      <DependentUpon>Permissoes_ADM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

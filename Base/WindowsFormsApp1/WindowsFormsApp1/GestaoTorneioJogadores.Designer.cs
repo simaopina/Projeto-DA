@@ -47,6 +47,7 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
@@ -102,7 +103,6 @@
             this.playerSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.playerSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_PlayerTableAdapters.PlayerSetTableAdapter();
             this.playerSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
@@ -264,6 +264,13 @@
             this.torneioEquipaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
+            // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
             // 
             // terminarSessãoToolStripMenuItem
             // 
@@ -561,10 +568,11 @@
             // 
             this.btnCancelar.Location = new System.Drawing.Point(110, 124);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 23);
             this.btnCancelar.TabIndex = 47;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Limpar Dados";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // playerSetTableAdapter
             // 
@@ -718,13 +726,6 @@
             // 
             this.playerSetBindingSource3.DataMember = "PlayerSet";
             this.playerSetBindingSource3.DataSource = this.baseDadosDataSet4BindingSource;
-            // 
-            // listaDeJogosToolStripMenuItem
-            // 
-            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
-            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
-            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
             // 
             // GestaoTorneioJogadores
             // 
