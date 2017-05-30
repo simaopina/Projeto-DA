@@ -111,7 +111,7 @@ namespace WindowsFormsApp1
                 ListViewItem item = new ListViewItem(arbrito.Username);
                 item.SubItems.Add(arbrito.Name);
                 item.SubItems.Add(arbrito.Avatar);
-                listVADM.Items.Add(item);
+                listVArbitro.Items.Add(item);
 
             }
         }
@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
             txtbNickName_ARB.Text = arbitroSeleciona.Username;
             txtbNome_ARB.Text = arbitroSeleciona.Name;
             txtbPassword_ARB.Text = arbitroSeleciona.Password;
-            linkLAvatar_ARB.Text = partefinal;
+            linkLAvatar_ARB.Text = arbitroSeleciona.Avatar;
 
 
         }
@@ -246,15 +246,15 @@ namespace WindowsFormsApp1
                 partefinal = partes.Last();
                 File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
 
-                linkLAvatar_ARB.Image = Image.FromFile(caminhoFicheiro);
+                linkLAvatar_ARB.Text = caminhoFicheiro;
 
             }
         }
 
         private void btnAlterar_ARB_Click(object sender, EventArgs e)
         {
-            string Username = txtbNickName_ADM.Text;
-            string Password = txtbPassword_ADM.Text;
+            string Username = txtbNickName_ARB.Text;
+            string Password = txtbPassword_ARB.Text;
             string Name = txtbNome_ARB.Text;
             string avatar = partefinal;
 
