@@ -571,6 +571,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(38, 23);
             this.btnLimpar.TabIndex = 42;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // CriarTorneio
             // 
