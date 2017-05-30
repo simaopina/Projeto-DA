@@ -202,5 +202,13 @@ namespace WindowsFormsApp1
                 refreshEquipa();
             }
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNome.ResetText();
+            tbxPesquisar.ResetText();
+            cbxJogador1.ResetText();
+            cbxJogador2.ResetText();
+        }
     }
 }

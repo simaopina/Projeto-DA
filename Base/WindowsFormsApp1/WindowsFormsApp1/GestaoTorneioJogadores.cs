@@ -451,6 +451,13 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            Home_ADM Hadmfrm = new Home_ADM();
+            Hadmfrm.Show();
+            Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
             limparCampos();
         }
     }
