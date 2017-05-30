@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         }
 
-        //Menu
+        //Navegação
         private void btnEditCartas_Click(object sender, EventArgs e)
         {
             Cartas_ADM Cadmefrm = new Cartas_ADM();
@@ -55,7 +55,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_ADM HAdmfrm = new Home_ADM();
