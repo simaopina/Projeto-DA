@@ -84,13 +84,9 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Cancelar();
-        }
-
-        private void Cancelar()
-        {
-            tbxNome.ResetText();
-            picbxAvatar.ResetText();
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
