@@ -12,6 +12,8 @@ namespace WindowsFormsApp1
 {
     public partial class Arbitro_JogosOndeTou : Form
     {
+
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         public Arbitro_JogosOndeTou()

@@ -57,10 +57,11 @@ namespace WindowsFormsApp1
 
                 var query = from user in container.UserSet.OfType<Referee>() where user.Username.Equals(tbxUsername.Text) where user.Password.Equals(tbxPW.Text) select user;
 
+                int id_arb = query.First().Id;
 
                 if (query.Any())
                 {
-                    Home_Arbitro H_abrfrm = new Home_Arbitro();
+                    Home_Arbitro H_abrfrm = new Home_Arbitro(id_arb);
                     H_abrfrm.Show();
                     Close();
                 }

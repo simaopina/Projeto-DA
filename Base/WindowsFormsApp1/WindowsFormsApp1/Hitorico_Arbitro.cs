@@ -12,23 +12,51 @@ namespace WindowsFormsApp1
 {
     public partial class Hitorico_Arbitro : Form
     {
-        public Hitorico_Arbitro()
+        public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+        Game JogoSelecionado;
+
+        public int id;
+
+        public Hitorico_Arbitro(int id_arb)
         {
             InitializeComponent();
+
+            id = id_arb;
+
+          
+            var query = from Game in container.GameSet where JogoSelecionado.Equals(id) select Game;
+
+
+            if (query.Any())
+            {
+
+                List<Game> listgame = container.GameSet.ToList();
+
+                foreach (Game game in listgame)
+                {
+                    listVHistorico.Items.Add(game.Description.ToString());
+                }
+
+            }
+
+
+            
+
         }
         //Navegação
        
 
         private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            Home_Arbitro Hfrm = new Home_Arbitro();
+            Home_Arbitro Hfrm = new Home_Arbitro(id);
             Hfrm.Show();
             Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro Hfrm = new Home_Arbitro();
+            Home_Arbitro Hfrm = new Home_Arbitro(id);
             Hfrm.Show();
             Close();
         }
@@ -63,7 +91,7 @@ namespace WindowsFormsApp1
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
+            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro(id);
             Histfrm.Show();
             Close();
         }

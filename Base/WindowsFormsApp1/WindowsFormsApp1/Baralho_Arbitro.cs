@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
+            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro(id);
             Histfrm.Show();
             Close();
         }
