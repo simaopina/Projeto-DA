@@ -46,6 +46,8 @@
             this.jogadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarJogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxPesquisar = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameSetStardadGameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosGameStardad)).BeginInit();
@@ -100,7 +102,7 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Gray;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEliminar.Location = new System.Drawing.Point(314, 277);
+            this.btnEliminar.Location = new System.Drawing.Point(318, 354);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 109);
             this.btnEliminar.TabIndex = 37;
@@ -142,26 +144,26 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click_1);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
             this.cartasToolStripMenuItem.Click += new System.EventHandler(this.cartasToolStripMenuItem_Click_1);
             // 
@@ -187,11 +189,31 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_2);
             // 
+            // tbxPesquisar
+            // 
+            this.tbxPesquisar.Location = new System.Drawing.Point(234, 213);
+            this.tbxPesquisar.Name = "tbxPesquisar";
+            this.tbxPesquisar.Size = new System.Drawing.Size(244, 20);
+            this.tbxPesquisar.TabIndex = 39;
+            this.tbxPesquisar.Text = "Pesquisar...";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(485, 213);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 40;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // Jogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 475);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.tbxPesquisar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listVJogos);
@@ -230,5 +252,7 @@
         private System.Windows.Forms.ToolStripMenuItem jogadoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarJogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.TextBox tbxPesquisar;
+        private System.Windows.Forms.Button btnPesquisar;
     }
 }
