@@ -14,10 +14,12 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //Declaração de Variaveis
         TeamTournament TTorneioSelected = null;
 
         StandadTournament SSTorneioSelected = null;
 
+        //Inicialização do Form
         public CriarTorneio()
         {
             InitializeComponent();
@@ -37,54 +39,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            string Nome = tbxNomeEquipas.Text;
-            string Descricao = tbxDescricao.Text;
-            DateTime Data = dateTEquipas.Value;
-
-            TeamTournament tournament = new TeamTournament()
-            {
-                Name = Nome,
-                Description = Descricao,
-                Date = Data
-
-            };
-
-            container.TournamentSet.Add(tournament);
-            container.SaveChanges();
-            refresh_listViewEquipas();
-            MessageBox.Show("Torneio Inserido com sucesso");
-
-            tbxNomeEquipas.ResetText();
-            tbxDescricao.ResetText();
-            dateTEquipas.Value = DateTime.Now;
-        }
-
-        private void btnGuardarStandard_Click(object sender, EventArgs e)
-        {
-            string Nome = tbxNomeStandard.Text;
-            string Descricao = tbxDescricaoStandard.Text;
-            DateTime Data = dateTimeDataStandard.Value;
-
-            StandadTournament tournament = new StandadTournament()
-            {
-                Name = Nome,
-                Description = Descricao,
-                Date = Data
-                
-            };
-            container.TournamentSet.Add(tournament);
-            container.SaveChanges();
-            refresh_listViewStandard();
-            MessageBox.Show("Torneio Inserido com sucesso");
-
-            tbxNomeStandard.ResetText();
-            tbxDescricaoStandard.ResetText();
-            dateTimeDataStandard.Value = DateTime.Now;
-
-        }
-
+        //Funções
         public void refresh_listViewStandard()
         {
             listVStandard.Items.Clear();
@@ -111,60 +66,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnAlterarStandard_Click(object sender, EventArgs e)
-        {
-            string Nome = tbxNomeStandard.Text;
-            string Descricao = tbxDescricaoStandard.Text;
-            DateTime data = dateTimeDataStandard.Value;
-
-            List<StandadTournament> StandTorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
-
-            if (SSTorneioSelected != null)
-            {
-                SSTorneioSelected.Name = Nome;
-                SSTorneioSelected.Description = Descricao;
-                SSTorneioSelected.Date = data;
-
-                container.SaveChanges();
-
-                MessageBox.Show("Alterado com Sucesso!");
-
-                refresh_listViewStandard();
-
-                tbxNomeStandard.ResetText();
-                tbxDescricaoStandard.ResetText();
-                dateTimeDataStandard.Value = DateTime.Now;
-
-            }
-        }
-
-        private void btnAlterarEquipas_Click(object sender, EventArgs e)
-        {
-            string Nome = tbxNomeEquipas.Text;
-            string Descricao = tbxDescricao.Text;
-            DateTime data = dateTEquipas.Value;
-
-            List<TeamTournament> TeamTorneio = container.TournamentSet.OfType<TeamTournament>().ToList();
-
-            if (TTorneioSelected != null)
-            {
-                TTorneioSelected.Name = Nome;
-                TTorneioSelected.Description = Descricao;
-                TTorneioSelected.Date = data;
-
-                container.SaveChanges();
-
-                MessageBox.Show("Alterado com sucesso!");
-
-                refresh_listViewEquipas();
-
-                tbxNomeEquipas.ResetText();
-                tbxDescricao.ResetText();
-                dateTEquipas.Value = DateTime.Now;
-
-            }
-        }
-
+        //Eventos
         private void listVStandard_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listVStandard.SelectedItems != null)
@@ -199,6 +101,49 @@ namespace WindowsFormsApp1
             }
         }
 
+
+        //Botões
+        //Invidivual
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNomeStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+            tbxDescricaoStandard.ResetText();
+        }
+        
+        private void btxPesquisarStand_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisarStand.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVStandard.Items.Count];
+                listVStandard.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxPesquisarStand.Text)).ToArray();
+
+                listVStandard.Items.Clear();
+                listVStandard.Items.AddRange(dados);
+
+                if (listVStandard.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listViewStandard();
+                    tbxPesquisarStand.ResetText();
+                    tbxPesquisarStand.Focus();
+                }
+            }
+            else
+            {
+                refresh_listViewStandard();
+            }
+        }
+
+        private void btnCancelarStand_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
+        }
+
         private void btnEliminarStandard_Click(object sender, EventArgs e)
         {
             string Name = SSTorneioSelected.Name;
@@ -219,6 +164,99 @@ namespace WindowsFormsApp1
             tbxDescricaoStandard.ResetText();
             dateTimeDataStandard.Value = DateTime.Now;
 
+        }
+
+        private void btnAlterarStandard_Click(object sender, EventArgs e)
+        {
+            string Nome = tbxNomeStandard.Text;
+            string Descricao = tbxDescricaoStandard.Text;
+            DateTime data = dateTimeDataStandard.Value;
+
+            List<StandadTournament> StandTorneio = container.TournamentSet.OfType<StandadTournament>().ToList();
+
+            if (SSTorneioSelected != null)
+            {
+                SSTorneioSelected.Name = Nome;
+                SSTorneioSelected.Description = Descricao;
+                SSTorneioSelected.Date = data;
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com Sucesso!");
+
+                refresh_listViewStandard();
+
+                tbxNomeStandard.ResetText();
+                tbxDescricaoStandard.ResetText();
+                dateTimeDataStandard.Value = DateTime.Now;
+
+            }
+        }
+
+        private void btnGuardarStandard_Click(object sender, EventArgs e)
+        {
+            string Nome = tbxNomeStandard.Text;
+            string Descricao = tbxDescricaoStandard.Text;
+            DateTime Data = dateTimeDataStandard.Value;
+
+            StandadTournament tournament = new StandadTournament()
+            {
+                Name = Nome,
+                Description = Descricao,
+                Date = Data
+
+            };
+            container.TournamentSet.Add(tournament);
+            container.SaveChanges();
+            refresh_listViewStandard();
+            MessageBox.Show("Torneio Inserido com sucesso");
+
+            tbxNomeStandard.ResetText();
+            tbxDescricaoStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+
+        }
+
+
+        //Team
+        private void btnLimparTeams_Click(object sender, EventArgs e)
+        {
+            tbxNomeEquipas.ResetText();
+            dateTEquipas.Value = DateTime.Now;
+            tbxDescricao.ResetText();
+        }
+
+        private void btxPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisarTeam.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVEquipas.Items.Count];
+                listVEquipas.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxPesquisarTeam.Text)).ToArray();
+
+                listVEquipas.Items.Clear();
+                listVEquipas.Items.AddRange(dados);
+
+                if (listVEquipas.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listViewEquipas();
+                    tbxPesquisarTeam.ResetText();
+                    tbxPesquisarTeam.Focus();
+                }
+            }
+            else
+            {
+                refresh_listViewEquipas();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
         }
 
         private void btnEliminarEquipas_Click(object sender, EventArgs e)
@@ -242,67 +280,59 @@ namespace WindowsFormsApp1
             dateTEquipas.Value = DateTime.Now;
         }
 
-        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void btnAlterarEquipas_Click(object sender, EventArgs e)
         {
-            Home_ADM HAdmfrm = new Home_ADM();
-            HAdmfrm.Show();
-            Close();
+            string Nome = tbxNomeEquipas.Text;
+            string Descricao = tbxDescricao.Text;
+            DateTime data = dateTEquipas.Value;
+
+            List<TeamTournament> TeamTorneio = container.TournamentSet.OfType<TeamTournament>().ToList();
+
+            if (TTorneioSelected != null)
+            {
+                TTorneioSelected.Name = Nome;
+                TTorneioSelected.Description = Descricao;
+                TTorneioSelected.Date = data;
+
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso!");
+
+                refresh_listViewEquipas();
+
+                tbxNomeEquipas.ResetText();
+                tbxDescricao.ResetText();
+                dateTEquipas.Value = DateTime.Now;
+
+            }
         }
 
-        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Baralho_ADM BarAdmfrm = new Baralho_ADM();
-            BarAdmfrm.Show();
-            Close();
+            string Nome = tbxNomeEquipas.Text;
+            string Descricao = tbxDescricao.Text;
+            DateTime Data = dateTEquipas.Value;
+
+            TeamTournament tournament = new TeamTournament()
+            {
+                Name = Nome,
+                Description = Descricao,
+                Date = Data
+
+            };
+
+            container.TournamentSet.Add(tournament);
+            container.SaveChanges();
+            refresh_listViewEquipas();
+            MessageBox.Show("Torneio Inserido com sucesso");
+
+            tbxNomeEquipas.ResetText();
+            tbxDescricao.ResetText();
+            dateTEquipas.Value = DateTime.Now;
         }
 
-        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM EdBaAdmfrm = new Edicao_Baralhos_ADM();
-            EdBaAdmfrm.Show();
-            Close();
-        }
 
-        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Cartas_ADM CAdmfrm = new Cartas_ADM();
-            CAdmfrm.Show();
-            Close();
-        }
-
-        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM UtiAdmfrm = new Utilizadores_ADM();
-            UtiAdmfrm.Show();
-            Close();
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void torneioIndividualToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores GesTorJogfrm = new GestaoTorneioJogadores();
-            GesTorJogfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipaToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas GesTorEqfrm = new GestaoTorneioEquipas();
-            GesTorEqfrm.Show();
-            Close();
-        }
-
-        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-            Hfrm.Show();
-            Close();
-        }
-
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_ADM Hfrm = new Home_ADM();
@@ -352,11 +382,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
         private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
@@ -371,18 +396,11 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_ADM hfrm = new Home_ADM();
-            hfrm.Show();
+            Jogos Jfrm = new Jogos();
+            Jfrm.Show();
             Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            tbxNomeEquipas.ResetText();
-            tbxDescricao.ResetText();
-            dateTEquipas.Value = DateTime.Now;
         }
 
         private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -392,70 +410,5 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Jogos Jfrm = new Jogos();
-            Jfrm.Show();
-            Close();
-        }
-
-        private void btxPesquisar_Click(object sender, EventArgs e)
-        {
-            if (tbxPesquisarTeam.Text.Length > 0)
-            {
-                ListViewItem[] dados = new ListViewItem[listVEquipas.Items.Count];
-                listVEquipas.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Text.Contains(tbxPesquisarTeam.Text)).ToArray();
-
-                listVEquipas.Items.Clear();
-                listVEquipas.Items.AddRange(dados);
-
-                if (listVEquipas.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refresh_listViewEquipas();
-                    tbxPesquisarTeam.ResetText();
-                    tbxPesquisarTeam.Focus();
-                }
-            }
-            else
-            {
-                refresh_listViewEquipas();
-            }
-        }
-
-        private void btxPesquisarStand_Click(object sender, EventArgs e)
-        {
-            if (tbxPesquisarStand.Text.Length > 0)
-            {
-                ListViewItem[] dados = new ListViewItem[listVStandard.Items.Count];
-                listVStandard.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Text.Contains(tbxPesquisarStand.Text)).ToArray();
-
-                listVStandard.Items.Clear();
-                listVStandard.Items.AddRange(dados);
-
-                if (listVStandard.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refresh_listViewStandard();
-                    tbxPesquisarStand.ResetText();
-                    tbxPesquisarStand.Focus();
-                }
-            }
-            else
-            {
-                refresh_listViewStandard();
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            tbxNomeStandard.ResetText();
-            dateTimeDataStandard.Value = DateTime.Now;
-            tbxDescricaoStandard.ResetText();
-        }
     }
 }
