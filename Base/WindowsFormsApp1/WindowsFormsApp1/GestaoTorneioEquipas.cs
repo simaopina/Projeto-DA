@@ -408,5 +408,12 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Jogos Jfrm = new Jogos();
+            Jfrm.Show();
+            Close();
+        }
     }
 }
