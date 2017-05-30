@@ -33,36 +33,43 @@ namespace WindowsFormsApp1
             string username = tbxUsername.Text;
             string password = tbxPW.Text;
 
-            /* // foreach (User user in container.UserSet.OfType<Administrator>())
-             //{
-                 if (tbxemail.Text.Length > 0)
-                 {
-
-                 //var query = container.UserSet.OfType<Administrator>().Where(email => email.Email.Contains(tbxemail.Text));
-
-                 Administrator db = new Administrator();
-                 var query = from User in db.Email where tbxemail.Text == db.Email select User;
-                 char query1 = query.FirstOrDefault();
-
-                 if (query1.ToString() != null || query1.ToString().Count() == 0)
-                 {
-                     Home_ADM HAdmfrm = new Home_ADM();
-                     HAdmfrm.Show();
-                     Close();
-                 }
-                 else
-                 {
-                     MessageBox.Show("Credencias erradas!");
-                 }
-                 }
-             //}*/
+            if (rbAdm.Checked == true)
+            {
+                var query = from user in container.UserSet.OfType<Administrator>() where user.Username.Equals(tbxUsername.Text) where user.Password.Equals(tbxPW.Text) select user;
 
 
-           // var query = container.UserSet.OfType<Administrator>().Where(user => user.Username.Contains(tbxUsername.Text));
+                if (query.Any())
+                {
+                    Home_ADM H_admfrm = new Home_ADM();
+                    H_admfrm.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário inválido!");
+                }
 
-            //query.ToList().Where(user => user.Username.CompareTo(tbxUsername.Text.ToString()));
 
-          
+            }
+
+            else if (rbArb.Checked == true)
+            {
+
+                var query = from user in container.UserSet.OfType<Referee>() where user.Username.Equals(tbxUsername.Text) where user.Password.Equals(tbxPW.Text) select user;
+
+
+                if (query.Any())
+                {
+                    Home_Arbitro H_abrfrm = new Home_Arbitro();
+                    H_abrfrm.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário inválido!");
+                }
+            }
+            
 
         }
 
