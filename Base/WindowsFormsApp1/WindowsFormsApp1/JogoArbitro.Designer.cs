@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gbxJogosArbitro = new System.Windows.Forms.GroupBox();
+            this.rbtnTeam = new System.Windows.Forms.RadioButton();
+            this.rbtnStandard = new System.Windows.Forms.RadioButton();
+            this.rbtnTodos = new System.Windows.Forms.RadioButton();
             this.listVJogo = new System.Windows.Forms.ListView();
             this.Nº = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,9 +51,7 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rbtnTodos = new System.Windows.Forms.RadioButton();
-            this.rbtnStandard = new System.Windows.Forms.RadioButton();
-            this.rbtnTeam = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,12 +63,48 @@
             this.gbxJogosArbitro.Controls.Add(this.rbtnStandard);
             this.gbxJogosArbitro.Controls.Add(this.rbtnTodos);
             this.gbxJogosArbitro.Controls.Add(this.listVJogo);
-            this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 231);
+            this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 246);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
             this.gbxJogosArbitro.Size = new System.Drawing.Size(568, 289);
             this.gbxJogosArbitro.TabIndex = 30;
             this.gbxJogosArbitro.TabStop = false;
             this.gbxJogosArbitro.Text = "Jogos Arbitro";
+            // 
+            // rbtnTeam
+            // 
+            this.rbtnTeam.AutoSize = true;
+            this.rbtnTeam.Location = new System.Drawing.Point(141, 20);
+            this.rbtnTeam.Name = "rbtnTeam";
+            this.rbtnTeam.Size = new System.Drawing.Size(52, 17);
+            this.rbtnTeam.TabIndex = 3;
+            this.rbtnTeam.TabStop = true;
+            this.rbtnTeam.Text = "Team";
+            this.rbtnTeam.UseVisualStyleBackColor = true;
+            this.rbtnTeam.CheckedChanged += new System.EventHandler(this.rbtnTeam_CheckedChanged);
+            // 
+            // rbtnStandard
+            // 
+            this.rbtnStandard.AutoSize = true;
+            this.rbtnStandard.Location = new System.Drawing.Point(67, 20);
+            this.rbtnStandard.Name = "rbtnStandard";
+            this.rbtnStandard.Size = new System.Drawing.Size(68, 17);
+            this.rbtnStandard.TabIndex = 2;
+            this.rbtnStandard.TabStop = true;
+            this.rbtnStandard.Text = "Standard";
+            this.rbtnStandard.UseVisualStyleBackColor = true;
+            this.rbtnStandard.CheckedChanged += new System.EventHandler(this.rbtnStandard_CheckedChanged);
+            // 
+            // rbtnTodos
+            // 
+            this.rbtnTodos.AutoSize = true;
+            this.rbtnTodos.Location = new System.Drawing.Point(6, 20);
+            this.rbtnTodos.Name = "rbtnTodos";
+            this.rbtnTodos.Size = new System.Drawing.Size(55, 17);
+            this.rbtnTodos.TabIndex = 1;
+            this.rbtnTodos.TabStop = true;
+            this.rbtnTodos.Text = "Todos";
+            this.rbtnTodos.UseVisualStyleBackColor = true;
+            this.rbtnTodos.CheckedChanged += new System.EventHandler(this.rbtnTodos_CheckedChanged);
             // 
             // listVJogo
             // 
@@ -102,15 +139,15 @@
             // 
             // tbxpesquisa
             // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(25, 205);
+            this.tbxpesquisa.Location = new System.Drawing.Point(25, 219);
             this.tbxpesquisa.Name = "tbxpesquisa";
             this.tbxpesquisa.Size = new System.Drawing.Size(486, 20);
             this.tbxpesquisa.TabIndex = 26;
-            this.tbxpesquisa.Text = "Pesquisar...";
+            this.tbxpesquisa.Text = "Pesquisar pelo numero do jogo...";
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(518, 205);
+            this.btnPesquisar.Location = new System.Drawing.Point(517, 216);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 21;
@@ -214,47 +251,22 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // rbtnTodos
+            // label1
             // 
-            this.rbtnTodos.AutoSize = true;
-            this.rbtnTodos.Location = new System.Drawing.Point(6, 20);
-            this.rbtnTodos.Name = "rbtnTodos";
-            this.rbtnTodos.Size = new System.Drawing.Size(55, 17);
-            this.rbtnTodos.TabIndex = 1;
-            this.rbtnTodos.TabStop = true;
-            this.rbtnTodos.Text = "Todos";
-            this.rbtnTodos.UseVisualStyleBackColor = true;
-            this.rbtnTodos.CheckedChanged += new System.EventHandler(this.rbtnTodos_CheckedChanged);
-            // 
-            // rbtnStandard
-            // 
-            this.rbtnStandard.AutoSize = true;
-            this.rbtnStandard.Location = new System.Drawing.Point(67, 20);
-            this.rbtnStandard.Name = "rbtnStandard";
-            this.rbtnStandard.Size = new System.Drawing.Size(68, 17);
-            this.rbtnStandard.TabIndex = 2;
-            this.rbtnStandard.TabStop = true;
-            this.rbtnStandard.Text = "Standard";
-            this.rbtnStandard.UseVisualStyleBackColor = true;
-            this.rbtnStandard.CheckedChanged += new System.EventHandler(this.rbtnStandard_CheckedChanged);
-            // 
-            // rbtnTeam
-            // 
-            this.rbtnTeam.AutoSize = true;
-            this.rbtnTeam.Location = new System.Drawing.Point(141, 20);
-            this.rbtnTeam.Name = "rbtnTeam";
-            this.rbtnTeam.Size = new System.Drawing.Size(52, 17);
-            this.rbtnTeam.TabIndex = 3;
-            this.rbtnTeam.TabStop = true;
-            this.rbtnTeam.Text = "Team";
-            this.rbtnTeam.UseVisualStyleBackColor = true;
-            this.rbtnTeam.CheckedChanged += new System.EventHandler(this.rbtnTeam_CheckedChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 18);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Pesquisar pelo número do jogo:";
             // 
             // JogoArbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 540);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gbxJogosArbitro);
             this.Controls.Add(this.tbxpesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -297,5 +309,6 @@
         private System.Windows.Forms.RadioButton rbtnTeam;
         private System.Windows.Forms.RadioButton rbtnStandard;
         private System.Windows.Forms.RadioButton rbtnTodos;
+        private System.Windows.Forms.Label label1;
     }
 }
