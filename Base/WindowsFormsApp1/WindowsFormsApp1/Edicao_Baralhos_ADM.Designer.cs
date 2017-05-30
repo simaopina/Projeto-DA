@@ -53,8 +53,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxEdBaralhoADM.SuspendLayout();
             this.menuStripHome.SuspendLayout();
@@ -109,11 +109,13 @@
             // 
             // listBoxCartas
             // 
+            this.listBoxCartas.Cursor = System.Windows.Forms.Cursors.Default;
             this.listBoxCartas.FormattingEnabled = true;
             this.listBoxCartas.Location = new System.Drawing.Point(534, 24);
             this.listBoxCartas.Name = "listBoxCartas";
             this.listBoxCartas.Size = new System.Drawing.Size(217, 238);
             this.listBoxCartas.TabIndex = 67;
+            this.listBoxCartas.SelectedIndexChanged += new System.EventHandler(this.listBoxCartas_SelectedIndexChanged);
             // 
             // listBoxCartasBaralho
             // 
@@ -130,6 +132,7 @@
             this.listBoxBaralho.Name = "listBoxBaralho";
             this.listBoxBaralho.Size = new System.Drawing.Size(217, 238);
             this.listBoxBaralho.TabIndex = 65;
+            this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged_1);
             // 
             // menuStripHome
             // 
@@ -270,19 +273,19 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click_1);
             // 
-            // terminarSessãoToolStripMenuItem
-            // 
-            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
-            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
-            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
-            // 
             // listaDeJogosToolStripMenuItem
             // 
             this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
             this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
             this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
+            // terminarSessãoToolStripMenuItem
+            // 
+            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
             // 
             // Edicao_Baralhos_ADM
             // 
