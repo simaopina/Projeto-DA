@@ -44,6 +44,8 @@
             this.btnPesquisarEquipa1 = new System.Windows.Forms.Button();
             this.tbxEquipa1 = new System.Windows.Forms.TextBox();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericEquipa2 = new System.Windows.Forms.NumericUpDown();
             this.listVEquipa2 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa2 = new System.Windows.Forms.ComboBox();
@@ -53,6 +55,8 @@
             this.baseDadosDataSetTeamSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSetTeamSet = new WindowsFormsApp1.BaseDadosDataSetTeamSet();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericEquipa1 = new System.Windows.Forms.NumericUpDown();
             this.listVEquipa1 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoEquipa1 = new System.Windows.Forms.ComboBox();
@@ -80,6 +84,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.teamSetTableAdapter = new WindowsFormsApp1.BaseDadosDataSetTeamSetTableAdapters.TeamSetTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericArbitro = new System.Windows.Forms.NumericUpDown();
             this.listVArbitro = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
@@ -90,28 +96,22 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Torneio = new System.Windows.Forms.Label();
             this.cbxTorneio = new System.Windows.Forms.ComboBox();
-            this.numericEquipa1 = new System.Windows.Forms.NumericUpDown();
-            this.numericArbitro = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericEquipa2 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
             this.gbxGestaoTorneios.SuspendLayout();
             this.gbxJogador2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).BeginInit();
             this.gbxJogador1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).BeginInit();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -265,6 +265,23 @@
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Equipa 2";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "ID Equipa2";
+            // 
+            // numericEquipa2
+            // 
+            this.numericEquipa2.Location = new System.Drawing.Point(67, 137);
+            this.numericEquipa2.Name = "numericEquipa2";
+            this.numericEquipa2.ReadOnly = true;
+            this.numericEquipa2.Size = new System.Drawing.Size(126, 20);
+            this.numericEquipa2.TabIndex = 43;
+            // 
             // listVEquipa2
             // 
             this.listVEquipa2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -336,6 +353,23 @@
             this.gbxJogador1.TabIndex = 42;
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Equipa 1";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "ID Equipa1";
+            // 
+            // numericEquipa1
+            // 
+            this.numericEquipa1.Location = new System.Drawing.Point(66, 139);
+            this.numericEquipa1.Name = "numericEquipa1";
+            this.numericEquipa1.ReadOnly = true;
+            this.numericEquipa1.Size = new System.Drawing.Size(126, 20);
+            this.numericEquipa1.TabIndex = 41;
             // 
             // listVEquipa1
             // 
@@ -547,6 +581,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbitro";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 45;
+            this.label9.Text = "ID Arbitro";
+            // 
+            // numericArbitro
+            // 
+            this.numericArbitro.Location = new System.Drawing.Point(63, 155);
+            this.numericArbitro.Name = "numericArbitro";
+            this.numericArbitro.ReadOnly = true;
+            this.numericArbitro.Size = new System.Drawing.Size(137, 20);
+            this.numericArbitro.TabIndex = 43;
+            // 
             // listVArbitro
             // 
             this.listVArbitro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -623,54 +674,6 @@
             this.cbxTorneio.Size = new System.Drawing.Size(188, 21);
             this.cbxTorneio.TabIndex = 0;
             // 
-            // numericEquipa1
-            // 
-            this.numericEquipa1.Location = new System.Drawing.Point(66, 139);
-            this.numericEquipa1.Name = "numericEquipa1";
-            this.numericEquipa1.Size = new System.Drawing.Size(126, 20);
-            this.numericEquipa1.TabIndex = 41;
-            // 
-            // numericArbitro
-            // 
-            this.numericArbitro.Location = new System.Drawing.Point(63, 155);
-            this.numericArbitro.Name = "numericArbitro";
-            this.numericArbitro.Size = new System.Drawing.Size(137, 20);
-            this.numericArbitro.TabIndex = 43;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 142);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "ID Equipa1";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "ID Equipa2";
-            // 
-            // numericEquipa2
-            // 
-            this.numericEquipa2.Location = new System.Drawing.Point(67, 137);
-            this.numericEquipa2.Name = "numericEquipa2";
-            this.numericEquipa2.Size = new System.Drawing.Size(126, 20);
-            this.numericEquipa2.TabIndex = 43;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 158);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "ID Arbitro";
-            // 
             // GestaoTorneioEquipas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -692,24 +695,24 @@
             this.gbxGestaoTorneios.PerformLayout();
             this.gbxJogador2.ResumeLayout(false);
             this.gbxJogador2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetTeamSet)).EndInit();
             this.gbxJogador1.ResumeLayout(false);
             this.gbxJogador1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamSetBindingSource)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericEquipa2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
