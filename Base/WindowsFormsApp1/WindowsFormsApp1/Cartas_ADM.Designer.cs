@@ -100,6 +100,7 @@
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogImportar = new System.Windows.Forms.OpenFileDialog();
+            this.listadeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
@@ -527,26 +528,26 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
             // editarBaralhoToolStripMenuItem
             // 
             this.editarBaralhoToolStripMenuItem.Name = "editarBaralhoToolStripMenuItem";
-            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editarBaralhoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editarBaralhoToolStripMenuItem.Text = "Editar Baralho";
             this.editarBaralhoToolStripMenuItem.Click += new System.EventHandler(this.editarBaralhoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem
             // 
             this.cartasToolStripMenuItem.Name = "cartasToolStripMenuItem";
-            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cartasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.cartasToolStripMenuItem.Text = "Cartas";
             // 
             // jogadoresToolStripMenuItem
@@ -564,31 +565,31 @@
             // novoJogadorToolStripMenuItem
             // 
             this.novoJogadorToolStripMenuItem.Name = "novoJogadorToolStripMenuItem";
-            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novoJogadorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novoJogadorToolStripMenuItem.Text = "Jogador";
             this.novoJogadorToolStripMenuItem.Click += new System.EventHandler(this.novoJogadorToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(138, 6);
             // 
             // novaEquipaToolStripMenuItem
             // 
             this.novaEquipaToolStripMenuItem.Name = "novaEquipaToolStripMenuItem";
-            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.novaEquipaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.novaEquipaToolStripMenuItem.Text = "Nova Equipa";
             this.novaEquipaToolStripMenuItem.Click += new System.EventHandler(this.novaEquipaToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(138, 6);
             // 
             // utilizadoresToolStripMenuItem
             // 
             this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
-            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
             this.utilizadoresToolStripMenuItem.Click += new System.EventHandler(this.utilizadoresToolStripMenuItem_Click);
             // 
@@ -598,7 +599,8 @@
             this.toolStripMenuItem2,
             this.toolStripSeparator4,
             this.torneioIndividualToolStripMenuItem,
-            this.torneioEquipaToolStripMenuItem});
+            this.torneioEquipaToolStripMenuItem,
+            this.listadeJogosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(88, 20);
             this.toolStripMenuItem1.Text = "Gestão Jogos";
@@ -639,6 +641,13 @@
             // openFileDialogImportar
             // 
             this.openFileDialogImportar.FileName = "openFileDialog1";
+            // 
+            // listadeJogosToolStripMenuItem
+            // 
+            this.listadeJogosToolStripMenuItem.Name = "listadeJogosToolStripMenuItem";
+            this.listadeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listadeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listadeJogosToolStripMenuItem.Click += new System.EventHandler(this.listadeJogosToolStripMenuItem_Click);
             // 
             // Cartas_ADM
             // 
@@ -746,5 +755,6 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialogImportar;
+        private System.Windows.Forms.ToolStripMenuItem listadeJogosToolStripMenuItem;
     }
 }

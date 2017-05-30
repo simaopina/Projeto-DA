@@ -96,6 +96,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Torneio = new System.Windows.Forms.Label();
             this.cbxTorneio = new System.Windows.Forms.ComboBox();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxGestaoTorneios.SuspendLayout();
             this.gbxJogador2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericEquipa2)).BeginInit();
@@ -516,7 +517,8 @@
             this.toolStripMenuItem2,
             this.toolStripSeparator4,
             this.torneioIndividualToolStripMenuItem,
-            this.torneioEquipaToolStripMenuItem});
+            this.torneioEquipaToolStripMenuItem,
+            this.listaDeJogosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(88, 20);
             this.toolStripMenuItem1.Text = "Gestão Jogos";
@@ -674,6 +676,13 @@
             this.cbxTorneio.Size = new System.Drawing.Size(188, 21);
             this.cbxTorneio.TabIndex = 0;
             // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
             // GestaoTorneioEquipas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,5 +796,6 @@
         private System.Windows.Forms.NumericUpDown numericEquipa1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown numericArbitro;
+        private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
     }
 }

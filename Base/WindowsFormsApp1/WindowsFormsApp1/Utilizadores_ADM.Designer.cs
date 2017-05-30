@@ -93,6 +93,7 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -564,7 +565,8 @@
             this.toolStripMenuItem2,
             this.toolStripSeparator4,
             this.torneioIndividualToolStripMenuItem,
-            this.torneioEquipaToolStripMenuItem});
+            this.torneioEquipaToolStripMenuItem,
+            this.listaDeJogosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(88, 20);
             this.toolStripMenuItem1.Text = "Gestão Jogos";
@@ -601,6 +603,13 @@
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
+            // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
             // 
             // Utilizadores_ADM
             // 
@@ -704,5 +713,6 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
     }
 }

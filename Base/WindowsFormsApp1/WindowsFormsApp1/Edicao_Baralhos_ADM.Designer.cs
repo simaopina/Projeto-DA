@@ -54,6 +54,7 @@
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxEdBaralhoADM.SuspendLayout();
             this.menuStripHome.SuspendLayout();
@@ -129,7 +130,6 @@
             this.listBoxBaralho.Name = "listBoxBaralho";
             this.listBoxBaralho.Size = new System.Drawing.Size(217, 238);
             this.listBoxBaralho.TabIndex = 65;
-            //this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged_1);
             // 
             // menuStripHome
             // 
@@ -166,7 +166,7 @@
             // baralhoToolStripMenuItem1
             // 
             this.baralhoToolStripMenuItem1.Name = "baralhoToolStripMenuItem1";
-            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.baralhoToolStripMenuItem1.Size = new System.Drawing.Size(147, 22);
             this.baralhoToolStripMenuItem1.Text = "Baralho";
             this.baralhoToolStripMenuItem1.Click += new System.EventHandler(this.baralhoToolStripMenuItem1_Click);
             // 
@@ -180,7 +180,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
             // 
             // cartasToolStripMenuItem
             // 
@@ -238,7 +238,8 @@
             this.toolStripMenuItem2,
             this.toolStripSeparator4,
             this.torneioIndividualToolStripMenuItem,
-            this.torneioEquipaToolStripMenuItem});
+            this.torneioEquipaToolStripMenuItem,
+            this.listaDeJogosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(88, 20);
             this.toolStripMenuItem1.Text = "Gestão Jogos";
@@ -275,6 +276,13 @@
             this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click_1);
+            // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
             // 
             // Edicao_Baralhos_ADM
             // 
@@ -323,5 +331,6 @@
         private System.Windows.Forms.ToolStripMenuItem torneioIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem torneioEquipaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
     }
 }
