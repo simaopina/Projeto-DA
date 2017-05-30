@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+            listVJogo.Items.Clear();
+
             List<Game> listgame = container.GameSet.ToList();
 
             foreach (Game game in listgame)
@@ -68,6 +70,8 @@ namespace WindowsFormsApp1
 
 
                 listVJogo.Items.Add(item);
+
+                
             }
         }
 
@@ -78,6 +82,7 @@ namespace WindowsFormsApp1
 
         private void rbtnStandard_CheckedChanged(object sender, EventArgs e)
         {
+            listVJogo.Items.Clear();
             List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
 
             foreach (StardadGame game in listgame)
@@ -89,11 +94,13 @@ namespace WindowsFormsApp1
 
 
                 listVJogo.Items.Add(item);
+                refresh_listview();
             }
         }
 
         private void rbtnTeam_CheckedChanged(object sender, EventArgs e)
         {
+            listVJogo.Items.Clear();
             List<TeamGame> listgame = container.GameSet.OfType<TeamGame>().ToList();
 
             foreach (TeamGame game in listgame)
@@ -104,6 +111,7 @@ namespace WindowsFormsApp1
                 item.SubItems.Add(game.Date.ToString());
 
                 listVJogo.Items.Add(item);
+                refresh_listview();
             }
         }
 
