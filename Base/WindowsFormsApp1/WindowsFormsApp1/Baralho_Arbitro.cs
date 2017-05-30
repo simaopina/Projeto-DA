@@ -12,11 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class Baralho_Arbitro : Form
     {
+        public int id;
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        public Baralho_Arbitro()
+        public Baralho_Arbitro(int id_arb)
         {
             InitializeComponent();
+
+            id = id_arb;
 
             carregar_Baralho();
             carregar_Carta_Baralho();
@@ -98,35 +102,35 @@ namespace WindowsFormsApp1
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro Hadmfrm = new Home_Arbitro();
+            Home_Arbitro Hadmfrm = new Home_Arbitro(id);
             Hadmfrm.Show();
             Close();
         }
 
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro Barbfrm = new Baralho_Arbitro();
+            Baralho_Arbitro Barbfrm = new Baralho_Arbitro(id);
             Barbfrm.Show();
             Close();
         }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cartas_Arbitro Cartfrm = new Cartas_Arbitro();
+            Cartas_Arbitro Cartfrm = new Cartas_Arbitro(id);
             Cartfrm.Show();
             Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro JogoArfrm = new JogoArbitro();
+            JogoArbitro JogoArfrm = new JogoArbitro(id);
             JogoArfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou ArbOTfrm = new Arbitro_JogosOndeTou();
+            Arbitro_JogosOndeTou ArbOTfrm = new Arbitro_JogosOndeTou(id);
             ArbOTfrm.Show();
             Close();
         }

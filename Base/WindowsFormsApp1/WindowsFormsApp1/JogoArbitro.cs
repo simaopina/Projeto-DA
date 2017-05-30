@@ -12,11 +12,16 @@ namespace WindowsFormsApp1
 {
     public partial class JogoArbitro : Form
     {
+
+        public int id;
+
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
-        public JogoArbitro()
+        public JogoArbitro(int id_arb)
         {
             InitializeComponent();
+
+            id = id_arb;
 
             listVJogo.Items.Clear();
 
@@ -121,42 +126,42 @@ namespace WindowsFormsApp1
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro HAfrm = new Home_Arbitro();
+            Home_Arbitro HAfrm = new Home_Arbitro(id);
             HAfrm.Show();
             Close();
         }
 
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro BArfrm = new Baralho_Arbitro();
+            Baralho_Arbitro BArfrm = new Baralho_Arbitro(id);
             BArfrm.Show();
             Close();
         }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cartas_Arbitro CarArbfrm = new Cartas_Arbitro();
+            Cartas_Arbitro CarArbfrm = new Cartas_Arbitro(id);
             CarArbfrm.Show();
             Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro JogArbfrm = new JogoArbitro();
+            JogoArbitro JogArbfrm = new JogoArbitro(id);
             JogArbfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou ArbOTfrm = new Arbitro_JogosOndeTou();
+            Arbitro_JogosOndeTou ArbOTfrm = new Arbitro_JogosOndeTou(id);
             ArbOTfrm.Show();
             Close();
         }
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
+            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro(id);
             Histfrm.Show();
             Close();
         }

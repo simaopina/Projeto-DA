@@ -16,9 +16,13 @@ namespace WindowsFormsApp1
 
         string ParteFinalNome;
 
-        public Cartas_Arbitro()
+        int id;
+
+        public Cartas_Arbitro(int id_arb)
         {
             InitializeComponent();
+
+            id = id_arb;
 
             foreach (Card cartas in container.CardSet)
             {
@@ -79,42 +83,42 @@ namespace WindowsFormsApp1
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro HAfrm = new Home_Arbitro();
+            Home_Arbitro HAfrm = new Home_Arbitro(id);
             HAfrm.Show();
             Close();
         }
 
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro BAfrm = new Baralho_Arbitro();
+            Baralho_Arbitro BAfrm = new Baralho_Arbitro(id);
             BAfrm.Show();
             Close();
         }
 
         private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cartas_Arbitro CAfrm = new Cartas_Arbitro();
+            Cartas_Arbitro CAfrm = new Cartas_Arbitro(id);
             CAfrm.Show();
             Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro JArbfrm = new JogoArbitro();
+            JogoArbitro JArbfrm = new JogoArbitro(id);
             JArbfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou AOTfrm = new Arbitro_JogosOndeTou();
+            Arbitro_JogosOndeTou AOTfrm = new Arbitro_JogosOndeTou(id);
             AOTfrm.Show();
             Close();
         }
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
+            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro(id);
             Histfrm.Show();
             Close();
         }

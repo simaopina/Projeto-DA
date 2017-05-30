@@ -24,28 +24,28 @@ namespace WindowsFormsApp1
         //Navegação
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro BarAbarfrm = new Baralho_Arbitro();
+            Baralho_Arbitro BarAbarfrm = new Baralho_Arbitro(id);
             BarAbarfrm.Show();
             Close();
         }
 
         private void cartaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cartas_Arbitro CartAbarfrm = new Cartas_Arbitro();
+            Cartas_Arbitro CartAbarfrm = new Cartas_Arbitro(id);
             CartAbarfrm.Show();
             Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro ArbJogosfrm = new JogoArbitro();
+            JogoArbitro ArbJogosfrm = new JogoArbitro(id);
             ArbJogosfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou();
+            Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou(id);
             ArbOndeToufrm.Show();
             Close();
         }

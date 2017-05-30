@@ -18,9 +18,13 @@ namespace WindowsFormsApp1
 
         Referee arbitroSeleciona = null;
 
-        public Login()
+        public int id;
+
+        public Login(int id_arb)
         {
             InitializeComponent();
+
+            id = id_arb;
 
             List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
 
@@ -103,7 +107,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Home_Arbitro HArbfrm = new Home_Arbitro();
+            Home_Arbitro HArbfrm = new Home_Arbitro(id);
             HArbfrm.Show();
             Close();
         }

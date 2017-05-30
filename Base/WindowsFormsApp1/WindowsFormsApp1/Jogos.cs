@@ -44,41 +44,7 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Baralho_Arbitro BArbfrm = new Baralho_Arbitro();
-            BArbfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cartas_Arbitro CartArbfrm = new Cartas_Arbitro();
-            CartArbfrm.Show();
-            Close();
-        }
-
-        private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            JogoArbitro JArbfrm = new JogoArbitro();
-            JArbfrm.Show();
-            Close();
-        }
-
-        private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Arbitro_JogosOndeTou AJOTfrm = new Arbitro_JogosOndeTou();
-            AJOTfrm.Show();
-            Close();
-        }
-
-        private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Hitorico_Arbitro HArbfrm = new Hitorico_Arbitro();
-            HArbfrm.Show();
-            Close();
-        }
-
+   
         private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home hfrm = new Home();
@@ -86,26 +52,7 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Home_Arbitro HArbfrm = new Home_Arbitro();
-            HArbfrm.Show();
-            Close();
-        }
 
-        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Baralho_Arbitro BAfrm = new Baralho_Arbitro();
-            BAfrm.Show();
-            Close();
-        }
-
-        private void cartaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cartas_Arbitro CArbfrm = new Cartas_Arbitro();
-            CArbfrm.Show();
-            Close();
-        }
 
         private void jogosADecorrerToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -114,19 +61,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void planeamentoDeJogosToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Arbitro_JogosOndeTou AJONTfrm = new Arbitro_JogosOndeTou();
-            AJONTfrm.Show();
-            Close();
-        }
-
-        private void historicoToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Hitorico_Arbitro HArbfrm = new Hitorico_Arbitro();
-            HArbfrm.Show();
-            Close();
-        }
 
         private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -175,6 +109,60 @@ namespace WindowsFormsApp1
             MessageBox.Show("Eliminado com sucesso!");
 
             refresh_ListView();
+        }
+
+        private void homeToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            Home_ADM Hadmfrm = new Home_ADM();
+            Hadmfrm.Show();
+            Close();
+        }
+
+        private void permissõesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Permissoes_ADM Perfrm = new Permissoes_ADM();
+            Perfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            Baralho_ADM Brlhfrm = new Baralho_ADM();
+
+            Brlhfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM EBrlhfrm = new Edicao_Baralhos_ADM();
+
+            EBrlhfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cartas_ADM Cfrm = new Cartas_ADM();
+
+            Cfrm.Show();
+            Close();
+        }
+
+        private void adicionarJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM addJofrm = new ADD_Jogador_ADM();
+
+            addJofrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click_2(object sender, EventArgs e)
+        {
+            Home Hfrm = new Home();
+
+            Hfrm.Show();
+            Close();
         }
     }
 }
