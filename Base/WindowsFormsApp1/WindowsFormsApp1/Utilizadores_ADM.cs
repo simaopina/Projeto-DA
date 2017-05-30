@@ -53,10 +53,7 @@ namespace WindowsFormsApp1
         }
 
         private void Utilizadores_ADM_Load(object sender, EventArgs e)
-        {
-          
-
-            
+        {   
 
         }
 
@@ -294,12 +291,7 @@ namespace WindowsFormsApp1
                 refresh_listviewARB();
               
             }
-        }
-
-        private void btn_Click(object sender, EventArgs e)
-        {
-
-        }
+        }      
 
         private void btnEliminar_ADM_Click(object sender, EventArgs e)
         {
@@ -343,6 +335,18 @@ namespace WindowsFormsApp1
 
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtbEmail_ADM.ResetText();
+            txtbNickName_ADM.ResetText();
+            txtbNickName_ARB.ResetText();
+            txtbNome_ARB.ResetText();
+            txtbPassword_ADM.ResetText();
+            txtbPassword_ARB.ResetText();
+            
+        }
+
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_ADM HAdmfrm = new Home_ADM();
@@ -420,27 +424,11 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            txtbEmail_ADM.ResetText();
-            txtbNickName_ADM.ResetText();
-            txtbNickName_ARB.ResetText();
-            txtbNome_ARB.ResetText();
-            txtbPassword_ADM.ResetText();
-            txtbPassword_ARB.ResetText();
-            
         }
     }
 }
