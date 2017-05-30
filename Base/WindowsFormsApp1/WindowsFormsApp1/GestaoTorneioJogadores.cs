@@ -340,6 +340,8 @@ namespace WindowsFormsApp1
                 //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
                 jogadorSelecionado = container.PlayerSet.Where(pla => pla.Name.Equals(jogador)).First();
 
+                validacao();
+
                 List<Player> player = container.PlayerSet.ToList();
 
                 numericJogador1.Value = jogadorSelecionado.Id;
@@ -381,7 +383,6 @@ namespace WindowsFormsApp1
 
                 userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
 
-                validacao();
 
                 List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
 
