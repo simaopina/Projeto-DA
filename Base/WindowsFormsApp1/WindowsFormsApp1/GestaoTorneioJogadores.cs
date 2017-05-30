@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         Player jogadorSelecionado = null;
+        Player jogadorSelecionado1 = null;
         User userSelect = null;
         List<Player> Items = new List<Player>();
         List<Referee> Id = new List<Referee>();
@@ -225,6 +226,21 @@ namespace WindowsFormsApp1
             }
         }
 
+        public void validacao()
+        {
+            if (jogadorSelecionado == jogadorSelecionado1)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericJogador1.ResetText();
+                numericJogador2.ResetText();
+            }
+            else if (jogadorSelecionado1 == jogadorSelecionado)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericJogador1.ResetText();
+                numericJogador2.ResetText();
+            }
+        }
 
         private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
         {
@@ -341,16 +357,18 @@ namespace WindowsFormsApp1
                 string jogador = listVJogador2.SelectedItems[0].Text;
 
 
-                jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+                jogadorSelecionado1 = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+
+                validacao();
 
                 List<Player> player = container.PlayerSet.ToList();
 
-                numericJogador2.Value = jogadorSelecionado.Id;
+                numericJogador2.Value = jogadorSelecionado1.Id;
 
             }
             else
             {
-                jogadorSelecionado = null;
+                jogadorSelecionado1 = null;
 
             }
         }
@@ -362,6 +380,8 @@ namespace WindowsFormsApp1
                 string arb = listVArbitro1.SelectedItems[0].Text;
 
                 userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
+
+                validacao();
 
                 List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
 
@@ -426,6 +446,11 @@ namespace WindowsFormsApp1
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limparCampos();
         }
     }
 }
