@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
 
 
                 listVJogo.Items.Add(item);
-                refresh_listview();
+             
             }
         }
 
@@ -115,10 +115,10 @@ namespace WindowsFormsApp1
                 item.SubItems.Add(game.Date.ToShortDateString());
 
                 listVJogo.Items.Add(item);
-                refresh_listview();
+             
             }
         }
-
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_Arbitro HAfrm = new Home_Arbitro();
