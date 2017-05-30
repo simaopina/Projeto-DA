@@ -44,17 +44,18 @@ namespace WindowsFormsApp1
 
                 listVArbitro.Items.Add(arbitroList);
             }
+
             foreach (Deck baralho in container.DeckSet)
             {
-                cbxBaralhoEquipa1.Items.Add(baralho.Name.ToString());
+                cbxBaralhoEquipa1.Items.Add(baralho.Id.ToString());
             }
             foreach (Deck baralho in container.DeckSet)
             {
-                cbxBaralhoEquipa2.Items.Add(baralho.Name.ToString());
+                cbxBaralhoEquipa2.Items.Add(baralho.Id.ToString());
             }
-            foreach (Tournament torn in container.TournamentSet.OfType<StandadTournament>())
+            foreach (Tournament torn in container.TournamentSet.OfType<TeamTournament>())
             {
-                cbxTorneio.Items.Add(torn.Name.ToString());
+                cbxTorneio.Items.Add(torn.Id.ToString());
             }
 
         }
@@ -237,6 +238,7 @@ namespace WindowsFormsApp1
             refresh_listview_Equipa2();
             refresh_listview_Arbitro();
 
+            MessageBox.Show("Inserido Com Sucesso!");
 
         }
 
@@ -262,7 +264,11 @@ namespace WindowsFormsApp1
             {
                 string team = listVEquipa1.SelectedItems[0].Text;
 
-                teamSelecionado = container.TeamSet.Where(tea => tea.Id.Equals(listVEquipa1.SelectedItems.ToString())).First();
+                teamSelecionado = container.TeamSet.Where(tea => tea.Name.Equals(team)).First();
+
+                List<Team> equipa = container.TeamSet.ToList();
+
+                numericEquipa1.Value = teamSelecionado.Id;
 
             }
             else
@@ -277,10 +283,11 @@ namespace WindowsFormsApp1
             {
                 string team = listVEquipa2.SelectedItems[0].Text;
 
+                teamSelecionado = container.TeamSet.Where(tea => tea.Name.Equals(team)).First();
 
-                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
-                teamSelecionado = container.TeamSet.Where(tea => tea.Id.Equals(listVEquipa2.SelectedItems.ToString())).First();
+                List<Team> equipa = container.TeamSet.ToList();
 
+                numericEquipa2.Value = teamSelecionado.Id;
             }
             else
             {
@@ -292,10 +299,14 @@ namespace WindowsFormsApp1
         {
             if (listVArbitro.SelectedItems.Count > 0)
             {
-                string team = listVArbitro.SelectedItems[0].Text;
+                string arb = listVArbitro.SelectedItems[0].Text;
 
                 
-                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Id.Equals(listVArbitro.SelectedItems.ToString())).First();
+                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
+
+                List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
+
+                numericArbitro.Value = userSelect.Id;
 
             }
             else
@@ -310,10 +321,11 @@ namespace WindowsFormsApp1
 
 
 
-            foreach (Player pl in container.PlayerSet)
+            foreach (Team pl in container.TeamSet)
             {
-                listVEquipa1.Items.Add(pl.Id.ToString());
-                listVEquipa1.Items.Add(pl.Name);
+                ListViewItem Equipa1List = new ListViewItem(Convert.ToString(pl.Name));
+
+                listVEquipa1.Items.Add(Equipa1List);
             }
 
         }
@@ -324,10 +336,11 @@ namespace WindowsFormsApp1
 
 
 
-            foreach (Player pl in container.PlayerSet)
+            foreach (Team pl1 in container.TeamSet)
             {
-                listVEquipa2.Items.Add(pl.Id.ToString());
-                listVEquipa2.Items.Add(pl.Name);
+                ListViewItem Equipa2List = new ListViewItem(Convert.ToString(pl1.Name));
+
+                listVEquipa2.Items.Add(Equipa2List);
             }
 
         }
@@ -340,8 +353,9 @@ namespace WindowsFormsApp1
 
             foreach (Referee refs in container.UserSet)
             {
-                listVArbitro.Items.Add(refs.Id.ToString());
-                listVArbitro.Items.Add(refs.Name);
+                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Name));
+
+                listVArbitro.Items.Add(refereeList);
             }
 
         }

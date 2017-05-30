@@ -51,6 +51,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxJogador1 = new System.Windows.Forms.TextBox();
             this.gbxJogador1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericJogador1 = new System.Windows.Forms.NumericUpDown();
             this.listVJogador1 = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador1 = new System.Windows.Forms.ComboBox();
@@ -59,6 +61,8 @@
             this.playerSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet4 = new WindowsFormsApp1.BaseDadosDataSet4();
             this.gbxJogador2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericJogador2 = new System.Windows.Forms.NumericUpDown();
             this.listVJogador2 = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbxBaralhoJogador2 = new System.Windows.Forms.ComboBox();
@@ -81,6 +85,8 @@
             this.baseDadosDataSetRefereeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baseDadosDataSet_Referee = new WindowsFormsApp1.BaseDadosDataSet_Referee();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericArbitro = new System.Windows.Forms.NumericUpDown();
             this.listVArbitro1 = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnPesquisarArbitro = new System.Windows.Forms.Button();
@@ -96,23 +102,20 @@
             this.playerSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.playerSetTableAdapter1 = new WindowsFormsApp1.BaseDadosDataSet_PlayerTableAdapters.PlayerSetTableAdapter();
             this.playerSetBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.numericJogador1 = new System.Windows.Forms.NumericUpDown();
-            this.numericJogador2 = new System.Windows.Forms.NumericUpDown();
-            this.numericArbitro = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbxJogador1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4)).BeginInit();
             this.gbxJogador2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).BeginInit();
             this.gbxGestaoTorneios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSetRefereeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4BindingSource)).BeginInit();
@@ -120,9 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripHome
@@ -304,6 +304,24 @@
             this.gbxJogador1.TabStop = false;
             this.gbxJogador1.Text = "Jogador 1";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "ID Jogador1";
+            // 
+            // numericJogador1
+            // 
+            this.numericJogador1.InterceptArrowKeys = false;
+            this.numericJogador1.Location = new System.Drawing.Point(78, 140);
+            this.numericJogador1.Name = "numericJogador1";
+            this.numericJogador1.ReadOnly = true;
+            this.numericJogador1.Size = new System.Drawing.Size(125, 20);
+            this.numericJogador1.TabIndex = 41;
+            // 
             // listVJogador1
             // 
             this.listVJogador1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -372,6 +390,24 @@
             this.gbxJogador2.TabIndex = 37;
             this.gbxJogador2.TabStop = false;
             this.gbxJogador2.Text = "Jogador 2";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "ID Jogador2";
+            // 
+            // numericJogador2
+            // 
+            this.numericJogador2.InterceptArrowKeys = false;
+            this.numericJogador2.Location = new System.Drawing.Point(79, 138);
+            this.numericJogador2.Name = "numericJogador2";
+            this.numericJogador2.ReadOnly = true;
+            this.numericJogador2.Size = new System.Drawing.Size(125, 20);
+            this.numericJogador2.TabIndex = 42;
             // 
             // listVJogador2
             // 
@@ -560,6 +596,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arbitro";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(4, 162);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "ID Arbitro";
+            // 
+            // numericArbitro
+            // 
+            this.numericArbitro.InterceptArrowKeys = false;
+            this.numericArbitro.Location = new System.Drawing.Point(61, 159);
+            this.numericArbitro.Name = "numericArbitro";
+            this.numericArbitro.ReadOnly = true;
+            this.numericArbitro.Size = new System.Drawing.Size(133, 20);
+            this.numericArbitro.TabIndex = 4;
+            // 
             // listVArbitro1
             // 
             this.listVArbitro1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -662,60 +716,6 @@
             this.playerSetBindingSource3.DataMember = "PlayerSet";
             this.playerSetBindingSource3.DataSource = this.baseDadosDataSet4BindingSource;
             // 
-            // numericJogador1
-            // 
-            this.numericJogador1.InterceptArrowKeys = false;
-            this.numericJogador1.Location = new System.Drawing.Point(78, 140);
-            this.numericJogador1.Name = "numericJogador1";
-            this.numericJogador1.ReadOnly = true;
-            this.numericJogador1.Size = new System.Drawing.Size(125, 20);
-            this.numericJogador1.TabIndex = 41;
-            // 
-            // numericJogador2
-            // 
-            this.numericJogador2.InterceptArrowKeys = false;
-            this.numericJogador2.Location = new System.Drawing.Point(79, 138);
-            this.numericJogador2.Name = "numericJogador2";
-            this.numericJogador2.ReadOnly = true;
-            this.numericJogador2.Size = new System.Drawing.Size(125, 20);
-            this.numericJogador2.TabIndex = 42;
-            // 
-            // numericArbitro
-            // 
-            this.numericArbitro.InterceptArrowKeys = false;
-            this.numericArbitro.Location = new System.Drawing.Point(61, 159);
-            this.numericArbitro.Name = "numericArbitro";
-            this.numericArbitro.ReadOnly = true;
-            this.numericArbitro.Size = new System.Drawing.Size(133, 20);
-            this.numericArbitro.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 143);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "ID Jogador1";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 13);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "ID Jogador2";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(4, 162);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "ID Arbitro";
-            // 
             // GestaoTorneioJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -736,10 +736,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbxJogador1.ResumeLayout(false);
             this.gbxJogador1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet4)).EndInit();
             this.gbxJogador2.ResumeLayout(false);
             this.gbxJogador2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).EndInit();
             this.gbxGestaoTorneios.ResumeLayout(false);
             this.gbxGestaoTorneios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource)).EndInit();
@@ -747,6 +749,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Referee)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userSetRefereeBindingSource1)).EndInit();
@@ -755,9 +758,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosDataSet_Player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSetBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericJogador1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericJogador2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericArbitro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
