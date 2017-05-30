@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
 
         Game JogoSelecionado;
 
+        //Iniciar o form
         public Jogos()
         {
         
@@ -37,6 +38,8 @@ namespace WindowsFormsApp1
 
         }
 
+
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home hfrm = new Home();
@@ -44,15 +47,12 @@ namespace WindowsFormsApp1
             Close();
         }
 
-   
         private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home hfrm = new Home();
             hfrm.Show();
             Close();
         }
-
-
 
         private void jogosADecorrerToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
@@ -61,54 +61,11 @@ namespace WindowsFormsApp1
             Close();
         }
 
-
         private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Home Hfrm = new Home();
             Hfrm.Show();
             Close();
-        }
-
-        private void listVJogos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVJogos.SelectedItems != null)
-            {
-                string JogosU = listVJogos.SelectedItems[0].Text;
-                JogoSelecionado = container.GameSet.Where(gam => gam.Description.Equals(JogosU)).First();
-
-                List<Game> game = container.GameSet.ToList();
-                refresh_ListView();
-            }
-        }
-
-        public void refresh_ListView()
-        {
-            listVJogos.Items.Clear();
-
-            List<Game> listgame = container.GameSet.ToList();
-
-            foreach (Game game in listgame)
-            {
-                listVJogos.Items.Add(game.Description);
-
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            string Name = JogoSelecionado.Description.ToString();
-
-            var query = container.GameSet.Where(torn => torn.Description.Equals(JogoSelecionado.Description));
-
-            container.GameSet.Remove(JogoSelecionado);
-
-            container.SaveChanges();
-
-            JogoSelecionado = null;
-
-            MessageBox.Show("Eliminado com sucesso!");
-
-            refresh_ListView();
         }
 
         private void homeToolStripMenuItem_Click_2(object sender, EventArgs e)
@@ -120,7 +77,7 @@ namespace WindowsFormsApp1
 
         private void permissõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
@@ -163,6 +120,67 @@ namespace WindowsFormsApp1
             Close();
         }
 
+        private void listVJogos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listVJogos.SelectedItems != null)
+            {
+                string JogosU = listVJogos.SelectedItems[0].Text;
+                JogoSelecionado = container.GameSet.Where(gam => gam.Description.Equals(JogosU)).First();
+
+                List<Game> game = container.GameSet.ToList();
+                refresh_ListView();
+            }
+        }
+
+
+        //Funções 
+        public void refresh_ListView()
+        {
+            listVJogos.Items.Clear();
+
+            List<Game> listgame = container.GameSet.ToList();
+
+            foreach (Game game in listgame)
+            {
+                listVJogos.Items.Add(game.Description);
+
+            }
+        }
+
+        public void refresh_listView()
+        {
+            listVJogos.Items.Clear();
+
+            foreach (Game game in container.GameSet)
+            {
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
+
+                listVJogos.Items.Add(item);
+            }
+        }
+
+
+        //Botões
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            string Name = JogoSelecionado.Description.ToString();
+
+            var query = container.GameSet.Where(torn => torn.Description.Equals(JogoSelecionado.Description));
+
+            container.GameSet.Remove(JogoSelecionado);
+
+            container.SaveChanges();
+
+            JogoSelecionado = null;
+
+            MessageBox.Show("Eliminado com sucesso!");
+
+            refresh_ListView();
+        }
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbxPesquisar.Text.Length > 0)
@@ -189,20 +207,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        public void refresh_listView()
-        {
-            listVJogos.Items.Clear();
-
-            foreach (Game game in container.GameSet)
-            {
-                ListViewItem item = new ListViewItem(game.Number.ToString());
-                item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToShortTimeString());
-                item.SubItems.Add(game.Date.ToShortDateString());
-
-                listVJogos.Items.Add(item);
-            }
-        }
+    
         
     }
 }
