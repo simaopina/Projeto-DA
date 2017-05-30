@@ -159,4 +159,17 @@
   <metadata name="menuStripHome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>520, 95</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnLimpar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4QUeESII3WfKDgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAD4SURBVDhP
+        nZI9TkJBFEZfiBS2xoKSxNLoGqxo7elIwC3QQ2HpIixdi0JpKAi07IGfc17eTeb9KXCSE5h5M99M5t7s
+        Svr4g1/5qIEHfMVuPirj5g0e0ZAaY9yjC77xDoN0s7+OS4zwgC4IPcWQfzcPMBZUXWDr5nv8RD8ucYi7
+        Yly18eRf9NpTvHECnrApxJukb5IzQz9+YAdfUNpC4k1KvKMf1/joREFbiNWplThCvMkt2gvSFmKf1IgQ
+        38UQ6eEzpiH2SRxQI73JG05QrI7zPrjN9icRskUf1upYYstos51FehNL7H+b7SIixGvbbFcxxxXasRWy
+        7AQvfGDDSABpAQAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>

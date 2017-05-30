@@ -431,5 +431,16 @@ namespace WindowsFormsApp1
             Jfrm.Show();
             Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtbEmail_ADM.ResetText();
+            txtbNickName_ADM.ResetText();
+            txtbNickName_ARB.ResetText();
+            txtbNome_ARB.ResetText();
+            txtbPassword_ADM.ResetText();
+            txtbPassword_ARB.ResetText();
+            
+        }
     }
 }
