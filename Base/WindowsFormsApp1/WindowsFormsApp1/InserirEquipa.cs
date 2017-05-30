@@ -84,13 +84,9 @@ namespace WindowsFormsApp1
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Cancelar();
-        }
-
-        private void Cancelar()
-        {
-            tbxNome.ResetText();
-            picbxAvatar.ResetText();
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -201,6 +197,14 @@ namespace WindowsFormsApp1
             {
                 refreshEquipa();
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNome.ResetText();
+            tbxPesquisar.ResetText();
+            cbxJogador1.ResetText();
+            cbxJogador2.ResetText();
         }
     }
 }

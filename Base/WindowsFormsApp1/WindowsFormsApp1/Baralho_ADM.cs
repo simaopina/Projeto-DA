@@ -296,5 +296,12 @@ namespace WindowsFormsApp1
         {
              tbxNome.ResetText();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
+        }
     }
 }
