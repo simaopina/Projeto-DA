@@ -291,5 +291,10 @@ namespace WindowsFormsApp1
             Jfrm.Show();
             Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

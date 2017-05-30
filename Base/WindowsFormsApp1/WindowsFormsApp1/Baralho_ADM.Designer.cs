@@ -61,9 +61,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listVBaralhos = new System.Windows.Forms.ListView();
-            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosdeck)).BeginInit();
@@ -395,6 +396,13 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
             // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
@@ -412,18 +420,23 @@
             this.listVBaralhos.View = System.Windows.Forms.View.List;
             this.listVBaralhos.SelectedIndexChanged += new System.EventHandler(this.listVBaralhos_SelectedIndexChanged);
             // 
-            // listaDeJogosToolStripMenuItem
+            // btnLimpar
             // 
-            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
-            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
-            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(530, 245);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 40;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Baralho_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 539);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.listVBaralhos);
             this.Controls.Add(this.menuStripHome);
             this.Controls.Add(this.btnEliminar);
@@ -482,5 +495,6 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.ListView listVBaralhos;
         private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
