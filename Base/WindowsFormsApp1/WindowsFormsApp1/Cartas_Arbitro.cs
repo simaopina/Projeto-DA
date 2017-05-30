@@ -51,13 +51,7 @@ namespace WindowsFormsApp1
            
         }
 
-    
-
-        public void refresh_datagrid()
-        {
-
-
-        }
+   
 
        
 
@@ -66,18 +60,47 @@ namespace WindowsFormsApp1
         {
             if (tbxpesquisa.Text.Length > 0)
             {
+                ListViewItem[] dados = new ListViewItem[listVCartas.Items.Count];
+                listVCartas.Items.CopyTo(dados, 0);
 
-                var query = container.CardSet.Where(carta => carta.Name.Contains(tbxpesquisa.Text));
+                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
 
-               // DataGridCartas.DataSource = query.ToList();
+                listVCartas.Items.Clear();
+                listVCartas.Items.AddRange(dados);
+
+                if (listVCartas.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refreshlistVcartas();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
             }
-
             else
             {
-                refresh_datagrid();
+                refreshlistVcartas();
             }
         }
 
+        public void refreshlistVcartas()
+        {
+            listVCartas.Items.Clear();
+            foreach (Card cartas in container.CardSet)
+            {
+                ListViewItem CartaList = new ListViewItem(cartas.Name);
+                CartaList.SubItems.Add(cartas.Faction);
+                CartaList.SubItems.Add(cartas.Type);
+                CartaList.SubItems.Add(Convert.ToString(cartas.Loyalty));
+                CartaList.SubItems.Add(Convert.ToString(cartas.Cost));
+                CartaList.SubItems.Add(cartas.RuleText);
+                CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
+                CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
+                CartaList.SubItems.Add(ParteFinalNome);
+
+                listVCartas.Items.Add(CartaList);
+            }
+
+        }
 
 
         //Navegação
