@@ -274,6 +274,10 @@ namespace WindowsFormsApp1
             cbxBaralhoEquipa1.ResetText();
             cbxBaralhoEquipa2.ResetText();
             cbxTorneio.ResetText();
+            tbxDescricao.ResetText();
+            tbxNumero.ResetText();
+            datetimeData.Value = DateTime.Now;
+            datetimeHora.ResetText();
         }
 
         private void btnPesquisarArbitro_Click(object sender, EventArgs e)
@@ -364,7 +368,6 @@ namespace WindowsFormsApp1
         public void refresh_listview_Equipa1()
         {
             listVEquipa1.Items.Clear();
-
 
 
             foreach (Team pl in container.TeamSet)

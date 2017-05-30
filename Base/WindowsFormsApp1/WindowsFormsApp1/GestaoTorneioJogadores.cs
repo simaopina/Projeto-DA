@@ -309,6 +309,10 @@ namespace WindowsFormsApp1
             cbxBaralhoJogador1.ResetText();
             cbxBaralhoJogador2.ResetText();
             cbxTorneio.ResetText();
+            tbxDescricao.ResetText();
+            tbxNumero.ResetText();
+            datetimeData.Value = DateTime.Now;
+            datetimeHora.ResetText();
         }
 
         private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
