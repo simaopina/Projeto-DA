@@ -193,25 +193,21 @@ namespace WindowsFormsApp1
             private void btnRemover_Click(object sender, EventArgs e)
         {
          
-            if (listVCartas.SelectedItems != null)
-            {
-                //cartaselecionada = container.CardSet.Where(jog => jog.Name.Equals(listVCartas.SelectedItems.ToString())).First();
+           // if (listVCartas.SelectedItems != null)
+           // {
+                cartaselecionada = container.CardSet.Where(jog => jog.Name.Equals(listVCartas.SelectedItems.ToString())).First();
 
-                /*string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + cartaselecionada.Image;
+                string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + cartaselecionada.Image;
 
-                File.Delete(caminhoImagem);*/
+                File.Delete(caminhoImagem);
 
-              //  var procurar = container.CardSet.Where(id => id.Id.Equals(id_carta));
+             //   var procurar = container.CardSet.Where(id => id.Id.Equals(id_carta));
 
 
-
-                //cartaselecionada = container.CardSet.Find(cartaselecionada);
+                cartaselecionada = container.CardSet.Find(cartaselecionada);
 
                 container.CardSet.Remove(cartaselecionada);
-
-                
-               
-
+        
 
                 container.SaveChanges();
 
@@ -219,7 +215,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Eliminado com sucesso!");
 
                 refreshlistVcartas();
-            }
+           // }
             
 
             
@@ -520,6 +516,9 @@ namespace WindowsFormsApp1
 
         private void listVCartas_DoubleClick(object sender, EventArgs e)
         {
+
+          //  ListViewItem CartaList;
+
             string nome = null;
             string facao = null;
             string tipo = null;
@@ -530,18 +529,36 @@ namespace WindowsFormsApp1
             string defesa = null;
             string imagem = ParteFinalNome;
 
-            foreach (Card cartas in container.CardSet)
-            {              
-                 nome = cartas.Name;
-                 facao =cartas.Faction ;
-                 tipo =cartas.Type ;
-                 lealdade =cartas.Loyalty.ToString();
-                 custo = cartas.Cost.ToString();
-                 regras =cartas.RuleText ;
-                 ataque = cartas.Attack.ToString();
-                 defesa = cartas.Defense.ToString();
-                 imagem =cartas.Image;
-            }
+            Card cartas;
+
+            /*
+                string nome = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
+                string facao = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
+                string tipo = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
+                string lealdade =DataGridCartas.CurrentRow.Cells[4].Value.ToString();
+                string custo = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
+                string regras = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+                string ataque = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+                string defesa = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+                string imagem = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
+
+
+
+                ListViewItem CartaList = new ListViewItem(cartas.Name);
+                CartaList.SubItems.Add(cartas.Faction);
+             */
+
+                      
+                 nome = cartaselecionada.Name;
+                 facao = cartaselecionada.Faction ;
+                 tipo = cartaselecionada.Type ;
+                 lealdade = cartaselecionada.Loyalty.ToString();
+                 custo = cartaselecionada.Cost.ToString();
+                 regras = cartaselecionada.RuleText ;
+                 ataque = cartaselecionada.Attack.ToString();
+                 defesa = cartaselecionada.Defense.ToString();
+                 imagem = cartaselecionada.Image;
+            
 
             Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
             Info_cartas_ADM.Show();

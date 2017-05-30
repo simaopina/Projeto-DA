@@ -33,9 +33,7 @@ namespace WindowsFormsApp1
             lblRegras.Text = regras;
             lblAtaque.Text = ataque;
             lblDefesa.Text = defesa;
-            pictureBox.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + carta.Image);
-            //Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + carta.Image);
-
+            pictureBox.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + imagem);
 
         }
 
