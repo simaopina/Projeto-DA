@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Utilizadores_ADM : Form
     {
+        //Declaração de variaveis
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         Administrator administradorSelecionado = null;
@@ -57,6 +58,9 @@ namespace WindowsFormsApp1
 
         }
 
+
+
+        //Eventos
         private void btnGuardar_ADM_Click(object sender, EventArgs e)
         {
             string Username = txtbNickName_ADM.Text;
@@ -79,41 +83,6 @@ namespace WindowsFormsApp1
             refresh_listviewADM();
 
         }
-
-        public void refresh_listviewADM()
-        {
-            listVADM.Items.Clear();
-
-            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
-            
-            foreach (Administrator adm in admin)
-            {
-                ListViewItem item = new ListViewItem(adm.Username);
-                item.SubItems.Add(adm.Email);
-                listVADM.Items.Add(item);
-
-            }
-
-        }
-
-
-        public void refresh_listviewARB()
-        {
-            listVArbitro.Items.Clear();
-
-            List<Referee> arb = container.UserSet.OfType<Referee>().ToList();
-
-            foreach (Referee arbrito in arb)
-            {
-                ListViewItem item = new ListViewItem(arbrito.Username);
-                item.SubItems.Add(arbrito.Name);
-                item.SubItems.Add(arbrito.Avatar);
-                listVArbitro.Items.Add(item);
-
-            }
-        }
-
-
 
         private void btnAlterar_ADM_Click(object sender, EventArgs e)
         {
@@ -143,11 +112,6 @@ namespace WindowsFormsApp1
            
         }
 
-        private void dataGrid_ADM_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void listVADM_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listVADM.SelectedItems.Count > 0)
@@ -164,29 +128,6 @@ namespace WindowsFormsApp1
             {
                 administradorSelecionado = null;
             }
-        }
-
-        private void CarregaDadosADM()
-        {
-           
-            List<User> user = container.UserSet.ToList();
-
-            txtbNickName_ADM.Text = administradorSelecionado.Username;
-            txtbPassword_ADM.Text = administradorSelecionado.Password;
-            txtbEmail_ADM.Text = administradorSelecionado.Email;
-            
-        }
-
-        private void CarregaDadosARB()
-        {
-            List<User> user = container.UserSet.ToList();
-
-            txtbNickName_ARB.Text = arbitroSeleciona.Username;
-            txtbNome_ARB.Text = arbitroSeleciona.Name;
-            txtbPassword_ARB.Text = arbitroSeleciona.Password;
-            linkLAvatar_ARB.Text = arbitroSeleciona.Avatar;
-
-
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -344,6 +285,62 @@ namespace WindowsFormsApp1
             txtbPassword_ADM.ResetText();
             txtbPassword_ARB.ResetText();
             
+        }
+
+        //Funções
+        public void refresh_listviewADM()
+        {
+            listVADM.Items.Clear();
+
+            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+            
+            foreach (Administrator adm in admin)
+            {
+                ListViewItem item = new ListViewItem(adm.Username);
+                item.SubItems.Add(adm.Email);
+                listVADM.Items.Add(item);
+
+            }
+
+        }
+
+        public void refresh_listviewARB()
+        {
+            listVArbitro.Items.Clear();
+
+            List<Referee> arb = container.UserSet.OfType<Referee>().ToList();
+
+            foreach (Referee arbrito in arb)
+            {
+                ListViewItem item = new ListViewItem(arbrito.Username);
+                item.SubItems.Add(arbrito.Name);
+                item.SubItems.Add(arbrito.Avatar);
+                listVArbitro.Items.Add(item);
+
+            }
+        }
+
+        private void CarregaDadosADM()
+        {
+           
+            List<User> user = container.UserSet.ToList();
+
+            txtbNickName_ADM.Text = administradorSelecionado.Username;
+            txtbPassword_ADM.Text = administradorSelecionado.Password;
+            txtbEmail_ADM.Text = administradorSelecionado.Email;
+            
+        }
+
+        private void CarregaDadosARB()
+        {
+            List<User> user = container.UserSet.ToList();
+
+            txtbNickName_ARB.Text = arbitroSeleciona.Username;
+            txtbNome_ARB.Text = arbitroSeleciona.Name;
+            txtbPassword_ARB.Text = arbitroSeleciona.Password;
+            linkLAvatar_ARB.Text = arbitroSeleciona.Avatar;
+
+
         }
 
         //Navegação
