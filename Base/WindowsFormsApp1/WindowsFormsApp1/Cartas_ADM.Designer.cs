@@ -98,9 +98,10 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogImportar = new System.Windows.Forms.OpenFileDialog();
-            this.listadeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
@@ -119,6 +120,7 @@
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.btnLimpar);
             this.gbxCartasADM.Controls.Add(this.linkLabel1);
             this.gbxCartasADM.Controls.Add(this.listVCartas);
             this.gbxCartasADM.Controls.Add(this.numericDefesa);
@@ -631,6 +633,13 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click_1);
             // 
+            // listadeJogosToolStripMenuItem
+            // 
+            this.listadeJogosToolStripMenuItem.Name = "listadeJogosToolStripMenuItem";
+            this.listadeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listadeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listadeJogosToolStripMenuItem.Click += new System.EventHandler(this.listadeJogosToolStripMenuItem_Click);
+            // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
@@ -642,12 +651,16 @@
             // 
             this.openFileDialogImportar.FileName = "openFileDialog1";
             // 
-            // listadeJogosToolStripMenuItem
+            // btnLimpar
             // 
-            this.listadeJogosToolStripMenuItem.Name = "listadeJogosToolStripMenuItem";
-            this.listadeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.listadeJogosToolStripMenuItem.Text = "Lista de Jogos";
-            this.listadeJogosToolStripMenuItem.Click += new System.EventHandler(this.listadeJogosToolStripMenuItem_Click);
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(529, 169);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 41;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // Cartas_ADM
             // 
@@ -756,5 +769,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialogImportar;
         private System.Windows.Forms.ToolStripMenuItem listadeJogosToolStripMenuItem;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

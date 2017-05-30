@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CriarTorneio));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabStandard = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btxPesquisarStand = new System.Windows.Forms.Button();
+            this.tbxPesquisarStand = new System.Windows.Forms.TextBox();
             this.btnEliminarStandard = new System.Windows.Forms.Button();
             this.btnAlterarStandard = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
@@ -44,6 +47,8 @@
             this.tbxDescricaoStandard = new System.Windows.Forms.TextBox();
             this.tbxNomeStandard = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btxPesquisar = new System.Windows.Forms.Button();
+            this.tbxPesquisarTeam = new System.Windows.Forms.TextBox();
             this.btnEliminarEquipas = new System.Windows.Forms.Button();
             this.btnAlterarEquipas = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -76,10 +81,7 @@
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
-            this.tbxPesquisarStand = new System.Windows.Forms.TextBox();
-            this.btxPesquisarStand = new System.Windows.Forms.Button();
-            this.btxPesquisar = new System.Windows.Forms.Button();
-            this.tbxPesquisarTeam = new System.Windows.Forms.TextBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabStandard.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +111,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage1.Controls.Add(this.btnLimpar);
             this.tabPage1.Controls.Add(this.btxPesquisarStand);
             this.tabPage1.Controls.Add(this.tbxPesquisarStand);
             this.tabPage1.Controls.Add(this.btnEliminarStandard);
@@ -129,6 +132,24 @@
             this.tabPage1.Size = new System.Drawing.Size(590, 310);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Standard";
+            // 
+            // btxPesquisarStand
+            // 
+            this.btxPesquisarStand.Location = new System.Drawing.Point(494, 11);
+            this.btxPesquisarStand.Name = "btxPesquisarStand";
+            this.btxPesquisarStand.Size = new System.Drawing.Size(75, 23);
+            this.btxPesquisarStand.TabIndex = 23;
+            this.btxPesquisarStand.Text = "Pesquisar";
+            this.btxPesquisarStand.UseVisualStyleBackColor = true;
+            this.btxPesquisarStand.Click += new System.EventHandler(this.btxPesquisarStand_Click);
+            // 
+            // tbxPesquisarStand
+            // 
+            this.tbxPesquisarStand.Location = new System.Drawing.Point(9, 11);
+            this.tbxPesquisarStand.Name = "tbxPesquisarStand";
+            this.tbxPesquisarStand.Size = new System.Drawing.Size(479, 20);
+            this.tbxPesquisarStand.TabIndex = 22;
+            this.tbxPesquisarStand.Text = "Pesquisar...";
             // 
             // btnEliminarStandard
             // 
@@ -261,6 +282,24 @@
             this.tabPage2.Size = new System.Drawing.Size(590, 310);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipas";
+            // 
+            // btxPesquisar
+            // 
+            this.btxPesquisar.Location = new System.Drawing.Point(494, 13);
+            this.btxPesquisar.Name = "btxPesquisar";
+            this.btxPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btxPesquisar.TabIndex = 25;
+            this.btxPesquisar.Text = "Pesquisar";
+            this.btxPesquisar.UseVisualStyleBackColor = true;
+            this.btxPesquisar.Click += new System.EventHandler(this.btxPesquisar_Click);
+            // 
+            // tbxPesquisarTeam
+            // 
+            this.tbxPesquisarTeam.Location = new System.Drawing.Point(9, 13);
+            this.tbxPesquisarTeam.Name = "tbxPesquisarTeam";
+            this.tbxPesquisarTeam.Size = new System.Drawing.Size(479, 20);
+            this.tbxPesquisarTeam.TabIndex = 24;
+            this.tbxPesquisarTeam.Text = "Pesquisar...";
             // 
             // btnEliminarEquipas
             // 
@@ -523,41 +562,16 @@
             this.menuStripHome.TabIndex = 48;
             this.menuStripHome.Text = "menuStrip1";
             // 
-            // tbxPesquisarStand
+            // btnLimpar
             // 
-            this.tbxPesquisarStand.Location = new System.Drawing.Point(9, 11);
-            this.tbxPesquisarStand.Name = "tbxPesquisarStand";
-            this.tbxPesquisarStand.Size = new System.Drawing.Size(479, 20);
-            this.tbxPesquisarStand.TabIndex = 22;
-            this.tbxPesquisarStand.Text = "Pesquisar...";
-            // 
-            // btxPesquisarStand
-            // 
-            this.btxPesquisarStand.Location = new System.Drawing.Point(494, 11);
-            this.btxPesquisarStand.Name = "btxPesquisarStand";
-            this.btxPesquisarStand.Size = new System.Drawing.Size(75, 23);
-            this.btxPesquisarStand.TabIndex = 23;
-            this.btxPesquisarStand.Text = "Pesquisar";
-            this.btxPesquisarStand.UseVisualStyleBackColor = true;
-            this.btxPesquisarStand.Click += new System.EventHandler(this.btxPesquisarStand_Click);
-            // 
-            // btxPesquisar
-            // 
-            this.btxPesquisar.Location = new System.Drawing.Point(494, 13);
-            this.btxPesquisar.Name = "btxPesquisar";
-            this.btxPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btxPesquisar.TabIndex = 25;
-            this.btxPesquisar.Text = "Pesquisar";
-            this.btxPesquisar.UseVisualStyleBackColor = true;
-            this.btxPesquisar.Click += new System.EventHandler(this.btxPesquisar_Click);
-            // 
-            // tbxPesquisarTeam
-            // 
-            this.tbxPesquisarTeam.Location = new System.Drawing.Point(9, 13);
-            this.tbxPesquisarTeam.Name = "tbxPesquisarTeam";
-            this.tbxPesquisarTeam.Size = new System.Drawing.Size(479, 20);
-            this.tbxPesquisarTeam.TabIndex = 24;
-            this.tbxPesquisarTeam.Text = "Pesquisar...";
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(531, 43);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 42;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // CriarTorneio
             // 
@@ -636,5 +650,6 @@
         private System.Windows.Forms.TextBox tbxPesquisarStand;
         private System.Windows.Forms.Button btxPesquisar;
         private System.Windows.Forms.TextBox tbxPesquisarTeam;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

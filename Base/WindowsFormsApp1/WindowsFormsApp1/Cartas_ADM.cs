@@ -497,5 +497,18 @@ namespace WindowsFormsApp1
             Jfrm.Show();
             Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.ResetText();
+            txtFacao.ResetText();
+            txtTipo.ResetText();
+            txtLealdade.ResetText();
+            txtcusto.ResetText();
+            txtRegras.ResetText();
+            numericAtaque.ResetText();
+            numericDefesa.ResetText();
+            pictImagem.Image = null;
+        }
     }
 }

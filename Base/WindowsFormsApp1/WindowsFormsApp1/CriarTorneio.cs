@@ -450,5 +450,12 @@ namespace WindowsFormsApp1
                 refresh_listViewStandard();
             }
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNomeStandard.ResetText();
+            dateTimeDataStandard.Value = DateTime.Now;
+            tbxDescricaoStandard.ResetText();
+        }
     }
 }
