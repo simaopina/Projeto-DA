@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cartas_ADM));
             this.gbxCartasADM = new System.Windows.Forms.GroupBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.listVCartas = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -101,7 +102,7 @@
             this.listadeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogImportar = new System.Windows.Forms.OpenFileDialog();
-            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
@@ -120,6 +121,7 @@
             // 
             // gbxCartasADM
             // 
+            this.gbxCartasADM.Controls.Add(this.btnCancelar);
             this.gbxCartasADM.Controls.Add(this.btnLimpar);
             this.gbxCartasADM.Controls.Add(this.linkLabel1);
             this.gbxCartasADM.Controls.Add(this.listVCartas);
@@ -151,6 +153,17 @@
             this.gbxCartasADM.TabIndex = 30;
             this.gbxCartasADM.TabStop = false;
             this.gbxCartasADM.Text = "Cartas";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(529, 169);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 41;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // linkLabel1
             // 
@@ -256,7 +269,7 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(403, 310);
+            this.btnRemover.Location = new System.Drawing.Point(340, 308);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 23);
             this.btnRemover.TabIndex = 20;
@@ -266,7 +279,7 @@
             // 
             // btAlterarCarta
             // 
-            this.btAlterarCarta.Location = new System.Drawing.Point(492, 310);
+            this.btAlterarCarta.Location = new System.Drawing.Point(421, 308);
             this.btAlterarCarta.Name = "btAlterarCarta";
             this.btAlterarCarta.Size = new System.Drawing.Size(75, 23);
             this.btAlterarCarta.TabIndex = 19;
@@ -276,7 +289,7 @@
             // 
             // btAdicionarCartas
             // 
-            this.btAdicionarCartas.Location = new System.Drawing.Point(322, 310);
+            this.btAdicionarCartas.Location = new System.Drawing.Point(259, 308);
             this.btAdicionarCartas.Name = "btAdicionarCartas";
             this.btAdicionarCartas.Size = new System.Drawing.Size(75, 23);
             this.btAdicionarCartas.TabIndex = 18;
@@ -651,16 +664,15 @@
             // 
             this.openFileDialogImportar.FileName = "openFileDialog1";
             // 
-            // btnLimpar
+            // btnCancelar
             // 
-            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLimpar.Location = new System.Drawing.Point(529, 169);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
-            this.btnLimpar.TabIndex = 41;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(502, 308);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Cartas_ADM
             // 
@@ -770,5 +782,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialogImportar;
         private System.Windows.Forms.ToolStripMenuItem listadeJogosToolStripMenuItem;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
