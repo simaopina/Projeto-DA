@@ -107,14 +107,25 @@ namespace WindowsFormsApp1
         {
             if (tbxpesquisa.Text.Length > 0)
             {
-                //var query = container.DeckSet.Where(baralho => baralho.Name.Contains(tbxpesquisa.Text));
-                //DataGridBaralho.DataSource = query.ToList();
+                ListViewItem[] dados = new ListViewItem[listVBaralhos.Items.Count];
+                listVBaralhos.Items.CopyTo(dados, 0);
 
+                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
+
+                listVBaralhos.Items.Clear();
+                listVBaralhos.Items.AddRange(dados);
+
+                if (listVBaralhos.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listview();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
             }
-
             else
             {
-                //refresh_datagrid();
+                refresh_listview();
             }
         }
 
