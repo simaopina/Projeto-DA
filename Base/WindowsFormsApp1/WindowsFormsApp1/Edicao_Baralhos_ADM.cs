@@ -62,6 +62,8 @@ namespace WindowsFormsApp1
             Deck baralhos = (Deck)listBoxBaralho.SelectedItem;
             Card cartas = (Card)listBoxCartas.SelectedItem;
 
+           // int quantidade_carta = Convert.ToInt32();
+
             if (baralhos != null && cartas != null)
             {
                 Deck_Card novoBaralhoCarta = new Deck_Card();
@@ -260,6 +262,16 @@ namespace WindowsFormsApp1
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
+        }
+
+        private void listBoxBaralho_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            carregar_Carta_Baralho();
+        }
+
+        private void listBoxCartas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

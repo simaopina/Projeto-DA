@@ -77,13 +77,9 @@ namespace WindowsFormsApp1
             
 
         }
-
-
-        //Home_Arbitro HAfrm = new Home_Arbitro();
-        //HAfrm.Show();
-        //Close();
     
-
+    
+            //Navegação
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Home Hfrm = new Home();
