@@ -438,7 +438,6 @@
             this.tbxpesquisa.Size = new System.Drawing.Size(486, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
-            this.tbxpesquisa.TextChanged += new System.EventHandler(this.tbxpesquisa_TextChanged);
             // 
             // btnPesquisar
             // 
