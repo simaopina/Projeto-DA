@@ -397,5 +397,14 @@ namespace WindowsFormsApp1
                 refreshJogador();
             }
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNome.ResetText();
+            tbxEmail.ResetText();
+            tbxNickName.ResetText();
+            numupdownIdade.Value = 0;
+            picbxAvatar.Image = null;
+        }
     }
 }
