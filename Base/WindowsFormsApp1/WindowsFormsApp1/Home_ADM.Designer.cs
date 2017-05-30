@@ -47,18 +47,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCartas = new System.Windows.Forms.Button();
             this.btnJogador = new System.Windows.Forms.Button();
             this.btnEditBaralhos = new System.Windows.Forms.Button();
             this.btnBaralhos = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUtilizadores = new System.Windows.Forms.Button();
             this.btnGestaoTorneios = new System.Windows.Forms.Button();
             this.btnGestaoDeJogosST = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.btnGestaoDeJogosTeam = new System.Windows.Forms.Button();
             this.gpbxMenu = new System.Windows.Forms.GroupBox();
-            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
             this.gpbxMenu.SuspendLayout();
@@ -212,6 +212,13 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
             // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
@@ -263,16 +270,16 @@
             this.btnBaralhos.UseVisualStyleBackColor = false;
             this.btnBaralhos.Click += new System.EventHandler(this.btnBaralhos_Click);
             // 
-            // button2
+            // btnUtilizadores
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(257, 173);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 92);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Utilizadores";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnUtilizadores.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUtilizadores.Location = new System.Drawing.Point(257, 173);
+            this.btnUtilizadores.Name = "btnUtilizadores";
+            this.btnUtilizadores.Size = new System.Drawing.Size(98, 92);
+            this.btnUtilizadores.TabIndex = 39;
+            this.btnUtilizadores.Text = "Utilizadores";
+            this.btnUtilizadores.UseVisualStyleBackColor = false;
+            this.btnUtilizadores.Click += new System.EventHandler(this.btnUtilizadores_Click);
             // 
             // btnGestaoTorneios
             // 
@@ -322,7 +329,7 @@
             this.gpbxMenu.Controls.Add(this.btnGestaoDeJogosTeam);
             this.gpbxMenu.Controls.Add(this.btnGestaoDeJogosST);
             this.gpbxMenu.Controls.Add(this.btnGestaoTorneios);
-            this.gpbxMenu.Controls.Add(this.button2);
+            this.gpbxMenu.Controls.Add(this.btnUtilizadores);
             this.gpbxMenu.Controls.Add(this.btnBaralhos);
             this.gpbxMenu.Controls.Add(this.btnEditBaralhos);
             this.gpbxMenu.Controls.Add(this.btnJogador);
@@ -333,13 +340,6 @@
             this.gpbxMenu.TabIndex = 41;
             this.gpbxMenu.TabStop = false;
             this.gpbxMenu.Text = "Menu:";
-            // 
-            // listaDeJogosToolStripMenuItem
-            // 
-            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
-            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
-            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
             // 
             // Home_ADM
             // 
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Button btnJogador;
         private System.Windows.Forms.Button btnEditBaralhos;
         private System.Windows.Forms.Button btnBaralhos;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUtilizadores;
         private System.Windows.Forms.Button btnGestaoTorneios;
         private System.Windows.Forms.Button btnGestaoDeJogosST;
         private System.Windows.Forms.Label label11;

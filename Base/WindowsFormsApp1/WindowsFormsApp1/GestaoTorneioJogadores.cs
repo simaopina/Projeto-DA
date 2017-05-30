@@ -14,12 +14,14 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //Declaração de Variaveis
         Player jogadorSelecionado = null;
         Player jogadorSelecionado1 = null;
         User userSelect = null;
         List<Player> Items = new List<Player>();
         List<Referee> Id = new List<Referee>();
 
+        //Inicialização do form
         public GestaoTorneioJogadores()
         {
             InitializeComponent();
@@ -60,95 +62,182 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
         {
-            Home_ADM HAfrm = new Home_ADM();
-            HAfrm.Show();
-            Close();
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Player.PlayerSet' table. You can move, or remove it, as needed.
+            this.playerSetTableAdapter1.Fill(this.baseDadosDataSet_Player.PlayerSet);
+            // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
+            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
+            // TODO: This line of code loads data into the 'baseDadosDataSet4.PlayerSet' table. You can move, or remove it, as needed.
+            this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        
+        //Evento
+        private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Baralho_ADM barfrm = new Baralho_ADM();
-            barfrm.Show();
-            Close();
+            if (listVJogador1.SelectedItems.Count > 0)
+            {
+                string jogador = listVJogador1.SelectedItems[0].Text;
+
+                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+                jogadorSelecionado = container.PlayerSet.Where(pla => pla.Name.Equals(jogador)).First();
+
+                validacao();
+
+                List<Player> player = container.PlayerSet.ToList();
+
+                numericJogador1.Value = jogadorSelecionado.Id;
+            }
+            else
+            {
+                jogadorSelecionado = null;
+            }
         }
 
-        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void listVJogador2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Home_ADM hmfrm = new Home_ADM();
-            hmfrm.Show();
-            Close();
+            if (listVJogador2.SelectedItems.Count > 0)
+            {
+                string jogador = listVJogador2.SelectedItems[0].Text;
+
+
+                jogadorSelecionado1 = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
+
+                validacao();
+
+                List<Player> player = container.PlayerSet.ToList();
+
+                numericJogador2.Value = jogadorSelecionado1.Id;
+
+            }
+            else
+            {
+                jogadorSelecionado1 = null;
+
+            }
         }
 
-        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listVArbitro1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Edicao_Baralhos_ADM ebfrm = new Edicao_Baralhos_ADM();
-            ebfrm.Show();
-            Close();
+            if (listVArbitro1.SelectedItems.Count > 0)
+            {
+                string arb = listVArbitro1.SelectedItems[0].Text;
+
+                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
+
+
+                List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
+
+                numericArbitro.Value = userSelect.Id;
+            }
+            else
+            {
+                userSelect = null;
+            }
         }
 
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        //Função
+        public void refresh_listview_Jogador1()
         {
-            Cartas_ADM ctfrm = new Cartas_ADM();
-            ctfrm.Show();
-            Close();
+            listVJogador1.Items.Clear();
+
+
+
+            foreach (Player pl1 in container.PlayerSet)
+            {
+                ListViewItem Jogador1List = new ListViewItem(Convert.ToString(pl1.Name));
+
+                listVJogador1.Items.Add(Jogador1List);
+            }
+
         }
 
-        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        public void refresh_listview_Jogador2()
         {
-            ADD_Jogador_ADM addfrm = new ADD_Jogador_ADM();
-            addfrm.Show();
-            Close();
+            listVJogador2.Items.Clear();
+
+
+
+            foreach (Player pl in container.PlayerSet)
+            {
+
+                ListViewItem Jogador2List = new ListViewItem(Convert.ToString(pl.Name));
+
+                listVJogador2.Items.Add(Jogador2List);
+            }
+
         }
 
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        public void refresh_listview_Arbitro()
         {
-            InserirEquipa efrm = new InserirEquipa();
-            efrm.Show();
-            Close();
+            listVArbitro1.Items.Clear();
+
+
+
+            foreach (Referee refs in container.UserSet.OfType<Referee>())
+            {
+
+                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Name));
+
+                listVArbitro1.Items.Add(refereeList);
+            }
+
+
         }
 
-        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        public void limparCampos()
         {
-            Utilizadores_ADM ufrm = new Utilizadores_ADM();
-            ufrm.Show();
-            Close();
+            numericJogador1.ResetText();
+            numericJogador2.ResetText();
+            numericArbitro.ResetText();
+            cbxBaralhoJogador1.ResetText();
+            cbxBaralhoJogador2.ResetText();
+            cbxTorneio.ResetText();
+            tbxDescricao.ResetText();
+            tbxNumero.ResetText();
+            datetimeData.Value = DateTime.Now;
+            datetimeHora.ResetText();
         }
 
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        public void validacao()
         {
-            GestaoTorneioJogadores gtfrm = new GestaoTorneioJogadores();
-            gtfrm.Show();
-            Close();
+            if (jogadorSelecionado == jogadorSelecionado1)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericJogador1.ResetText();
+                numericJogador2.ResetText();
+            }
+            else if (jogadorSelecionado1 == jogadorSelecionado)
+            {
+                MessageBox.Show("Não poderá selecionar a mesma equipa");
+                numericJogador1.ResetText();
+                numericJogador2.ResetText();
+            }
         }
 
-        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        public void validacao_pesquisar()
         {
-            GestaoTorneioEquipas gtefrm = new GestaoTorneioEquipas();
-            gtefrm.Show();
-            Close();
+            if (tbxJogador1.Text == tbxJogador2.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxJogador1.Focus();
+                refresh_listview_Jogador1();
+            }
+            else if(tbxJogador2.Text == tbxJogador1.Text)
+            {
+                MessageBox.Show("Não poderá procurar esse jogador");
+                tbxJogador2.Focus();
+                refresh_listview_Jogador2();
+            }
         }
 
-        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home logfrm = new Home();
-            logfrm.Show();
-            Close();
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            CriarTorneio tjsfrm = new CriarTorneio();
-            tjsfrm.Show();
-            Close();
-        }
-
+        //Botão
         private void btnPesquisarJogador1_Click(object sender, EventArgs e)
         {
             
@@ -208,49 +297,6 @@ namespace WindowsFormsApp1
             {
                 refresh_listview_Jogador2();
             }
-        }
-
-        public void validacao_pesquisar()
-        {
-            if (tbxJogador1.Text == tbxJogador2.Text)
-            {
-                MessageBox.Show("Não poderá procurar esse jogador");
-                tbxJogador1.Focus();
-                refresh_listview_Jogador1();
-            }
-            else if(tbxJogador2.Text == tbxJogador1.Text)
-            {
-                MessageBox.Show("Não poderá procurar esse jogador");
-                tbxJogador2.Focus();
-                refresh_listview_Jogador2();
-            }
-        }
-
-        public void validacao()
-        {
-            if (jogadorSelecionado == jogadorSelecionado1)
-            {
-                MessageBox.Show("Não poderá selecionar a mesma equipa");
-                numericJogador1.ResetText();
-                numericJogador2.ResetText();
-            }
-            else if (jogadorSelecionado1 == jogadorSelecionado)
-            {
-                MessageBox.Show("Não poderá selecionar a mesma equipa");
-                numericJogador1.ResetText();
-                numericJogador2.ResetText();
-            }
-        }
-
-        private void GestaoTorneioJogadores_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'baseDadosDataSet_Player.PlayerSet' table. You can move, or remove it, as needed.
-            this.playerSetTableAdapter1.Fill(this.baseDadosDataSet_Player.PlayerSet);
-            // TODO: This line of code loads data into the 'baseDadosDataSet_Referee.UserSet_Referee' table. You can move, or remove it, as needed.
-            this.userSet_RefereeTableAdapter.Fill(this.baseDadosDataSet_Referee.UserSet_Referee);
-            // TODO: This line of code loads data into the 'baseDadosDataSet4.PlayerSet' table. You can move, or remove it, as needed.
-            this.playerSetTableAdapter.Fill(this.baseDadosDataSet4.PlayerSet);
-
         }
 
         private void btnPesquisarArbitro_Click(object sender, EventArgs e)
@@ -317,138 +363,6 @@ namespace WindowsFormsApp1
             MessageBox.Show("Inserido com sucesso!");
         }
 
-        public void limparCampos()
-        {
-            numericJogador1.ResetText();
-            numericJogador2.ResetText();
-            numericArbitro.ResetText();
-            cbxBaralhoJogador1.ResetText();
-            cbxBaralhoJogador2.ResetText();
-            cbxTorneio.ResetText();
-            tbxDescricao.ResetText();
-            tbxNumero.ResetText();
-            datetimeData.Value = DateTime.Now;
-            datetimeHora.ResetText();
-        }
-
-        private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVJogador1.SelectedItems.Count > 0)
-            {
-                string jogador = listVJogador1.SelectedItems[0].Text;
-
-                //jogadorSelecionado = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
-                jogadorSelecionado = container.PlayerSet.Where(pla => pla.Name.Equals(jogador)).First();
-
-                validacao();
-
-                List<Player> player = container.PlayerSet.ToList();
-
-                numericJogador1.Value = jogadorSelecionado.Id;
-            }
-            else
-            {
-                jogadorSelecionado = null;
-            }
-        }
-
-        private void listVJogador2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVJogador2.SelectedItems.Count > 0)
-            {
-                string jogador = listVJogador2.SelectedItems[0].Text;
-
-
-                jogadorSelecionado1 = container.PlayerSet.Where(play => play.Name.Equals(jogador)).First();
-
-                validacao();
-
-                List<Player> player = container.PlayerSet.ToList();
-
-                numericJogador2.Value = jogadorSelecionado1.Id;
-
-            }
-            else
-            {
-                jogadorSelecionado1 = null;
-
-            }
-        }
-
-        private void listVArbitro1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listVArbitro1.SelectedItems.Count > 0)
-            {
-                string arb = listVArbitro1.SelectedItems[0].Text;
-
-                userSelect = container.UserSet.OfType<Referee>().Where(refe => refe.Name.Equals(arb)).First();
-
-
-                List<Referee> refey = container.UserSet.OfType<Referee>().ToList();
-
-                numericArbitro.Value = userSelect.Id;
-            }
-            else
-            {
-                userSelect = null;
-            }
-        }
-
-        public void refresh_listview_Jogador1()
-        {
-            listVJogador1.Items.Clear();
-
-
-
-            foreach (Player pl1 in container.PlayerSet)
-            {
-                ListViewItem Jogador1List = new ListViewItem(Convert.ToString(pl1.Name));
-
-                listVJogador1.Items.Add(Jogador1List);
-            }
-
-        }
-
-        public void refresh_listview_Jogador2()
-        {
-            listVJogador2.Items.Clear();
-
-
-
-            foreach (Player pl in container.PlayerSet)
-            {
-
-                ListViewItem Jogador2List = new ListViewItem(Convert.ToString(pl.Name));
-
-                listVJogador2.Items.Add(Jogador2List);
-            }
-
-        }
-
-        public void refresh_listview_Arbitro()
-        {
-            listVArbitro1.Items.Clear();
-
-
-
-            foreach (Referee refs in container.UserSet.OfType<Referee>())
-            {
-
-                ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Name));
-
-                listVArbitro1.Items.Add(refereeList);
-            }
-
-
-        }
-
-        private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Jogos Jfrm = new Jogos();
-            Jfrm.Show();
-            Close();
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Home_ADM Hadmfrm = new Home_ADM();
@@ -460,5 +374,91 @@ namespace WindowsFormsApp1
         {
             limparCampos();
         }
+
+        //Navegação
+        private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Home_ADM hmfrm = new Home_ADM();
+            hmfrm.Show();
+            Close();
+        }
+
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Baralho_ADM barfrm = new Baralho_ADM();
+            barfrm.Show();
+            Close();
+        }
+
+        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Edicao_Baralhos_ADM ebfrm = new Edicao_Baralhos_ADM();
+            ebfrm.Show();
+            Close();
+        }
+
+        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cartas_ADM ctfrm = new Cartas_ADM();
+            ctfrm.Show();
+            Close();
+        }
+
+        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM addfrm = new ADD_Jogador_ADM();
+            addfrm.Show();
+            Close();
+        }
+
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InserirEquipa efrm = new InserirEquipa();
+            efrm.Show();
+            Close();
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Utilizadores_ADM ufrm = new Utilizadores_ADM();
+            ufrm.Show();
+            Close();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            CriarTorneio tjsfrm = new CriarTorneio();
+            tjsfrm.Show();
+            Close();
+        }
+
+        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores gtfrm = new GestaoTorneioJogadores();
+            gtfrm.Show();
+            Close();
+        }
+
+        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas gtefrm = new GestaoTorneioEquipas();
+            gtefrm.Show();
+            Close();
+        }
+
+        private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Jogos Jfrm = new Jogos();
+            Jfrm.Show();
+            Close();
+        }
+
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Home logfrm = new Home();
+            logfrm.Show();
+            Close();
+        }
+
     }
 }

@@ -208,6 +208,7 @@
             this.listVCartas.TabIndex = 33;
             this.listVCartas.UseCompatibleStateImageBehavior = false;
             this.listVCartas.View = System.Windows.Forms.View.Details;
+            this.listVCartas.DoubleClick += new System.EventHandler(this.listVCartas_DoubleClick);
             // 
             // columnHeader1
             // 

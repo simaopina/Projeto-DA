@@ -14,9 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Cartas_ADM : Form
     {
-        /// <summary>
-        /// Variavel gobal
-        /// </summary>
+        //Declaração de variaveis
         int id_carta = 0;
 
         string ParteFinalNome;
@@ -56,6 +54,7 @@ namespace WindowsFormsApp1
 
         }
 
+        //Eventos
         private void btAdicionarCartas_Click(object sender, EventArgs e)
         {
             string nome = txtNome.Text;
@@ -91,28 +90,18 @@ namespace WindowsFormsApp1
             
         }
 
-
-        public void refreshlistVcartas()
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-            listVCartas.Items.Clear();
-            foreach (Card cartas in container.CardSet)
-            {
-                ListViewItem CartaList = new ListViewItem(cartas.Name);
-                CartaList.SubItems.Add(cartas.Faction);
-                CartaList.SubItems.Add(cartas.Type);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Loyalty));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Cost));
-                CartaList.SubItems.Add(cartas.RuleText);
-                CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
-                CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
-                CartaList.SubItems.Add(ParteFinalNome);
-
-                listVCartas.Items.Add(CartaList);
-            }
-
+            txtNome.ResetText();
+            txtFacao.ResetText();
+            txtTipo.ResetText();
+            txtLealdade.ResetText();
+            txtcusto.ResetText();
+            txtRegras.ResetText();
+            numericAtaque.ResetText();
+            numericDefesa.ResetText();
+            pictImagem.Image = null;
         }
-
-
 
         private void Cartas_ADM_Load(object sender, EventArgs e)
         {
@@ -126,30 +115,6 @@ namespace WindowsFormsApp1
             /*this.cardSetTableAdapter.Fill(this.baseDadosDataSet.CardSet);*/
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           /* if (DataGridCartas.CurrentRow != null)
-            {
-                cartaselecionada = container.CardSet.Where(car => car.Id.Equals(DataGridCartas.CurrentRow.ToString())).First();
-
-                txtNome.Text = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
-                txtFacao.Text = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
-                txtTipo.Text = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
-                txtLealdade.Text = DataGridCartas.CurrentRow.Cells[4].Value.ToString();
-                NumericDefesa.Text = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
-                txtcusto.Text = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-                txtRegras.Text = DataGridCartas.CurrentRow.Cells[7].Value.ToString();
-                NumericAtaque.Text = DataGridCartas.CurrentRow.Cells[8].Value.ToString();
-                LinkLabelImagem.Text = DataGridCartas.CurrentRow.Cells[9].Value.ToString();
-
-                id_carta = (int)DataGridCartas.CurrentRow.Cells[0].Value;
-            }
-            
-            */
-            
-        }
-
       
         private void btAlterarCarta_Click(object sender, EventArgs e)
         {
@@ -189,8 +154,47 @@ namespace WindowsFormsApp1
             
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
+        }
 
-            private void btnRemover_Click(object sender, EventArgs e)
+        private void listVCartas_DoubleClick(object sender, EventArgs e)
+        {
+
+          //  ListViewItem CartaList;
+
+            string nome = null;
+            string facao = null;
+            string tipo = null;
+            string lealdade = null;
+            string custo = null;
+            string regras = null;
+            string ataque = null;
+            string defesa = null;
+            string imagem = ParteFinalNome;
+
+           
+                      
+                 nome = cartaselecionada.Name;
+                 facao = cartaselecionada.Faction;
+                 tipo = cartaselecionada.Type;
+                 lealdade = cartaselecionada.Loyalty.ToString();
+                 custo = cartaselecionada.Cost.ToString();
+                 regras = cartaselecionada.RuleText;
+                 ataque = cartaselecionada.Attack.ToString();
+                 defesa = cartaselecionada.Defense.ToString();
+                 imagem = cartaselecionada.Image;
+            
+
+            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
+            Info_cartas_ADM.Show();
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
         {
          
            // if (listVCartas.SelectedItems != null)
@@ -222,12 +226,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void tbxpesquisa_TextChanged(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbxpesquisa.Text.Length > 0)
@@ -254,24 +252,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-        private void DataGridCartas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-           /* string nome = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
-            string facao = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
-            string tipo = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
-            string lealdade =DataGridCartas.CurrentRow.Cells[4].Value.ToString();
-            string custo = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
-            string regras = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string ataque = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string defesa = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-            string imagem = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-
-            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
-            Info_cartas_ADM.Show();*/
-        }
-
         private void LinkLabelImagem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
@@ -286,10 +266,21 @@ namespace WindowsFormsApp1
                 string[] partes = caminhoFicheiro.Split('\\');
                 ParteFinalNome = partes.Last();
 
-                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+                string destino = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last();
 
-                pictImagem.Image = Image.FromFile(caminhoFicheiro);
+                if (File.Exists(destino))
+                {
+                    MessageBox.Show("Essa imagem já existe!");
+                }
 
+                else
+                {
+                    File.Copy(caminhoFicheiro, destino);
+
+
+                    pictImagem.Image = Image.FromFile(caminhoFicheiro);
+
+                }
             }
         }
 
@@ -314,25 +305,7 @@ namespace WindowsFormsApp1
                 cartaselecionada = null;
             }
 
-        }
-
-        public void CarregaDadosCartas()
-        {
-            Card carta;
-
-            txtNome.Text = cartaselecionada.Name;
-            txtFacao.Text = cartaselecionada.Faction;
-            txtTipo.Text = cartaselecionada.Type;
-            txtLealdade.Text = (Convert.ToString(cartaselecionada.Loyalty));
-            numericAtaque.Text = (Convert.ToString(cartaselecionada.Attack));
-            txtcusto.Text = (Convert.ToString(cartaselecionada.Cost));
-            txtRegras.Text = cartaselecionada.RuleText;
-            numericDefesa.Text = (Convert.ToString(cartaselecionada.Defense));
-            LinkLabelImagem.Text = cartaselecionada.Image;
-
-        }
-    
-
+        }      
        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -340,8 +313,7 @@ namespace WindowsFormsApp1
             {
                 string path = openFileDialogImportar.FileName;
 
-                string linha = "";
-                int nCartasTotais = 0;
+                string linha = "";             
                 int nCartasImportadas = 0;
 
                 using (StreamReader ficheiro = new StreamReader(path))
@@ -389,7 +361,45 @@ namespace WindowsFormsApp1
                 refreshlistVcartas();
             }
         }
-    private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
+
+        //Funções
+        public void CarregaDadosCartas()
+        {        
+
+            txtNome.Text = cartaselecionada.Name;
+            txtFacao.Text = cartaselecionada.Faction;
+            txtTipo.Text = cartaselecionada.Type;
+            txtLealdade.Text = (Convert.ToString(cartaselecionada.Loyalty));
+            numericAtaque.Text = (Convert.ToString(cartaselecionada.Attack));
+            txtcusto.Text = (Convert.ToString(cartaselecionada.Cost));
+            txtRegras.Text = cartaselecionada.RuleText;
+            numericDefesa.Text = (Convert.ToString(cartaselecionada.Defense));
+            LinkLabelImagem.Text = cartaselecionada.Image;
+
+        }
+    
+        public void refreshlistVcartas()
+        {
+            listVCartas.Items.Clear();
+            foreach (Card cartas in container.CardSet)
+            {
+                ListViewItem CartaList = new ListViewItem(cartas.Name);
+                CartaList.SubItems.Add(cartas.Faction);
+                CartaList.SubItems.Add(cartas.Type);
+                CartaList.SubItems.Add(Convert.ToString(cartas.Loyalty));
+                CartaList.SubItems.Add(Convert.ToString(cartas.Cost));
+                CartaList.SubItems.Add(cartas.RuleText);
+                CartaList.SubItems.Add(Convert.ToString(cartas.Attack));
+                CartaList.SubItems.Add(Convert.ToString(cartas.Defense));
+                CartaList.SubItems.Add(ParteFinalNome);
+
+                listVCartas.Items.Add(CartaList);
+            }
+
+        }
+
+        //Navegação
+        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InserirEquipa Iefrm = new InserirEquipa();
             Iefrm.Show();
@@ -494,75 +504,5 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            txtNome.ResetText();
-            txtFacao.ResetText();
-            txtTipo.ResetText();
-            txtLealdade.ResetText();
-            txtcusto.ResetText();
-            txtRegras.ResetText();
-            numericAtaque.ResetText();
-            numericDefesa.ResetText();
-            pictImagem.Image = null;
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Home_ADM hfrm = new Home_ADM();
-            hfrm.Show();
-            Close();
-        }
-
-        private void listVCartas_DoubleClick(object sender, EventArgs e)
-        {
-
-          //  ListViewItem CartaList;
-
-            string nome = null;
-            string facao = null;
-            string tipo = null;
-            string lealdade = null;
-            string custo = null;
-            string regras = null;
-            string ataque = null;
-            string defesa = null;
-            string imagem = ParteFinalNome;
-
-            Card cartas;
-
-            /*
-                string nome = DataGridCartas.CurrentRow.Cells[1].Value.ToString();
-                string facao = DataGridCartas.CurrentRow.Cells[2].Value.ToString();
-                string tipo = DataGridCartas.CurrentRow.Cells[3].Value.ToString();
-                string lealdade =DataGridCartas.CurrentRow.Cells[4].Value.ToString();
-                string custo = DataGridCartas.CurrentRow.Cells[5].Value.ToString();
-                string regras = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-                string ataque = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-                string defesa = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-                string imagem = DataGridCartas.CurrentRow.Cells[6].Value.ToString();
-
-
-
-                ListViewItem CartaList = new ListViewItem(cartas.Name);
-                CartaList.SubItems.Add(cartas.Faction);
-             */
-
-                      
-                 nome = cartaselecionada.Name;
-                 facao = cartaselecionada.Faction ;
-                 tipo = cartaselecionada.Type ;
-                 lealdade = cartaselecionada.Loyalty.ToString();
-                 custo = cartaselecionada.Cost.ToString();
-                 regras = cartaselecionada.RuleText ;
-                 ataque = cartaselecionada.Attack.ToString();
-                 defesa = cartaselecionada.Defense.ToString();
-                 imagem = cartaselecionada.Image;
-            
-
-            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
-            Info_cartas_ADM.Show();
-
-        }
     }
 }

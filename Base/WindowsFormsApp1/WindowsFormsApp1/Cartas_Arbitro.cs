@@ -14,6 +14,8 @@ namespace WindowsFormsApp1
     {
         int id_carta = 0;
 
+        Card cartaselecionada;
+
         string ParteFinalNome;
 
         int id;
@@ -80,6 +82,36 @@ namespace WindowsFormsApp1
             {
                 refreshlistVcartas();
             }
+        }
+
+        private void listVCartas_DoubleClick(object sender, EventArgs e)
+        {
+
+            string nome = null;
+            string facao = null;
+            string tipo = null;
+            string lealdade = null;
+            string custo = null;
+            string regras = null;
+            string ataque = null;
+            string defesa = null;
+            string imagem = ParteFinalNome;
+
+
+
+            nome = cartaselecionada.Name;
+            facao = cartaselecionada.Faction;
+            tipo = cartaselecionada.Type;
+            lealdade = cartaselecionada.Loyalty.ToString();
+            custo = cartaselecionada.Cost.ToString();
+            regras = cartaselecionada.RuleText;
+            ataque = cartaselecionada.Attack.ToString();
+            defesa = cartaselecionada.Defense.ToString();
+            imagem = cartaselecionada.Image;
+
+
+            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
+            Info_cartas_ADM.Show();
         }
 
         public void refreshlistVcartas()
@@ -160,6 +192,5 @@ namespace WindowsFormsApp1
 
         }
 
-        
     }
 }
