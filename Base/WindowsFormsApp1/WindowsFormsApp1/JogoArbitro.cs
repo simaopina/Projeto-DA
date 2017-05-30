@@ -18,14 +18,16 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+            listVJogo.Items.Clear();
+
             List<Game> listgame = container.GameSet.ToList();
 
             foreach (Game game in listgame)
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());           
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());           
 
 
                 listVJogo.Items.Add(item);
@@ -57,17 +59,21 @@ namespace WindowsFormsApp1
 
         public void refresh_listview()
         {
+            listVJogo.Items.Clear();
+
             List<Game> listgame = container.GameSet.ToList();
 
             foreach (Game game in listgame)
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
 
                 listVJogo.Items.Add(item);
+
+                
             }
         }
 
@@ -84,11 +90,12 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
 
                 listVJogo.Items.Add(item);
+                refresh_listview();
             }
         }
 
@@ -100,10 +107,11 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
                 listVJogo.Items.Add(item);
+                refresh_listview();
             }
         }
 
