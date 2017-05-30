@@ -108,5 +108,46 @@ namespace WindowsFormsApp1
             Hfrm.Show();
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVHistorico.Items.Count];
+                listVHistorico.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
+
+                listVHistorico.Items.Clear();
+                listVHistorico.Items.AddRange(dados);
+
+                if (listVHistorico.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listVHistorico();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
+            }
+            else
+            {
+                refresh_listVHistorico();
+            }
+        }
+
+        public void refresh_listVHistorico()
+        {
+            listVHistorico.Items.Clear();
+            foreach (Game game in container.GameSet)
+            {
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
+
+                listVHistorico.Items.Add(item);
+            }
+            
+        }
     }
 }
