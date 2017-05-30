@@ -86,6 +86,7 @@ namespace WindowsFormsApp1
 
         private void rbtnStandard_CheckedChanged(object sender, EventArgs e)
         {
+            listVJogo.Items.Clear();
             List<StardadGame> STlistgame = container.GameSet.OfType<StardadGame>().ToList();
 
             foreach (StardadGame game in STlistgame)
@@ -103,6 +104,7 @@ namespace WindowsFormsApp1
 
         private void rbtnTeam_CheckedChanged(object sender, EventArgs e)
         {
+            listVJogo.Items.Clear();
             List<TeamGame> TMlistgame = container.GameSet.OfType<TeamGame>().ToList();
 
             foreach (TeamGame game in TMlistgame)
