@@ -528,11 +528,7 @@ namespace WindowsFormsApp1
             string regras = null;
             string ataque = null;
             string defesa = null;
-            string imagem = null;
-
-            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
-            Info_cartas_ADM.Show();
-
+            string imagem = ParteFinalNome;
 
             foreach (Card cartas in container.CardSet)
             {              
@@ -546,6 +542,10 @@ namespace WindowsFormsApp1
                  defesa = cartas.Defense.ToString();
                  imagem =cartas.Image;
             }
+
+            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
+            Info_cartas_ADM.Show();
+
         }
     }
 }
