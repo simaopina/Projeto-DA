@@ -176,5 +176,31 @@ namespace WindowsFormsApp1
             Jfrm.Show();
             Close();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisar.Text.Length > 0)
+            {
+                string[] dados = new string[lbxEquipa.Items.Count];
+                lbxEquipa.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Contains(tbxPesquisar.Text)).ToArray();
+
+                lbxEquipa.Items.Clear();
+                lbxEquipa.Items.AddRange(dados);
+
+                if (lbxEquipa.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refreshEquipa();
+                    tbxPesquisar.ResetText();
+                    tbxPesquisar.Focus();
+                }
+            }
+            else
+            {
+                refreshEquipa();
+            }
+        }
     }
 }
