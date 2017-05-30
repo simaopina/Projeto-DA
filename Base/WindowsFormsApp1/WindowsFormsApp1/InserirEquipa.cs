@@ -19,34 +19,154 @@ namespace WindowsFormsApp1
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
         public string ParteFinalNome;
-
-        //Funções
-        public InserirEquipa()
-        {
-            InitializeComponent();
-
-            foreach (Player jogador in container.PlayerSet)
-            {
-                cbxJogador1.Items.Add(jogador.Id.ToString());
-            }
-            foreach (Player jogador in container.PlayerSet)
-            {
-                cbxJogador2.Items.Add(jogador.Id.ToString());
-            }
-        }
-
+     
+        //Eventos
         private void lbxEquipa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbxEquipa.SelectedItem != null)
             {
                 equipaSelected = container.TeamSet.Where(equip => equip.Name.Equals(lbxEquipa.SelectedItem.ToString())).First();
                 tbxNome.Text = equipaSelected.Name;
+                cbxJogador1.Text = Convert.ToString(equipaSelected.Player1);
+                cbxJogador2.Text = Convert.ToString(equipaSelected.Player2);
                 picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + equipaSelected.Avatar);
             }
             else
             {
                 equipaSelected = null;
             }
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            AddEquipa();
+            refreshEquipa();
+            LimparDados();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
+        }
+
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisar.Text.Length > 0)
+            {
+                string[] dados = new string[lbxEquipa.Items.Count];
+                lbxEquipa.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Contains(tbxPesquisar.Text)).ToArray();
+
+                lbxEquipa.Items.Clear();
+                lbxEquipa.Items.AddRange(dados);
+
+                if (lbxEquipa.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refreshEquipa();
+                    tbxPesquisar.ResetText();
+                    tbxPesquisar.Focus();
+                }
+            }
+            else
+            {
+                refreshEquipa();
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNome.ResetText();
+            tbxPesquisar.ResetText();
+            cbxJogador1.ResetText();
+            cbxJogador2.ResetText();
+        }
+
+        private void btnAbrirImagem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = openFileDialogImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                ParteFinalNome = partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            string nome = tbxNome.Text;
+            int jog1 =Convert.ToInt32(cbxJogador1.Text);
+            int jog2 = Convert.ToInt32(cbxJogador2.Text);
+            string imagem = picbxAvatar.Text;
+
+            if (equipaSelected != null)
+            {
+                equipaSelected.Name = nome;
+                equipaSelected.Player1 = jog1;
+                equipaSelected.Player2 = jog2;
+                equipaSelected.Avatar = imagem;
+
+                container.Entry(equipaSelected).State = System.Data.Entity.EntityState.Modified;
+                container.SaveChanges();
+
+                MessageBox.Show("Alterado com sucesso");
+
+                refreshEquipa();
+                LimparDados();
+
+            }
+            else
+            {
+                MessageBox.Show("Erro!");
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (lbxEquipa.SelectedItem != null)
+            {
+                string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + equipaSelected.Avatar;
+
+                File.Delete(caminhoImagem);
+
+                container.TeamSet.Remove(equipaSelected);
+
+                container.SaveChanges();
+
+                equipaSelected = null;
+
+                MessageBox.Show("Elimindado com sucesso");
+
+                refreshEquipa();
+                LimparDados();
+            }
+            else
+            {
+                MessageBox.Show("Erro!");
+            }
+        }
+
+        //Funções
+        public void LimparDados()
+        {
+            tbxNome.ResetText();
+            cbxJogador1.ResetText();
+            cbxJogador2.ResetText();
+            picbxAvatar.Image = null;
         }
 
         private void AddEquipa()
@@ -69,7 +189,20 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             refreshEquipa();
         }
-        
+
+        public InserirEquipa()
+        {
+            InitializeComponent();
+
+            foreach (Player jogador in container.PlayerSet)
+            {
+                cbxJogador1.Items.Add(jogador.Id.ToString());
+            }
+            foreach (Player jogador in container.PlayerSet)
+            {
+                cbxJogador2.Items.Add(jogador.Id.ToString());
+            }
+        }
 
         private void refreshEquipa()
         {
@@ -81,19 +214,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-            AddEquipa();
-            refreshEquipa();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Home_ADM hfrm = new Home_ADM();
-            hfrm.Show();
-            Close();
-        }
-
+        //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home_ADM HAdmfrm = new Home_ADM();
@@ -164,13 +285,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-            Hfrm.Show();
-            Close();
-        }
-
         private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Jogos Jfrm = new Jogos();
@@ -178,58 +292,11 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (tbxPesquisar.Text.Length > 0)
-            {
-                string[] dados = new string[lbxEquipa.Items.Count];
-                lbxEquipa.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Contains(tbxPesquisar.Text)).ToArray();
-
-                lbxEquipa.Items.Clear();
-                lbxEquipa.Items.AddRange(dados);
-
-                if (lbxEquipa.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refreshEquipa();
-                    tbxPesquisar.ResetText();
-                    tbxPesquisar.Focus();
-                }
-            }
-            else
-            {
-                refreshEquipa();
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            tbxNome.ResetText();
-            tbxPesquisar.ResetText();
-            cbxJogador1.ResetText();
-            cbxJogador2.ResetText();
-        }
-
-        private void btnAbrirImagem_Click(object sender, EventArgs e)
-        {
-            if (openFileDialogImagem.ShowDialog() == DialogResult.OK)
-            {
-
-                string caminhoFicheiro = openFileDialogImagem.FileName;
-
-                caminhoFicheiro.Contains(".jpg");
-                caminhoFicheiro.Contains(".png");
-
-                string[] partes = caminhoFicheiro.Split('\\');
-                ParteFinalNome = partes.Last();
-
-                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
-
-                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
-
-            }
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
         }
     }
 }
