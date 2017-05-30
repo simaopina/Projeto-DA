@@ -821,6 +821,7 @@
     <Content Include="Resources\l\7.PNG" />
     <Content Include="Resources\l\8.PNG" />
     <Content Include="Resources\l\9.PNG" />
+    <None Include="Resources\no-image-icon-4.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

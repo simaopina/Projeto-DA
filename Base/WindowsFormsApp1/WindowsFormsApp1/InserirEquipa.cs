@@ -44,8 +44,10 @@ namespace WindowsFormsApp1
                 tbxNome.Text = equipaSelected.Name;
                 cbxJogador1.Text = Convert.ToString(equipaSelected.Player1);
                 cbxJogador2.Text = Convert.ToString(equipaSelected.Player2);
-                //picbxAvatar.Text = ParteFinalNome;
-                picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + equipaSelected.Avatar);
+                //picbxAvatar.Location;
+                //em principio ele nunca da erro agora no entanto se não houver foto não vai apresentar nada
+                //e por isso que quero resolver o problema com aquela imagem
+                picbxAvatar.ImageLocation = Application.StartupPath + "/imagens/" + equipaSelected.Avatar;
             }
             else
             {
@@ -116,7 +118,7 @@ namespace WindowsFormsApp1
                 ParteFinalNome = partes.Last();
 
                 File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
-
+                
                 picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
 
             }
