@@ -13,9 +13,14 @@ namespace WindowsFormsApp1
 {
     public partial class InserirEquipa : Form
     {
+        //Declaração de variáveis
         Team equipaSelected = null;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+
+        public string ParteFinalNome;
+
+        //Funções
         public InserirEquipa()
         {
             InitializeComponent();
@@ -47,7 +52,7 @@ namespace WindowsFormsApp1
         private void AddEquipa()
         {
             string nome = tbxNome.Text;
-            string imagem = picbxAvatar.Text;
+            string imagem = ParteFinalNome;
             int jogador1 = Convert.ToInt32(cbxJogador1.Text);
             int jogador2 = Convert.ToInt32(cbxJogador2.Text);
 
@@ -205,6 +210,26 @@ namespace WindowsFormsApp1
             tbxPesquisar.ResetText();
             cbxJogador1.ResetText();
             cbxJogador2.ResetText();
+        }
+
+        private void btnAbrirImagem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogImagem.ShowDialog() == DialogResult.OK)
+            {
+
+                string caminhoFicheiro = openFileDialogImagem.FileName;
+
+                caminhoFicheiro.Contains(".jpg");
+                caminhoFicheiro.Contains(".png");
+
+                string[] partes = caminhoFicheiro.Split('\\');
+                ParteFinalNome = partes.Last();
+
+                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+
+                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+
+            }
         }
     }
 }
