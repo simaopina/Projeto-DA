@@ -14,7 +14,8 @@ namespace WindowsFormsApp1
     {
 
         DiagramaEntidadesArcmageContainer dbAC;
-
+        
+        //Inicialização de Form
         public Edicao_Baralhos_ADM()
         {
             InitializeComponent();
@@ -28,6 +29,21 @@ namespace WindowsFormsApp1
 
         }
 
+
+        //Eventos
+        private void listBoxBaralho_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            carregar_Carta_Baralho();
+        }
+
+        private void listBoxCartas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        //Funções
         private void carregar_Baralho()
         {
             List<Deck> baralhos = (from d in dbAC.DeckSet
@@ -100,71 +116,7 @@ namespace WindowsFormsApp1
         }
 
 
-        //Navegação
-
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM Hadmfrm = new Home_ADM();
-            Hadmfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cartas_ADM Cfrm = new Cartas_ADM();
-            Cfrm.Show();
-            Close();
-        }
-
-        private void addJogadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ADD_Jogador_ADM addJofrm = new ADD_Jogador_ADM();
-            addJofrm.Show();
-            Close();
-        }
-
-        private void terminarSessãoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-            Hfrm.Show();
-            Close();
-        }
-
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InserirEquipa Iefrm = new InserirEquipa();
-            Iefrm.Show();
-            Close();
-        }
-
-        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM Uadmfrm = new Utilizadores_ADM();
-            Uadmfrm.Show();
-            Close();
-        }
-
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
-            Gtjfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
-            Gtefrm.Show();
-            Close();
-        }
-
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM Ebfrm = new Edicao_Baralhos_ADM();
-            Ebfrm.Show();
-            Close();
-        }
-
+        //Botões
         private void btnAdicionarBaralho_Click(object sender, EventArgs e)
         {
             Adicionar();
@@ -177,14 +129,22 @@ namespace WindowsFormsApp1
              Remover();
         }
 
-        private void listBoxBaralho_SelectedIndexChanged(object sender, EventArgs e)
+
+
+
+        //Navegação
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            carregar_Carta_Baralho();
+            Home_ADM Hadmfrm = new Home_ADM();
+            Hadmfrm.Show();
+            Close();
         }
 
-        private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            Baralho_ADM BAdmfrm = new Baralho_ADM();
+            BAdmfrm.Show();
+            Close();
         }
 
         private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -243,20 +203,6 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            Home Hfrm = new Home();
-            Hfrm.Show();
-            Close();
-        }
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Baralho_ADM BAdmfrm = new Baralho_ADM();
-            BAdmfrm.Show();
-            Close();
-        }
-
         private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Jogos Jfrm = new Jogos();
@@ -264,14 +210,12 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void listBoxBaralho_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void terminarSessãoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            carregar_Carta_Baralho();
+            Home Hfrm = new Home();
+            Hfrm.Show();
+            Close();
         }
 
-        private void listBoxCartas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

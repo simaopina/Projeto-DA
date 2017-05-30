@@ -32,13 +32,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabStandard = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btxPesquisarStand = new System.Windows.Forms.Button();
             this.tbxPesquisarStand = new System.Windows.Forms.TextBox();
             this.btnEliminarStandard = new System.Windows.Forms.Button();
             this.btnAlterarStandard = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.listVStandard = new System.Windows.Forms.ListView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCancelarStand = new System.Windows.Forms.Button();
             this.btnGuardarStandard = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +48,14 @@
             this.tbxDescricaoStandard = new System.Windows.Forms.TextBox();
             this.tbxNomeStandard = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnLimparTeams = new System.Windows.Forms.Button();
             this.btxPesquisar = new System.Windows.Forms.Button();
             this.tbxPesquisarTeam = new System.Windows.Forms.TextBox();
             this.btnEliminarEquipas = new System.Windows.Forms.Button();
             this.btnAlterarEquipas = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listVEquipas = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,7 +83,6 @@
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
-            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabStandard.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -118,7 +119,7 @@
             this.tabPage1.Controls.Add(this.btnAlterarStandard);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.listVStandard);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.btnCancelarStand);
             this.tabPage1.Controls.Add(this.btnGuardarStandard);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
@@ -132,6 +133,17 @@
             this.tabPage1.Size = new System.Drawing.Size(590, 310);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Standard";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(531, 43);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 42;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btxPesquisarStand
             // 
@@ -190,15 +202,15 @@
             this.listVStandard.View = System.Windows.Forms.View.List;
             this.listVStandard.SelectedIndexChanged += new System.EventHandler(this.listVStandard_SelectedIndexChanged);
             // 
-            // button3
+            // btnCancelarStand
             // 
-            this.button3.Location = new System.Drawing.Point(494, 284);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancelarStand.Location = new System.Drawing.Point(494, 284);
+            this.btnCancelarStand.Name = "btnCancelarStand";
+            this.btnCancelarStand.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarStand.TabIndex = 15;
+            this.btnCancelarStand.Text = "Cancelar";
+            this.btnCancelarStand.UseVisualStyleBackColor = true;
+            this.btnCancelarStand.Click += new System.EventHandler(this.btnCancelarStand_Click);
             // 
             // btnGuardarStandard
             // 
@@ -262,13 +274,14 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage2.Controls.Add(this.btnLimparTeams);
             this.tabPage2.Controls.Add(this.btxPesquisar);
             this.tabPage2.Controls.Add(this.tbxPesquisarTeam);
             this.tabPage2.Controls.Add(this.btnEliminarEquipas);
             this.tabPage2.Controls.Add(this.btnAlterarEquipas);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.listVEquipas);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.btnGuardar);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label5);
@@ -282,6 +295,17 @@
             this.tabPage2.Size = new System.Drawing.Size(590, 310);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Equipas";
+            // 
+            // btnLimparTeams
+            // 
+            this.btnLimparTeams.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimparTeams.BackgroundImage")));
+            this.btnLimparTeams.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimparTeams.Location = new System.Drawing.Point(531, 48);
+            this.btnLimparTeams.Name = "btnLimparTeams";
+            this.btnLimparTeams.Size = new System.Drawing.Size(38, 23);
+            this.btnLimparTeams.TabIndex = 43;
+            this.btnLimparTeams.UseVisualStyleBackColor = true;
+            this.btnLimparTeams.Click += new System.EventHandler(this.btnLimparTeams_Click);
             // 
             // btxPesquisar
             // 
@@ -340,15 +364,15 @@
             this.listVEquipas.View = System.Windows.Forms.View.List;
             this.listVEquipas.SelectedIndexChanged += new System.EventHandler(this.listVEquipas_SelectedIndexChanged);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(486, 275);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(486, 275);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -513,7 +537,6 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(154, 22);
             this.toolStripMenuItem2.Text = "Torneios";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
             // 
             // toolStripSeparator4
             // 
@@ -562,17 +585,6 @@
             this.menuStripHome.TabIndex = 48;
             this.menuStripHome.Text = "menuStrip1";
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLimpar.Location = new System.Drawing.Point(531, 43);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
-            this.btnLimpar.TabIndex = 42;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
             // CriarTorneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,9 +626,9 @@
         private System.Windows.Forms.DateTimePicker dateTEquipas;
         private System.Windows.Forms.TextBox tbxDescricao;
         private System.Windows.Forms.TextBox tbxNomeEquipas;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCancelarStand;
         private System.Windows.Forms.Button btnGuardarStandard;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ListView listVStandard;
@@ -651,5 +663,6 @@
         private System.Windows.Forms.Button btxPesquisar;
         private System.Windows.Forms.TextBox tbxPesquisarTeam;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnLimparTeams;
     }
 }

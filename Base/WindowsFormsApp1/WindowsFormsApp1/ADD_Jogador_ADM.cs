@@ -98,6 +98,7 @@ namespace WindowsFormsApp1
 
         }
 
+        //Eventos
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbxJogadores.SelectedItem != null)
