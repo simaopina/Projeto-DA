@@ -160,5 +160,41 @@ namespace WindowsFormsApp1
             vercartas();
             
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                string[] dados = new string[listBoxBaralho.Items.Count];
+                listBoxBaralho.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Contains(tbxpesquisa.Text)).ToArray();
+
+                listBoxBaralho.Items.Clear();
+                listBoxBaralho.Items.AddRange(dados);
+
+                if (listBoxBaralho.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
+            }
+            else
+            {
+                refresh();
+            }
+        }
+
+        public void refresh()
+        {
+            listBoxBaralho.Items.Clear();
+
+            foreach (Deck baralho in container.DeckSet)
+            {
+                listBoxBaralho.Items.Add(baralho.Name);
+            }
+        }
     }
 }

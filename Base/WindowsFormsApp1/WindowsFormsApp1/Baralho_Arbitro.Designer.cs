@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baralho_Arbitro));
             this.gbxBaralhoArbitro = new System.Windows.Forms.GroupBox();
+            this.listBoxCartasBaralho = new System.Windows.Forms.ListBox();
+            this.listBoxBaralho = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaBaralhoArbitroUneasyAlliance = new System.Windows.Forms.ImageList(this.components);
             this.listaBaralhoArbitroGaianloveforlife = new System.Windows.Forms.ImageList(this.components);
-            this.listBoxBaralho = new System.Windows.Forms.ListBox();
-            this.listBoxCartasBaralho = new System.Windows.Forms.ListBox();
             this.gbxBaralhoArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +68,23 @@
             this.gbxBaralhoArbitro.TabIndex = 30;
             this.gbxBaralhoArbitro.TabStop = false;
             this.gbxBaralhoArbitro.Text = "Baralho";
+            // 
+            // listBoxCartasBaralho
+            // 
+            this.listBoxCartasBaralho.FormattingEnabled = true;
+            this.listBoxCartasBaralho.Location = new System.Drawing.Point(223, 36);
+            this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
+            this.listBoxCartasBaralho.Size = new System.Drawing.Size(151, 225);
+            this.listBoxCartasBaralho.TabIndex = 4;
+            // 
+            // listBoxBaralho
+            // 
+            this.listBoxBaralho.FormattingEnabled = true;
+            this.listBoxBaralho.Location = new System.Drawing.Point(16, 36);
+            this.listBoxBaralho.Name = "listBoxBaralho";
+            this.listBoxBaralho.Size = new System.Drawing.Size(151, 225);
+            this.listBoxBaralho.TabIndex = 3;
+            this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -103,6 +120,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -299,23 +317,6 @@
             this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(42, "43.PNG");
             this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(43, "44.PNG");
             this.listaBaralhoArbitroGaianloveforlife.Images.SetKeyName(44, "45.PNG");
-            // 
-            // listBoxBaralho
-            // 
-            this.listBoxBaralho.FormattingEnabled = true;
-            this.listBoxBaralho.Location = new System.Drawing.Point(16, 36);
-            this.listBoxBaralho.Name = "listBoxBaralho";
-            this.listBoxBaralho.Size = new System.Drawing.Size(151, 225);
-            this.listBoxBaralho.TabIndex = 3;
-            this.listBoxBaralho.SelectedIndexChanged += new System.EventHandler(this.listBoxBaralho_SelectedIndexChanged);
-            // 
-            // listBoxCartasBaralho
-            // 
-            this.listBoxCartasBaralho.FormattingEnabled = true;
-            this.listBoxCartasBaralho.Location = new System.Drawing.Point(223, 36);
-            this.listBoxCartasBaralho.Name = "listBoxCartasBaralho";
-            this.listBoxCartasBaralho.Size = new System.Drawing.Size(151, 225);
-            this.listBoxCartasBaralho.TabIndex = 4;
             // 
             // Baralho_Arbitro
             // 
