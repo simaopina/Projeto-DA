@@ -44,13 +44,11 @@ namespace WindowsFormsApp1
 
                 if (query.Any())
                 {
-                    Home_ADM H_admfrm = new Home_ADM();
-                    H_admfrm.Show();
-                    Close();
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Usuário inválido!");
+                    MessageBox.Show("Não tem histórico");
                 }
 
 
