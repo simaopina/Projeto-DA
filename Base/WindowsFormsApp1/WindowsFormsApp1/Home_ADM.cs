@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class Home_ADM : Form
     {
-
+        //Inicialização de Form
         public Home_ADM()
         {
             InitializeComponent();
 
         }
 
-        //Navegação
+        //Botões
         private void btnEditCartas_Click(object sender, EventArgs e)
         {
             Cartas_ADM Cadmefrm = new Cartas_ADM();
@@ -55,54 +56,35 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home_ADM HAdmfrm = new Home_ADM();
-            HAdmfrm.Show();
-            Close();
-        }
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Baralho_ADM BarAdmfrm = new Baralho_ADM();
-            BarAdmfrm.Show();
-            Close();
-        }
-
-        private void editarBaralhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM EditBarAdmfrm = new Edicao_Baralhos_ADM();
-            EditBarAdmfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cartas_ADM CarADMfrm = new Cartas_ADM();
-            CarADMfrm.Show();
-            Close();
-        }
-
-        private void novoJogadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ADD_Jogador_ADM AddJofrm = new ADD_Jogador_ADM();
-            AddJofrm.Show();
-            Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUtilizadores_Click(object sender, EventArgs e)
         {
             Utilizadores_ADM uti = new Utilizadores_ADM();
             uti.Show();
             Close();
-            
         }
 
+        private void btnGestaoDeJogosST_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
+            GTJfrm.Show();
+            Close();
+        }
+
+        private void btnGestaoDeJogosTeam_Click(object sender, EventArgs e)
+        {
+            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
+            GTEfrm.Show();
+            Close();
+        }
+
+        private void btnGestaoTorneios_Click(object sender, EventArgs e)
+        {
+            CriarTorneio CTornfrm = new CriarTorneio();
+            CTornfrm.Show();
+            Close();
+        }
+        
+        //Navegação
         private void homeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             Home_ADM HAdmfrm = new Home_ADM();
@@ -180,32 +162,12 @@ namespace WindowsFormsApp1
             Close();
         }
 
-        private void btnGestaoDeJogosST_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores GTJfrm = new GestaoTorneioJogadores();
-            GTJfrm.Show();
-            Close();
-        }
-
-        private void btnGestaoDeJogosTeam_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas GTEfrm = new GestaoTorneioEquipas();
-            GTEfrm.Show();
-            Close();
-        }
-
-        private void btnGestaoTorneios_Click(object sender, EventArgs e)
-        {
-            CriarTorneio CTornfrm = new CriarTorneio();
-            CTornfrm.Show();
-            Close();
-        }
-
         private void listaDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
         }
+
     }
 }

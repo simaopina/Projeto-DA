@@ -12,8 +12,10 @@ namespace WindowsFormsApp1
 {
     public partial class Home : Form
     {
+        //Declaração de Variaveis
         public int id;
 
+        //Inicialização do Form
         public Home()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace WindowsFormsApp1
         {
             
         }
-
+        //Navegação
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login Lfrm = new Login(id);
