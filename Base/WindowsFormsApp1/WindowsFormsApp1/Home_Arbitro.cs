@@ -12,15 +12,17 @@ namespace WindowsFormsApp1
 {
     public partial class Home_Arbitro : Form
     {
-
+        //Declaração de Variaveis
         public int id;
 
+        //Inicialização do form
         public Home_Arbitro(int id_arb)
         {
             InitializeComponent();
 
             id= id_arb;
         }
+
         //Navegação
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {

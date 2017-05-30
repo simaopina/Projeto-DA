@@ -185,10 +185,21 @@ namespace WindowsFormsApp1
                 string[] partes = caminhoFicheiro.Split('\\');
                 ParteFinalNome = partes.Last();
 
-                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
+                string destino = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last();
 
-                picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+                if (File.Exists(destino))
+                {
+                    MessageBox.Show("Essa imagem já existe!");
+                }
 
+                else
+                {
+                    File.Copy(caminhoFicheiro, destino);
+
+
+                    picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
+
+                }
             }
 
         }
