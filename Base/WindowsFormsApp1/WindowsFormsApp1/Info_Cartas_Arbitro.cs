@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Info_Cartas_Arbitro : Form
     {
+        //Declaração de variaveis
+
         int id_carta = 0;
 
         string ParteFinalNome;
