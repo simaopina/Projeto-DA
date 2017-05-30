@@ -150,21 +150,27 @@ namespace WindowsFormsApp1
 
         private void btnPesquisarJogador1_Click(object sender, EventArgs e)
         {
-            //string overdose = listVJogador1.Items.ToString();
+            
             validacao_pesquisar();
             if (tbxJogador1.Text.Length > 0)
             {
 
-                //var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador1.Text));
+                ListViewItem[] dados1 = new ListViewItem[listVJogador1.Items.Count];
+                listVJogador1.Items.CopyTo(dados1, 0);
 
-                //if (overdose.StartsWith(tbxJogador1.Text))
-                //{
-                //listVJogador1.Items.Clear();
+                dados1 = dados1.Where(d => d.Text.Contains(tbxJogador1.Text)).ToArray();
 
-                //    listVJogador1.Items.AddRange(overdose.StartsWith(tbxJogador1.Text));
-                //}
+                listVJogador1.Items.Clear();
+                listVJogador1.Items.AddRange(dados1);
 
-                //dataGridJogador1.DataSource = query.ToList();
+                if (listVJogador1.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Jogador1();
+                    tbxJogador1.ResetText();
+                    tbxJogador1.Focus();
+                }
+
             }
 
             else
@@ -179,9 +185,21 @@ namespace WindowsFormsApp1
             if (tbxJogador2.Text.Length > 0)
             {
 
-                var query = container.PlayerSet.Where(pla => pla.Name.Contains(tbxJogador2.Text));
+                ListViewItem[] dados2 = new ListViewItem[listVJogador2.Items.Count];
+                listVJogador2.Items.CopyTo(dados2, 0);
 
-                //dataGridJogador2.DataSource = query.ToList();
+                dados2 = dados2.Where(d => d.Text.Contains(tbxJogador2.Text)).ToArray();
+
+                listVJogador2.Items.Clear();
+                listVJogador2.Items.AddRange(dados2);
+
+                if (listVJogador2.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Jogador2();
+                    tbxJogador2.ResetText();
+                    tbxJogador2.Focus();
+                }
 
             }
 
@@ -224,22 +242,21 @@ namespace WindowsFormsApp1
             if (tbxArbitro.Text.Length > 0)
             {
 
-                var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
+                ListViewItem[] dados3 = new ListViewItem[listVArbitro1.Items.Count];
+                listVArbitro1.Items.CopyTo(dados3, 0);
 
-                foreach (Referee refs in query.ToList())
-                {
-
-                    ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Id));
-                    refereeList.SubItems.Add(refs.Name);
-
-                    listVArbitro1.Items.Add(refereeList);
-                }
+                dados3 = dados3.Where(d => d.Text.Contains(tbxArbitro.Text)).ToArray();
 
                 listVArbitro1.Items.Clear();
+                listVArbitro1.Items.AddRange(dados3);
 
-                listVArbitro1.Items.AddRange(Id.Where(i => string.IsNullOrEmpty(tbxArbitro.Text) || i.Name.StartsWith(tbxArbitro.Text)).Select(c => new ListViewItem(c.Name)).ToArray());
-
-                //dataGridReferee.DataSource = query.ToList();
+                if (listVArbitro1.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Arbitro();
+                    tbxArbitro.ResetText();
+                    tbxArbitro.Focus();
+                }
             }
 
             else
