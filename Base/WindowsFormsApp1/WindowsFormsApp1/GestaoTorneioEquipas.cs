@@ -154,11 +154,22 @@ namespace WindowsFormsApp1
             if (tbxEquipa1.Text.Length > 0)
             {
 
-                var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa1.Text));
+                ListViewItem[] dados1 = new ListViewItem[listVEquipa1.Items.Count];
+                listVEquipa1.Items.CopyTo(dados1, 0);
 
-                //dataGridEquipa1.DataSource = query.ToList();
+                dados1 = dados1.Where(d => d.Text.Contains(tbxEquipa1.Text)).ToArray();
+
+                listVEquipa1.Items.Clear();
+                listVEquipa1.Items.AddRange(dados1);
+
+                if (listVEquipa1.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Equipa1();
+                    tbxEquipa1.ResetText();
+                    tbxEquipa1.Focus();
+                }
             }
-
             else
             {
                 refresh_listview_Equipa1();
@@ -170,9 +181,21 @@ namespace WindowsFormsApp1
             if (tbxEquipa2.Text.Length > 0)
             {
 
-                var query = container.TeamSet.Where(tea => tea.Name.Contains(tbxEquipa2.Text));
+                ListViewItem[] dados2 = new ListViewItem[listVEquipa2.Items.Count];
+                listVEquipa2.Items.CopyTo(dados2, 0);
 
-                //dataGridEquipa2.DataSource = query.ToList();
+                dados2 = dados2.Where(d => d.Text.Contains(tbxEquipa2.Text)).ToArray();
+
+                listVEquipa2.Items.Clear();
+                listVEquipa2.Items.AddRange(dados2);
+
+                if (listVEquipa2.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Equipa2();
+                    tbxEquipa2.ResetText();
+                    tbxEquipa2.Focus();
+                }
             }
 
             else
@@ -185,13 +208,13 @@ namespace WindowsFormsApp1
         {
             if (tbxEquipa1.Text == tbxEquipa2.Text)
             {
-                MessageBox.Show("Não poderá procurar esse jogador");
+                MessageBox.Show("Não poderá procurar essa Equipa");
                 tbxEquipa1.Focus();
                 refresh_listview_Equipa1();
             }
             else if (tbxEquipa2.Text == tbxEquipa1.Text)
             {
-                MessageBox.Show("Não poderá procurar esse jogador");
+                MessageBox.Show("Não poderá procurar essa Equipa");
                 tbxEquipa2.Focus();
                 refresh_listview_Equipa2();
             }
@@ -247,9 +270,21 @@ namespace WindowsFormsApp1
             if (tbxArbitro.Text.Length > 0)
             {
 
-                var query = container.UserSet.OfType<Referee>().Where(arb => arb.Name.Contains(tbxArbitro.Text));
+                ListViewItem[] dados3 = new ListViewItem[listVArbitro.Items.Count];
+                listVArbitro.Items.CopyTo(dados3, 0);
 
-                //dataGridReferee.DataSource = query.ToList();
+                dados3 = dados3.Where(d => d.Text.Contains(tbxArbitro.Text)).ToArray();
+
+                listVArbitro.Items.Clear();
+                listVArbitro.Items.AddRange(dados3);
+
+                if (listVArbitro.Items.Count < 1)
+                {
+                    MessageBox.Show("Não foi encontrado nenhum resultado");
+                    refresh_listview_Arbitro();
+                    tbxArbitro.ResetText();
+                    tbxArbitro.Focus();
+                }
             }
 
             else
