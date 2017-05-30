@@ -12,10 +12,13 @@ namespace WindowsFormsApp1
 {
     public partial class Home : Form
     {
+        public int id;
+
         public Home()
         {
             InitializeComponent();
-       
+
+                  
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -25,7 +28,7 @@ namespace WindowsFormsApp1
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login Lfrm = new Login();
+            Login Lfrm = new Login(id);
             Lfrm.Show();
             Hide();           
         }

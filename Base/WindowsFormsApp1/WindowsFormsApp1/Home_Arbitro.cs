@@ -12,42 +12,47 @@ namespace WindowsFormsApp1
 {
     public partial class Home_Arbitro : Form
     {
-        public Home_Arbitro()
+
+        public int id;
+
+        public Home_Arbitro(int id_arb)
         {
             InitializeComponent();
+
+            id= id_arb;
         }
         //Navegação
         private void baralhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Baralho_Arbitro BarAbarfrm = new Baralho_Arbitro();
+            Baralho_Arbitro BarAbarfrm = new Baralho_Arbitro(id);
             BarAbarfrm.Show();
             Close();
         }
 
         private void cartaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cartas_Arbitro CartAbarfrm = new Cartas_Arbitro();
+            Cartas_Arbitro CartAbarfrm = new Cartas_Arbitro(id);
             CartAbarfrm.Show();
             Close();
         }
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JogoArbitro ArbJogosfrm = new JogoArbitro();
+            JogoArbitro ArbJogosfrm = new JogoArbitro(id);
             ArbJogosfrm.Show();
             Close();
         }
 
         private void planeamentoDeJogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou();
+            Arbitro_JogosOndeTou ArbOndeToufrm = new Arbitro_JogosOndeTou(id);
             ArbOndeToufrm.Show();
             Close();
         }
 
         private void historicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro();
+            Hitorico_Arbitro Histfrm = new Hitorico_Arbitro(id);
             Histfrm.Show();
             Close();
         }
@@ -61,7 +66,7 @@ namespace WindowsFormsApp1
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Home_Arbitro HArbfrm = new Home_Arbitro();
+            Home_Arbitro HArbfrm = new Home_Arbitro(id);
             HArbfrm.Show();
             Close();
         }
