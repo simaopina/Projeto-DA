@@ -55,6 +55,10 @@ namespace WindowsFormsApp1
                     tbxpesquisa.Focus();
                 }
             }
+            else
+            {
+                refresh_listview();
+            }
         }
 
         public void refresh_listview()
@@ -71,9 +75,7 @@ namespace WindowsFormsApp1
                 item.SubItems.Add(game.Date.ToShortDateString());
 
 
-                listVJogo.Items.Add(item);
-
-                
+                listVJogo.Items.Add(item);         
             }
         }
 
@@ -84,9 +86,9 @@ namespace WindowsFormsApp1
 
         private void rbtnStandard_CheckedChanged(object sender, EventArgs e)
         {
-            List<StardadGame> listgame = container.GameSet.OfType<StardadGame>().ToList();
+            List<StardadGame> STlistgame = container.GameSet.OfType<StardadGame>().ToList();
 
-            foreach (StardadGame game in listgame)
+            foreach (StardadGame game in STlistgame)
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
@@ -101,9 +103,9 @@ namespace WindowsFormsApp1
 
         private void rbtnTeam_CheckedChanged(object sender, EventArgs e)
         {
-            List<TeamGame> listgame = container.GameSet.OfType<TeamGame>().ToList();
+            List<TeamGame> TMlistgame = container.GameSet.OfType<TeamGame>().ToList();
 
-            foreach (TeamGame game in listgame)
+            foreach (TeamGame game in TMlistgame)
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
