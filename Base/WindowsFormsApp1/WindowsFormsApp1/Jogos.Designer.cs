@@ -38,7 +38,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.permissõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarBaralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -113,7 +112,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.permissõesToolStripMenuItem,
             this.baralhoToolStripMenuItem,
             this.jogadoresToolStripMenuItem,
             this.terminarSessãoToolStripMenuItem});
@@ -129,13 +127,6 @@
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click_2);
-            // 
-            // permissõesToolStripMenuItem
-            // 
-            this.permissõesToolStripMenuItem.Name = "permissõesToolStripMenuItem";
-            this.permissõesToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.permissõesToolStripMenuItem.Text = "Permissões";
-            this.permissõesToolStripMenuItem.Click += new System.EventHandler(this.permissõesToolStripMenuItem_Click);
             // 
             // baralhoToolStripMenuItem
             // 
@@ -231,7 +222,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem permissõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarBaralhoToolStripMenuItem;

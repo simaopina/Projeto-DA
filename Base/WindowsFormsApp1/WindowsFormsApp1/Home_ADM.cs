@@ -93,9 +93,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ATorneioJogosStandard Sefrm = new ATorneioJogosStandard();
-            Sefrm.Show();
-            Close();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)

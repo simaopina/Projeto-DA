@@ -120,9 +120,7 @@ namespace WindowsFormsApp1
 
         private void permissõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Permissoes_ADM Perfrm = new Permissoes_ADM();
-            Perfrm.Show();
-            Close();
+            
         }
 
         private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
