@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cartas_ADM));
             this.gbxCartasADM = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.listVCartas = new System.Windows.Forms.ListView();
@@ -102,7 +103,6 @@
             this.listadeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogImportar = new System.Windows.Forms.OpenFileDialog();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.gbxCartasADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDefesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericAtaque)).BeginInit();
@@ -154,6 +154,16 @@
             this.gbxCartasADM.TabStop = false;
             this.gbxCartasADM.Text = "Cartas";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(502, 308);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // btnLimpar
             // 
             this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
@@ -196,6 +206,7 @@
             this.listVCartas.UseCompatibleStateImageBehavior = false;
             this.listVCartas.View = System.Windows.Forms.View.Details;
             this.listVCartas.SelectedIndexChanged += new System.EventHandler(this.listVCartas_SelectedIndexChanged);
+            this.listVCartas.DoubleClick += new System.EventHandler(this.listVCartas_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -663,16 +674,6 @@
             // openFileDialogImportar
             // 
             this.openFileDialogImportar.FileName = "openFileDialog1";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(502, 308);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 42;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Cartas_ADM
             // 

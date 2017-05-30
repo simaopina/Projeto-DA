@@ -147,7 +147,6 @@
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 13;
             this.lblNome.Text = "label9";
-            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
             // 
             // pictureBox
             // 
@@ -156,7 +155,6 @@
             this.pictureBox.Size = new System.Drawing.Size(152, 215);
             this.pictureBox.TabIndex = 12;
             this.pictureBox.TabStop = false;
-            this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label7
             // 

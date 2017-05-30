@@ -38,20 +38,10 @@ namespace WindowsFormsApp1
 
         }
 
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Info_Cartas_ADM_Load(object sender, EventArgs e)
         {
 
             
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

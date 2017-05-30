@@ -517,5 +517,35 @@ namespace WindowsFormsApp1
             hfrm.Show();
             Close();
         }
+
+        private void listVCartas_DoubleClick(object sender, EventArgs e)
+        {
+            string nome = null;
+            string facao = null;
+            string tipo = null;
+            string lealdade = null;
+            string custo = null;
+            string regras = null;
+            string ataque = null;
+            string defesa = null;
+            string imagem = null;
+
+            Info_Cartas_ADM Info_cartas_ADM = new Info_Cartas_ADM(nome, facao, tipo, lealdade, custo, regras, ataque, defesa, imagem);
+            Info_cartas_ADM.Show();
+
+
+            foreach (Card cartas in container.CardSet)
+            {              
+                 nome = cartas.Name;
+                 facao =cartas.Faction ;
+                 tipo =cartas.Type ;
+                 lealdade =cartas.Loyalty.ToString();
+                 custo = cartas.Cost.ToString();
+                 regras =cartas.RuleText ;
+                 ataque = cartas.Attack.ToString();
+                 defesa = cartas.Defense.ToString();
+                 imagem =cartas.Image;
+            }
+        }
     }
 }
