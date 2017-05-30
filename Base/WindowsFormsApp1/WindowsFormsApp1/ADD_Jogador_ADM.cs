@@ -129,13 +129,9 @@ namespace WindowsFormsApp1
 
         private void Cancelar()
         {
-            tbxNome.ResetText();
-            tbxNickName.ResetText();
-            tbxEmail.ResetText();
-            tbxpesquisa.ResetText();
-            numupdownIdade.ResetText();
-            picbxAvatar.ResetText();
-
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
+            Close();
         }
 
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
