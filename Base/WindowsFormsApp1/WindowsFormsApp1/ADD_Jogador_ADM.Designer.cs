@@ -49,7 +49,6 @@
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +70,7 @@
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.caminhoImagem = new System.Windows.Forms.OpenFileDialog();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
@@ -169,7 +169,6 @@
             this.tbxNome.Name = "tbxNome";
             this.tbxNome.Size = new System.Drawing.Size(142, 20);
             this.tbxNome.TabIndex = 6;
-            this.tbxNome.TextChanged += new System.EventHandler(this.tbxNome_TextChanged);
             // 
             // label14
             // 
@@ -225,7 +224,6 @@
             this.picbxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picbxAvatar.TabIndex = 0;
             this.picbxAvatar.TabStop = false;
-            this.picbxAvatar.Click += new System.EventHandler(this.picbxAvatar_Click);
             // 
             // gbxJogadores
             // 
@@ -272,11 +270,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(580, 158);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // caminhoImagem
-            // 
-            this.caminhoImagem.FileName = "openFileDialog1";
-            this.caminhoImagem.FileOk += new System.ComponentModel.CancelEventHandler(this.caminhoImagem_FileOk);
             // 
             // menuStripHome
             // 
@@ -441,6 +434,10 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // caminhoImagem
+            // 
+            this.caminhoImagem.FileName = "openFileDialog1";
+            // 
             // ADD_Jogador_ADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,7 +488,6 @@
         private System.Windows.Forms.ListBox lbxJogadores;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.OpenFileDialog caminhoImagem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baralhoToolStripMenuItem;
@@ -513,5 +509,6 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.OpenFileDialog caminhoImagem;
     }
 }

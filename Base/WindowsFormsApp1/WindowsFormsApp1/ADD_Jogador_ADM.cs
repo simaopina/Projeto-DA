@@ -13,64 +13,35 @@ namespace WindowsFormsApp1
 {
     public partial class ADD_Jogador_ADM : Form
     {
-        int id_jogador = 0;
+        //Declaração de Variaveis
         Player jogadorSelected = null;
 
-
         string ParteFinalNome;
-    
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
+        
+        //Iniciar Form
         public ADD_Jogador_ADM()
         {
             InitializeComponent();
         }
 
-        private void tbxNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-            AddJogador();
-
-            refreshJogador();
-
-
-
-
-        }
-
-
-       
         private void ADD_Jogador_ADM_Load(object sender, EventArgs e)
         {
             refreshJogador();
         }
 
-
-        private void btnAlterar_Click(object sender, EventArgs e)
-        {
-            AlterarJogador();
-            refreshJogador();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Cancelar();
-        }
-
+        //Funções
         private void AddJogador()
         {
-           
+
 
             string nome = tbxNome.Text;
             string email = tbxEmail.Text;
             string nickname = tbxNickName.Text;
             int idade = Convert.ToInt32(numupdownIdade.Text);
             string imagem = ParteFinalNome;
-           
+
 
 
             Player jogador = new Player
@@ -127,13 +98,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void Cancelar()
-        {
-            Home_ADM hfrm = new Home_ADM();
-            hfrm.Show();
-            Close();
-        }
-
         private void lbxJogadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lbxJogadores.SelectedItem != null)
@@ -152,6 +116,15 @@ namespace WindowsFormsApp1
             }
         }
 
+        //Butões
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            AddJogador();
+
+            refreshJogador();
+
+        }
+
         private void btnRemover_Click(object sender, EventArgs e)
         {
 
@@ -167,7 +140,7 @@ namespace WindowsFormsApp1
 
                 container.PlayerSet.Remove(jogadorSelected);
 
-               
+
                 container.SaveChanges();
 
                 jogadorSelected = null;
@@ -180,88 +153,25 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Erro!");
             }
-            
+
         }
 
-        //limpar campos
-        //apagar 
-
-
-        // Menu Strip
-        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
-            Home_ADM Homefrm = new Home_ADM();
-            Homefrm.Show();
-            Close();
+            AlterarJogador();
+            refreshJogador();
         }
 
-
-        private void baralhoToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Baralho_ADM BarFrm = new Baralho_ADM();
-            BarFrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Edicao_Baralhos_ADM EBfrm = new Edicao_Baralhos_ADM();
-            EBfrm.Show();
-            Close();
-        }
-
-        private void cartasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Cartas_ADM CardFrm = new Cartas_ADM();
-            CardFrm.Show();
-            Close();
-        }
-
-        private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
-            AddJFrm.Show();
-            Close();
-        }
-
-        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Home Homefrm = new Home();
-            Homefrm.Show();
-            Close();
-        }
-
-        private void torneioIndividualToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioJogadores Gtjfrm = new GestaoTorneioJogadores();
-            Gtjfrm.Show();
-            Close();
-        }
-
-        private void torneioEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestaoTorneioEquipas Gtefrm = new GestaoTorneioEquipas();
-            Gtefrm.Show();
-            Close();
-        }
-
-        private void novaEquipaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            InserirEquipa Iefrm = new InserirEquipa();
-            Iefrm.Show();
-            Close();
-        }
-
-        private void utilizadoresToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Utilizadores_ADM Utifrm = new Utilizadores_ADM();
-            Utifrm.Show();
+            Home_ADM hfrm = new Home_ADM();
+            hfrm.Show();
             Close();
         }
 
         private void btnInserirAvatar_Click(object sender, EventArgs e)
         {
-            
+
             if (caminhoImagem.ShowDialog() == DialogResult.OK)
             {
 
@@ -278,19 +188,52 @@ namespace WindowsFormsApp1
                 picbxAvatar.Image = Image.FromFile(caminhoFicheiro);
 
             }
-        
-    }
-
-        private void picbxAvatar_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void caminhoImagem_FileOk(object sender, CancelEventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            if (tbxpesquisa.Text.Length > 0)
+            {
+                string[] dados = new string[lbxJogadores.Items.Count];
+                lbxJogadores.Items.CopyTo(dados, 0);
 
+                dados = dados.Where(d => d.Contains(tbxpesquisa.Text)).ToArray();
+
+                lbxJogadores.Items.Clear();
+                lbxJogadores.Items.AddRange(dados);
+
+                if (lbxJogadores.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refreshJogador();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
+            }
+            else
+            {
+                refreshJogador();
+            }
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            tbxNome.ResetText();
+            tbxEmail.ResetText();
+            tbxNickName.ResetText();
+            numupdownIdade.Value = 0;
+            picbxAvatar.Image = null;
+        }
+
+        // Navegação
+        private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
+            AddJFrm.Show();
+            Close();
+        }
+    
         private void baralhoToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             Baralho_ADM BAdmfmr = new Baralho_ADM();
@@ -366,41 +309,6 @@ namespace WindowsFormsApp1
             Jogos Jfrm = new Jogos();
             Jfrm.Show();
             Close();
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if (tbxpesquisa.Text.Length > 0)
-            {
-                string[] dados = new string[lbxJogadores.Items.Count];
-                lbxJogadores.Items.CopyTo(dados, 0);
-
-                dados = dados.Where(d => d.Contains(tbxpesquisa.Text)).ToArray();
-
-                lbxJogadores.Items.Clear();
-                lbxJogadores.Items.AddRange(dados);
-
-                if(lbxJogadores.Items.Count < 1)
-                {
-                    MessageBox.Show("Nao foi encontrado nenhum resultado");
-                    refreshJogador();
-                    tbxpesquisa.ResetText();
-                    tbxpesquisa.Focus();
-                }
-            }
-            else
-            {
-                refreshJogador();
-            }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            tbxNome.ResetText();
-            tbxEmail.ResetText();
-            tbxNickName.ResetText();
-            numupdownIdade.Value = 0;
-            picbxAvatar.Image = null;
         }
     }
 }
