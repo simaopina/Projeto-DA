@@ -527,6 +527,7 @@
             this.datetimeHora.Name = "datetimeHora";
             this.datetimeHora.Size = new System.Drawing.Size(121, 20);
             this.datetimeHora.TabIndex = 42;
+            this.datetimeHora.Value = new System.DateTime(2017, 5, 30, 0, 0, 0, 0);
             // 
             // label2
             // 
