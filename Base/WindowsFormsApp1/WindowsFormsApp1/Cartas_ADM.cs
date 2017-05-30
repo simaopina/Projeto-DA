@@ -236,15 +236,25 @@ namespace WindowsFormsApp1
         {
             if (tbxpesquisa.Text.Length > 0)
             {
+                ListViewItem[] dados = new ListViewItem[listVCartas.Items.Count];
+                listVCartas.Items.CopyTo(dados, 0);
 
-                var query = container.CardSet.Where(carta => carta.Name.Contains(tbxpesquisa.Text));
+                dados = dados.Where(d => d.Text.Contains(tbxpesquisa.Text)).ToArray();
 
-               // listVCartas.DataSource = query.ToList();
+                listVCartas.Items.Clear();
+                listVCartas.Items.AddRange(dados);
+
+                if (listVCartas.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refreshlistVcartas();
+                    tbxpesquisa.ResetText();
+                    tbxpesquisa.Focus();
+                }
             }
-
             else
             {
-               // refresh_datagrid();
+                refreshlistVcartas();
             }
         }
 
