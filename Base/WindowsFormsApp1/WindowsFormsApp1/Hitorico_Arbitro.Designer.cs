@@ -52,27 +52,27 @@
             // gbxHistorico
             // 
             this.gbxHistorico.Controls.Add(this.listVHistorico);
-            this.gbxHistorico.Location = new System.Drawing.Point(12, 271);
+            this.gbxHistorico.Location = new System.Drawing.Point(12, 249);
             this.gbxHistorico.Name = "gbxHistorico";
-            this.gbxHistorico.Size = new System.Drawing.Size(616, 248);
+            this.gbxHistorico.Size = new System.Drawing.Size(616, 270);
             this.gbxHistorico.TabIndex = 30;
             this.gbxHistorico.TabStop = false;
             this.gbxHistorico.Text = "Historico Arbitro";
             // 
             // listVHistorico
             // 
-            this.listVHistorico.Location = new System.Drawing.Point(13, 20);
+            this.listVHistorico.Location = new System.Drawing.Point(6, 19);
             this.listVHistorico.Name = "listVHistorico";
-            this.listVHistorico.Size = new System.Drawing.Size(580, 222);
+            this.listVHistorico.Size = new System.Drawing.Size(604, 245);
             this.listVHistorico.TabIndex = 0;
             this.listVHistorico.UseCompatibleStateImageBehavior = false;
             this.listVHistorico.View = System.Windows.Forms.View.List;
             // 
             // tbxpesquisa
             // 
-            this.tbxpesquisa.Location = new System.Drawing.Point(245, 204);
+            this.tbxpesquisa.Location = new System.Drawing.Point(25, 204);
             this.tbxpesquisa.Name = "tbxpesquisa";
-            this.tbxpesquisa.Size = new System.Drawing.Size(266, 20);
+            this.tbxpesquisa.Size = new System.Drawing.Size(486, 20);
             this.tbxpesquisa.TabIndex = 26;
             this.tbxpesquisa.Text = "Pesquisar...";
             // 
@@ -84,6 +84,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // pictureBox1
             // 
