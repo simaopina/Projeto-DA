@@ -48,6 +48,9 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rbtnTodos = new System.Windows.Forms.RadioButton();
+            this.rbtnStandard = new System.Windows.Forms.RadioButton();
+            this.rbtnTeam = new System.Windows.Forms.RadioButton();
             this.gbxJogosArbitro.SuspendLayout();
             this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,10 +58,13 @@
             // 
             // gbxJogosArbitro
             // 
+            this.gbxJogosArbitro.Controls.Add(this.rbtnTeam);
+            this.gbxJogosArbitro.Controls.Add(this.rbtnStandard);
+            this.gbxJogosArbitro.Controls.Add(this.rbtnTodos);
             this.gbxJogosArbitro.Controls.Add(this.listVJogo);
-            this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 272);
+            this.gbxJogosArbitro.Location = new System.Drawing.Point(25, 231);
             this.gbxJogosArbitro.Name = "gbxJogosArbitro";
-            this.gbxJogosArbitro.Size = new System.Drawing.Size(568, 248);
+            this.gbxJogosArbitro.Size = new System.Drawing.Size(568, 289);
             this.gbxJogosArbitro.TabIndex = 30;
             this.gbxJogosArbitro.TabStop = false;
             this.gbxJogosArbitro.Text = "Jogos Arbitro";
@@ -70,9 +76,9 @@
             this.Description,
             this.Hour,
             this.Date});
-            this.listVJogo.Location = new System.Drawing.Point(6, 19);
+            this.listVJogo.Location = new System.Drawing.Point(6, 43);
             this.listVJogo.Name = "listVJogo";
-            this.listVJogo.Size = new System.Drawing.Size(556, 223);
+            this.listVJogo.Size = new System.Drawing.Size(556, 240);
             this.listVJogo.TabIndex = 0;
             this.listVJogo.UseCompatibleStateImageBehavior = false;
             this.listVJogo.View = System.Windows.Forms.View.Details;
@@ -110,6 +116,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // homeToolStripMenuItem
             // 
@@ -207,6 +214,42 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // rbtnTodos
+            // 
+            this.rbtnTodos.AutoSize = true;
+            this.rbtnTodos.Location = new System.Drawing.Point(6, 20);
+            this.rbtnTodos.Name = "rbtnTodos";
+            this.rbtnTodos.Size = new System.Drawing.Size(55, 17);
+            this.rbtnTodos.TabIndex = 1;
+            this.rbtnTodos.TabStop = true;
+            this.rbtnTodos.Text = "Todos";
+            this.rbtnTodos.UseVisualStyleBackColor = true;
+            this.rbtnTodos.CheckedChanged += new System.EventHandler(this.rbtnTodos_CheckedChanged);
+            // 
+            // rbtnStandard
+            // 
+            this.rbtnStandard.AutoSize = true;
+            this.rbtnStandard.Location = new System.Drawing.Point(67, 20);
+            this.rbtnStandard.Name = "rbtnStandard";
+            this.rbtnStandard.Size = new System.Drawing.Size(68, 17);
+            this.rbtnStandard.TabIndex = 2;
+            this.rbtnStandard.TabStop = true;
+            this.rbtnStandard.Text = "Standard";
+            this.rbtnStandard.UseVisualStyleBackColor = true;
+            this.rbtnStandard.CheckedChanged += new System.EventHandler(this.rbtnStandard_CheckedChanged);
+            // 
+            // rbtnTeam
+            // 
+            this.rbtnTeam.AutoSize = true;
+            this.rbtnTeam.Location = new System.Drawing.Point(141, 20);
+            this.rbtnTeam.Name = "rbtnTeam";
+            this.rbtnTeam.Size = new System.Drawing.Size(52, 17);
+            this.rbtnTeam.TabIndex = 3;
+            this.rbtnTeam.TabStop = true;
+            this.rbtnTeam.Text = "Team";
+            this.rbtnTeam.UseVisualStyleBackColor = true;
+            this.rbtnTeam.CheckedChanged += new System.EventHandler(this.rbtnTeam_CheckedChanged);
+            // 
             // JogoArbitro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +263,7 @@
             this.Name = "JogoArbitro";
             this.Text = "JogoArbitro";
             this.gbxJogosArbitro.ResumeLayout(false);
+            this.gbxJogosArbitro.PerformLayout();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -250,5 +294,8 @@
         private System.Windows.Forms.ColumnHeader Description;
         private System.Windows.Forms.ColumnHeader Hour;
         private System.Windows.Forms.ColumnHeader Date;
+        private System.Windows.Forms.RadioButton rbtnTeam;
+        private System.Windows.Forms.RadioButton rbtnStandard;
+        private System.Windows.Forms.RadioButton rbtnTodos;
     }
 }
