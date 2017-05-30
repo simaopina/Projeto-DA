@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Info_Cartas_ADM : Form
     {
-
+        //declaração de variaveis
         int id_carta = 0;
 
         string ParteFinalNome;
