@@ -227,7 +227,6 @@ namespace WindowsFormsApp1
         }
 
         // Navegação
-
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ADD_Jogador_ADM AddJFrm = new ADD_Jogador_ADM();
