@@ -26,8 +26,8 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());           
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());           
 
 
                 listVJogo.Items.Add(item);
@@ -67,8 +67,8 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
 
                 listVJogo.Items.Add(item);
@@ -90,8 +90,8 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
 
                 listVJogo.Items.Add(item);
@@ -107,8 +107,8 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem(game.Number.ToString());
                 item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToString());
-                item.SubItems.Add(game.Date.ToString());
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
                 listVJogo.Items.Add(item);
                 refresh_listview();
