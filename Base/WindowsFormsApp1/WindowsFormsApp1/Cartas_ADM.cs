@@ -164,8 +164,6 @@ namespace WindowsFormsApp1
         private void listVCartas_DoubleClick(object sender, EventArgs e)
         {
 
-          //  ListViewItem CartaList;
-
             string nome = null;
             string facao = null;
             string tipo = null;

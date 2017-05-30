@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
             string defesa = null;
             string imagem = ParteFinalNome;
 
-
+            
 
             nome = cartaselecionada.Name;
             facao = cartaselecionada.Faction;
