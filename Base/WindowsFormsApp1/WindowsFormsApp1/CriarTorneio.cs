@@ -398,5 +398,57 @@ namespace WindowsFormsApp1
             Jfrm.Show();
             Close();
         }
+
+        private void btxPesquisar_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisarTeam.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVEquipas.Items.Count];
+                listVEquipas.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxPesquisarTeam.Text)).ToArray();
+
+                listVEquipas.Items.Clear();
+                listVEquipas.Items.AddRange(dados);
+
+                if (listVEquipas.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listViewEquipas();
+                    tbxPesquisarTeam.ResetText();
+                    tbxPesquisarTeam.Focus();
+                }
+            }
+            else
+            {
+                refresh_listViewEquipas();
+            }
+        }
+
+        private void btxPesquisarStand_Click(object sender, EventArgs e)
+        {
+            if (tbxPesquisarStand.Text.Length > 0)
+            {
+                ListViewItem[] dados = new ListViewItem[listVStandard.Items.Count];
+                listVStandard.Items.CopyTo(dados, 0);
+
+                dados = dados.Where(d => d.Text.Contains(tbxPesquisarStand.Text)).ToArray();
+
+                listVStandard.Items.Clear();
+                listVStandard.Items.AddRange(dados);
+
+                if (listVStandard.Items.Count < 1)
+                {
+                    MessageBox.Show("Nao foi encontrado nenhum resultado");
+                    refresh_listViewStandard();
+                    tbxPesquisarStand.ResetText();
+                    tbxPesquisarStand.Focus();
+                }
+            }
+            else
+            {
+                refresh_listViewStandard();
+            }
+        }
     }
 }
