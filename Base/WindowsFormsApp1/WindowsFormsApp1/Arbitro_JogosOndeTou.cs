@@ -20,14 +20,30 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            id = id_arb; 
+            id = id_arb;
 
-            List<Game> game = container.GameSet.ToList();
+            List<Referee> admin = container.UserSet.OfType<Referee>().ToList();
 
-            foreach (Game games in game)
+            var verificar_id = from user in container.UserSet.OfType<Referee>() where user.Id == id select user;
+
+
+            if (verificar_id.Any())
             {
-                listVJogos.Items.Add(games.Description);
+
+               var verificar_id_jogo = from Game in container.GameSet where Game.RefereeId == id where DateTime.Compare(Game.Date, DateTime.Today) >= 0 select Game;
+
+                if (verificar_id.Any())
+                {
+                    List<Game> listgame = verificar_id_jogo.ToList();
+
+                    foreach (Game game in listgame)
+                    {
+                        listVJogos.Items.Add(game.Description.ToString());
+                    }
+                }
+
             }
+
         }
 
         private void perfilToolStripMenuItem_Click(object sender, EventArgs e)

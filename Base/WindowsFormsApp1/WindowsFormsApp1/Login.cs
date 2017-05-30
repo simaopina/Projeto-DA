@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    MessageBox.Show("Não tem histórico");
+                    MessageBox.Show("Usuario inválido");
                 }
 
 
