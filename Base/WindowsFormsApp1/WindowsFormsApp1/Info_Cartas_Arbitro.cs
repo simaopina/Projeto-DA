@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
        
-
+        //Inicialização do Form
         public Info_Cartas_Arbitro(string nome, string facao, string tipo, string lealdade, string custo, string regras, string ataque, string defesa, string imagem)
         {
             InitializeComponent();

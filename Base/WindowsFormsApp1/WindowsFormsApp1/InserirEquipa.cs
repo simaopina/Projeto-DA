@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
 
         public string ParteFinalNome;
 
+        //Iniciazação de Form
         public InserirEquipa()
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace WindowsFormsApp1
                 refreshEquipa();
             }
         }
+        
         //Eventos
         private void lbxEquipa_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -44,9 +46,6 @@ namespace WindowsFormsApp1
                 tbxNome.Text = equipaSelected.Name;
                 cbxJogador1.Text = Convert.ToString(equipaSelected.Player1);
                 cbxJogador2.Text = Convert.ToString(equipaSelected.Player2);
-                //picbxAvatar.Location;
-                //em principio ele nunca da erro agora no entanto se não houver foto não vai apresentar nada
-                //e por isso que quero resolver o problema com aquela imagem
                 picbxAvatar.ImageLocation = Application.StartupPath + "/imagens/" + equipaSelected.Avatar;
             }
             else
@@ -55,6 +54,7 @@ namespace WindowsFormsApp1
             }
         }
         
+        //Botões
         private void btnInserir_Click(object sender, EventArgs e)
         {
             AddEquipa();
@@ -207,8 +207,6 @@ namespace WindowsFormsApp1
             container.SaveChanges();
             refreshEquipa();
         }
-
-        
 
         private void refreshEquipa()
         {

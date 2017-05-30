@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         string ParteFinalNome;
 
         Card carta = null;
-
+        //inicialização de Form
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
         public Info_Cartas_ADM(string nome, string facao, string tipo, string lealdade, string custo, string regras, string  ataque, string defesa, string imagem)
         {
@@ -35,12 +35,6 @@ namespace WindowsFormsApp1
             lblDefesa.Text = defesa;
             pictureBox.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + imagem);
 
-        }
-
-        private void Info_Cartas_ADM_Load(object sender, EventArgs e)
-        {
-
-            
         }
     }
 }

@@ -245,7 +245,6 @@
             this.Controls.Add(this.gbxInfoCartasADM);
             this.Name = "Info_Cartas_ADM";
             this.Text = "Info_Cartas_ADM";
-            this.Load += new System.EventHandler(this.Info_Cartas_ADM_Load);
             this.gbxInfoCartasADM.ResumeLayout(false);
             this.gbxInfoCartasADM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

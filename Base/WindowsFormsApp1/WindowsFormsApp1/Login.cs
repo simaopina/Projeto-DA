@@ -14,12 +14,14 @@ namespace WindowsFormsApp1
     {
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //Declaração de Variaveis
         Administrator administradorSelecionado = null;
 
         Referee arbitroSeleciona = null;
 
         public int id;
 
+        //Inicialização do form
         public Login(int id_arb)
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace WindowsFormsApp1
             List<Referee> arbitro = container.UserSet.OfType<Referee>().ToList();
         }
 
+
+        //Botões
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -79,7 +83,7 @@ namespace WindowsFormsApp1
         }
     
     
-            //Navegação
+        //Navegação
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Home Hfrm = new Home();

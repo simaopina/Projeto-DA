@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
 
+        //Inicialização do Form
         public JogoArbitro(int id_arb)
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace WindowsFormsApp1
             }                       
         }
 
-        //Butões
+        //Botões
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbxpesquisa.Text.Length > 0)
