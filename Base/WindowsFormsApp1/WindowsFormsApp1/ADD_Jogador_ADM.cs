@@ -109,7 +109,8 @@ namespace WindowsFormsApp1
                 tbxEmail.Text = jogadorSelected.Email;
                 tbxNickName.Text = jogadorSelected.Nickname;
                 numupdownIdade.Value = jogadorSelected.Age;
-                picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar);
+                picbxAvatar.ImageLocation = Application.StartupPath + "/imagens/" + jogadorSelected.Avatar;
+                //picbxAvatar.Image = Image.FromFile(Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar);
             }
             else
             
@@ -118,12 +119,12 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Butões
+        //Botões
         private void btnInserir_Click(object sender, EventArgs e)
         {
             AddJogador();
-
             refreshJogador();
+            limpar_campos();
 
         }
 
@@ -132,9 +133,6 @@ namespace WindowsFormsApp1
 
             if (lbxJogadores.SelectedItem != null)
             {
-
-                // verificar o remover //
-                //jogadorSelected = container.PlayerSet.Find(jogadorSelected);
 
                 string caminhoImagem = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + jogadorSelected.Avatar;
 
@@ -150,6 +148,9 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Eliminado com sucesso!");
 
                 refreshJogador();
+                limpar_campos();
+
+
             }
             else
             {
@@ -238,6 +239,17 @@ namespace WindowsFormsApp1
             numupdownIdade.Value = 0;
             picbxAvatar.Image = null;
         }
+
+        //Funções
+        public void limpar_campos()
+        {
+            tbxNome.ResetText();
+            tbxEmail.ResetText();
+            tbxNickName.ResetText();
+            numupdownIdade.Value = 0;
+            picbxAvatar.Image = null;
+        }
+
 
         // Navegação
         private void adicionarNovoToolStripMenuItem_Click(object sender, EventArgs e)
