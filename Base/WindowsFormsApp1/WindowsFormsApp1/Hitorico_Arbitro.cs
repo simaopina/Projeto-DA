@@ -24,22 +24,24 @@ namespace WindowsFormsApp1
 
             id = id_arb;
 
-            List<Administrator> admin = container.UserSet.OfType<Administrator>().ToList();
+            List<Referee> admin = container.UserSet.OfType<Referee>().ToList();
 
-            var verificar_id = from user in container.UserSet.OfType<Referee>() where user.Id.Equals(id) select user;
+            var verificar_id = from user in container.UserSet.OfType<Referee>() where user.Id == id select user;
 
 
             if (verificar_id.Any())
             {
 
-                var verificar_id_jogo = from Game in container.GameSet where Game.RefereeId.Equals(id) select Game;
+                var verificar_id_jogo = from Game in container.GameSet where Game.RefereeId == id select Game;
 
-
-                List<Game> listgame = verificar_id_jogo.ToList();
-
-                foreach (Game game in listgame)
+                if (verificar_id.Any())
                 {
-                    listVHistorico.Items.Add(game.Description.ToString());
+                    List<Game> listgame = verificar_id_jogo.ToList();
+
+                    foreach (Game game in listgame)
+                    {
+                        listVHistorico.Items.Add(game.Description.ToString());
+                    }
                 }
 
             }

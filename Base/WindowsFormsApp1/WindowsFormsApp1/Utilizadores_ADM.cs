@@ -153,7 +153,7 @@ namespace WindowsFormsApp1
 
         private void listVADM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listVArbitro.SelectedItems.Count > 0)
+            if (listVADM.SelectedItems.Count > 0)
             {
                 string adminU = listVADM.SelectedItems[0].Text;
                 administradorSelecionado = container.UserSet.OfType<Administrator>().Where(user => user.Username.Equals(adminU)).First();
@@ -229,7 +229,7 @@ namespace WindowsFormsApp1
 
             container.UserSet.Add(User_ARB);
             container.SaveChanges();
-            listVArbitro.Refresh();
+            refresh_listviewARB();
         }
 
         private void linkLAvatar_ARB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -244,9 +244,24 @@ namespace WindowsFormsApp1
 
                 string[] partes = caminhoFicheiro.Split('\\');
                 partefinal = partes.Last();
-                File.Copy(caminhoFicheiro, Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last());
 
-                linkLAvatar_ARB.Text = caminhoFicheiro;
+                string destino = Path.GetDirectoryName(Application.ExecutablePath) + @"\imagens\" + partes.Last();
+
+                if(File.Exists(destino))
+                {
+                    MessageBox.Show("Essa imagem já existe!");
+                }
+
+                else
+                {
+                    File.Copy(caminhoFicheiro, destino);
+
+
+                    linkLAvatar_ARB.Text = caminhoFicheiro;
+
+                }
+               
+
 
             }
         }

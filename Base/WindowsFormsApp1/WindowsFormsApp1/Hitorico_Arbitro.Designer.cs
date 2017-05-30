@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbxHistorico = new System.Windows.Forms.GroupBox();
+            this.listVHistorico = new System.Windows.Forms.ListView();
             this.tbxpesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +44,6 @@
             this.historicoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
-            this.listVHistorico = new System.Windows.Forms.ListView();
             this.gbxHistorico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStripHome.SuspendLayout();
@@ -58,6 +58,15 @@
             this.gbxHistorico.TabIndex = 30;
             this.gbxHistorico.TabStop = false;
             this.gbxHistorico.Text = "Historico Arbitro";
+            // 
+            // listVHistorico
+            // 
+            this.listVHistorico.Location = new System.Drawing.Point(13, 20);
+            this.listVHistorico.Name = "listVHistorico";
+            this.listVHistorico.Size = new System.Drawing.Size(580, 222);
+            this.listVHistorico.TabIndex = 0;
+            this.listVHistorico.UseCompatibleStateImageBehavior = false;
+            this.listVHistorico.View = System.Windows.Forms.View.List;
             // 
             // tbxpesquisa
             // 
@@ -171,14 +180,6 @@
             this.menuStripHome.Size = new System.Drawing.Size(640, 24);
             this.menuStripHome.TabIndex = 20;
             this.menuStripHome.Text = "menuStrip1";
-            // 
-            // listVHistorico
-            // 
-            this.listVHistorico.Location = new System.Drawing.Point(13, 20);
-            this.listVHistorico.Name = "listVHistorico";
-            this.listVHistorico.Size = new System.Drawing.Size(580, 222);
-            this.listVHistorico.TabIndex = 0;
-            this.listVHistorico.UseCompatibleStateImageBehavior = false;
             // 
             // Hitorico_Arbitro
             // 
