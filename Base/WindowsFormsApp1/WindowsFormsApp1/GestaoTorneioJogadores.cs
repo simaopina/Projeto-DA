@@ -296,8 +296,19 @@ namespace WindowsFormsApp1
             refresh_listview_Jogador1();
             refresh_listview_Jogador2();
             refresh_listview_Arbitro();
+            limparCampos();
 
             MessageBox.Show("Inserido com sucesso!");
+        }
+
+        public void limparCampos()
+        {
+            numericJogador1.ResetText();
+            numericJogador2.ResetText();
+            numericArbitro.ResetText();
+            cbxBaralhoJogador1.ResetText();
+            cbxBaralhoJogador2.ResetText();
+            cbxTorneio.ResetText();
         }
 
         private void listVJogador1_SelectedIndexChanged(object sender, EventArgs e)
@@ -395,7 +406,7 @@ namespace WindowsFormsApp1
 
 
 
-            foreach (Referee refs in container.UserSet)
+            foreach (Referee refs in container.UserSet.OfType<Referee>())
             {
 
                 ListViewItem refereeList = new ListViewItem(Convert.ToString(refs.Name));
