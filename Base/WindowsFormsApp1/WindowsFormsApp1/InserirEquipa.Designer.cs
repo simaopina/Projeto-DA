@@ -32,7 +32,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.tbxPesquisar = new System.Windows.Forms.TextBox();
             this.cbxJogador1 = new System.Windows.Forms.ComboBox();
@@ -41,12 +40,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbxEquipa = new System.Windows.Forms.ListBox();
             this.btnAbrirImagem = new System.Windows.Forms.Button();
-            this.picbxAvatar = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tbxNome = new System.Windows.Forms.TextBox();
             this.btnInserir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baralhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,10 +65,13 @@
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialogImagem = new System.Windows.Forms.OpenFileDialog();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.picbxAvatar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
+            this.menuStripHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStripHome.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -118,17 +118,6 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
-            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLimpar.Location = new System.Drawing.Point(235, 312);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
-            this.btnLimpar.TabIndex = 49;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnPesquisar
             // 
@@ -201,14 +190,6 @@
             this.btnAbrirImagem.UseVisualStyleBackColor = true;
             this.btnAbrirImagem.Click += new System.EventHandler(this.btnAbrirImagem_Click);
             // 
-            // picbxAvatar
-            // 
-            this.picbxAvatar.Location = new System.Drawing.Point(254, 61);
-            this.picbxAvatar.Name = "picbxAvatar";
-            this.picbxAvatar.Size = new System.Drawing.Size(100, 93);
-            this.picbxAvatar.TabIndex = 48;
-            this.picbxAvatar.TabStop = false;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(521, 312);
@@ -244,15 +225,6 @@
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
             // 
             // menuStripHome
             // 
@@ -411,6 +383,36 @@
             // 
             this.openFileDialogImagem.FileName = "openFileDialog1";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(235, 312);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 49;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // picbxAvatar
+            // 
+            this.picbxAvatar.ErrorImage = global::WindowsFormsApp1.Properties.Resources.no_image_icon_4;
+            this.picbxAvatar.Location = new System.Drawing.Point(254, 54);
+            this.picbxAvatar.Name = "picbxAvatar";
+            this.picbxAvatar.Size = new System.Drawing.Size(100, 100);
+            this.picbxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picbxAvatar.TabIndex = 48;
+            this.picbxAvatar.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._17813900_1281975635190102_1290798384_n;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(580, 158);
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
             // InserirEquipa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,10 +425,10 @@
             this.Text = "InserirEquipa";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStripHome.ResumeLayout(false);
             this.menuStripHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

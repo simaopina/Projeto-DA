@@ -124,4 +124,7 @@
   <data name="17813900_1281975635190102_1290798384_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17813900_1281975635190102_1290798384_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="no_image_icon_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\no-image-icon-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
