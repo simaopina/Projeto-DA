@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
         private void jogosADecorrerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Jogos Jogfrm = new Jogos();
+            JogoArbitro Jogfrm = new JogoArbitro();
             Jogfrm.Show();
             Close();
         }
