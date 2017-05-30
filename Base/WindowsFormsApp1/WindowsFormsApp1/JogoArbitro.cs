@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class JogoArbitro : Form
     {
-
+        //Declaração de variaveis
         public int id;
 
         public DiagramaEntidadesArcmageContainer container = new DiagramaEntidadesArcmageContainer();
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             }                       
         }
 
-
+        //Butões
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbxpesquisa.Text.Length > 0)
@@ -65,25 +65,8 @@ namespace WindowsFormsApp1
                 refresh_listview();
             }
         }
-
-        public void refresh_listview()
-        {
-            listVJogo.Items.Clear();
-
-            List<Game> listgame = container.GameSet.ToList();
-
-            foreach (Game game in listgame)
-            {
-                ListViewItem item = new ListViewItem(game.Number.ToString());
-                item.SubItems.Add(game.Description);
-                item.SubItems.Add(game.Hour.ToShortTimeString());
-                item.SubItems.Add(game.Date.ToShortDateString());
-
-
-                listVJogo.Items.Add(item);         
-            }
-        }
-
+       
+        //Radio Buttons
         private void rbtnTodos_CheckedChanged(object sender, EventArgs e)
         {
             refresh_listview();
@@ -123,6 +106,26 @@ namespace WindowsFormsApp1
              
             }
         }
+
+        //Funções
+        public void refresh_listview()
+        {
+            listVJogo.Items.Clear();
+
+            List<Game> listgame = container.GameSet.ToList();
+
+            foreach (Game game in listgame)
+            {
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
+
+
+                listVJogo.Items.Add(item);         
+            }
+        }
+
         //Navegação
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
