@@ -37,7 +37,6 @@
             this.listVStandard = new System.Windows.Forms.ListView();
             this.button3 = new System.Windows.Forms.Button();
             this.btnGuardarStandard = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.listVEquipas = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,9 +73,13 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHome = new System.Windows.Forms.MenuStrip();
-            this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbxPesquisarStand = new System.Windows.Forms.TextBox();
+            this.btxPesquisarStand = new System.Windows.Forms.Button();
+            this.btxPesquisar = new System.Windows.Forms.Button();
+            this.tbxPesquisarTeam = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabStandard.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,13 +109,14 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage1.Controls.Add(this.btxPesquisarStand);
+            this.tabPage1.Controls.Add(this.tbxPesquisarStand);
             this.tabPage1.Controls.Add(this.btnEliminarStandard);
             this.tabPage1.Controls.Add(this.btnAlterarStandard);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.listVStandard);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.btnGuardarStandard);
-            this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -150,7 +153,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(86, 22);
+            this.label10.Location = new System.Drawing.Point(6, 48);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 19;
@@ -158,9 +161,9 @@
             // 
             // listVStandard
             // 
-            this.listVStandard.Location = new System.Drawing.Point(7, 38);
+            this.listVStandard.Location = new System.Drawing.Point(7, 64);
             this.listVStandard.Name = "listVStandard";
-            this.listVStandard.Size = new System.Drawing.Size(204, 266);
+            this.listVStandard.Size = new System.Drawing.Size(204, 240);
             this.listVStandard.TabIndex = 16;
             this.listVStandard.UseCompatibleStateImageBehavior = false;
             this.listVStandard.View = System.Windows.Forms.View.List;
@@ -186,19 +189,10 @@
             this.btnGuardarStandard.UseVisualStyleBackColor = true;
             this.btnGuardarStandard.Click += new System.EventHandler(this.btnGuardarStandard_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(274, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Torneio Standard";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(235, 102);
+            this.label3.Location = new System.Drawing.Point(231, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 5;
@@ -207,7 +201,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(235, 70);
+            this.label2.Location = new System.Drawing.Point(231, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 4;
@@ -216,7 +210,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 41);
+            this.label1.Location = new System.Drawing.Point(231, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
@@ -224,14 +218,14 @@
             // 
             // dateTimeDataStandard
             // 
-            this.dateTimeDataStandard.Location = new System.Drawing.Point(276, 64);
+            this.dateTimeDataStandard.Location = new System.Drawing.Point(272, 87);
             this.dateTimeDataStandard.Name = "dateTimeDataStandard";
             this.dateTimeDataStandard.Size = new System.Drawing.Size(206, 20);
             this.dateTimeDataStandard.TabIndex = 2;
             // 
             // tbxDescricaoStandard
             // 
-            this.tbxDescricaoStandard.Location = new System.Drawing.Point(238, 118);
+            this.tbxDescricaoStandard.Location = new System.Drawing.Point(234, 141);
             this.tbxDescricaoStandard.Multiline = true;
             this.tbxDescricaoStandard.Name = "tbxDescricaoStandard";
             this.tbxDescricaoStandard.Size = new System.Drawing.Size(342, 133);
@@ -239,7 +233,7 @@
             // 
             // tbxNomeStandard
             // 
-            this.tbxNomeStandard.Location = new System.Drawing.Point(276, 38);
+            this.tbxNomeStandard.Location = new System.Drawing.Point(272, 61);
             this.tbxNomeStandard.Name = "tbxNomeStandard";
             this.tbxNomeStandard.Size = new System.Drawing.Size(206, 20);
             this.tbxNomeStandard.TabIndex = 0;
@@ -247,13 +241,14 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tabPage2.Controls.Add(this.btxPesquisar);
+            this.tabPage2.Controls.Add(this.tbxPesquisarTeam);
             this.tabPage2.Controls.Add(this.btnEliminarEquipas);
             this.tabPage2.Controls.Add(this.btnAlterarEquipas);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.listVEquipas);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.btnGuardar);
-            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label6);
@@ -290,7 +285,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(73, 25);
+            this.label9.Location = new System.Drawing.Point(6, 53);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 13);
             this.label9.TabIndex = 18;
@@ -298,9 +293,9 @@
             // 
             // listVEquipas
             // 
-            this.listVEquipas.Location = new System.Drawing.Point(7, 41);
+            this.listVEquipas.Location = new System.Drawing.Point(7, 69);
             this.listVEquipas.Name = "listVEquipas";
-            this.listVEquipas.Size = new System.Drawing.Size(204, 266);
+            this.listVEquipas.Size = new System.Drawing.Size(204, 238);
             this.listVEquipas.TabIndex = 17;
             this.listVEquipas.UseCompatibleStateImageBehavior = false;
             this.listVEquipas.View = System.Windows.Forms.View.List;
@@ -326,19 +321,10 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(260, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Torneio Equipas";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(214, 92);
+            this.label4.Location = new System.Drawing.Point(230, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 11;
@@ -347,7 +333,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(214, 75);
+            this.label5.Location = new System.Drawing.Point(233, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 13);
             this.label5.TabIndex = 10;
@@ -356,7 +342,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 46);
+            this.label6.Location = new System.Drawing.Point(233, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 9;
@@ -364,22 +350,22 @@
             // 
             // dateTEquipas
             // 
-            this.dateTEquipas.Location = new System.Drawing.Point(255, 69);
+            this.dateTEquipas.Location = new System.Drawing.Point(274, 95);
             this.dateTEquipas.Name = "dateTEquipas";
             this.dateTEquipas.Size = new System.Drawing.Size(206, 20);
             this.dateTEquipas.TabIndex = 8;
             // 
             // tbxDescricao
             // 
-            this.tbxDescricao.Location = new System.Drawing.Point(217, 108);
+            this.tbxDescricao.Location = new System.Drawing.Point(233, 141);
             this.tbxDescricao.Multiline = true;
             this.tbxDescricao.Name = "tbxDescricao";
-            this.tbxDescricao.Size = new System.Drawing.Size(342, 160);
+            this.tbxDescricao.Size = new System.Drawing.Size(337, 128);
             this.tbxDescricao.TabIndex = 7;
             // 
             // tbxNomeEquipas
             // 
-            this.tbxNomeEquipas.Location = new System.Drawing.Point(255, 43);
+            this.tbxNomeEquipas.Location = new System.Drawing.Point(274, 69);
             this.tbxNomeEquipas.Name = "tbxNomeEquipas";
             this.tbxNomeEquipas.Size = new System.Drawing.Size(206, 20);
             this.tbxNomeEquipas.TabIndex = 6;
@@ -509,6 +495,13 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click);
             // 
+            // listaDeJogosToolStripMenuItem
+            // 
+            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
+            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
+            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
             // terminarSessãoToolStripMenuItem
             // 
             this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
@@ -530,12 +523,41 @@
             this.menuStripHome.TabIndex = 48;
             this.menuStripHome.Text = "menuStrip1";
             // 
-            // listaDeJogosToolStripMenuItem
+            // tbxPesquisarStand
             // 
-            this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
-            this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
-            this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            this.tbxPesquisarStand.Location = new System.Drawing.Point(9, 11);
+            this.tbxPesquisarStand.Name = "tbxPesquisarStand";
+            this.tbxPesquisarStand.Size = new System.Drawing.Size(479, 20);
+            this.tbxPesquisarStand.TabIndex = 22;
+            this.tbxPesquisarStand.Text = "Pesquisar...";
+            // 
+            // btxPesquisarStand
+            // 
+            this.btxPesquisarStand.Location = new System.Drawing.Point(494, 11);
+            this.btxPesquisarStand.Name = "btxPesquisarStand";
+            this.btxPesquisarStand.Size = new System.Drawing.Size(75, 23);
+            this.btxPesquisarStand.TabIndex = 23;
+            this.btxPesquisarStand.Text = "Pesquisar";
+            this.btxPesquisarStand.UseVisualStyleBackColor = true;
+            this.btxPesquisarStand.Click += new System.EventHandler(this.btxPesquisarStand_Click);
+            // 
+            // btxPesquisar
+            // 
+            this.btxPesquisar.Location = new System.Drawing.Point(494, 13);
+            this.btxPesquisar.Name = "btxPesquisar";
+            this.btxPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btxPesquisar.TabIndex = 25;
+            this.btxPesquisar.Text = "Pesquisar";
+            this.btxPesquisar.UseVisualStyleBackColor = true;
+            this.btxPesquisar.Click += new System.EventHandler(this.btxPesquisar_Click);
+            // 
+            // tbxPesquisarTeam
+            // 
+            this.tbxPesquisarTeam.Location = new System.Drawing.Point(9, 13);
+            this.tbxPesquisarTeam.Name = "tbxPesquisarTeam";
+            this.tbxPesquisarTeam.Size = new System.Drawing.Size(479, 20);
+            this.tbxPesquisarTeam.TabIndex = 24;
+            this.tbxPesquisarTeam.Text = "Pesquisar...";
             // 
             // CriarTorneio
             // 
@@ -568,12 +590,10 @@
         private System.Windows.Forms.TextBox tbxDescricaoStandard;
         private System.Windows.Forms.TextBox tbxNomeStandard;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimeDataStandard;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -612,5 +632,9 @@
         private System.Windows.Forms.ToolStripMenuItem terminarSessãoToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStripHome;
         private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
+        private System.Windows.Forms.Button btxPesquisarStand;
+        private System.Windows.Forms.TextBox tbxPesquisarStand;
+        private System.Windows.Forms.Button btxPesquisar;
+        private System.Windows.Forms.TextBox tbxPesquisarTeam;
     }
 }
