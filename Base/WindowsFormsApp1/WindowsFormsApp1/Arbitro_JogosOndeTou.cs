@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
             if (verificar_id.Any())
             {
 
-               var verificar_id_jogo = from Game in container.GameSet where Game.RefereeId == id where DateTime.Compare(Game.Date, DateTime.Today) >= 0 select Game;
+                var verificar_id_jogo = from Game in container.GameSet where Game.RefereeId == id where DateTime.Compare(Game.Date, DateTime.Today) >= 0 select Game;
 
                 if (verificar_id.Any())
                 {
@@ -122,17 +122,17 @@ namespace WindowsFormsApp1
         }
 
         public void refresh_listVHistorico()
+        {
+            listVJogos.Items.Clear();
+            foreach (Game game in container.GameSet)
             {
-                listVJogos.Items.Clear();
-                foreach (Game game in container.GameSet)
-                {
-                    ListViewItem item = new ListViewItem(game.Number.ToString());
-                    item.SubItems.Add(game.Description);
-                    item.SubItems.Add(game.Hour.ToShortTimeString());
-                    item.SubItems.Add(game.Date.ToShortDateString());
+                ListViewItem item = new ListViewItem(game.Number.ToString());
+                item.SubItems.Add(game.Description);
+                item.SubItems.Add(game.Hour.ToShortTimeString());
+                item.SubItems.Add(game.Date.ToShortDateString());
 
                 listVJogos.Items.Add(item);
-                }
             }
-    
+        }
+    }
 }
