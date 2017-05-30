@@ -67,8 +67,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.torneioIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxNovoJogadorADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numupdownIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
@@ -260,6 +260,7 @@
             this.btnPesquisar.TabIndex = 21;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // pictureBox1
             // 
@@ -413,19 +414,19 @@
             this.torneioEquipaToolStripMenuItem.Text = "Jogo Equipa";
             this.torneioEquipaToolStripMenuItem.Click += new System.EventHandler(this.torneioEquipaToolStripMenuItem_Click_1);
             // 
-            // terminarSessãoToolStripMenuItem
-            // 
-            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
-            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
-            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
-            // 
             // listaDeJogosToolStripMenuItem
             // 
             this.listaDeJogosToolStripMenuItem.Name = "listaDeJogosToolStripMenuItem";
             this.listaDeJogosToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.listaDeJogosToolStripMenuItem.Text = "Lista de Jogos";
             this.listaDeJogosToolStripMenuItem.Click += new System.EventHandler(this.listaDeJogosToolStripMenuItem_Click);
+            // 
+            // terminarSessãoToolStripMenuItem
+            // 
+            this.terminarSessãoToolStripMenuItem.Name = "terminarSessãoToolStripMenuItem";
+            this.terminarSessãoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
+            this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
             // ADD_Jogador_ADM
             // 
