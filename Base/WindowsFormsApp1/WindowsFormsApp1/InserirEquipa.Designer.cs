@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InserirEquipa));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.tbxPesquisar = new System.Windows.Forms.TextBox();
             this.cbxJogador1 = new System.Windows.Forms.ComboBox();
             this.cbxJogador2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,8 +64,7 @@
             this.torneioEquipaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeJogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminarSessãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbxPesquisar = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +73,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnLimpar);
             this.groupBox3.Controls.Add(this.btnPesquisar);
             this.groupBox3.Controls.Add(this.tbxPesquisar);
             this.groupBox3.Controls.Add(this.cbxJogador1);
@@ -90,6 +93,24 @@
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Inserir Equipa";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(492, 19);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 58;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // tbxPesquisar
+            // 
+            this.tbxPesquisar.Location = new System.Drawing.Point(254, 20);
+            this.tbxPesquisar.Name = "tbxPesquisar";
+            this.tbxPesquisar.Size = new System.Drawing.Size(232, 20);
+            this.tbxPesquisar.TabIndex = 57;
+            this.tbxPesquisar.Text = "Pesquisar...";
             // 
             // cbxJogador1
             // 
@@ -349,23 +370,16 @@
             this.terminarSessãoToolStripMenuItem.Text = "Terminar Sessão";
             this.terminarSessãoToolStripMenuItem.Click += new System.EventHandler(this.terminarSessãoToolStripMenuItem_Click);
             // 
-            // tbxPesquisar
+            // btnLimpar
             // 
-            this.tbxPesquisar.Location = new System.Drawing.Point(254, 20);
-            this.tbxPesquisar.Name = "tbxPesquisar";
-            this.tbxPesquisar.Size = new System.Drawing.Size(232, 20);
-            this.tbxPesquisar.TabIndex = 57;
-            this.tbxPesquisar.Text = "Pesquisar...";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Location = new System.Drawing.Point(492, 19);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisar.TabIndex = 58;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.btnLimpar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLimpar.BackgroundImage")));
+            this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLimpar.Location = new System.Drawing.Point(367, 312);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(38, 23);
+            this.btnLimpar.TabIndex = 49;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // InserirEquipa
             // 
@@ -425,5 +439,6 @@
         private System.Windows.Forms.ToolStripMenuItem listaDeJogosToolStripMenuItem;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox tbxPesquisar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
